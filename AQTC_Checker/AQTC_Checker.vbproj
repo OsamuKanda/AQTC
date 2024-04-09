@@ -1,0 +1,358 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{78A9A865-954B-4452-86CF-3818F07C00C0}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>AQTC_Checker.My.MyApplication</StartupObject>
+    <RootNamespace>AQTC_Checker</RootNamespace>
+    <AssemblyName>AQTC_Checker</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>AQTC_Checker.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <Optimize>false</Optimize>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>embedded</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>AQTC_Checker.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <DebugSymbols>true</DebugSymbols>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>My Project\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>34.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="IFCAD">
+      <HintPath>..\..\if\IFCAD\bin\IFCAD.dll</HintPath>
+    </Reference>
+    <Reference Include="IFCDA">
+      <HintPath>..\..\if\IFCDA\bin\IFCDA.dll</HintPath>
+    </Reference>
+    <Reference Include="IFCDIO">
+      <HintPath>..\..\if\IFCDIO\bin\IFCDIO.dll</HintPath>
+    </Reference>
+    <Reference Include="IFCGPIB">
+      <HintPath>..\..\if\ifcgpib\bin\IFCGPIB.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Def\DataDef.vb" />
+    <Compile Include="Def\DHEDDef.vb" />
+    <Compile Include="Def\IODef.vb" />
+    <Compile Include="Def\DatDef.vb" />
+    <Compile Include="Dialog\MessageDlg.Designer.vb">
+      <DependentUpon>MessageDlg.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Dialog\MessageDlg.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialog\TestDataSelectDlg.Designer.vb">
+      <DependentUpon>TestDataSelectDlg.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Dialog\TestDataSelectDlg.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialog\TestItemDlg.Designer.vb">
+      <DependentUpon>TestItemDlg.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Dialog\TestItemDlg.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialog\TestParmDlg.Designer.vb">
+      <DependentUpon>TestParmDlg.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Dialog\TestParmDlg.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialog\TestTmpDlg.Designer.vb">
+      <DependentUpon>TestTmpDlg.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Dialog\TestTmpDlg.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\DHDParmSet.Designer.vb">
+      <DependentUpon>DHDParmSet.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\DHDParmSet.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\DHDtstAio.Designer.vb">
+      <DependentUpon>DHDtstAio.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\DHDtstAio.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\DHDMenu.Designer.vb">
+      <DependentUpon>DHDMenu.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\DHDMenu.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\DHDMente.Designer.vb">
+      <DependentUpon>DHDMente.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\DHDMente.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\DHDTest.Designer.vb">
+      <DependentUpon>DHDTest.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\DHDTest.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\FrmDBG.Designer.vb">
+      <DependentUpon>FrmDBG.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\FrmDBG.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\FrmGraph.Designer.vb">
+      <DependentUpon>FrmGraph.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\FrmGraph.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\FrmLog.Designer.vb">
+      <DependentUpon>FrmLog.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\FrmLog.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\FrmWait.designer.vb">
+      <DependentUpon>FrmWait.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\FrmWait.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\FrmWaitCdt.Designer.vb">
+      <DependentUpon>FrmWaitCdt.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\FrmWaitCdt.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IFDevice\ExAd.vb" />
+    <Compile Include="IFDevice\ExDa.vb" />
+    <Compile Include="IFDevice\ExDio.vb" />
+    <Compile Include="IFDevice\ExGpib.vb" />
+    <Compile Include="Lib\AdWaitLib.vb" />
+    <Compile Include="Lib\AioLib.vb" />
+    <Compile Include="Lib\Board.vb" />
+    <Compile Include="Lib\CalConvLib.vb" />
+    <Compile Include="Lib\CfgGpib.vb" />
+    <Compile Include="Lib\IntAi.vb" />
+    <Compile Include="Lib\MBPPrc.vb" />
+    <Compile Include="Lib\Pirani.vb" />
+    <Compile Include="Lib\PtlCntl.vb" />
+    <Compile Include="Lib\RyHv.vb" />
+    <Compile Include="Lib\ScrLib.vb" />
+    <Compile Include="Lib\SdcLib.vb" />
+    <Compile Include="Lib\SysErrLib.vb" />
+    <Compile Include="Lib\tst1Lib.vb" />
+    <Compile Include="Lib\tst4Lib.vb" />
+    <Compile Include="Lib\tst3Lib.vb" />
+    <Compile Include="Lib\WiatTimer.vb" />
+    <Compile Include="Module\common.vb" />
+    <Compile Include="Module\convToStrlib.vb" />
+    <Compile Include="Module\dbTblSub.vb" />
+    <Compile Include="Lib\tst2Lib.vb" />
+    <Compile Include="Module\TstDataWT.vb" />
+    <Compile Include="Module\TstResultWT.vb" />
+    <Compile Include="Module\TstFileSub.vb" />
+    <Compile Include="Module\TstDataRD.vb" />
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Module\WriteLogs.vb" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Dialog\MessageDlg.resx">
+      <DependentUpon>MessageDlg.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialog\TestDataSelectDlg.resx">
+      <DependentUpon>TestDataSelectDlg.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialog\TestItemDlg.resx">
+      <DependentUpon>TestItemDlg.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialog\TestParmDlg.resx">
+      <DependentUpon>TestParmDlg.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialog\TestTmpDlg.resx">
+      <DependentUpon>TestTmpDlg.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\DHDParmSet.resx">
+      <DependentUpon>DHDParmSet.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\DHDtstAio.resx">
+      <DependentUpon>DHDtstAio.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\DHDMenu.resx">
+      <DependentUpon>DHDMenu.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\DHDMente.resx">
+      <DependentUpon>DHDMente.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\DHDTest.resx">
+      <DependentUpon>DHDTest.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\FrmDBG.resx">
+      <DependentUpon>FrmDBG.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\FrmGraph.resx">
+      <DependentUpon>FrmGraph.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\FrmLog.resx">
+      <DependentUpon>FrmLog.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\FrmWait.resx">
+      <DependentUpon>FrmWait.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\FrmWaitCdt.resx">
+      <DependentUpon>FrmWaitCdt.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="ClassDiagram2.cd" />
+    <None Include="My Project\app.manifest" />
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0,Profile=Client">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 Client Profile %28x86 および x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows インストーラー 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="34.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

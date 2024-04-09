@@ -1,0 +1,253 @@
+
+追加機能　//////////////////////////////////////
+
+Public Function tst3
+{
+	'
+	'	ＰＩＤによりＭＦＣ１を制御する
+	'
+	' MFC の SET PT入力を PIDの制御出力と接続
+	ExDio_Output( MAEdoRYFC, DIO_ON )
+
+	'
+	'	RSP（外部入力）
+	'	PIDのセットポイントはPCのアナログ出力で設定する
+	'
+	' PID調節計のSPをアナログ入力に切替える
+	ExDio_Output( MAEdoPIDRSP, DIO_ON )
+
+	'
+	'	高圧リレー接続
+	'	電極ヘッドとＥＳＣ電源を接続
+	'
+	RyHvMode( pol, MES_ESC )
+	RyHvPos( pol, MES_ESC, dt.t3.posv )
+
+	'
+	'	ＳＤＣ電源電圧ステップ数分のル－プ
+	'
+	Do While dt.t3.dsiz > ntst
+
+		'
+		'	チャンバ内圧力、ウエハ裏面圧が下がるのを待つ
+		'
+		DHDTest.waittstcond3
+
+		'
+		'	電極ヘッドに吸着電圧印加し目標に到達するまで待つ
+		'
+		ESCproc( sdcv1, sdcv2, 30000.0, 7 )
+
+		'
+		'	Ｈｅリーク量測定実施
+		'
+		tst3_proc( vac, dt, dt.t3.d( ntst ), tprs, bakp, ntst, sdcv1, sdcv2 )
+		{
+			'
+			'	裏面圧を1,2,3,4,6kPaまで連続測定に変更
+			’
+			Do While True
+
+				' PIDへ目標裏面圧力 DA値 を出力
+				ExDa_Output( PIDaoRSP, cvtp2PIDset( setpa ) )
+
+				'
+				'	試験ループ (NGの場合は３回までﾘﾄﾗｲ)
+				'
+				Do While ( 3 > nrty )
+
+					'
+					'	ウエハ裏面圧開放バルブ SV3(G4) OFF
+					'
+					ExDio_Output( EXSdoRYE3, DIO_OFF )
+
+					'
+					'	DOX34 EXDIO2 OUT2	RYE2 SV2 MFC 2次側バルブ開
+					'
+					ExDio_Output( EXSdoRYE2, DIO_ON )
+
+					'
+					'	ｳｴﾊ裏面圧が一定値になる様にPID調節計を使用しHeを制御（安定で測定）
+					'
+					tst3_pid( dat, ANTtout, 9, bpsel )
+					{
+						'
+						'	ＰＩＤ運転スタ－ト
+						'
+						ExDio_Output( MAEdoPIDSTART, DIO_ON )
+
+						'
+						'	安定チェックル－プ(1ｸﾛｯｸは１回分のAD変換終了)
+						'
+						Do While ( TimDCnt( 0 ) > 0 )
+
+							流量安定待ち処理
+
+						Loop
+
+						'
+						'	ＰＩＤ運転停止 (Ｈｅの停止)
+						'
+						ExDio_Output( MAEdoPIDSTART, DIO_OFF )
+					}
+
+					'
+					'	配管真空引き
+					'
+					DHDTest.VACBproc()
+
+					'
+					'	判定
+					'
+					流量が基準値以下なら Exit Do
+
+					リトライ実施
+				Loop
+
+				測定終了ならここで Exit Do
+
+				'
+				'	ウエハ裏面圧条件待ち処理
+				'
+				DHDTest.waitwbakp
+
+			Loop
+		}
+
+		'
+		'	電極ヘッドの除電を行う
+		'	ＳＤＣ出力電圧を徐々に下げて、ウエハ飛び上がりを小さくする
+		'
+		ESCstop2
+
+	Loop
+
+	' DOX34 EXDIO2 OUT2	RYE2 SV2 MFC 2次側バルブ閉
+	ExDio_Output( EXSdoRYE2, DIO_OFF )
+
+	'
+	'	高圧リレー接続ＯＦＦ
+	'
+	RyHvPos( pol, MES_ESC, CON_OFF )
+
+	＜終了＞
+}
+
+従来仕様 ////////////////////////////////////////////////////////////////
+
+
+Public Function tst3
+{
+
+	' DOX34 EXDIO2 OUT2	RYE2 SV2 MFC 2次側バルブ開
+	ExDio_Output( EXSdoRYE2, DIO_ON )
+
+	'
+	'	ＰＩＤによりＭＦＣ１を制御する
+	'
+	' MFC の SET PT入力を PIDの制御出力と接続
+	ExDio_Output( MAEdoRYFC, DIO_ON )
+
+	'
+	'	RSP（外部入力）
+	'	PIDのセットポイントはPCのアナログ出力で設定する
+	'
+	' PID調節計のSPをアナログ入力に切替える
+	ExDio_Output( MAEdoPIDRSP, DIO_ON )
+
+	'
+	'	Heﾘｰｸ測定時のｳｴｱ裏面圧力をセット
+	'	PID調節計のRSPの設定値をアナログ出力する
+	'
+	ExDa_Output( PIDaoRSP, cvtp2PIDset( HLPRS ) )
+
+	'
+	'	高圧リレー接続
+	'	電極ヘッドとＥＳＣ電源を接続
+	'
+	RyHvMode( pol, MES_ESC )
+	RyHvPos( pol, MES_ESC, dt.t3.posv )
+
+	'
+	'	ＳＤＣ電源電圧ステップ数分のル－プ
+	'
+	Do While dt.t3.dsiz > ntst
+
+		'
+		'	チャンバ内圧力、ウエハ裏面圧が下がるのを待つ
+		'
+		DHDTest.waittstcond3
+
+		'
+		'	電極ヘッドに吸着電圧印加し目標に到達するまで待つ
+		'
+		ESCproc( sdcv1, sdcv2, 30000.0, 7 )
+
+		'
+		'	ウエハ裏面圧開放バルブ SV3(G4) OFF
+		'
+		ExDio_Output( EXSdoRYE3, DIO_OFF )		' 20200901 y.goto MB起動中なので既にOFF
+
+		'
+		'	ｳｴﾊ裏面圧が一定値になる様にPID調節計を使用しHeを制御（安定で測定）
+		'
+		tst3_pid( dt.t3.d( ntst ), ANTtout, 7 )
+		{
+			'
+			'	ＰＩＤ運転スタ－ト
+			'
+			ExDio_Output( MAEdoPIDSTART, DIO_ON )
+
+			'
+			'	Ｈｅ流量が安定しないままタイムアウトした場合の
+			'	リトライループ先頭
+			'
+			Do
+
+				'
+				'	安定チェックル－プ(1ｸﾛｯｸは１回分のAD変換終了)	
+				'
+				Do While ( TimDCnt( 0 ) > 0 )
+
+					流量安定待ち処理
+
+				Loop
+
+				安定待ちタイムアウトならリトライ
+
+			Loop While True
+
+			'
+			'	ＰＩＤ運転停止 (Ｈｅの停止)
+			'
+			ExDio_Output( MAEdoPIDSTART, DIO_OFF )
+		}
+
+		'
+		'	配管真空引き
+		'
+		DHDTest.VACBproc()
+
+		'
+		'	電極ヘッドの除電を行う
+		'
+		ESCstop2
+
+		'
+		'	ウエハ裏面圧条件待ち処理
+		'
+		DHDTest.waitwbakp
+
+	Loop
+
+	' DOX34 EXDIO2 OUT2	RYE2 SV2 MFC 2次側バルブ閉
+	ExDio_Output( EXSdoRYE2, DIO_OFF )
+
+	'
+	'	高圧リレー接続ＯＦＦ
+	'
+	RyHvPos( pol, MES_ESC, CON_OFF )
+}
+
+
+
