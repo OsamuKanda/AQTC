@@ -400,181 +400,284 @@ Module tst3Lib
 
 		'
 		'	裏面圧を1,2,3,4,6kPaまで連続測定に変更
-		’
+		'
 		Do While True
 
-			Dim setpa		As Double
-
-			'
-			'	20201124 追加 y.goto
-			'	VACBproc()で　MAEdoRYFC を OFF にしていたため、2回目以降の検査でPIDの制御がMFCに伝わっていなかった
-			'
-			'	ＰＩＤによりＭＦＣ１を制御する
-			'
-
-			' MFC の SET PT入力を PIDの制御出力と接続
-			ExDio_Output( MAEdoRYFC, DIO_ON )
-			WaitTim( 10 )
-
-			'
-			'	設定圧力 0=1.0[KPa], 1=2.0[KPa], 2=3.0[KPa], 3=4.0[KPa], 4=6.0[KPa]
-			'
+			Dim setpa As Double
+			'▼2024.05.02 TC Kanda (測定有効無効パラメータ追加)
+			'指定の設定圧力の試験の指示が無ければスキップする
 			Select Case bpsel
-			Case 0
-				'1kPa
-				setpa		= 1000.0
-
-			Case 1
-				'2kPa
-				setpa		= 2000.0
-
-			Case 2
-				'3kPa
-				setpa		= 3000.0
-
-			Case 3
-				'4kPa
-				setpa		= 4000.0
-
-			Case 4
-				'6kPa
-				setpa		= 6000.0
-
+				Case 0 '1KPa
+					If Not dat.ptn.Contains("1") Then
+						bpsel = -1
+					End If
+				Case 1 '2KPa
+					If Not dat.ptn.Contains("2") Then
+						bpsel = -1
+					End If
+				Case 2 '3KPa
+					If Not dat.ptn.Contains("3") Then
+						bpsel = -1
+					End If
+				Case 3 '4KPa
+					If Not dat.ptn.Contains("4") Then
+						bpsel = -1
+					End If
+				Case 4 '6KPa
+					If Not dat.ptn.Contains("6") Then
+						bpsel = -1
+					End If
 			End Select
+			If bpsel <> -1 Then
+				'▲2024.05.02 TC Kanda (測定有効無効パラメータ追加)
 
-			' PIDへ目標裏面圧力 DA値 を出力
-			ExDa_Output( PIDaoRSP, cvtp2PIDset( setpa ) )
-			WaitTim( 10 )
-
-			'
-			'	試験ループ (NGの場合は３回までﾘﾄﾗｲ)
-			'
-			nrty			= 0
-
-			Do While ( 3 > nrty )
 
 				'
-				'	20230110 y.goto
+				'	20201124 追加 y.goto
+				'	VACBproc()で　MAEdoRYFC を OFF にしていたため、2回目以降の検査でPIDの制御がMFCに伝わっていなかった
 				'
-				'	本ループ内の tst3_pid() の処理後、VACBproc()が処理される。
-				'	VACBproc()の処理で MAEdoRYFC は OFF される。
-				'	tst3_pid()の処理結果が判定NGの場合 本Loop先頭から処理継続するが、この時 MAEdoRYFC はOFFのまま
-				'	処理してしまうBug有り。
-				'	下記処理を追加する。
+				'	ＰＩＤによりＭＦＣ１を制御する
 				'
+
 				' MFC の SET PT入力を PIDの制御出力と接続
-				ExDio_Output( MAEdoRYFC, DIO_ON )
-				WaitTim( 10 )
-
-				' 20201102 S_Harada リトライ回数追加
-				DHDTest.StatusDisp( 9, 7,　"設定圧力 : " + ( setpa / 1000 ).ToString( "0.0kPa    トライ : " ) +  ( nrty + 1 ).ToString + "回目" )
-
-				' 測定ループ終了フラグ・初期値セット
-				rtn			= -1
+				ExDio_Output(MAEdoRYFC, DIO_ON)
+				WaitTim(10)
 
 				'
-				'	20200220 y.goto トーカロ様対応
-				'	ウエハ裏面圧開放バルブ SV3(G4) OFF
+				'	設定圧力 0=1.0[KPa], 1=2.0[KPa], 2=3.0[KPa], 3=4.0[KPa], 4=6.0[KPa]
 				'
-				ExDio_Output( EXSdoRYE3, DIO_OFF )
-				WaitTim( 100 )
+				Select Case bpsel
+					Case 0
+						'1kPa
+						setpa = 1000.0
+
+					Case 1
+						'2kPa
+						setpa = 2000.0
+
+					Case 2
+						'3kPa
+						setpa = 3000.0
+
+					Case 3
+						'4kPa
+						setpa = 4000.0
+
+					Case 4
+						'6kPa
+						setpa = 6000.0
+
+				End Select
+
+				' PIDへ目標裏面圧力 DA値 を出力
+				ExDa_Output(PIDaoRSP, cvtp2PIDset(setpa))
+				WaitTim(10)
 
 				'
-				'	20201104 y.goto リトライしたとき、SV2 が閉じていたのでここで開くようにした
-				'	DOX34 EXDIO2 OUT2	RYE2 SV2 MFC 2次側バルブ開
+				'	試験ループ (NGの場合は３回までﾘﾄﾗｲ)
 				'
-				ExDio_Output( EXSdoRYE2, DIO_ON )
-				WaitTim( 100 )
+				nrty = 0
 
-				'
-				'	チャンバ内圧力、ウエハ裏面圧が下がるのを待つ
-				'	リトライした時に圧が下がるまで待つ
-				'
-				If						_
-					DHDTest.waittstcond3			_
-					(					_
-						"ウエハ裏面圧が下がるのを待つ",	_
-						vac,				_
-						dt.schuse,			_
-						dt.tmp,				_
-						tprs,				_
-						bakp				_
-					)					_
+				Do While (3 > nrty)
+
+					'
+					'	20230110 y.goto
+					'
+					'	本ループ内の tst3_pid() の処理後、VACBproc()が処理される。
+					'	VACBproc()の処理で MAEdoRYFC は OFF される。
+					'	tst3_pid()の処理結果が判定NGの場合 本Loop先頭から処理継続するが、この時 MAEdoRYFC はOFFのまま
+					'	処理してしまうBug有り。
+					'	下記処理を追加する。
+					'
+					' MFC の SET PT入力を PIDの制御出力と接続
+					ExDio_Output(MAEdoRYFC, DIO_ON)
+					WaitTim(10)
+
+					' 20201102 S_Harada リトライ回数追加
+					DHDTest.StatusDisp(9, 7, "設定圧力 : " + (setpa / 1000).ToString("0.0kPa    トライ : ") + (nrty + 1).ToString + "回目")
+
+					' 測定ループ終了フラグ・初期値セット
+					rtn = -1
+
+					'
+					'	20200220 y.goto トーカロ様対応
+					'	ウエハ裏面圧開放バルブ SV3(G4) OFF
+					'
+					ExDio_Output(EXSdoRYE3, DIO_OFF)
+					WaitTim(100)
+
+					'
+					'	20201104 y.goto リトライしたとき、SV2 が閉じていたのでここで開くようにした
+					'	DOX34 EXDIO2 OUT2	RYE2 SV2 MFC 2次側バルブ開
+					'
+					ExDio_Output(EXSdoRYE2, DIO_ON)
+					WaitTim(100)
+
+					'
+					'	チャンバ内圧力、ウエハ裏面圧が下がるのを待つ
+					'	リトライした時に圧が下がるまで待つ
+					'
+					If _
+					DHDTest.waittstcond3 _
+					(
+						"ウエハ裏面圧が下がるのを待つ",
+						vac,
+						dt.schuse,
+						dt.tmp,
+						tprs,
+						bakp
+					) _
 				Then
 
-					'   20200716 s.harada
-					FrmLog.LogDspAdd( "", "tst3_proc 途中終了", Color.Empty )
+						'   20200716 s.harada
+						FrmLog.LogDspAdd("", "tst3_proc 途中終了", Color.Empty)
 
-					' 中止指示
-					rtn			= -1
+						' 中止指示
+						rtn = -1
 
-					Exit Do
+						Exit Do
 
-				End If
-
-				'
-				'	ｳｴﾊ裏面圧が一定値になる様にPID調節計を使用しHeを制御（安定で測定）
-				'
-				'	20201102 S_Harada AQTC対応で引数変更
-				'sts			= tst3_pid( dt.t3.d( ntst ), ANTtout, 7 )
-				sts			= tst3_pid( dat, ANTtout, 9, bpsel )
-
-
-				'
-				'	20200901 追加 y.goto
-				'	配管真空引き
-				'
-				'	20230110 y.goto この関数内で MAEdoRYFC を OFFしている!
-				'
-				vacs			= DHDTest.VACBproc()
-				If vacs <> 0 Then
-
-					' 試験中止
-					rtn		= -1
-					Exit Do
-
-				End If
-
-				'
-				'	判定
-				'
-				'	bpsel		設定圧力 0=1.0[KPa], 1=2.0[KPa], 2=3.0[KPa], 3=4.0[KPa], 4=6.0[KPa]
-				'	dat.bs		裏面圧力が1.0[KPa]の時のHe流量基準値 (0 < 設定値有りの場合)
-				'	dat.bs2		裏面圧力が2.0[KPa]の時のHe流量基準値 (0 < 設定値有りの場合)
-				'
-				'
-				If sts = 1 Then
+					End If
 
 					'
-					'	Ｈｅ流量安定した
+					'	ｳｴﾊ裏面圧が一定値になる様にPID調節計を使用しHeを制御（安定で測定）
 					'
+					'	20201102 S_Harada AQTC対応で引数変更
+					'sts			= tst3_pid( dt.t3.d( ntst ), ANTtout, 7 )
+					sts = tst3_pid(dat, ANTtout, 9, bpsel)
 
-					' 裏面圧力が 1.0[KPa] で、He流量の基準値が設定してる時
-					If bpsel = 0 And　dat.bs > 0 Then
 
-						' He流量が基準値以下か？
-						If dat.bs >= dat.cm( bpsel ) Then
+					'
+					'	20200901 追加 y.goto
+					'	配管真空引き
+					'
+					'	20230110 y.goto この関数内で MAEdoRYFC を OFFしている!
+					'
+					vacs = DHDTest.VACBproc(DHDTest.TestType.HeLeak, sdcv1, sdcv2)
+					If vacs <> 0 Then
 
-							' 判定ＯＫ
-							dat.okng		= 0
+						' 試験中止
+						rtn = -1
+						Exit Do
 
-							rtn			= 1
+					End If
 
-							Exit Do
+					'
+					'	判定
+					'
+					'	bpsel		設定圧力 0=1.0[KPa], 1=2.0[KPa], 2=3.0[KPa], 3=4.0[KPa], 4=6.0[KPa]
+					'	dat.bs		裏面圧力が1.0[KPa]の時のHe流量基準値 (0 < 設定値有りの場合)
+					'	dat.bs2		裏面圧力が2.0[KPa]の時のHe流量基準値 (0 < 設定値有りの場合)
+					'
+					'
+					If sts = 1 Then
+
+						'
+						'	Ｈｅ流量安定した
+						'
+
+						' 裏面圧力が 1.0[KPa] で、He流量の基準値が設定してる時
+						If bpsel = 0 And dat.bs > 0 Then
+
+							' He流量が基準値以下か？
+							If dat.bs >= dat.cm(bpsel) Then
+
+								' 判定ＯＫ
+								dat.okng = 0
+
+								rtn = 1
+
+								Exit Do
+
+							Else
+
+								' 判定ＮＧ
+								dat.okng = 1
+
+								' 判定NG　リトライ判断
+								'
+								nrty += 1
+
+								If (3 <= nrty) Then
+
+									' ﾘﾄﾗｲｱｳﾄ
+									rtn = 0 '測定終了なら-1
+
+									Exit Do
+
+								End If
+
+								' 20230110 y.goto
+								'
+								'	判定NGの場合 Loop先頭から処理するが、この時 MAEdoRYFC はOFFのまま
+								'	処理してしまうBug有り①。
+								'
+							End If
+
+							' 裏面圧力が 2.0[KPa] で、He流量の基準値が設定してる時
+						ElseIf bpsel = 1 And dat.bs2 > 0 Then
+
+							If dat.bs2 >= dat.cm(bpsel) Then
+
+								'	判定ＯＫ
+								dat.okng2 = 0
+
+								rtn = 1
+
+								Exit Do
+
+							Else
+
+								'	判定ＮＧ
+								dat.okng2 = 1
+
+								' 判定NG　リトライ判断
+								'
+								nrty += 1
+
+								If (3 <= nrty) Then
+
+									' ﾘﾄﾗｲｱｳﾄ
+									rtn = 0 '測定終了なら-1
+
+									Exit Do
+
+								End If
+
+								' 20230110 y.goto
+								'
+								'	判定NGの場合 Loop先頭から処理するが、この時 MAEdoRYFC はOFFのまま
+								'	処理してしまうBug有り②。
+								'
+							End If
 
 						Else
 
-							' 判定ＮＧ
-							dat.okng		= 1
+							'判定なし
+							rtn = 1     '測定継続
 
-							' 判定NG　リトライ判断
+							Exit Do
+
+						End If
+
+					ElseIf sts = -1 Then
+
+						'
+						'	Ｈｅ流量安定しなかった
+						'
+
+						' 裏面圧力が 1.0[KPa] で、He流量基準値が設定してある時又は、
+						' 裏面圧力が 2.0[KPa] で、He流量基準値が設定してある時
+						If (bpsel = 0 And dat.bs > 0) Or (bpsel = 1 And dat.bs2 > 0) Then
+
+							' リトライ判断
 							'
-							nrty			+= 1
+							nrty += 1
 
-							If ( 3 <= nrty ) Then
+							If (3 <= nrty) Then
 
 								' ﾘﾄﾗｲｱｳﾄ
-								rtn			= 0	'測定終了なら-1
+								rtn = 0 '測定終了なら-1
 
 								Exit Do
 
@@ -583,141 +686,68 @@ Module tst3Lib
 							' 20230110 y.goto
 							'
 							'	判定NGの場合 Loop先頭から処理するが、この時 MAEdoRYFC はOFFのまま
-							'	処理してしまうBug有り①。
+							'	処理してしまうBug有り③。
 							'
-						End If
-
-					' 裏面圧力が 2.0[KPa] で、He流量の基準値が設定してる時
-					ElseIf bpsel = 1 And　dat.bs2 > 0 Then
-
-						If dat.bs2 >= dat.cm( bpsel ) Then
-
-							'	判定ＯＫ
-							dat.okng2		= 0
-
-							rtn			= 1
-
-							Exit Do
-
 						Else
 
-							'	判定ＮＧ
-							dat.okng2		= 1
-
-							' 判定NG　リトライ判断
-							'
-							nrty			+= 1
-
-							If ( 3 <= nrty ) Then
-
-								' ﾘﾄﾗｲｱｳﾄ
-								rtn			= 0	'測定終了なら-1
-
-								Exit Do
-
-							End If
-
-							' 20230110 y.goto
-							'
-							'	判定NGの場合 Loop先頭から処理するが、この時 MAEdoRYFC はOFFのまま
-							'	処理してしまうBug有り②。
-							'
-						End If
-
-					Else
-
-						’判定なし
-						rtn			= 1		'測定継続
-
-						Exit Do
-
-					End If
-
-				ElseIf sts = -1  then
-
-					'
-					'	Ｈｅ流量安定しなかった
-					'
-
-					' 裏面圧力が 1.0[KPa] で、He流量基準値が設定してある時又は、
-					' 裏面圧力が 2.0[KPa] で、He流量基準値が設定してある時
-					If ( bpsel = 0 And　dat.bs > 0 ) Or ( bpsel = 1 And　dat.bs2 > 0 ) Then
-
-						' リトライ判断
-						'
-						nrty			+= 1
-
-						If ( 3 <= nrty ) Then
-
-							' ﾘﾄﾗｲｱｳﾄ
-							rtn			= 0	'測定終了なら-1
+							'判定なし
+							rtn = 1     '測定継続
 
 							Exit Do
 
 						End If
 
-						' 20230110 y.goto
-						'
-						'	判定NGの場合 Loop先頭から処理するが、この時 MAEdoRYFC はOFFのまま
-						'	処理してしまうBug有り③。
-						'
 					Else
 
-						’判定なし
-						rtn			= 1		'測定継続
+						' 中止
+						rtn = 0 '測定終了なら-1
 
 						Exit Do
 
 					End If
 
-				Else
+				Loop
 
-					' 中止
-					rtn			= 0	'測定終了なら-1
+				'
+				'	測定値を画面表示
+				'
+				DHDTest.setMesHeGas(ntst)
 
+				If rtn <= 0 Then
+
+					' 測定終了
 					Exit Do
 
 				End If
 
-			Loop
-
-			'
-			'	測定値を画面表示
-			'
-			DHDTest.setMesHeGas( ntst )
-
-			If rtn <= 0 Then
-
-				' 測定終了
-				Exit Do
-
-			End If
-
-			'
-			'	ウエハ裏面圧条件待ち処理
-			'
-			If							_
-				DHDTest.waitwbakp				_
-				(						_
-					"ウエハ裏面圧が下がるのを待つ",		_
-					vac,					_
-					dt.schuse,				_
-					dt.tmp,					_
-					tprs,					_
-					bakp					_
-				)						_
+				'
+				'	ウエハ裏面圧条件待ち処理
+				'
+				If _
+				DHDTest.waitwbakp _
+				(
+					"ウエハ裏面圧が下がるのを待つ",
+					vac,
+					dt.schuse,
+					dt.tmp,
+					tprs,
+					bakp
+				) _
 			Then
 
-				'   20200716 s.harada
-				FrmLog.LogDspAdd( "", "tst3 途中終了：waitwbakp", Color.Empty )
+					'   20200716 s.harada
+					FrmLog.LogDspAdd("", "tst3 途中終了：waitwbakp", Color.Empty)
 
-				' 中止指示
-				rtn			= -1		'測定継続なら0
+					' 中止指示
+					rtn = -1        '測定継続なら0
 
-				Exit Do
+					Exit Do
 
+				End If
+
+				'▼2024.05.02 TC Kanda (測定有効無効パラメータ追加)
 			End If
-
+			'▲2024.05.02 TC Kanda (測定有効無効パラメータ追加)
 			' 設定圧力 0=1.0[KPa], 1=2.0[KPa], 2=3.0[KPa], 3=4.0[KPa], 4=6.0[KPa]
 			bpsel += 1
 
@@ -1049,13 +1079,22 @@ Module tst3Lib
 		WaveSmpStop()
 
 		' 波形サンプリングデータを保存
-		SaveWaveData					_
-		(						_
-			DHDtest.tstNo,				_
-			"C",					_
-			dat.volt1,				_
-			dat.volt2				_
+		'▼2024.04.19 TC Kanda (HEリーク量測定ファイル名が残留吸着力測定印加中とファイル名が被っているため修正)
+		'SaveWaveData _
+		'(
+		'	DHDTest.tstNo,
+		'	"C",
+		'	dat.volt1,
+		'	dat.volt2
+		')
+		SaveWaveData _
+		(
+			DHDTest.tstNo,
+			"A",
+			dat.volt1,
+			dat.volt2
 		)
+		'▲2024.04.19 TC Kanda (HEリーク量測定ファイル名が残留吸着力測定印加中とファイル名が被っているため修正)
 
 		'
 		'	ＭＦＣ電圧とＮ２流量デ－タをセット

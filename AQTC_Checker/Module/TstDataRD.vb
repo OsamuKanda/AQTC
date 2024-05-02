@@ -344,258 +344,284 @@ Module TstDataRD
 				'	サ－モチラ－設定情報
 				'	CH1使用ﾌﾗｸﾞ, CH1設定温度, CH2使用ﾌﾗｸﾞ, CH2設定温度, 配管接続変更有無
 				'
-				Case	"0"
+					Case "0"
 
-					ReDim MESrec.dt( no ).tmp( 1 )
+						ReDim MESrec.dt( no ).tmp( 1 )
 
-					ReDim MESrec.dt( no ).schuse( 1 )
-
-
-					' CH1使用フラグ
-					MESrec.dt( no ).schuse( 0 )	= CInt( aryBuf( 2 ) )
-
-					' CH1設定温度
-					MESrec.dt( no ).tmp( 0 )	= CInt( aryBuf( 3 ) )
-
-					' CH2使用フラグ
-					MESrec.dt( no ).schuse( 1 )	= CInt( aryBuf( 4 ) )
-
-					' CH2設定温度
-					MESrec.dt( no ).tmp( 1 )	= CInt( aryBuf( 5 ) )
-
-					' 配管接続変更有無フラグ
-					MESrec.dt( no ).schchg		= CInt( aryBuf( 6 ) )
+						ReDim MESrec.dt(no).schuse(1)
 
 
-					t1ct				= -1
+						' CH1使用フラグ
+						MESrec.dt(no).schuse(0) = CInt(aryBuf(2))
+
+						' CH1設定温度
+						MESrec.dt(no).tmp(0) = CInt(aryBuf(3))
+
+						' CH2使用フラグ
+						MESrec.dt(no).schuse(1) = CInt(aryBuf(4))
+
+						' CH2設定温度
+						MESrec.dt(no).tmp(1) = CInt(aryBuf(5))
+
+						' 配管接続変更有無フラグ
+						MESrec.dt(no).schchg = CInt(aryBuf(6))
 
 
-				' 電圧印可箇所
-				Case	"1"
-
-					posv			= aryBuf( 2 )
-
-					t1ct			= -1
-
-				' 絶縁耐圧 印可電圧（Ｖ）
-				Case	"2"
-
-					If tMod <> TST_AUTO And tMod <> TST_ZETS Then
-
-						Exit Select
-
-					End If
+						t1ct = -1
 
 
-					If t1ct < 0 Then
+					' 電圧印可箇所
+					Case "1"
 
-						t1ct			= MESrec.dt( no ).t1siz
+						posv = aryBuf(2)
 
-						If t1ct = 0 Then
+						t1ct = -1
 
-							ReDim MESrec.dt( no ).t1( t1ct )
- 
-						Else
+					' 絶縁耐圧 印可電圧（Ｖ）
+					Case "2"
 
-							ReDim Preserve MESrec.dt( no ).t1( t1ct )
+						If tMod <> TST_AUTO And tMod <> TST_ZETS Then
+
+							Exit Select
 
 						End If
 
-						MESrec.dt( no ).t1siz		= t1ct + 1
 
-						MESrec.dt( no ).t1( t1ct ).posv	= posv
+						If t1ct < 0 Then
 
-					End If
+							t1ct = MESrec.dt(no).t1siz
 
+							If t1ct = 0 Then
 
-					Dim ct			As Integer = MESrec.dt( no ).t1( t1ct ).dsiz
+								ReDim MESrec.dt(no).t1(t1ct)
 
+							Else
 
-					If ct = 0 Then
+								ReDim Preserve MESrec.dt(no).t1(t1ct)
 
-						ReDim MESrec.dt( no ).t1( t1ct ).d( ct )
+							End If
 
-					Else
+							MESrec.dt(no).t1siz = t1ct + 1
 
-						ReDim Preserve MESrec.dt( no ).t1( t1ct ).d( ct )
+							MESrec.dt(no).t1(t1ct).posv = posv
 
-					End If
+						End If
 
 
-					MESrec.dt( no ).t1( t1ct ).d( ct ).volt	= CDbl( aryBuf( 2 ) )
+						Dim ct As Integer = MESrec.dt(no).t1(t1ct).dsiz
 
-					MESrec.dt( no ).t1( t1ct ).dsiz		= ct + 1
 
-				' 吸着力 印可電圧（Ｖ）ＣＨ１・ＣＨ２・判定値（kPa以上）
-				Case	"3"
+						If ct = 0 Then
 
-					If tMod <> TST_AUTO And tMod <> TST_KYUC Then
+							ReDim MESrec.dt(no).t1(t1ct).d(ct)
 
-						Exit Select
+						Else
 
-					End If
+							ReDim Preserve MESrec.dt(no).t1(t1ct).d(ct)
 
+						End If
 
-					Dim ct			As Integer = MESrec.dt( no ).t2.dsiz
 
+						MESrec.dt(no).t1(t1ct).d(ct).volt = CDbl(aryBuf(2))
 
-					If ct = 0 Then
+						MESrec.dt(no).t1(t1ct).dsiz = ct + 1
 
-						ReDim MESrec.dt( no ).t2.d( ct )
+					' 吸着力 印可電圧（Ｖ）ＣＨ１・ＣＨ２・判定値（kPa以上）
+					Case "3"
 
-						MESrec.dt( no ).t2.posv		= posv
+						If tMod <> TST_AUTO And tMod <> TST_KYUC Then
 
-					Else
+							Exit Select
 
-						ReDim Preserve MESrec.dt( no ).t2.d( ct )
+						End If
 
-					End If
 
+						Dim ct As Integer = MESrec.dt(no).t2.dsiz
 
-					MESrec.dt( no ).t2.d( ct ).volt1		= CDbl( aryBuf( 2 ) )
 
-					MESrec.dt( no ).t2.d( ct ).volt2		= CDbl( aryBuf( 3 ) )
+						If ct = 0 Then
 
+							ReDim MESrec.dt(no).t2.d(ct)
 
-					If IsNumeric( aryBuf( 4 ) ) Then
+							MESrec.dt(no).t2.posv = posv
 
-						' 20201102 s.harada	判定値を時間に変更
-						'MESrec.dt( no ).t2.d( ct ).bs		= CDbl( aryBuf( 4 ) ) * 1000.0
-						MESrec.dt( no ).t2.d( ct ).bs		= CDbl( aryBuf( 4 ) )
+						Else
 
-					Else
+							ReDim Preserve MESrec.dt(no).t2.d(ct)
 
-						MESrec.dt( no ).t2.d( ct ).bs		= -1.0
+						End If
 
-					End If
 
+						MESrec.dt(no).t2.d(ct).volt1 = CDbl(aryBuf(2))
 
-					ReDim MESrec.dt( no ).t2.d( ct ).pa( 2 )
+						MESrec.dt(no).t2.d(ct).volt2 = CDbl(aryBuf(3))
 
-					'	ヘリウム流量
-					If IsNumeric( aryBuf( 5 ) ) Then
 
-						MESrec.dt( no ).t2.d( ct ).he		= CDbl( aryBuf( 5 ) )
+						If IsNumeric(aryBuf(4)) Then
 
-					Else
+							' 20201102 s.harada	判定値を時間に変更
+							'MESrec.dt( no ).t2.d( ct ).bs		= CDbl( aryBuf( 4 ) ) * 1000.0
+							MESrec.dt(no).t2.d(ct).bs = CDbl(aryBuf(4))
 
-						MESrec.dt( no ).t2.d( ct ).he		= 5.0
+						Else
 
-					End If
+							MESrec.dt(no).t2.d(ct).bs = -1.0
 
+						End If
 
-					' 20201102 s.harada	裏面圧到達時間を確保
-					ReDim MESrec.dt( no ).t2.d( ct ).tmr( 4 )
 
-					MESrec.dt( no ).t2.dsiz		= ct + 1
+						ReDim MESrec.dt(no).t2.d(ct).pa(2)
 
-				' Ｈｅリーク量 印可電圧（Ｖ）ＣＨ１・ＣＨ２・判定値（ml/min以下）
-				Case	"4"
+						'	ヘリウム流量
+						If IsNumeric(aryBuf(5)) Then
 
-					If tMod <> TST_AUTO And tMod <> TST_HGAS Then
+							MESrec.dt(no).t2.d(ct).he = CDbl(aryBuf(5))
 
-						Exit Select
+						Else
 
-					End If
+							MESrec.dt(no).t2.d(ct).he = 5.0
 
+						End If
 
-					Dim ct			As Integer = MESrec.dt( no ).t3.dsiz
 
+						' 20201102 s.harada	裏面圧到達時間を確保
+						ReDim MESrec.dt(no).t2.d(ct).tmr(4)
 
-					If ct = 0 Then
+						MESrec.dt(no).t2.dsiz = ct + 1
 
-						ReDim MESrec.dt( no ).t3.d( ct )
+					' Ｈｅリーク量 印可電圧（Ｖ）ＣＨ１・ＣＨ２・判定値（ml/min以下）
+					Case "4"
 
-						MESrec.dt( no ).t3.posv		= posv
+						If tMod <> TST_AUTO And tMod <> TST_HGAS Then
 
-					Else
+							Exit Select
 
-						ReDim Preserve MESrec.dt( no ).t3.d( ct )
+						End If
 
-					End If
 
-					MESrec.dt( no ).t3.d( ct ).volt1	= CDbl( aryBuf( 2 ) )
+						Dim ct As Integer = MESrec.dt(no).t3.dsiz
 
-					MESrec.dt( no ).t3.d( ct ).volt2	= CDbl( aryBuf( 3 ) )
 
-					If IsNumeric( aryBuf( 4 ) ) Then
+						If ct = 0 Then
 
-						MESrec.dt( no ).t3.d( ct ).bs	= CDbl( aryBuf( 4 ) )
+							ReDim MESrec.dt(no).t3.d(ct)
 
-					Else
+							MESrec.dt(no).t3.posv = posv
 
-						MESrec.dt( no ).t3.d( ct ).bs	= -1.0
+						Else
 
-					End If
+							ReDim Preserve MESrec.dt(no).t3.d(ct)
+
+						End If
+
+						MESrec.dt(no).t3.d(ct).volt1 = CDbl(aryBuf(2))
+
+						MESrec.dt(no).t3.d(ct).volt2 = CDbl(aryBuf(3))
+
+						If IsNumeric(aryBuf(4)) Then
+
+							MESrec.dt(no).t3.d(ct).bs = CDbl(aryBuf(4))
+
+						Else
+
+							MESrec.dt(no).t3.d(ct).bs = -1.0
+
+						End If
+
+						' 20201102 s.harada	AQTC対応で追加
+						'	判定基準２
+						If IsNumeric(aryBuf(5)) Then
+
+							MESrec.dt(no).t3.d(ct).bs2 = CDbl(aryBuf(5))
+
+						Else
+
+							MESrec.dt(no).t3.d(ct).bs2 = -1.5
+
+						End If
+
+
+						'▼2024.05.02 TC Kanda (測定有効無効パラメータ追加)
+
+						'一旦無条件に全試験を有効にする
+						MESrec.dt(no).t3.d(ct).ptn = New List(Of String)
+						MESrec.dt(no).t3.d(ct).ptn.Clear()
+						MESrec.dt(no).t3.d(ct).ptn.Add(1)
+						MESrec.dt(no).t3.d(ct).ptn.Add(2)
+						MESrec.dt(no).t3.d(ct).ptn.Add(3)
+						MESrec.dt(no).t3.d(ct).ptn.Add(4)
+						MESrec.dt(no).t3.d(ct).ptn.Add(6)
+
+						'新しく保存されたパラメータファイルかを確認する
+						If aryBuf.Length >= 8 Then
+							If aryBuf(6).IndexOf("|") >= 0 Then
+								'パイプで区切られた文字列
+								MESrec.dt(no).t3.d(ct).ptn.Clear()
+								MESrec.dt(no).t3.d(ct).ptn = aryBuf(6).Split("|").ToList
+							ElseIf Integer.TryParse(aryBuf(6), Nothing) Then
+								'パイプで区切られていない数値
+								MESrec.dt(no).t3.d(ct).ptn.Clear()
+								MESrec.dt(no).t3.d(ct).ptn.Add(aryBuf(6).Trim())
+							End If
+						End If
+						'▲2024.05.02 TC Kanda (測定有効無効パラメータ追加)
+
+						' 20201102 s.harada	到達時MFC電圧、He流量を確保
+						ReDim MESrec.dt(no).t3.d(ct).mfcvolt(4)
+						ReDim MESrec.dt(no).t3.d(ct).cm(4)
+
+						MESrec.dt(no).t3.dsiz = ct + 1
+
+
 
 					' 20201102 s.harada	AQTC対応で追加
-					'	判定基準２
-					If IsNumeric( aryBuf( 5 ) ) Then
+					' 残留吸着力 印可電圧（Ｖ）ＣＨ１・ＣＨ２・判定値（kPa以上）
+					Case	"5"
 
-						MESrec.dt( no ).t3.d( ct ).bs2		= CDbl( aryBuf( 5 ) ) 
+						If tMod <> TST_AUTO And tMod <> TST_ZKYU Then
 
-					Else
+							Exit Select
 
-						MESrec.dt( no ).t3.d( ct ).bs2		= -1.5
-
-					End If
+						End If
 
 
-					' 20201102 s.harada	到達時MFC電圧、He流量を確保
-					ReDim MESrec.dt( no ).t3.d( ct ).mfcvolt( 4 )
-					ReDim MESrec.dt( no ).t3.d( ct ).cm( 4 )
-
-					MESrec.dt(no).t3.dsiz = ct + 1
+						Dim ct As Integer = MESrec.dt(no).t4.dsiz
 
 
-				' 20201102 s.harada	AQTC対応で追加
-				' 残留吸着力 印可電圧（Ｖ）ＣＨ１・ＣＨ２・判定値（kPa以上）
-				Case	"5"
+						If ct = 0 Then
 
-					If tMod <> TST_AUTO And tMod <> TST_ZKYU Then
+							ReDim MESrec.dt(no).t4.d(ct)
 
-						Exit Select
+							MESrec.dt(no).t4.posv = posv
 
-					End If
+						Else
 
+							ReDim Preserve MESrec.dt(no).t4.d(ct)
 
-					Dim ct			As Integer = MESrec.dt( no ).t4.dsiz
-
-
-					If ct = 0 Then
-
-						ReDim MESrec.dt( no ).t4.d( ct )
-
-						MESrec.dt( no ).t4.posv		= posv
-
-					Else
-
-						ReDim Preserve MESrec.dt( no ).t4.d( ct )
-
-					End If
+						End If
 
 
-					MESrec.dt( no ).t4.d( ct ).volt1	= CDbl( aryBuf( 2 ) )
+						MESrec.dt(no).t4.d(ct).volt1 = CDbl(aryBuf(2))
 
-					MESrec.dt( no ).t4.d( ct ).volt2	= CDbl( aryBuf( 3 ) )
-
-
-					If IsNumeric( aryBuf( 4 ) ) Then
-
-						MESrec.dt( no ).t4.d( ct ).bs	= CDbl( aryBuf( 4 ) )
-
-					Else
-
-						MESrec.dt(no).t4.d(ct).bs = -1.0
-
-					End If
+						MESrec.dt(no).t4.d(ct).volt2 = CDbl(aryBuf(3))
 
 
-					MESrec.dt( no ).t4.dsiz		= ct + 1
+						If IsNumeric(aryBuf(4)) Then
 
-				Case Else
+							MESrec.dt(no).t4.d(ct).bs = CDbl(aryBuf(4))
 
-					WriteLog("", "LG", "テストデータ　該当なし dat=" + rBuf)
+						Else
+
+							MESrec.dt(no).t4.d(ct).bs = -1.0
+
+						End If
+
+
+						MESrec.dt(no).t4.dsiz = ct + 1
+
+					Case Else
+
+						WriteLog("", "LG", "テストデータ　該当なし dat=" + rBuf)
 
 				End Select
 

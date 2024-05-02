@@ -228,6 +228,37 @@ Public Class TestItemDlg
 		' Ｈｅリーク測定・ＳＤＣ電源印加電圧２
 		txtLekV2.Text		= pDtRow( "LEK_VOLT2" )
 
+		'▼ 2024.05.02 TC Kanda （測定有効無効パラメータ追加）
+		If pDtRow("LEK_PTN").ToString.Trim("-") = "" Then
+			ChkPa1k.Checked = True
+			ChkPa2k.Checked = True
+			ChkPa3k.Checked = True
+			ChkPa4k.Checked = True
+			ChkPa6k.Checked = True
+		Else
+			ChkPa1k.Checked = False
+			ChkPa2k.Checked = False
+			ChkPa3k.Checked = False
+			ChkPa4k.Checked = False
+			ChkPa6k.Checked = False
+			For Each pa In pDtRow("LEK_PTN").ToString.Split(",")
+				Select Case pa
+					Case "1"
+						ChkPa1k.Checked = True
+					Case "2"
+						ChkPa2k.Checked = True
+					Case "3"
+						ChkPa3k.Checked = True
+					Case "4"
+						ChkPa4k.Checked = True
+					Case "6"
+						ChkPa6k.Checked = True
+				End Select
+			Next
+
+		End If
+		'▲ 2024.05.02 TC Kanda （測定有効無効パラメータ追加）
+
 		' Ｈｅリーク測定・判定値
 		txtLekBase.Text		= pDtRow( "LEK_BASE" )
 
@@ -426,6 +457,26 @@ Public Class TestItemDlg
 			pDtRow( "LEK_BASE2" )		= txtLekBase2.Text
 
 
+			'▼ 2024.05.02 TC Kanda （測定有効無効パラメータ追加）
+			Dim pa As New List(Of String)
+
+			If ChkPa1k.Checked Then
+				pa.Add(1)
+			End If
+			If ChkPa2k.Checked Then
+				pa.Add(2)
+			End If
+			If ChkPa3k.Checked Then
+				pa.Add(3)
+			End If
+			If ChkPa4k.Checked Then
+				pa.Add(4)
+			End If
+			If ChkPa6k.Checked Then
+				pa.Add(6)
+			End If
+			pDtRow("LEK_PTN") = String.Join(",", pa)
+			'▲ 2024.05.02 TC Kanda （測定有効無効パラメータ追加）
 		End If
 
 		'	20201102 s.harada	AQTC対応追加
@@ -590,6 +641,27 @@ Public Class TestItemDlg
 				pDtRow( "LEK_VOLT2" )	= txtLekV2.Text
 
 			End If
+
+			'▼ 2024.05.02 TC Kanda （測定有効無効パラメータ追加）
+			Dim pa As New List(Of String)
+
+			If ChkPa1k.Checked Then
+				pa.Add(1)
+			End If
+			If ChkPa2k.Checked Then
+				pa.Add(2)
+			End If
+			If ChkPa3k.Checked Then
+				pa.Add(3)
+			End If
+			If ChkPa4k.Checked Then
+				pa.Add(4)
+			End If
+			If ChkPa6k.Checked Then
+				pa.Add(6)
+			End If
+			pDtRow("LEK_PTN") = String.Join(",", pa)
+			'▲ 2024.05.02 TC Kanda （測定有効無効パラメータ追加）
 
 			' Ｈｅリーク測定・判定値
 			'	20201102 s.harada	０設定はスペースに変更する
@@ -989,7 +1061,6 @@ Public Class TestItemDlg
 		End If
 
 	End Sub
-
 
 
 End Class

@@ -452,11 +452,13 @@
 			'
 			'	電極ヘッドに吸着電圧印加し目標に到達するまで待つ
 			'
+			'▼ 2024.04.19 TC Kanda （ウエハ吸着直測定においてESC電源ONは既にありました）
 			If ( ESCproc( dat.volt1, dat.volt2, 30000L, 7 ) ) Then
 
 				Exit Do
 
 			End If
+			'▲ 2024.04.19 TC Kanda （ウエハ吸着直測定においてESC電源ONは既にありました）
 
 
 			'	※ 20200901 本バルブはトーカロ様では未装着
@@ -798,16 +800,16 @@
 			'	20200220 y.goto トーカロ様対応
 			'	ウエハ裏面圧開放バルブ SV3(G4) ON
 			'
-		'
-		'	20200901 y.goto 配管真空引き VACBproc() で実施する
-		'	ExDio_Output( EXSdoRYE3, DIO_ON )
-		'
+			'
+			'	20200901 y.goto 配管真空引き VACBproc() で実施する
+			'	ExDio_Output( EXSdoRYE3, DIO_ON )
+			'
 
 			'
 			'	20200901 追加 y.goto
 			'	配管真空引き
 			'
-			sts			= DHDTest.VACBproc()
+			sts = DHDTest.VACBproc(DHDTest.TestType.Resistance, 0, 0)
 			If sts <> 0 Then
 
 				' 試験中止
@@ -823,7 +825,9 @@
 			'
 			'	吸着を停止する
 			'
-			ESCstop( 2000.0, 7 )
+			'▼2024.04.19 TC Kanda (ESC電源OFFの処理を チャンバ内圧力を下げる前に異動）
+			'ESCstop( 2000.0, 7 )
+			'▲2024.04.19 TC Kanda (ESC電源OFFの処理を チャンバ内圧力を下げる前に異動）
 
 			'
 			'	しばらく待つ
@@ -833,15 +837,17 @@
 			'
 			'	ウエハ裏面圧条件待ち処理
 			'
-			sts			= DHDTest.waitwbakp		_
-			(							_
-				"ウエハ裏面圧が下がるのを待つ",			_
-				vac,						_
-				dt.schuse,					_
-				dt.tmp,						_
-				tprs,						_
-				bakp						_
+			'▼2024.04.11 TC Kanda （無限ループすることがあるらしいので削除）
+			sts = DHDTest.waitwbakp _
+			(
+				"ウエハ裏面圧が下がるのを待つ",
+				vac,
+				dt.schuse,
+				dt.tmp,
+				tprs,
+				bakp
 			)
+			'▲2024.04.11 TC Kanda （無限ループすることがあるらしいので削除）
 
 			'
 			'	波形サンプリング停止

@@ -758,21 +758,21 @@ Module TstDataWT
 
 			Select Case	Sel
 
-			Case	0
+				Case 0
 
-				Buff			= "試験１　大気"
+					Buff = "試験１　大気"
 
-			Case	1
+				Case 1
 
-				Buff			= "試験２　真空"
+					Buff = "試験２　真空"
 
-			Case	2
+				Case 2
 
-				Buff			= "試験３　真空"
+					Buff = "試験３　真空"
 
-			Case Else
+				Case Else
 
-				Buff			= "試験４　真空"
+					Buff = "試験４　真空"
 
 			End Select
 
@@ -985,9 +985,16 @@ Module TstDataWT
 
 					End If
 
+					'▼2024.05.02 TC Kanda (測定有効無効パラメータ追加)
+					Buff += "," + String.Join("|", rowView.Item("LEK_PTN").ToString.Split(","))
+					'▲2024.05.02 TC Kanda (測定有効無効パラメータ追加)
+
 					'	20201102 s.harada	Ｈｅリーク測定・判定値(2kPa)　追加
 					'Buff			+= ",Ｈｅリーク量 印可電圧（Ｖ）ＣＨ１・ＣＨ２・判定値（ml/min以下）"
-					Buff			+= ",Ｈｅリーク量 印可電圧（Ｖ）ＣＨ１・ＣＨ２・判定値1kPa（sccm以下）・判定値2kPa（sccm以下）"
+					'▼2024.05.02 TC Kanda (測定有効無効パラメータ追加)
+					'Buff += ",Ｈｅリーク量 印可電圧（Ｖ）ＣＨ１・ＣＨ２・判定値1kPa（sccm以下）・判定値2kPa（sccm以下）"
+					Buff += ",Ｈｅリーク量 印可電圧（Ｖ）ＣＨ１・ＣＨ２・判定値1kPa（sccm以下）・判定値2kPa（sccm以下）・測定圧"
+					'▲2024.05.02 TC Kanda (測定有効無効パラメータ追加)
 
 					TextFile.WriteLine( Buff )
 

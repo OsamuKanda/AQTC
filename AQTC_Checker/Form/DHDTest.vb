@@ -11,7 +11,12 @@ Imports System.IO
 '*****
 Public Class DHDTest
 
-
+	Public Enum TestType
+		None
+		Resistance
+		HeLeak
+		Adsorption
+	End Enum
 
 	Dim dtZetsuen		As DataTable
 	Dim dtKyucyaku		As DataTable
@@ -3699,7 +3704,10 @@ Public Class DHDTest
 		frm.PrmWTim		= 40 * 60
 
 		' 全条件成立確定時間タイマー値（秒）
-		frm.PrmTcAllOK		= 10
+		'▼ 2024.04.11 条件成立後の待ち時間を１秒に統一
+		'frm.PrmTcAllOK = 10
+		frm.PrmTcAllOK = 1 + 1
+		'▲ 2024.04.11 条件成立後の待ち時間を１秒に統一
 
 		' サーモチラーＣＨ１目標到達判定タイマー値（秒）
 		frm.PrmTcAimChl1	= 20
@@ -3841,7 +3849,10 @@ Public Class DHDTest
 		frm.PrmWTim		= 20 * 60
 
 		' 全条件成立確定時間タイマー値（秒）
-		frm.PrmTcAllOK		= 10
+		'▼ 2024.04.11 条件成立後の待ち時間を１秒に統一
+		'frm.PrmTcAllOK = 10
+		frm.PrmTcAllOK = 1 + 1
+		'▲ 2024.04.11 条件成立後の待ち時間を１秒に統一
 
 		' サーモチラーＣＨ１目標到達判定タイマー値（秒）
 		frm.PrmTcAimChl1	= 10
@@ -3987,7 +3998,10 @@ Public Class DHDTest
 		frm.PrmWTim		= 20 * 60
 
 		' 全条件成立確定時間タイマー値（秒）
-		frm.PrmTcAllOK		= 10
+		'▼ 2024.04.11 条件成立後の待ち時間を１秒に統一
+		'frm.PrmTcAllOK = 10
+		frm.PrmTcAllOK = 1 + 1
+		'▲ 2024.04.11 条件成立後の待ち時間を１秒に統一
 
 		' サーモチラーＣＨ１目標到達判定タイマー値（秒）
 		frm.PrmTcAimChl1	= 10
@@ -4121,7 +4135,10 @@ Public Class DHDTest
 		frm.PrmWTim		= 20 * 60
 
 		' 全条件成立確定時間タイマー値（秒）
-		frm.PrmTcAllOK		= 3
+		'▼ 2024.04.11 条件成立後の待ち時間を１秒に統一
+		'frm.PrmTcAllOK = 3
+		frm.PrmTcAllOK = 1 + 1
+		'▲ 2024.04.11 条件成立後の待ち時間を１秒に統一
 
 		' サーモチラーＣＨ１目標到達判定タイマー値（秒）
 		frm.PrmTcAimChl1	= 10
@@ -4254,7 +4271,10 @@ Public Class DHDTest
 		frm.PrmWTim		= 20 * 60
 
 		' 全条件成立確定時間タイマー値（秒）
-		frm.PrmTcAllOK		= 3
+		'▼ 2024.04.11 条件成立後の待ち時間を１秒に統一
+		'frm.PrmTcAllOK = 3
+		frm.PrmTcAllOK = 1 + 1
+		'▲ 2024.04.11 条件成立後の待ち時間を１秒に統一
 
 		' サーモチラーＣＨ１目標到達判定タイマー値（秒）
 		frm.PrmTcAimChl1	= 10
@@ -4433,7 +4453,10 @@ Public Class DHDTest
 		frm.PrmWTim		= 20 * 60
 
 		' 全条件成立確定時間タイマー値（秒）
-		frm.PrmTcAllOK		= 3
+		'▼ 2024.04.11 条件成立後の待ち時間を１秒に統一
+		'frm.PrmTcAllOK = 3
+		frm.PrmTcAllOK = 1 + 1
+		'▲ 2024.04.11 条件成立後の待ち時間を１秒に統一
 
 		' チャンバ内圧力目標到達判定タイマー値（秒）
 		frm.PrmTcAimCmb		= 10
@@ -4617,64 +4640,66 @@ Public Class DHDTest
 	'	0	条件成立
 	'	!0	試験中止指示
 	'*****
-	Public Function waittsttim				_
-	(							_
-		ByVal msg		As String,		_
-		ByVal tmr		As Long			_
-	)	As Integer
+
+
+	Public Function waittsttim _
+	(
+		ByVal msg As String,
+		ByVal tmr As Long
+	) As Integer
 
 		' 試験開始条件待ちフォーム・クラス
-		Dim frm			As New FrmWaitCdt
-		Dim rtn			As Integer
+		Dim frm As New FrmWaitCdt
+		Dim rtn As Integer
 
-		FrmLog.LogDspAdd				_
-		(						_
-			"",					_
-			"待機時間待ち開始",			_
-			Color.Empty				_
+		FrmLog.LogDspAdd _
+		(
+			"",
+			"待機時間待ち開始",
+			Color.Empty
 		)
 
-		frm.Text		= msg
+		frm.Text = msg
 
 		' 総合待ち時間 (秒)
-		frm.PrmWTim		= 20 * 60
+		frm.PrmWTim = 20 * 60
 
 		' 全条件成立確定時間タイマー値（秒）
-		frm.PrmTcAllOK		= tmr
+		frm.PrmTcAllOK = tmr
 
 		' サーモチラーＣＨ１目標到達判定タイマー値（秒）
-		frm.PrmTcAimChl1	= 0
+		frm.PrmTcAimChl1 = 0
 
 		' サーモチラーＣＨ２目標到達判定タイマー値（秒）
-		frm.PrmTcAimChl2	= 0
+		frm.PrmTcAimChl2 = 0
 
 		' チャンバ内圧力目標到達判定タイマー値（秒）
-		frm.PrmTcAimCmb		= 0
+		frm.PrmTcAimCmb = 0
 
 		' ウエハ裏面圧力目標到達判定タイマー値（秒）
-		frm.PrmTcAimWbp		= 0
+		frm.PrmTcAimWbp = 0
 
 		'
 		'	条件チェックする、しないの指示をセット　 ( "" を指定するとチェックしない )
 		'
 
 		' サーモチラーＣＨ１設定温度	チェックしない
-		frm.PrmAimChl1		= ""
+		frm.PrmAimChl1 = ""
 
 		' サーモチラーＣＨ２設定温度	チェックしない
-		frm.PrmAimChl2		= ""
+		frm.PrmAimChl2 = ""
 
 		' 電極ヘッド温度安定待ち	チェックしない
-		frm.PrmTcAimHed		= ""
+		frm.PrmTcAimHed = ""
 
 		' チャンバ内圧力		チェックしない
-		frm.PrmAimCmb		= ""
+		frm.PrmAimCmb = ""
 
 		' ウエハ裏面圧力		チェックしない
-		frm.PrmAimWbp		= ""
+		frm.PrmAimWbp = ""
 
 		' 20200326 追加 y.goto
-		frm.PrmMode		= 0
+		frm.PrmMode = 0
 
 		'
 		'	条件成立待ちウインドウ表示
@@ -4686,30 +4711,30 @@ Public Class DHDTest
 		'
 		Do While frm.FrmWaitCdtClose = 0
 
-			Application.Doevents()
+			Application.DoEvents()
 
 		Loop
 
 		If frm.StsFrmWaitCdt Then
 
 			' 試験中止が選択された
-			rtn			= -1
+			rtn = -1
 
 		Else
 
 			' 条件成立
-			rtn			= 0
+			rtn = 0
 
 		End If
 
-		FrmLog.LogDspAdd				_
-		(						_
-			"",					_
-			"待機時間待ち終了",			_
-			Color.Empty				_
+		FrmLog.LogDspAdd _
+		(
+			"",
+			"待機時間待ち終了",
+			Color.Empty
 		)
 
-		return rtn
+		Return rtn
 
 	End Function
 
@@ -4746,7 +4771,10 @@ Public Class DHDTest
 		frm.PrmWTim		= 20 * 60
 
 		' 全条件成立確定時間タイマー値（秒）
-		frm.PrmTcAllOK		= 3
+		'▼ 2024.04.11 条件成立後の待ち時間を１秒に統一
+		'frm.PrmTcAllOK = 3
+		frm.PrmTcAllOK = 1 + 1
+		'▲ 2024.04.11 条件成立後の待ち時間を１秒に統一
 
 		' サーモチラーＣＨ１目標到達判定タイマー値（秒）
 		frm.PrmTcAimChl1	= 5
@@ -5239,78 +5267,81 @@ Public Class DHDTest
 	'	0	正常終了
 	'	!= 0	試験中止
 	'*****
-	Public Function VACBproc() As Integer
+	'▼2024.04.19 TC Kanda （真空排気シーケンス内でESC電源OFF）
+	'Public Function VACBproc() As Integer
+	Public Function VACBproc(testType As TestType, sdcv1 As Double, sdcv2 As Double) As Integer
+		'▲2024.04.19 TC Kanda （真空排気シーケンス内でESC電源OFF）
 
-		Dim sts			As Integer
-		Dim schflg( 2 )		As Integer
-		Dim temp( 2 )		As Double
-		Dim rtn			As Integer
-		Dim msg			As String
-		Dim bkp			As Double
+		Dim sts As Integer
+		Dim schflg(2) As Integer
+		Dim temp(2) As Double
+		Dim rtn As Integer
+		Dim msg As String
+		Dim bkp As Double
 
 		' 戻り値初期値セット
-		rtn			= -1
+		rtn = -1
 
 		Do
 
-			schflg( 0 )		= 0
-			schflg( 1 )		= 0
+			schflg(0) = 0
+			schflg(1) = 0
 
-			temp( 0 )		= 0.0
-			temp( 1 )		= 0.0
+			temp(0) = 0.0
+			temp(1) = 0.0
 
-			FrmLog.LogDspAdd( "", "VACBproc(1) <<<< 配管真空引き動作開始", Color.Empty )
+			FrmLog.LogDspAdd("", "VACBproc(1) <<<< 配管真空引き動作開始", Color.Empty)
 
 			'
 			'	バルブ初期値
 			'
 
 			' MV=開 SV1=開 RYE1=ON DOX33=ON
-			ExDio_Output( EXSdoRYE1,	DIO_ON )
+			ExDio_Output(EXSdoRYE1, DIO_ON)
 
 			' G1=閉 SV2=閉 RYE2=OFF DOX34=OFF
-			ExDio_Output( EXSdoRYE2,	DIO_OFF )
+			ExDio_Output(EXSdoRYE2, DIO_OFF)
 
 			' G4=開 SV3=閉 RYE3=ON DOX35=ON
-			ExDio_Output( EXSdoRYE3,	DIO_OFF )
+			ExDio_Output(EXSdoRYE3, DIO_OFF)
 
 			' LV=閉 SV4=OFF RYE4=OFF DOX36=OFF
-			ExDio_Output( EXSdoRYE4,	DIO_OFF )
+			ExDio_Output(EXSdoRYE4, DIO_OFF)
 
 			'
 			'	MFC1の流量設定を０にする
 			'
 
 			' MFC1の SET PT入力を パソコンＡＯと接続
-			ExDio_Output( MAEdoRYFC, DIO_OFF )
+			ExDio_Output(MAEdoRYFC, DIO_OFF)
 
 			' MFC1強制OPEN を解除
-			ExDio_Output( MAEdoFOPN, DIO_OFF )
+			ExDio_Output(MAEdoFOPN, DIO_OFF)
 
 			' MFC1強制CLOSE を解除
-			ExDio_Output( MAEdoFCLS, DIO_OFF )
+			ExDio_Output(MAEdoFCLS, DIO_OFF)
 
 			' MFC1流量設定信号電圧を０
-			AoPutV( MFCaoSETPT1, 0.0 )
+			AoPutV(MFCaoSETPT1, 0.0)
 
 			'
 			'	真空ポンプの起動 (DP ON)
 			'
-			FrmLog.LogDspAdd( "", "VACBproc(2) DPスタート", Color.Empty )
-			ExDio_Output( MAEdoPUMP, DIO_ON )
+			FrmLog.LogDspAdd("", "VACBproc(2) DPスタート", Color.Empty)
+			ExDio_Output(MAEdoPUMP, DIO_ON)
 
 			'
 			'	20201008 y.goto ウエハ裏面圧判定値を 20[Pa] -> 50[Pa] に変更
 			'	CM <= 50 [Pa] ?
 			'	配管、ウエハ裏面圧 <= 50.0 [Pa] 判断
 			'
-			bkp		= FrmGraph.MesBkp
+			bkp = FrmGraph.MesBkp
 			If FrmGraph.MesBkp <= 50.0 Then
 
 				'
 				'	CM (ウエハ裏面圧)は 50[[Pa] 以下
 				'
-				FrmLog.LogDspAdd( "", "VACBproc(3) CM <= 50 [Pa]", Color.Empty )
+				FrmLog.LogDspAdd("", "VACBproc(3) CM <= 50 [Pa]", Color.Empty)
 
 			Else
 
@@ -5318,38 +5349,38 @@ Public Class DHDTest
 				'	CM > 50 [Pa]
 				'	ウエハ裏面圧は 50[[Pa] より大きい
 				'
-				msg		= "VACBproc(4) CM > 50[Pa]" + " "
-				FrmLog.LogDspAdd( "", msg + "1) Start", Color.Empty )
+				msg = "VACBproc(4) CM > 50[Pa]" + " "
+				FrmLog.LogDspAdd("", msg + "1) Start", Color.Empty)
 
 				'
 				'	MV閉
 				'
 				' SV1=閉 RYE1=OFF DOX33=OFF
-				FrmLog.LogDspAdd( "", msg + "2) MV閉", Color.Empty )
-				ExDio_Output( EXSdoRYE1, DIO_OFF )
+				FrmLog.LogDspAdd("", msg + "2) MV閉", Color.Empty)
+				ExDio_Output(EXSdoRYE1, DIO_OFF)
 
 				'
 				'	MB OFF
 				'
 				' MB=OFF R2=OFF DOX38=OFF
-				FrmLog.LogDspAdd( "", msg + "3) MB停止", Color.Empty )
-				ExDio_Output( EXSdoMBP,	DIO_OFF )
+				FrmLog.LogDspAdd("", msg + "3) MB停止", Color.Empty)
+				ExDio_Output(EXSdoMBP, DIO_OFF)
 
 				'
 				'	待機 5 sec
 				'
 				' 待機 5 sec
-				FrmLog.LogDspAdd( "", msg + "4) 待機 5 sec", Color.Empty )
+				FrmLog.LogDspAdd("", msg + "4) 待機 5 sec", Color.Empty)
 
 				' 指定時間待ち処理
-				sts		= waittsttim				_
-				(							_
-					"真空排気動作・待機時間待ち",			_
-					5						_
+				sts = waittsttim _
+				(
+					"真空排気動作・待機時間待ち",
+					5
 				)
 				If sts Then
 
-					FrmLog.LogDspAdd( "", msg + " 5) 試験中止", Color.Empty )
+					FrmLog.LogDspAdd("", msg + " 5) 試験中止", Color.Empty)
 
 					Exit Do
 
@@ -5359,54 +5390,69 @@ Public Class DHDTest
 				'	G4開
 				'
 				' ウエハ裏面圧開放バルブ SV3(G4) ON
-				FrmLog.LogDspAdd( "", msg + "6) G4開", Color.Empty )
-				ExDio_Output( EXSdoRYE3, DIO_ON )
+				FrmLog.LogDspAdd("", msg + "6) G4開", Color.Empty)
+				ExDio_Output(EXSdoRYE3, DIO_ON)
 
 				'
 				'	G1開
 				'
 				' SV2=開 RYE2=ON DOX34=ON
-				FrmLog.LogDspAdd( "", msg + "7) G1開", Color.Empty )
-				ExDio_Output( EXSdoRYE2, DIO_ON )
+				FrmLog.LogDspAdd("", msg + "7) G1開", Color.Empty)
+				ExDio_Output(EXSdoRYE2, DIO_ON)
 
 				'
 				'	20201008 y.goto ウエハ裏面圧判定値を 20[Pa] -> 30[Pa] に変更
 				'	CM (配管・ウエハ裏面圧) <= 30Pa になるのを待つ
 				'	CMの圧力値で判断
 				'
-				FrmLog.LogDspAdd( "", msg + "8) 配管・ウエハ裏面圧 <= 30 [Pa] 待ち開始", Color.Empty )
+				FrmLog.LogDspAdd("", msg + "8) 配管・ウエハ裏面圧 <= 30 [Pa] 待ち開始", Color.Empty)
 
-				sts			= waitwbakp				_
-				(								_
-					"真空排気動作・配管・ウエハ裏面圧 30 [Pa] 到達待ち",	_
-					1,							_
-					schflg,							_
-					temp,							_
-					0.0,							_
-					30.0							_
+				sts = waitwbakp _
+				(
+					"真空排気動作・配管・ウエハ裏面圧 30 [Pa] 到達待ち",
+					1,
+					schflg,
+					temp,
+					0.0,
+					30.0
 				)
 				If sts Then
 
-					FrmLog.LogDspAdd( "", msg + " 9) 試験中止", Color.Empty )
+					FrmLog.LogDspAdd("", msg + " 9) 試験中止", Color.Empty)
 
 					Exit Do
 
 				End If
-				FrmLog.LogDspAdd( "", msg + "10) 配管・ウエハ裏面圧 CM <= 30 [Pa] 待ち終了", Color.Empty )
+				FrmLog.LogDspAdd("", msg + "10) 配管・ウエハ裏面圧 CM <= 30 [Pa] 待ち終了", Color.Empty)
+
+				'▼2024.04.19 TC Kanda (ESC電源OFFの処理を チャンバ内圧力を下げる前に異動）
+				Select Case (testType)
+					Case TestType.None
+					Case TestType.Resistance
+						'ウエハ吸着テストの場合
+						ESCstop(2000.0, 7)
+					Case TestType.HeLeak
+						'Heリークテストの場合
+						ESCstop2(sdcv1, sdcv2, 3000.0, 7)
+					Case TestType.Adsorption
+						'残留吸着力測定は独自の排気シーケンスがある
+						'配管真空引きの後ESC電源のOFFが無い
+				End Select
+				'▲2024.04.19 TC Kanda (ESC電源OFFの処理を チャンバ内圧力を下げる前に異動）
 
 				'
 				'	G1閉
 				'
 				' SV2=閉 RYE2=OFF DOX34=OFF
-				FrmLog.LogDspAdd( "", msg + "11) G1閉", Color.Empty )
-				ExDio_Output( EXSdoRYE2, DIO_OFF )
+				FrmLog.LogDspAdd("", msg + "11) G1閉", Color.Empty)
+				ExDio_Output(EXSdoRYE2, DIO_OFF)
 
 				'
 				'	G4閉
 				'
 				' ウエハ裏面圧開放バルブ SV3(G4) OFF
-				FrmLog.LogDspAdd( "", msg + "12) G4閉", Color.Empty )
-				ExDio_Output( EXSdoRYE3, DIO_OFF )
+				FrmLog.LogDspAdd("", msg + "12) G4閉", Color.Empty)
+				ExDio_Output(EXSdoRYE3, DIO_OFF)
 
 			End If
 
@@ -5414,17 +5460,17 @@ Public Class DHDTest
 			'	待機 5 sec
 			'
 			' 待機 5 sec
-			FrmLog.LogDspAdd( "", "VACBproc(5) 待機 5 sec", Color.Empty )
+			FrmLog.LogDspAdd("", "VACBproc(5) 待機 5 sec", Color.Empty)
 
 			' 指定時間待ち処理
-			sts		= waittsttim				_
-			(							_
-				"真空排気動作・待機時間待ち",			_
-				5						_
+			sts = waittsttim _
+			(
+				"真空排気動作・待機時間待ち",
+				5
 			)
 			If sts Then
 
-				FrmLog.LogDspAdd( "", "VACBproc(6) 試験中止", Color.Empty )
+				FrmLog.LogDspAdd("", "VACBproc(6) 試験中止", Color.Empty)
 
 				Exit Do
 
@@ -5434,52 +5480,52 @@ Public Class DHDTest
 			'	MV開
 			'
 			' SV1=開 RYE1=ON DOX33=ON
-			FrmLog.LogDspAdd( "", "VACBproc(7) MV開", Color.Empty )
-			ExDio_Output( EXSdoRYE1, DIO_ON )
+			FrmLog.LogDspAdd("", "VACBproc(7) MV開", Color.Empty)
+			ExDio_Output(EXSdoRYE1, DIO_ON)
 
 			'
 			'	2400[Pa] => PIG になるのを待つ
 			'	念のためMB起動条件の下限を設定
 			'
-			FrmLog.LogDspAdd( "", "VACBproc(8) チャンバ圧 <= 2400.0 [Pa] 待ち開始", Color.Empty )
+			FrmLog.LogDspAdd("", "VACBproc(8) チャンバ圧 <= 2400.0 [Pa] 待ち開始", Color.Empty)
 
 			' チャンバ圧条件待ち処理
-			sts			= waitwchmp			_
-			(							_
-				"真空排気動作・チャンバ内圧到達待ち",		_
-				2400.0						_
+			sts = waitwchmp _
+			(
+				"真空排気動作・チャンバ内圧到達待ち",
+				2400.0
 			)
 
 			If sts Then
 
-				FrmLog.LogDspAdd( "", "VACBproc(9) 試験中止", Color.Empty )
+				FrmLog.LogDspAdd("", "VACBproc(9) 試験中止", Color.Empty)
 
 				Exit Do
 
 			End If
 
-			FrmLog.LogDspAdd( "", "VACBproc(10) チャンバ圧 <= 2400.0 [Pa] 待ち終了", Color.Empty )
+			FrmLog.LogDspAdd("", "VACBproc(10) チャンバ圧 <= 2400.0 [Pa] 待ち終了", Color.Empty)
 
 			'
 			'	MB ON
 			'
 			' MB=ON R2=ON DOX38=ON
-			FrmLog.LogDspAdd( "", "VACBproc(11) MB起動", Color.Empty )
-			ExDio_Output( EXSdoMBP,	DIO_ON )
+			FrmLog.LogDspAdd("", "VACBproc(11) MB起動", Color.Empty)
+			ExDio_Output(EXSdoMBP, DIO_ON)
 
 			'
 			'	真空排気完了
 			'
-			FrmLog.LogDspAdd( "", "VACBproc() >>>> 真空排気動作終了", Color.Empty )
+			FrmLog.LogDspAdd("", "VACBproc() >>>> 真空排気動作終了", Color.Empty)
 
 			' 正常終了
-			rtn		= 0
+			rtn = 0
 
 			Exit Do
 
 		Loop
 
-		Return( rtn )
+		Return (rtn)
 
 	End Function
 
@@ -5892,13 +5938,13 @@ Public Class DHDTest
 	'*****
 	'	検査実行
 	'*****
-	Private Function tst_proc			_
-	(						_
-		ByVal vac		As Integer,	_
-		ByRef dt		As DTREC,	_
-		ByVal tprs		As Double,	_
-		ByVal bakp		As Double	_
-	)	As Integer
+	Private Function tst_proc _
+	(
+		ByVal vac As Integer, _ '★真空引きするか？
+		ByRef dt As DTREC,      '
+		ByVal tprs As Double,
+		ByVal bakp As Double
+	) As Integer
 
 		'vac;		真空設定
 		'		0:      大気圧
@@ -5907,8 +5953,8 @@ Public Class DHDTest
 		'tprs;		検査条件・真空圧
 		'bakp;		吸着停止する際の裏面圧
 
-		Dim rtn			As Integer
-		Dim sts			As Integer
+		Dim rtn As Integer
+		Dim sts As Integer
 
 
 
@@ -5932,7 +5978,7 @@ Public Class DHDTest
 
 
 		' 戻り値初期値セット
-		rtn			= -1
+		rtn = -1
 
 		Do
 
@@ -5943,7 +5989,7 @@ Public Class DHDTest
 
 				' 20200323追加
 				' 真空引き処理
-				If VACproc( dt.schuse ) Then
+				If VACproc(dt.schuse) Then
 
 					' 試験中止
 					Exit Do
@@ -5955,17 +6001,17 @@ Public Class DHDTest
 			'
 			'	サ－モチラ－の温度設定
 			'
-			SCRSetTmp( dt.schchg, dt.schuse, dt.tmp )
+			SCRSetTmp(dt.schchg, dt.schuse, dt.tmp)
 
 			'
 			'	試験開始条件待ち１
 			'
-			sts			= waittstcond1			_
-			(							_
-				vac,						_
-				dt,						_
-				tprs,						_
-				bakp						_
+			sts = waittstcond1 _
+			(
+				vac,
+				dt,
+				tprs,
+				bakp
 			)
 
 			If sts Then
@@ -5978,15 +6024,15 @@ Public Class DHDTest
 			'
 			'	絶縁抵抗試験
 			'
-			If ( dt.t1siz > 0 ) Then
+			If (dt.t1siz > 0) Then
 
-				If					_
-					tst1				_
-					(				_
-						dt,			_
-						ESCmd,			_
-						vac,			_
-						tprs			_
+				If _
+					tst1 _
+					(
+						dt,
+						ESCmd,
+						vac,
+						tprs
 					) < 0 Then
 
 					Exit Do
@@ -5995,43 +6041,74 @@ Public Class DHDTest
 
 			End If
 
-			'
-			'	ｳｴﾊ吸着力測定
-			'
-			If ( dt.t2.dsiz > 0 ) Then
+			'▼2024.05.02 TC Kanda (テスト順を入れ替え)
+			''
+			''	ｳｴﾊ吸着力測定
+			''
+			'If (dt.t2.dsiz > 0) Then
 
-			'	20201102 s.harada
-			'	ウエハ裏面圧力リミット値は未使用
-			'	測定の上限時間を追加
-				If tst2( vac, dt, ESCmd, tprs, 0, bakp, PrmMaxTim ) Then
-				'If tst2( vac, dt, ESCmd, tprs, BPRS, bakp ) Then
+			'	'	20201102 s.harada
+			'	'	ウエハ裏面圧力リミット値は未使用
+			'	'	測定の上限時間を追加
+			'	If tst2(vac, dt, ESCmd, tprs, 0, bakp, PrmMaxTim) Then
+			'		'If tst2( vac, dt, ESCmd, tprs, BPRS, bakp ) Then
 
-					Exit Do
+			'		Exit Do
 
-				End If
+			'	End If
 
-			End If
+			'End If
+
+			''
+			''	Ｈｅリーク量測定
+			''	
+			'If (dt.t3.dsiz > 0) Then
+
+			'	If tst3(vac, dt, ESCmd, tprs, bakp) Then
+
+			'		Exit Do
+
+			'	End If
+
+			'End If
 
 			'
 			'	Ｈｅリーク量測定
 			'	
-			If ( dt.t3.dsiz > 0 ) Then
+			If (dt.t3.dsiz > 0) Then
 
-				If tst3( vac, dt, ESCmd, tprs, bakp ) Then
+				If tst3(vac, dt, ESCmd, tprs, bakp) Then
 
 					Exit Do
 
 				End If
 
 			End If
+			'
+			'	ｳｴﾊ吸着力測定
+			'
+			If (dt.t2.dsiz > 0) Then
+
+				'	20201102 s.harada
+				'	ウエハ裏面圧力リミット値は未使用
+				'	測定の上限時間を追加
+				If tst2(vac, dt, ESCmd, tprs, 0, bakp, PrmMaxTim) Then
+					'If tst2( vac, dt, ESCmd, tprs, BPRS, bakp ) Then
+
+					Exit Do
+
+				End If
+
+			End If
+			'▲2024.05.02 TC Kanda (テスト順を入れ替え)
 
 			' 20200716 s.harada
 			'
 			'	残留吸着量測定
 			'	
-			If ( dt.t4.dsiz > 0 ) Then
+			If (dt.t4.dsiz > 0) Then
 
-				If tst4( vac, dt, ESCmd, tprs, bakp ) Then
+				If tst4(vac, dt, ESCmd, tprs, bakp) Then
 
 					Exit Do
 
@@ -6039,7 +6116,7 @@ Public Class DHDTest
 
 			End If
 
-			rtn			= 0
+			rtn = 0
 
 			Application.DoEvents()
 

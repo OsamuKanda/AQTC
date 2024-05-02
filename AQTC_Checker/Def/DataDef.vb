@@ -244,6 +244,10 @@ Module DataDef
 		'
 		Public volt2		As Double
 
+		'▼2024.05.02 TC Kanda (測定有効無効パラメータ追加)
+		Public ptn As List(Of String)
+		'▲2024.05.02 TC Kanda (測定有効無効パラメータ追加)
+
 		'
 		'	測定値・Ｈｅリーク量
 		'	ＭＦＣ流量モニタ信号電圧値
@@ -279,7 +283,7 @@ Module DataDef
 
 		Public okng2		As Integer
 
-	'	20201102 s.harada	bpは検査方法変更で削除
+		'	20201102 s.harada	bpは検査方法変更で削除
 		'   20200716 s.harada
 		'	ウエハ裏面圧 トーカロ仕様追加
 		'

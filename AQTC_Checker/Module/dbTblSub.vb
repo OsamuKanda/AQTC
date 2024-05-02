@@ -316,9 +316,9 @@ Module dbTblSub
 				'   20201102 s.harada	トーカロで追加
 				dtWorkRow( "HE_FLOW" )		= .t2.d( i ).he.ToString( "0." )
 
-				If .t2.d( i ).bs <= 0 Then
+				If .t2.d(i).bs <= 0 Then
 
-					dtWorkRow( "H_BASE" )		= "-"
+					dtWorkRow("H_BASE") = "-"
 
 				Else
 
@@ -397,15 +397,37 @@ Module dbTblSub
 				End If
 
 				'	20201102 s.harada	変定期準２を追加（設定圧力2kpa）
-				If .t3.d( i ).bs2 <= 0 Then
+				If .t3.d(i).bs2 <= 0 Then
 
-					dtWorkRow( "H_BASE2" )		= "-"
+					dtWorkRow("H_BASE2") = "-"
 
 				Else
 
-					dtWorkRow( "H_BASE2" )		= .t3.d( i ).bs2.ToString( "0.0 以下" )
+					dtWorkRow("H_BASE2") = .t3.d(i).bs2.ToString("0.0 以下")
 
 				End If
+
+				'▼ 2024.05.02 TC Kanda （測定有効無効パラメータ追加）
+				dtWorkRow("LEAK") = "-"
+				dtWorkRow("LEAK2") = "-"
+				dtWorkRow("LEAK3") = "-"
+				dtWorkRow("LEAK4") = "-"
+				dtWorkRow("LEAK6") = "-"
+				For Each ptn In .t3.d(i).ptn
+					Select Case ptn
+						Case "1"
+							dtWorkRow("LEAK") = ""
+						Case "2"
+							dtWorkRow("LEAK2") = ""
+						Case "3"
+							dtWorkRow("LEAK3") = ""
+						Case "4"
+							dtWorkRow("LEAK4") = ""
+						Case "6"
+							dtWorkRow("LEAK6") = ""
+					End Select
+				Next
+				'▲ 2024.05.02 TC Kanda （測定有効無効パラメータ追加）
 
 				'	20201102 s.harada	判定結果２を追加
 
@@ -851,8 +873,12 @@ Module dbTblSub
 			' Heリーク印加電圧 CH2
 			.Add("LEK_VOLT2", Type.GetType("System.String"))
 
+			'▼ 2024.05.02 TC Kanda （測定有効無効パラメータ追加）
+			.Add("LEK_PTN", Type.GetType("System.String"))
+			'▲ 2024.05.02 TC Kanda （測定有効無効パラメータ追加）
+
 			'	20201102 s.harada	検査方法変更で削除
-		'	20200716 s.harada　トーカロ対応で追加
+			'	20200716 s.harada　トーカロ対応で追加
 			' Heリーク裏面圧
 			'.Add( "LEK_BP", Type.GetType( "System.String" ) )
 
@@ -1091,16 +1117,21 @@ Module dbTblSub
 
 							End If
 							dtWorkRow( "LEK_BASE2" )		= .t3.d( j ).bs2.ToString( "0.0" )
-							If .t3.d( j ).bs2 > 0 Then
+							If .t3.d(j).bs2 > 0 Then
 
-								dtWorkRow( "LEK_BASE2" )	= .t3.d( j ).bs2.ToString( "0.0" )
+								dtWorkRow("LEK_BASE2") = .t3.d(j).bs2.ToString("0.0")
 
 							Else
 
-								dtWorkRow( "LEK_BASE2" )	= " "
+								dtWorkRow("LEK_BASE2") = " "
 
 							End If
-
+							'▼2024.05.02 TC Kanda (測定有効無効パラメータ追加)
+							dtWorkRow("LEK_PTN") = String.Join(",", .t3.d(j).ptn)
+							If dtWorkRow("LEK_PTN") = "" Then
+								dtWorkRow("LEK_PTN") = "-"
+							End If
+							'▲2024.05.02 TC Kanda (測定有効無効パラメータ追加)
 
 						Else
 
@@ -1115,6 +1146,9 @@ Module dbTblSub
 							'	20201102 s.harada	Ｈｅリーク測定・判定値(2kPa)　追加
 							dtWorkRow( "LEK_BASE2" )	= "-"
 
+							'▼2024.05.02 TC Kanda (測定有効無効パラメータ追加)
+							dtWorkRow("LEK_PTN") = "-"
+							'▲2024.05.02 TC Kanda (測定有効無効パラメータ追加)
 						End If
 
 					Else
@@ -1130,6 +1164,9 @@ Module dbTblSub
 						'	20201102 s.harada	Ｈｅリーク測定・判定値(2kPa)　追加
 						dtWorkRow( "LEK_BASE2" )	= "-"
 
+						'▼2024.05.02 TC Kanda (測定有効無効パラメータ追加)
+						dtWorkRow("LEK_PTN") = "-"
+						'▲2024.05.02 TC Kanda (測定有効無効パラメータ追加)
 					End If
 
 

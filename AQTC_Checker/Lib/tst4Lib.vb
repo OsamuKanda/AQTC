@@ -153,7 +153,7 @@ Module tst4Lib
 
 			FrmLog.LogDspAdd( "", "tst4 開始 " + ( ntst + 1 ).ToString + "/" + dt.t4.dsiz.ToString, Color.Empty )
 
-			'
+			'stop
 			'	残留吸着力測定実施
 			'
 			sts			= tst4_prc( vac, dt, dt.t4.d( ntst ), pol, tprs, bakp, ntst )
@@ -943,20 +943,41 @@ Module tst4Lib
 		WaitTim( 200 )
 
 		' 波形サンプリングデータを保存
-		SaveWaveData						_
-		(							_
-			DHDTest.tstNo,					_
-			"D" + ntst.ToString(),				_
-			dat.volt1,					_
-			dat.volt2					_
-		)
+		'▼2024.04.19 TC Kanda (印加前と印加後のファイル名が同じなので変更)
+		'SaveWaveData _
+		'(
+		'	DHDTest.tstNo,
+		'	"D" + ntst.ToString(),
+		'	dat.volt1,
+		'	dat.volt2
+		')
+		If tsel = 0 Then
+			'印加前
+			SaveWaveData _
+			(
+				DHDTest.tstNo,
+				"C" + ntst.ToString(),
+				dat.volt1,
+				dat.volt2
+			)
+		Else
+			'印加後
+			SaveWaveData _
+			(
+				DHDTest.tstNo,
+				"E" + ntst.ToString(),
+				dat.volt1,
+				dat.volt2
+			)
+		End If
+		'▲2024.04.19 TC Kanda (印加前と印加後のファイル名が同じなので変更)
 
 		DHDTest.StatusClear( 9, 6 )
 
 		'
 		'	配管真空引き
 		'
-		vacs			= DHDTest.VACBproc()
+		vacs = DHDTest.VACBproc(DHDTest.TestType.Adsorption, 0, 0)
 		If vacs <> 0 Then
 
 			' オペレータによる中断
@@ -1270,14 +1291,23 @@ Module tst4Lib
 		'
 		WaveSmpStop()
 
+		'▼2024.04.19 TC Kanda (印加前をCにしたので、印加中はDとする)
 		' 波形サンプリングデータを保存
-		SaveWaveData					_
-		(						_
-			DHDtest.tstNo,				_
-			"C",					_
-			dat.volt1,				_
-			dat.volt2				_
+		'SaveWaveData					_
+		'(						_
+		'	DHDtest.tstNo,				_
+		'	"C",					_
+		'	dat.volt1,				_
+		'	dat.volt2				_
+		')
+		SaveWaveData _
+		(
+			DHDTest.tstNo,
+			"D",
+			dat.volt1,
+			dat.volt2
 		)
+		'▲2024.04.19 TC Kanda (印加前をCにしたので、印加中はDとする)
 
 		'
 		'	ＰＩＤ運転停止 (Ｈｅの停止)
