@@ -404,70 +404,82 @@ Module tst3Lib
 		Do While True
 
 			Dim setpa As Double
-			'▼2024.05.02 TC Kanda (測定有効無効パラメータ追加)
-			'指定の設定圧力の試験の指示が無ければスキップする
+
+			'
+			'	20201124 追加 y.goto
+			'	VACBproc()で　MAEdoRYFC を OFF にしていたため、2回目以降の検査でPIDの制御がMFCに伝わっていなかった
+			'
+			'	ＰＩＤによりＭＦＣ１を制御する
+			'
+
+			' MFC の SET PT入力を PIDの制御出力と接続
+			ExDio_Output(MAEdoRYFC, DIO_ON)
+			WaitTim(10)
+
+			'
+			'	設定圧力 0=1.0[KPa], 1=2.0[KPa], 2=3.0[KPa], 3=4.0[KPa], 4=6.0[KPa]
+			'
 			Select Case bpsel
-				Case 0 '1KPa
-					If Not dat.ptn.Contains("1") Then
-						bpsel = -1
-					End If
-				Case 1 '2KPa
-					If Not dat.ptn.Contains("2") Then
-						bpsel = -1
-					End If
-				Case 2 '3KPa
-					If Not dat.ptn.Contains("3") Then
-						bpsel = -1
-					End If
-				Case 3 '4KPa
-					If Not dat.ptn.Contains("4") Then
-						bpsel = -1
-					End If
-				Case 4 '6KPa
-					If Not dat.ptn.Contains("6") Then
-						bpsel = -1
-					End If
-			End Select
-			If bpsel <> -1 Then
-				'▲2024.05.02 TC Kanda (測定有効無効パラメータ追加)
+				Case 0
+					'1kPa
+					'▼2024.05.02 TC Kanda (測定有効無効パラメータ追加)
+					'setpa = 1000.0
+					If dat.ptn.Contains("1") Then
+							setpa = 1000.0
+						Else
+							setpa = 0.0
+						End If
+					'▲2024.05.02 TC Kanda (測定有効無効パラメータ追加)
 
+				Case 1
+					'2kPa
+					'▼2024.05.02 TC Kanda (測定有効無効パラメータ追加)
+					'setpa = 2000.0
+					If dat.ptn.Contains("2") Then
+							setpa = 2000.0
+						Else
+							setpa = 0.0
+						End If
+					'▲2024.05.02 TC Kanda (測定有効無効パラメータ追加)
 
-				'
-				'	20201124 追加 y.goto
-				'	VACBproc()で　MAEdoRYFC を OFF にしていたため、2回目以降の検査でPIDの制御がMFCに伝わっていなかった
-				'
-				'	ＰＩＤによりＭＦＣ１を制御する
-				'
+				Case 2
+					'3kPa
+					'▼2024.05.02 TC Kanda (測定有効無効パラメータ追加)
+					'setpa = 3000.0
+					If dat.ptn.Contains("3") Then
+							setpa = 3000.0
+						Else
+							setpa = 0.0
+						End If
+					'▲2024.05.02 TC Kanda (測定有効無効パラメータ追加)
 
-				' MFC の SET PT入力を PIDの制御出力と接続
-				ExDio_Output(MAEdoRYFC, DIO_ON)
-				WaitTim(10)
+				Case 3
+					'4kPa
+					'▼2024.05.02 TC Kanda (測定有効無効パラメータ追加)
+					'setpa = 4000.0
+					If dat.ptn.Contains("4") Then
+							setpa = 4000.0
+						Else
+							setpa = 0.0
+						End If
+					'▲2024.05.02 TC Kanda (測定有効無効パラメータ追加)
 
-				'
-				'	設定圧力 0=1.0[KPa], 1=2.0[KPa], 2=3.0[KPa], 3=4.0[KPa], 4=6.0[KPa]
-				'
-				Select Case bpsel
-					Case 0
-						'1kPa
-						setpa = 1000.0
-
-					Case 1
-						'2kPa
-						setpa = 2000.0
-
-					Case 2
-						'3kPa
-						setpa = 3000.0
-
-					Case 3
-						'4kPa
-						setpa = 4000.0
-
-					Case 4
-						'6kPa
+				Case 4
+					'6kPa
+					'▼2024.05.02 TC Kanda (測定有効無効パラメータ追加)
+					'setpa = 6000.0
+					If dat.ptn.Contains("6") Then
 						setpa = 6000.0
+					Else
+						setpa = 0.0
+					End If
+					'▲2024.05.02 TC Kanda (測定有効無効パラメータ追加)
 
-				End Select
+			End Select
+
+			'▼2024.05.02 TC Kanda (測定有効無効パラメータ追加)
+			If setpa > 0.0 Then
+				'▲2024.05.02 TC Kanda (測定有効無効パラメータ追加)
 
 				' PIDへ目標裏面圧力 DA値 を出力
 				ExDa_Output(PIDaoRSP, cvtp2PIDset(setpa))
@@ -518,16 +530,16 @@ Module tst3Lib
 					'	リトライした時に圧が下がるまで待つ
 					'
 					If _
-					DHDTest.waittstcond3 _
-					(
-						"ウエハ裏面圧が下がるのを待つ",
-						vac,
-						dt.schuse,
-						dt.tmp,
-						tprs,
-						bakp
-					) _
-				Then
+						DHDTest.waittstcond3 _
+						(
+							"ウエハ裏面圧が下がるのを待つ",
+							vac,
+							dt.schuse,
+							dt.tmp,
+							tprs,
+							bakp
+						) _
+					Then
 
 						'   20200716 s.harada
 						FrmLog.LogDspAdd("", "tst3_proc 途中終了", Color.Empty)
@@ -723,17 +735,15 @@ Module tst3Lib
 				'
 				'	ウエハ裏面圧条件待ち処理
 				'
-				If _
-				DHDTest.waitwbakp _
-				(
-					"ウエハ裏面圧が下がるのを待つ",
-					vac,
-					dt.schuse,
-					dt.tmp,
-					tprs,
-					bakp
-				) _
-			Then
+				If DHDTest.waitwbakp _
+					(
+						"ウエハ裏面圧が下がるのを待つ",
+						vac,
+						dt.schuse,
+						dt.tmp,
+						tprs,
+						bakp
+					) Then
 
 					'   20200716 s.harada
 					FrmLog.LogDspAdd("", "tst3 途中終了：waitwbakp", Color.Empty)
@@ -748,6 +758,7 @@ Module tst3Lib
 				'▼2024.05.02 TC Kanda (測定有効無効パラメータ追加)
 			End If
 			'▲2024.05.02 TC Kanda (測定有効無効パラメータ追加)
+
 			' 設定圧力 0=1.0[KPa], 1=2.0[KPa], 2=3.0[KPa], 3=4.0[KPa], 4=6.0[KPa]
 			bpsel += 1
 
