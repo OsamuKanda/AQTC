@@ -378,16 +378,19 @@ Module tst3Lib
 	)	As Integer
 
 
-		Dim sts			As Integer
-		Dim rtn			As Integer
-		Dim nrty		As Integer		' リトライ
-		Dim bpsel		As Integer		' 試験裏面圧選択
-		Dim jdgTm1		As Double		' 判定値１
-		Dim jdgTm2		As Double		' 判定値２
-		Dim vacs		As Integer
+		Dim sts As Integer
+		Dim rtn As Integer
+		Dim nrty As Integer     ' リトライ
+		Dim bpsel As Integer    ' 試験裏面圧選択
+		Dim jdgTm1 As Double    ' 判定値１
+		Dim jdgTm2 As Double    ' 判定値２
+		Dim vacs As Integer
+		'▼2024.05.10 TC Kanda （３．Ｈｅリーク量測定のパターン追加／測定有効無効パラメータ追加）
+		Dim tmp50 As Boolean = False       '50度の測定になっているか？
+		'▲2024.05.10 TC Kanda （３．Ｈｅリーク量測定のパターン追加／測定有効無効パラメータ追加）
 
 
-		’判定値パラメータの設定で判定する
+		'判定値パラメータの設定で判定する
 		jdgTm1			= dat.bs
 		jdgTm2			= dat.bs2
 
@@ -416,70 +419,80 @@ Module tst3Lib
 			ExDio_Output(MAEdoRYFC, DIO_ON)
 			WaitTim(10)
 
+			'▼2024.05.10 TC Kanda （３．Ｈｅリーク量測定のパターン追加／測定有効無効パラメータ追加）
+			'どちらかが50℃の場合にスキップを有効にする
+			If dt.schuse(0) = 1 AndAlso dt.tmp(0) = 50.0 Then
+				tmp50 = True
+			End If
+			If dt.schuse(1) = 1 AndAlso dt.tmp(1) = 50.0 Then
+				tmp50 = True
+			End If
+			'▲2024.05.10 TC Kanda （３．Ｈｅリーク量測定のパターン追加／測定有効無効パラメータ追加）
 			'
 			'	設定圧力 0=1.0[KPa], 1=2.0[KPa], 2=3.0[KPa], 3=4.0[KPa], 4=6.0[KPa]
 			'
 			Select Case bpsel
-				Case 0
+				Case 0 And dat.ptn.Contains("1")
 					'1kPa
-					'▼2024.05.02 TC Kanda (測定有効無効パラメータ追加)
+					'▼2024.05.02 TC Kanda （３．Ｈｅリーク量測定のパターン追加／測定有効無効パラメータ追加）
 					'setpa = 1000.0
-					If dat.ptn.Contains("1") Then
-							setpa = 1000.0
-						Else
-							setpa = 0.0
-						End If
-					'▲2024.05.02 TC Kanda (測定有効無効パラメータ追加)
+					If dat.ptn.Contains("1") Or (Not tmp50) Then    '1kPaが有効またはサーモチラーの設定が50℃でない場合は測定実施
+						setpa = 1000.0
+					Else
+						setpa = 0.0
+					End If
+					'▲2024.05.02 TC Kanda （３．Ｈｅリーク量測定のパターン追加／測定有効無効パラメータ追加）
 
 				Case 1
 					'2kPa
-					'▼2024.05.02 TC Kanda (測定有効無効パラメータ追加)
+					'▼2024.05.02 TC Kanda （３．Ｈｅリーク量測定のパターン追加／測定有効無効パラメータ追加）
 					'setpa = 2000.0
-					If dat.ptn.Contains("2") Then
-							setpa = 2000.0
-						Else
-							setpa = 0.0
-						End If
-					'▲2024.05.02 TC Kanda (測定有効無効パラメータ追加)
+					If dat.ptn.Contains("2") Or (Not tmp50) Then    '2kPaが有効またはサーモチラーの設定が50℃でない場合は測定実施
+						setpa = 2000.0
+					Else
+						setpa = 0.0
+					End If
+					'▲2024.05.02 TC Kanda （３．Ｈｅリーク量測定のパターン追加／測定有効無効パラメータ追加）
 
 				Case 2
 					'3kPa
-					'▼2024.05.02 TC Kanda (測定有効無効パラメータ追加)
+					'▼2024.05.02 TC Kanda （３．Ｈｅリーク量測定のパターン追加／測定有効無効パラメータ追加）
 					'setpa = 3000.0
-					If dat.ptn.Contains("3") Then
-							setpa = 3000.0
-						Else
-							setpa = 0.0
-						End If
-					'▲2024.05.02 TC Kanda (測定有効無効パラメータ追加)
+					If dat.ptn.Contains("3") Or (Not tmp50) Then    '3kPaが有効またはサーモチラーの設定が50℃でない場合は測定実施
+						setpa = 3000.0
+					Else
+						setpa = 0.0
+					End If
+					'▲2024.05.02 TC Kanda （３．Ｈｅリーク量測定のパターン追加／測定有効無効パラメータ追加）
 
 				Case 3
 					'4kPa
-					'▼2024.05.02 TC Kanda (測定有効無効パラメータ追加)
+					'▼2024.05.02 TC Kanda （３．Ｈｅリーク量測定のパターン追加／測定有効無効パラメータ追加）
 					'setpa = 4000.0
-					If dat.ptn.Contains("4") Then
-							setpa = 4000.0
-						Else
-							setpa = 0.0
-						End If
-					'▲2024.05.02 TC Kanda (測定有効無効パラメータ追加)
+					If dat.ptn.Contains("4") Or (Not tmp50) Then    '4kPaが有効またはサーモチラーの設定が50℃でない場合は測定実施
+						setpa = 4000.0
+					Else
+						setpa = 0.0
+					End If
+					'▲2024.05.02 TC Kanda （３．Ｈｅリーク量測定のパターン追加／測定有効無効パラメータ追加）
 
 				Case 4
 					'6kPa
-					'▼2024.05.02 TC Kanda (測定有効無効パラメータ追加)
+					'▼2024.05.02 TC Kanda （３．Ｈｅリーク量測定のパターン追加／測定有効無効パラメータ追加）
 					'setpa = 6000.0
-					If dat.ptn.Contains("6") Then
+					If dat.ptn.Contains("6") Or (Not tmp50) Then    '6kPaが有効またはサーモチラーの設定が50℃でない場合は測定実施
 						setpa = 6000.0
 					Else
 						setpa = 0.0
 					End If
-					'▲2024.05.02 TC Kanda (測定有効無効パラメータ追加)
+					'▲2024.05.02 TC Kanda （３．Ｈｅリーク量測定のパターン追加／測定有効無効パラメータ追加）
 
 			End Select
 
-			'▼2024.05.02 TC Kanda (測定有効無効パラメータ追加)
+			'▼2024.05.02 TC Kanda （３．Ｈｅリーク量測定のパターン追加／測定有効無効パラメータ追加）
+
 			If setpa > 0.0 Then
-				'▲2024.05.02 TC Kanda (測定有効無効パラメータ追加)
+				'▲2024.05.02 TC Kanda （３．Ｈｅリーク量測定のパターン追加／測定有効無効パラメータ追加）
 
 				' PIDへ目標裏面圧力 DA値 を出力
 				ExDa_Output(PIDaoRSP, cvtp2PIDset(setpa))
@@ -755,9 +768,9 @@ Module tst3Lib
 
 				End If
 
-				'▼2024.05.02 TC Kanda (測定有効無効パラメータ追加)
+				'▼2024.05.02 TC Kanda （３．Ｈｅリーク量測定のパターン追加／測定有効無効パラメータ追加）
 			End If
-			'▲2024.05.02 TC Kanda (測定有効無効パラメータ追加)
+			'▲2024.05.02 TC Kanda （３．Ｈｅリーク量測定のパターン追加／測定有効無効パラメータ追加）
 
 			' 設定圧力 0=1.0[KPa], 1=2.0[KPa], 2=3.0[KPa], 3=4.0[KPa], 4=6.0[KPa]
 			bpsel += 1
@@ -1090,7 +1103,7 @@ Module tst3Lib
 		WaveSmpStop()
 
 		' 波形サンプリングデータを保存
-		'▼2024.04.19 TC Kanda (HEリーク量測定ファイル名が残留吸着力測定印加中とファイル名が被っているため修正)
+		'▼2024.04.19 TC Kanda （２．測定中のHe流量及びウエハ裏面圧力のログ出力追加／HEリーク量測定ファイル名が残留吸着力測定印加中とファイル名が被っているため修正）
 		'SaveWaveData _
 		'(
 		'	DHDTest.tstNo,
@@ -1101,11 +1114,11 @@ Module tst3Lib
 		SaveWaveData _
 		(
 			DHDTest.tstNo,
-			"A",
+			"A" + bpsel.ToString,
 			dat.volt1,
 			dat.volt2
 		)
-		'▲2024.04.19 TC Kanda (HEリーク量測定ファイル名が残留吸着力測定印加中とファイル名が被っているため修正)
+		'▲2024.04.19 TC Kanda （２．測定中のHe流量及びウエハ裏面圧力のログ出力追加／HEリーク量測定ファイル名が残留吸着力測定印加中とファイル名が被っているため修正）
 
 		'
 		'	ＭＦＣ電圧とＮ２流量デ－タをセット

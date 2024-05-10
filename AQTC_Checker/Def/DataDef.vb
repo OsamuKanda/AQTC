@@ -244,9 +244,9 @@ Module DataDef
 		'
 		Public volt2		As Double
 
-		'▼2024.05.02 TC Kanda (測定有効無効パラメータ追加)
+		'▼2024.05.02 TC Kanda （３．Ｈｅリーク量測定のパターン追加／測定有効無効パラメータ追加）
 		Public ptn As List(Of String)
-		'▲2024.05.02 TC Kanda (測定有効無効パラメータ追加)
+		'▲2024.05.02 TC Kanda （３．Ｈｅリーク量測定のパターン追加／測定有効無効パラメータ追加）
 
 		'
 		'	測定値・Ｈｅリーク量

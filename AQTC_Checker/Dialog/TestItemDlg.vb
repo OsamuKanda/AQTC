@@ -228,7 +228,7 @@ Public Class TestItemDlg
 		' Ｈｅリーク測定・ＳＤＣ電源印加電圧２
 		txtLekV2.Text		= pDtRow( "LEK_VOLT2" )
 
-		'▼ 2024.05.02 TC Kanda （測定有効無効パラメータ追加）
+		'▼ 2024.05.02 TC Kanda （３．Ｈｅリーク量測定のパターン追加／測定有効無効パラメータ追加）
 		If pDtRow("LEK_PTN").ToString.Trim("-") = "" Then
 			ChkPa1k.Checked = True
 			ChkPa2k.Checked = True
@@ -257,7 +257,7 @@ Public Class TestItemDlg
 			Next
 
 		End If
-		'▲ 2024.05.02 TC Kanda （測定有効無効パラメータ追加）
+		'▲ 2024.05.02 TC Kanda （３．Ｈｅリーク量測定のパターン追加／測定有効無効パラメータ追加）
 
 		' Ｈｅリーク測定・判定値
 		txtLekBase.Text		= pDtRow( "LEK_BASE" )
@@ -457,7 +457,7 @@ Public Class TestItemDlg
 			pDtRow( "LEK_BASE2" )		= txtLekBase2.Text
 
 
-			'▼ 2024.05.02 TC Kanda （測定有効無効パラメータ追加）
+			'▼ 2024.05.02 TC Kanda （３．Ｈｅリーク量測定のパターン追加／測定有効無効パラメータ追加）
 			Dim pa As New List(Of String)
 
 			If ChkPa1k.Checked Then
@@ -475,8 +475,13 @@ Public Class TestItemDlg
 			If ChkPa6k.Checked Then
 				pa.Add(6)
 			End If
-			pDtRow("LEK_PTN") = String.Join(",", pa)
-			'▲ 2024.05.02 TC Kanda （測定有効無効パラメータ追加）
+			'印加電圧が数値でない場合は（－）を表示する
+			If IsNumeric(txtLekV1.Text) Then
+				pDtRow("LEK_PTN") = String.Join(",", pa)
+			Else
+				pDtRow("LEK_PTN") = "-"
+			End If
+			'▲ 2024.05.02 TC Kanda （３．Ｈｅリーク量測定のパターン追加／測定有効無効パラメータ追加）
 		End If
 
 		'	20201102 s.harada	AQTC対応追加
@@ -642,7 +647,7 @@ Public Class TestItemDlg
 
 			End If
 
-			'▼ 2024.05.02 TC Kanda （測定有効無効パラメータ追加）
+			'▼ 2024.05.02 TC Kanda （３．Ｈｅリーク量測定のパターン追加／測定有効無効パラメータ追加）
 			Dim pa As New List(Of String)
 
 			If ChkPa1k.Checked Then
@@ -660,37 +665,42 @@ Public Class TestItemDlg
 			If ChkPa6k.Checked Then
 				pa.Add(6)
 			End If
-			pDtRow("LEK_PTN") = String.Join(",", pa)
-			'▲ 2024.05.02 TC Kanda （測定有効無効パラメータ追加）
+			'印加電圧が数値でない場合は（－）を表示する
+			If IsNumeric(txtLekV1.Text) Then
+				pDtRow("LEK_PTN") = String.Join(",", pa)
+			Else
+				pDtRow("LEK_PTN") = "-"
+			End If
+			'▲ 2024.05.02 TC Kanda （３．Ｈｅリーク量測定のパターン追加／測定有効無効パラメータ追加）
 
 			' Ｈｅリーク測定・判定値
 			'	20201102 s.harada	０設定はスペースに変更する
 			'pDtRow( "LEK_BASE" )	= txtLekBase.Text
-			If IsNumeric( txtLekBase.Text ) AndAlso CDbl( txtLekBase.Text ) > 0 Then
+			If IsNumeric(txtLekBase.Text) AndAlso CDbl(txtLekBase.Text) > 0 Then
 
-				pDtRow("LEK_BASE")		= CDbl( txtLekBase.Text ).ToString( "F1" )
+					pDtRow("LEK_BASE") = CDbl(txtLekBase.Text).ToString("F1")
 
-			Else 
+				Else
 
-				pDtRow("LEK_BASE")		= " "
- 
-			End If
+					pDtRow("LEK_BASE") = " "
 
-			'	20201102 s.harada	Ｈｅリーク測定・判定値(2kPa)　追加
-			If IsNumeric( txtLekBase2.Text ) AndAlso CDbl( txtLekBase2.Text ) > 0 Then
+				End If
 
-				pDtRow("LEK_BASE2")		= CDbl( txtLekBase2.Text ).ToString( "F1" )
+				'	20201102 s.harada	Ｈｅリーク測定・判定値(2kPa)　追加
+				If IsNumeric(txtLekBase2.Text) AndAlso CDbl(txtLekBase2.Text) > 0 Then
 
-			Else 
+					pDtRow("LEK_BASE2") = CDbl(txtLekBase2.Text).ToString("F1")
 
-				pDtRow("LEK_BASE2")		= " "
- 
-			End If
+				Else
+
+					pDtRow("LEK_BASE2") = " "
+
+				End If
 
 
-		Else
+			Else
 
-			pDtRow( "LV" )		= 0
+				pDtRow( "LV" )		= 0
 
 			pDtRow( "LEK_VOLT1" )	= "-"
 

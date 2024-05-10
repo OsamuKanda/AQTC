@@ -3704,10 +3704,10 @@ Public Class DHDTest
 		frm.PrmWTim		= 40 * 60
 
 		' 全条件成立確定時間タイマー値（秒）
-		'▼ 2024.04.11 条件成立後の待ち時間を１秒に統一
+		'▼ 2024.04.11 TC Kanda （５．ポップアップ待機時間削減／条件成立後の待ち時間を１秒に統一）
 		'frm.PrmTcAllOK = 10
 		frm.PrmTcAllOK = 1 + 1
-		'▲ 2024.04.11 条件成立後の待ち時間を１秒に統一
+		'▲ 2024.04.11 TC Kanda （５．ポップアップ待機時間削減／条件成立後の待ち時間を１秒に統一）
 
 		' サーモチラーＣＨ１目標到達判定タイマー値（秒）
 		frm.PrmTcAimChl1	= 20
@@ -3849,10 +3849,10 @@ Public Class DHDTest
 		frm.PrmWTim		= 20 * 60
 
 		' 全条件成立確定時間タイマー値（秒）
-		'▼ 2024.04.11 条件成立後の待ち時間を１秒に統一
+		'▼ 2024.04.11 TC Kanda （５．ポップアップ待機時間削減／条件成立後の待ち時間を１秒に統一）
 		'frm.PrmTcAllOK = 10
 		frm.PrmTcAllOK = 1 + 1
-		'▲ 2024.04.11 条件成立後の待ち時間を１秒に統一
+		'▲ 2024.04.11 TC Kanda （５．ポップアップ待機時間削減／条件成立後の待ち時間を１秒に統一）
 
 		' サーモチラーＣＨ１目標到達判定タイマー値（秒）
 		frm.PrmTcAimChl1	= 10
@@ -3998,10 +3998,10 @@ Public Class DHDTest
 		frm.PrmWTim		= 20 * 60
 
 		' 全条件成立確定時間タイマー値（秒）
-		'▼ 2024.04.11 条件成立後の待ち時間を１秒に統一
+		'▼ 2024.04.11 TC Kanda （５．ポップアップ待機時間削減／条件成立後の待ち時間を１秒に統一）
 		'frm.PrmTcAllOK = 10
 		frm.PrmTcAllOK = 1 + 1
-		'▲ 2024.04.11 条件成立後の待ち時間を１秒に統一
+		'▲ 2024.04.11 TC Kanda （５．ポップアップ待機時間削減／条件成立後の待ち時間を１秒に統一）
 
 		' サーモチラーＣＨ１目標到達判定タイマー値（秒）
 		frm.PrmTcAimChl1	= 10
@@ -4135,10 +4135,10 @@ Public Class DHDTest
 		frm.PrmWTim		= 20 * 60
 
 		' 全条件成立確定時間タイマー値（秒）
-		'▼ 2024.04.11 条件成立後の待ち時間を１秒に統一
+		'▼ 2024.04.11 TC Kanda （５．ポップアップ待機時間削減／条件成立後の待ち時間を１秒に統一）
 		'frm.PrmTcAllOK = 3
 		frm.PrmTcAllOK = 1 + 1
-		'▲ 2024.04.11 条件成立後の待ち時間を１秒に統一
+		'▲ 2024.04.11 TC Kanda （５．ポップアップ待機時間削減／条件成立後の待ち時間を１秒に統一）
 
 		' サーモチラーＣＨ１目標到達判定タイマー値（秒）
 		frm.PrmTcAimChl1	= 10
@@ -4271,10 +4271,10 @@ Public Class DHDTest
 		frm.PrmWTim		= 20 * 60
 
 		' 全条件成立確定時間タイマー値（秒）
-		'▼ 2024.04.11 条件成立後の待ち時間を１秒に統一
+		'▼ 2024.04.11 TC Kanda （５．ポップアップ待機時間削減／条件成立後の待ち時間を１秒に統一）
 		'frm.PrmTcAllOK = 3
 		frm.PrmTcAllOK = 1 + 1
-		'▲ 2024.04.11 条件成立後の待ち時間を１秒に統一
+		'▲ 2024.04.11 TC Kanda （５．ポップアップ待機時間削減／条件成立後の待ち時間を１秒に統一）
 
 		' サーモチラーＣＨ１目標到達判定タイマー値（秒）
 		frm.PrmTcAimChl1	= 10
@@ -4771,10 +4771,10 @@ Public Class DHDTest
 		frm.PrmWTim		= 20 * 60
 
 		' 全条件成立確定時間タイマー値（秒）
-		'▼ 2024.04.11 条件成立後の待ち時間を１秒に統一
+		'▼ 2024.04.11 TC Kanda （５．ポップアップ待機時間削減／条件成立後の待ち時間を１秒に統一）
 		'frm.PrmTcAllOK = 3
 		frm.PrmTcAllOK = 1 + 1
-		'▲ 2024.04.11 条件成立後の待ち時間を１秒に統一
+		'▲ 2024.04.11 TC Kanda （５．ポップアップ待機時間削減／条件成立後の待ち時間を１秒に統一）
 
 		' サーモチラーＣＨ１目標到達判定タイマー値（秒）
 		frm.PrmTcAimChl1	= 5
@@ -5267,10 +5267,10 @@ Public Class DHDTest
 	'	0	正常終了
 	'	!= 0	試験中止
 	'*****
-	'▼2024.04.19 TC Kanda （真空排気シーケンス内でESC電源OFF）
+	'▼2024.04.19 TC Kanda （１．配管真空排気シーケンス修正／真空排気シーケンス内でESC電源OFF）
 	'Public Function VACBproc() As Integer
 	Public Function VACBproc(testType As TestType, sdcv1 As Double, sdcv2 As Double) As Integer
-		'▲2024.04.19 TC Kanda （真空排気シーケンス内でESC電源OFF）
+		'▲2024.04.19 TC Kanda （１．配管真空排気シーケンス修正／真空排気シーケンス内でESC電源OFF）
 
 		Dim sts As Integer
 		Dim schflg(2) As Integer
@@ -5425,7 +5425,7 @@ Public Class DHDTest
 				End If
 				FrmLog.LogDspAdd("", msg + "10) 配管・ウエハ裏面圧 CM <= 30 [Pa] 待ち終了", Color.Empty)
 
-				'▼2024.04.19 TC Kanda (ESC電源OFFの処理を チャンバ内圧力を下げる前に異動）
+				'▼2024.04.19 TC Kanda （１．配管真空排気シーケンス修正／ESC電源OFFの処理を チャンバ内圧力を下げる前に移動）
 				Select Case (testType)
 					Case TestType.None
 					Case TestType.Resistance
@@ -5438,7 +5438,7 @@ Public Class DHDTest
 						'残留吸着力測定は独自の排気シーケンスがある
 						'配管真空引きの後ESC電源のOFFが無い
 				End Select
-				'▲2024.04.19 TC Kanda (ESC電源OFFの処理を チャンバ内圧力を下げる前に異動）
+				'▲2024.04.19 TC Kanda （１．配管真空排気シーケンス修正／ESC電源OFFの処理を チャンバ内圧力を下げる前に移動）
 
 				'
 				'	G1閉
@@ -6041,7 +6041,7 @@ Public Class DHDTest
 
 			End If
 
-			'▼2024.05.02 TC Kanda (テスト順を入れ替え)
+			'▼2024.05.02 TC Kanda (４．測定順の変更／テスト順を入れ替え）
 			''
 			''	ｳｴﾊ吸着力測定
 			''
@@ -6100,7 +6100,7 @@ Public Class DHDTest
 				End If
 
 			End If
-			'▲2024.05.02 TC Kanda (テスト順を入れ替え)
+			'▲2024.05.02 TC Kanda (４．測定順の変更／テスト順を入れ替え）
 
 			' 20200716 s.harada
 			'

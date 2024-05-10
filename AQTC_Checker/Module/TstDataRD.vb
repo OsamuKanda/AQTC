@@ -346,7 +346,7 @@ Module TstDataRD
 				'
 					Case "0"
 
-						ReDim MESrec.dt( no ).tmp( 1 )
+						ReDim MESrec.dt(no).tmp(1)
 
 						ReDim MESrec.dt(no).schuse(1)
 
@@ -541,7 +541,7 @@ Module TstDataRD
 						End If
 
 
-						'▼2024.05.02 TC Kanda (測定有効無効パラメータ追加)
+						'▼2024.05.02 TC Kanda （３．Ｈｅリーク量測定のパターン追加／測定有効無効パラメータ追加）
 
 						'一旦無条件に全試験を有効にする
 						MESrec.dt(no).t3.d(ct).ptn = New List(Of String)
@@ -564,7 +564,7 @@ Module TstDataRD
 								MESrec.dt(no).t3.d(ct).ptn.Add(aryBuf(6).Trim())
 							End If
 						End If
-						'▲2024.05.02 TC Kanda (測定有効無効パラメータ追加)
+						'▲2024.05.02 TC Kanda （３．Ｈｅリーク量測定のパターン追加／測定有効無効パラメータ追加）
 
 						' 20201102 s.harada	到達時MFC電圧、He流量を確保
 						ReDim MESrec.dt(no).t3.d(ct).mfcvolt(4)

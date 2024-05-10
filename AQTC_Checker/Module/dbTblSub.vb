@@ -407,7 +407,7 @@ Module dbTblSub
 
 				End If
 
-				'▼ 2024.05.02 TC Kanda （測定有効無効パラメータ追加）
+				'▼ 2024.05.02 TC Kanda （３．Ｈｅリーク量測定のパターン追加／測定有効無効パラメータ追加）
 				dtWorkRow("LEAK") = "-"
 				dtWorkRow("LEAK2") = "-"
 				dtWorkRow("LEAK3") = "-"
@@ -427,7 +427,7 @@ Module dbTblSub
 							dtWorkRow("LEAK6") = ""
 					End Select
 				Next
-				'▲ 2024.05.02 TC Kanda （測定有効無効パラメータ追加）
+				'▲ 2024.05.02 TC Kanda （３．Ｈｅリーク量測定のパターン追加／測定有効無効パラメータ追加）
 
 				'	20201102 s.harada	判定結果２を追加
 
@@ -873,9 +873,9 @@ Module dbTblSub
 			' Heリーク印加電圧 CH2
 			.Add("LEK_VOLT2", Type.GetType("System.String"))
 
-			'▼ 2024.05.02 TC Kanda （測定有効無効パラメータ追加）
+			'▼ 2024.05.02 TC Kanda （３．Ｈｅリーク量測定のパターン追加／測定有効無効パラメータ追加）
 			.Add("LEK_PTN", Type.GetType("System.String"))
-			'▲ 2024.05.02 TC Kanda （測定有効無効パラメータ追加）
+			'▲ 2024.05.02 TC Kanda （３．Ｈｅリーク量測定のパターン追加／測定有効無効パラメータ追加）
 
 			'	20201102 s.harada	検査方法変更で削除
 			'	20200716 s.harada　トーカロ対応で追加
@@ -1126,12 +1126,12 @@ Module dbTblSub
 								dtWorkRow("LEK_BASE2") = " "
 
 							End If
-							'▼2024.05.02 TC Kanda (測定有効無効パラメータ追加)
+							'▼2024.05.02 TC Kanda （３．Ｈｅリーク量測定のパターン追加／測定有効無効パラメータ追加）
 							dtWorkRow("LEK_PTN") = String.Join(",", .t3.d(j).ptn)
 							If dtWorkRow("LEK_PTN") = "" Then
 								dtWorkRow("LEK_PTN") = "-"
 							End If
-							'▲2024.05.02 TC Kanda (測定有効無効パラメータ追加)
+							'▲2024.05.02 TC Kanda （３．Ｈｅリーク量測定のパターン追加／測定有効無効パラメータ追加）
 
 						Else
 
@@ -1146,9 +1146,9 @@ Module dbTblSub
 							'	20201102 s.harada	Ｈｅリーク測定・判定値(2kPa)　追加
 							dtWorkRow( "LEK_BASE2" )	= "-"
 
-							'▼2024.05.02 TC Kanda (測定有効無効パラメータ追加)
+							'▼2024.05.02 TC Kanda （３．Ｈｅリーク量測定のパターン追加／測定有効無効パラメータ追加）
 							dtWorkRow("LEK_PTN") = "-"
-							'▲2024.05.02 TC Kanda (測定有効無効パラメータ追加)
+							'▲2024.05.02 TC Kanda （３．Ｈｅリーク量測定のパターン追加／測定有効無効パラメータ追加）
 						End If
 
 					Else
@@ -1164,9 +1164,9 @@ Module dbTblSub
 						'	20201102 s.harada	Ｈｅリーク測定・判定値(2kPa)　追加
 						dtWorkRow( "LEK_BASE2" )	= "-"
 
-						'▼2024.05.02 TC Kanda (測定有効無効パラメータ追加)
+						'▼2024.05.02 TC Kanda （３．Ｈｅリーク量測定のパターン追加／測定有効無効パラメータ追加）
 						dtWorkRow("LEK_PTN") = "-"
-						'▲2024.05.02 TC Kanda (測定有効無効パラメータ追加)
+						'▲2024.05.02 TC Kanda （３．Ｈｅリーク量測定のパターン追加／測定有効無効パラメータ追加）
 					End If
 
 

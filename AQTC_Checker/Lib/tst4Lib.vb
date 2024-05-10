@@ -943,7 +943,7 @@ Module tst4Lib
 		WaitTim( 200 )
 
 		' 波形サンプリングデータを保存
-		'▼2024.04.19 TC Kanda (印加前と印加後のファイル名が同じなので変更)
+		'▼2024.04.19 TC Kanda （２．測定中のHe流量及びウエハ裏面圧力のログ出力追加／印加前と印加後のファイル名が同じなので変更）
 		'SaveWaveData _
 		'(
 		'	DHDTest.tstNo,
@@ -956,7 +956,7 @@ Module tst4Lib
 			SaveWaveData _
 			(
 				DHDTest.tstNo,
-				"C" + ntst.ToString(),
+				"C",
 				dat.volt1,
 				dat.volt2
 			)
@@ -970,7 +970,7 @@ Module tst4Lib
 				dat.volt2
 			)
 		End If
-		'▲2024.04.19 TC Kanda (印加前と印加後のファイル名が同じなので変更)
+		'▲2024.04.19 TC Kanda （２．測定中のHe流量及びウエハ裏面圧力のログ出力追加／印加前と印加後のファイル名が同じなので変更）
 
 		DHDTest.StatusClear( 9, 6 )
 
@@ -1291,7 +1291,7 @@ Module tst4Lib
 		'
 		WaveSmpStop()
 
-		'▼2024.04.19 TC Kanda (印加前をCにしたので、印加中はDとする)
+		'▼2024.04.19 TC Kanda （２．測定中のHe流量及びウエハ裏面圧力のログ出力追加／印加前をCにしたので、印加中はDとする）
 		' 波形サンプリングデータを保存
 		'SaveWaveData					_
 		'(						_
@@ -1307,7 +1307,7 @@ Module tst4Lib
 			dat.volt1,
 			dat.volt2
 		)
-		'▲2024.04.19 TC Kanda (印加前をCにしたので、印加中はDとする)
+		'▲2024.04.19 TC Kanda （２．測定中のHe流量及びウエハ裏面圧力のログ出力追加／印加前をCにしたので、印加中はDとする）
 
 		'
 		'	ＰＩＤ運転停止 (Ｈｅの停止)
