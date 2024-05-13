@@ -53,7 +53,6 @@ Partial Class TestItemDlg
         Me.Label27 = New System.Windows.Forms.Label()
         Me.Label14 = New System.Windows.Forms.Label()
         Me.txtLekBase = New System.Windows.Forms.TextBox()
-        Me.Label28 = New System.Windows.Forms.Label()
         Me.Label23 = New System.Windows.Forms.Label()
         Me.Label15 = New System.Windows.Forms.Label()
         Me.Label10 = New System.Windows.Forms.Label()
@@ -79,6 +78,7 @@ Partial Class TestItemDlg
         Me.Label20 = New System.Windows.Forms.Label()
         Me.txtZKyuV1 = New System.Windows.Forms.TextBox()
         Me.Label21 = New System.Windows.Forms.Label()
+        Me.Label28 = New System.Windows.Forms.Label()
         Me.grpZetsuen.SuspendLayout()
         Me.grpKyucyaku.SuspendLayout()
         Me.grpHeGas.SuspendLayout()
@@ -320,9 +320,9 @@ Partial Class TestItemDlg
         Me.ChkPa6k.CheckState = System.Windows.Forms.CheckState.Checked
         Me.ChkPa6k.Location = New System.Drawing.Point(119, 220)
         Me.ChkPa6k.Name = "ChkPa6k"
-        Me.ChkPa6k.Size = New System.Drawing.Size(75, 20)
+        Me.ChkPa6k.Size = New System.Drawing.Size(70, 20)
         Me.ChkPa6k.TabIndex = 45
-        Me.ChkPa6k.Text = "6.0 kPa"
+        Me.ChkPa6k.Text = "6.0kPa"
         Me.ChkPa6k.UseVisualStyleBackColor = True
         '
         'ChkPa4k
@@ -332,9 +332,9 @@ Partial Class TestItemDlg
         Me.ChkPa4k.CheckState = System.Windows.Forms.CheckState.Checked
         Me.ChkPa4k.Location = New System.Drawing.Point(119, 194)
         Me.ChkPa4k.Name = "ChkPa4k"
-        Me.ChkPa4k.Size = New System.Drawing.Size(75, 20)
+        Me.ChkPa4k.Size = New System.Drawing.Size(70, 20)
         Me.ChkPa4k.TabIndex = 45
-        Me.ChkPa4k.Text = "4.0 kPa"
+        Me.ChkPa4k.Text = "4.0kPa"
         Me.ChkPa4k.UseVisualStyleBackColor = True
         '
         'ChkPa3k
@@ -344,9 +344,9 @@ Partial Class TestItemDlg
         Me.ChkPa3k.CheckState = System.Windows.Forms.CheckState.Checked
         Me.ChkPa3k.Location = New System.Drawing.Point(119, 168)
         Me.ChkPa3k.Name = "ChkPa3k"
-        Me.ChkPa3k.Size = New System.Drawing.Size(75, 20)
+        Me.ChkPa3k.Size = New System.Drawing.Size(70, 20)
         Me.ChkPa3k.TabIndex = 45
-        Me.ChkPa3k.Text = "3.0 kPa"
+        Me.ChkPa3k.Text = "3.0kPa"
         Me.ChkPa3k.UseVisualStyleBackColor = True
         '
         'ChkPa2k
@@ -356,9 +356,9 @@ Partial Class TestItemDlg
         Me.ChkPa2k.CheckState = System.Windows.Forms.CheckState.Checked
         Me.ChkPa2k.Location = New System.Drawing.Point(119, 142)
         Me.ChkPa2k.Name = "ChkPa2k"
-        Me.ChkPa2k.Size = New System.Drawing.Size(75, 20)
+        Me.ChkPa2k.Size = New System.Drawing.Size(70, 20)
         Me.ChkPa2k.TabIndex = 45
-        Me.ChkPa2k.Text = "2.0 kPa"
+        Me.ChkPa2k.Text = "2.0kPa"
         Me.ChkPa2k.UseVisualStyleBackColor = True
         '
         'ChkPa1k
@@ -368,9 +368,9 @@ Partial Class TestItemDlg
         Me.ChkPa1k.CheckState = System.Windows.Forms.CheckState.Checked
         Me.ChkPa1k.Location = New System.Drawing.Point(119, 115)
         Me.ChkPa1k.Name = "ChkPa1k"
-        Me.ChkPa1k.Size = New System.Drawing.Size(75, 20)
+        Me.ChkPa1k.Size = New System.Drawing.Size(70, 20)
         Me.ChkPa1k.TabIndex = 45
-        Me.ChkPa1k.Text = "1.0 kPa"
+        Me.ChkPa1k.Text = "1.0kPa"
         Me.ChkPa1k.UseVisualStyleBackColor = True
         '
         'Label22
@@ -433,23 +433,14 @@ Partial Class TestItemDlg
         Me.txtLekBase.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         Me.txtLekBase.Visible = False
         '
-        'Label28
-        '
-        Me.Label28.AutoSize = True
-        Me.Label28.Location = New System.Drawing.Point(10, 275)
-        Me.Label28.Name = "Label28"
-        Me.Label28.Size = New System.Drawing.Size(241, 16)
-        Me.Label28.TabIndex = 37
-        Me.Label28.Text = "※測定する圧力にチェックをいれること"
-        '
         'Label23
         '
         Me.Label23.AutoSize = True
         Me.Label23.Location = New System.Drawing.Point(8, 116)
         Me.Label23.Name = "Label23"
-        Me.Label23.Size = New System.Drawing.Size(55, 16)
+        Me.Label23.Size = New System.Drawing.Size(113, 16)
         Me.Label23.TabIndex = 37
-        Me.Label23.Text = "測定圧"
+        Me.Label23.Text = "測定圧(50℃時)"
         '
         'Label15
         '
@@ -695,6 +686,15 @@ Partial Class TestItemDlg
         Me.Label21.Size = New System.Drawing.Size(82, 16)
         Me.Label21.TabIndex = 28
         Me.Label21.Text = "印加電圧１"
+        '
+        'Label28
+        '
+        Me.Label28.AutoSize = True
+        Me.Label28.Location = New System.Drawing.Point(10, 275)
+        Me.Label28.Name = "Label28"
+        Me.Label28.Size = New System.Drawing.Size(241, 16)
+        Me.Label28.TabIndex = 37
+        Me.Label28.Text = "※測定する圧力にチェックをいれること"
         '
         'TestItemDlg
         '
