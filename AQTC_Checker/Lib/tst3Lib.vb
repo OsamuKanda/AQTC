@@ -385,9 +385,9 @@ Module tst3Lib
 		Dim jdgTm1 As Double    ' 判定値１
 		Dim jdgTm2 As Double    ' 判定値２
 		Dim vacs As Integer
-		'▼2024.05.10 TC Kanda （３．Ｈｅリーク量測定のパターン追加／測定有効無効パラメータ追加）
-		Dim tmp50 As Boolean = False       '50度の測定になっているか？
-		'▲2024.05.10 TC Kanda （３．Ｈｅリーク量測定のパターン追加／測定有効無効パラメータ追加）
+		''▼2024.05.10 TC Kanda （３．Ｈｅリーク量測定のパターン追加／測定有効無効パラメータ追加）
+		'Dim tmp50 As Boolean = False       '50度の測定になっているか？
+		''▲2024.05.10 TC Kanda （３．Ｈｅリーク量測定のパターン追加／測定有効無効パラメータ追加）
 
 
 		'判定値パラメータの設定で判定する
@@ -419,15 +419,15 @@ Module tst3Lib
 			ExDio_Output(MAEdoRYFC, DIO_ON)
 			WaitTim(10)
 
-			'▼2024.05.10 TC Kanda （３．Ｈｅリーク量測定のパターン追加／測定有効無効パラメータ追加）
-			'どちらかが50℃の場合にスキップを有効にする
-			If dt.schuse(0) = 1 AndAlso dt.tmp(0) = 50.0 Then
-				tmp50 = True
-			End If
-			If dt.schuse(1) = 1 AndAlso dt.tmp(1) = 50.0 Then
-				tmp50 = True
-			End If
-			'▲2024.05.10 TC Kanda （３．Ｈｅリーク量測定のパターン追加／測定有効無効パラメータ追加）
+			''▼2024.05.10 TC Kanda （３．Ｈｅリーク量測定のパターン追加／測定有効無効パラメータ追加）
+			''どちらかが50℃の場合にスキップを有効にする
+			'If dt.schuse(0) = 1 AndAlso dt.tmp(0) = 50.0 Then
+			'	tmp50 = True
+			'End If
+			'If dt.schuse(1) = 1 AndAlso dt.tmp(1) = 50.0 Then
+			'	tmp50 = True
+			'End If
+			''▲2024.05.10 TC Kanda （３．Ｈｅリーク量測定のパターン追加／測定有効無効パラメータ追加）
 			'
 			'	設定圧力 0=1.0[KPa], 1=2.0[KPa], 2=3.0[KPa], 3=4.0[KPa], 4=6.0[KPa]
 			'
@@ -436,7 +436,8 @@ Module tst3Lib
 					'1kPa
 					'▼2024.05.02 TC Kanda （３．Ｈｅリーク量測定のパターン追加／測定有効無効パラメータ追加）
 					'setpa = 1000.0
-					If dat.ptn.Contains("1") Or (Not tmp50) Then    '1kPaが有効またはサーモチラーの設定が50℃でない場合は測定実施
+					'If dat.ptn.Contains("1") Or (Not tmp50) Then    '1kPaが有効またはサーモチラーの設定が50℃でない場合は測定実施
+					If dat.ptn.Contains("1") Then    '1kPaが有効またはサーモチラーの設定が50℃でない場合は測定実施
 						setpa = 1000.0
 					Else
 						setpa = 0.0
@@ -447,7 +448,8 @@ Module tst3Lib
 					'2kPa
 					'▼2024.05.02 TC Kanda （３．Ｈｅリーク量測定のパターン追加／測定有効無効パラメータ追加）
 					'setpa = 2000.0
-					If dat.ptn.Contains("2") Or (Not tmp50) Then    '2kPaが有効またはサーモチラーの設定が50℃でない場合は測定実施
+					'If dat.ptn.Contains("2") Or (Not tmp50) Then    '2kPaが有効またはサーモチラーの設定が50℃でない場合は測定実施
+					If dat.ptn.Contains("2") Then    '2kPaが有効またはサーモチラーの設定が50℃でない場合は測定実施
 						setpa = 2000.0
 					Else
 						setpa = 0.0
@@ -458,7 +460,8 @@ Module tst3Lib
 					'3kPa
 					'▼2024.05.02 TC Kanda （３．Ｈｅリーク量測定のパターン追加／測定有効無効パラメータ追加）
 					'setpa = 3000.0
-					If dat.ptn.Contains("3") Or (Not tmp50) Then    '3kPaが有効またはサーモチラーの設定が50℃でない場合は測定実施
+					'If dat.ptn.Contains("3") Or (Not tmp50) Then    '3kPaが有効またはサーモチラーの設定が50℃でない場合は測定実施
+					If dat.ptn.Contains("3") Then    '3kPaが有効またはサーモチラーの設定が50℃でない場合は測定実施
 						setpa = 3000.0
 					Else
 						setpa = 0.0
@@ -469,7 +472,8 @@ Module tst3Lib
 					'4kPa
 					'▼2024.05.02 TC Kanda （３．Ｈｅリーク量測定のパターン追加／測定有効無効パラメータ追加）
 					'setpa = 4000.0
-					If dat.ptn.Contains("4") Or (Not tmp50) Then    '4kPaが有効またはサーモチラーの設定が50℃でない場合は測定実施
+					'If dat.ptn.Contains("4") Or (Not tmp50) Then    '4kPaが有効またはサーモチラーの設定が50℃でない場合は測定実施
+					If dat.ptn.Contains("4") Then    '4kPaが有効またはサーモチラーの設定が50℃でない場合は測定実施
 						setpa = 4000.0
 					Else
 						setpa = 0.0
@@ -480,7 +484,8 @@ Module tst3Lib
 					'6kPa
 					'▼2024.05.02 TC Kanda （３．Ｈｅリーク量測定のパターン追加／測定有効無効パラメータ追加）
 					'setpa = 6000.0
-					If dat.ptn.Contains("6") Or (Not tmp50) Then    '6kPaが有効またはサーモチラーの設定が50℃でない場合は測定実施
+					'If dat.ptn.Contains("6") Or (Not tmp50) Then    '6kPaが有効またはサーモチラーの設定が50℃でない場合は測定実施
+					If dat.ptn.Contains("6") Then    '6kPaが有効またはサーモチラーの設定が50℃でない場合は測定実施
 						setpa = 6000.0
 					Else
 						setpa = 0.0
