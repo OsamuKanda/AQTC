@@ -450,55 +450,55 @@ Public Class DHDTest
 
 
 
-	Public Sub setMesHeGas				_
-	(						_
-		ByVal dno		As Integer	_
+	Public Sub setMesHeGas _
+	(
+		ByVal dno As Integer
 	)
 
-		Dim dgv			As DataGridView
-		Dim dt			As DataTable
+		Dim dgv As DataGridView
+		Dim dt As DataTable
 
 
 
-		Select Case	tstNo
+		Select Case tstNo
 
-		Case	0
+			Case 0
 
-			dgv			= dgvHeGas1
+				dgv = dgvHeGas1
 
-			dt			= dtHeGas1
+				dt = dtHeGas1
 
-		Case	1
+			Case 1
 
-			dgv			= dgvHeGas2
+				dgv = dgvHeGas2
 
-			dt			= dtHeGas2
+				dt = dtHeGas2
 
-		Case	2
+			Case 2
 
-			dgv			= dgvHeGas3
+				dgv = dgvHeGas3
 
-			dt			= dtHeGas3
+				dt = dtHeGas3
 
-		Case	3
+			Case 3
 
-			dgv			= dgvHeGas4
+				dgv = dgvHeGas4
 
-			dt			= dtHeGas4
+				dt = dtHeGas4
 
-		Case Else
+			Case Else
 
-			Exit Sub
+				Exit Sub
 
 		End Select
 
 
-		Dim mdt			As DTI3 = MESrec.dt( tstNo ).t3.d( dno )
-		Dim rno			As Integer = 0
+		Dim mdt As DTI3 = MESrec.dt(tstNo).t3.d(dno)
+		Dim rno As Integer = 0
 
 
 
-		rno			+= dno
+		rno += dno
 
 		' 20140107 小数点以下桁数変更
 		' dt.Rows(rno).Item(2) = mdt.mfcvolt.ToString("0.00000")
@@ -509,30 +509,64 @@ Public Class DHDTest
 
 		' 20201102 S_Harada 測定方法変更
 		' 20140107 小数点以下桁数変更
-		' dt.Rows(rno).Item(3) = mdt.cm.ToString("0.00000")
-		dt.Rows( rno ).Item( 2 )	= mdt.cm( 0 ).ToString( "0.00" )
+		'▼2024.05.14 TC Kanda （３．Ｈｅリーク量測定のパターン追加／測定有効無効パラメータ追加）
+		'dt.Rows(rno).Item(2) = mdt.cm(0).ToString("0.00")
+		If mdt.ptn.Contains("1") Then
+			dt.Rows(rno).Item(2) = mdt.cm(0).ToString("0.00")
+		Else
+			dt.Rows(rno).Item(2) = "-"
+		End If
+		'▲2024.05.14 TC Kanda （３．Ｈｅリーク量測定のパターン追加／測定有効無効パラメータ追加）
 
-		If mdt.cm( 1 ) > 0 Then
+		If mdt.cm(1) > 0 Then
 
-			dt.Rows( rno ).Item( 3 )	= mdt.cm( 1 ).ToString( "0.00" )
+			'▼2024.05.14 TC Kanda （３．Ｈｅリーク量測定のパターン追加／測定有効無効パラメータ追加）
+			'dt.Rows(rno).Item(3) = mdt.cm(1).ToString("0.00")
+			If mdt.ptn.Contains("2") Then
+				dt.Rows(rno).Item(3) = mdt.cm(1).ToString("0.00")
+			Else
+				dt.Rows(rno).Item(3) = "-"
+			End If
+			'▲2024.05.14 TC Kanda （３．Ｈｅリーク量測定のパターン追加／測定有効無効パラメータ追加）
 
 		End If
 
-		If mdt.cm( 2 ) > 0 Then
+		If mdt.cm(2) > 0 Then
 
-			dt.Rows( rno ).Item( 4 )	= mdt.cm( 2 ).ToString( "0.00" )
+			'▼2024.05.14 TC Kanda （３．Ｈｅリーク量測定のパターン追加／測定有効無効パラメータ追加）
+			'dt.Rows(rno).Item(4) = mdt.cm(2).ToString("0.00")
+			If mdt.ptn.Contains("3") Then
+				dt.Rows(rno).Item(4) = mdt.cm(2).ToString("0.00")
+			Else
+				dt.Rows(rno).Item(4) = "-"
+			End If
+			'▲2024.05.14 TC Kanda （３．Ｈｅリーク量測定のパターン追加／測定有効無効パラメータ追加）
 
 		End If
 
-		If mdt.cm( 3 ) > 0 Then
+		If mdt.cm(3) > 0 Then
 
-			dt.Rows( rno ).Item( 5 )	= mdt.cm( 3 ).ToString( "0.00" )
+			'▼2024.05.14 TC Kanda （３．Ｈｅリーク量測定のパターン追加／測定有効無効パラメータ追加）
+			'dt.Rows(rno).Item(5) = mdt.cm(3).ToString("0.00")
+			If mdt.ptn.Contains("4") Then
+				dt.Rows(rno).Item(5) = mdt.cm(3).ToString("0.00")
+			Else
+				dt.Rows(rno).Item(5) = "-"
+			End If
+			'▲2024.05.14 TC Kanda （３．Ｈｅリーク量測定のパターン追加／測定有効無効パラメータ追加）
 
 		End If
 
-		If mdt.cm( 4 ) > 0 Then
+		If mdt.cm(4) > 0 Then
 
-			dt.Rows( rno ).Item( 6 )	= mdt.cm( 4 ).ToString( "0.00" )
+			'▼2024.05.14 TC Kanda （３．Ｈｅリーク量測定のパターン追加／測定有効無効パラメータ追加）
+			'dt.Rows(rno).Item(6) = mdt.cm(4).ToString("0.00")
+			If mdt.ptn.Contains("6") Then
+				dt.Rows(rno).Item(6) = mdt.cm(4).ToString("0.00")
+			Else
+				dt.Rows(rno).Item(6) = "-"
+			End If
+			'▲2024.05.14 TC Kanda （３．Ｈｅリーク量測定のパターン追加／測定有効無効パラメータ追加）
 
 		End If
 
@@ -551,29 +585,29 @@ Public Class DHDTest
 
 		If mdt.okng = 0 Then
 
-			dt.Rows( rno ).Item( 9 )	= "合"
+			dt.Rows(rno).Item(9) = "合"
 
 		ElseIf mdt.okng = 1 Then
 
-			dt.Rows( rno ).Item( 9 )	= "否"
+			dt.Rows(rno).Item(9) = "否"
 
-		else
+		Else
 
-			dt.Rows( rno ).Item( 9 )	= "-"
+			dt.Rows(rno).Item(9) = "-"
 
 		End If
 
 		If mdt.okng2 = 0 Then
 
-			dt.Rows( rno ).Item( 10 )	= "合"
+			dt.Rows(rno).Item(10) = "合"
 
 		ElseIf mdt.okng2 = 1 Then
 
-			dt.Rows( rno ).Item( 10 )	= "否"
+			dt.Rows(rno).Item(10) = "否"
 
-		else
+		Else
 
-			dt.Rows( rno ).Item( 10 )	= "-"
+			dt.Rows(rno).Item(10) = "-"
 
 		End If
 
@@ -589,10 +623,10 @@ Public Class DHDTest
 		' 測定実施した行へ移動させる
 		Try
 
-			dgv.CurrentCell			= dgv			_
-			(							_
-				1,						_
-				rno						_
+			dgv.CurrentCell = dgv _
+			(
+				1,
+				rno
 			)
 
 		Catch
@@ -5425,20 +5459,22 @@ Public Class DHDTest
 				End If
 				FrmLog.LogDspAdd("", msg + "10) 配管・ウエハ裏面圧 CM <= 30 [Pa] 待ち終了", Color.Empty)
 
-				'▼2024.04.19 TC Kanda （１．配管真空排気シーケンス修正／ESC電源OFFの処理を チャンバ内圧力を下げる前に移動）
+				'▼2024.04.19 TC Kanda （１．配管真空排気シーケンス修正／ESC電源OFFの処理を チャンバ内圧力を下げる前に行う）
 				Select Case (testType)
 					Case TestType.None
 					Case TestType.Resistance
 						'ウエハ吸着テストの場合
+						FrmLog.LogDspAdd("", msg + "★ 真空引き時のESC電源OFF ★", Color.Empty)
 						ESCstop(2000.0, 7)
 					Case TestType.HeLeak
 						'Heリークテストの場合
+						FrmLog.LogDspAdd("", msg + "★ 真空引き時のESC電源OFF ★", Color.Empty)
 						ESCstop2(sdcv1, sdcv2, 3000.0, 7)
 					Case TestType.Adsorption
-						'残留吸着力測定は独自の排気シーケンスがある
-						'配管真空引きの後ESC電源のOFFが無い
+						'残留吸着力測定において印加中の真空引きには独自の排気シーケンスがある
+						'印加前、印加後はこの真空引き処理を利用しているが、ESC電源の状態が重要な為、ここでは処理しない
 				End Select
-				'▲2024.04.19 TC Kanda （１．配管真空排気シーケンス修正／ESC電源OFFの処理を チャンバ内圧力を下げる前に移動）
+				'▲2024.04.19 TC Kanda （１．配管真空排気シーケンス修正／ESC電源OFFの処理を チャンバ内圧力を下げる前に行う）
 
 				'
 				'	G1閉
@@ -5703,6 +5739,9 @@ Public Class DHDTest
 				' SV2=閉 RYE2=OFF DOX34=OFF
 				FrmLog.LogDspAdd( "", msg + "11) G1閉", Color.Empty )
 				ExDio_Output( EXSdoRYE2, DIO_OFF )
+				'▼
+				ESCstop(2000.0, 7)
+				'▲
 
 				'
 				'	G4閉

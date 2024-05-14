@@ -988,20 +988,25 @@ Module tst4Lib
 		'
 		'	ウエハ裏面圧条件待ち処理
 		'
-		If						_
-		DHDTest.waitwbakp				_
-		(						_
-			"ウエハ裏面圧が下がるのを待つ",		_
-			vac,					_
-			dt.schuse,				_
-			dt.tmp,					_
-			tprs,					_
-			bakp					_
-		)						_
-		Then
-			' オペレータによる中断
-			rtn		= 0
-		End If
+		'▼
+		'▼2024.05.14 TC Kanda （１．配管真空排気シーケンス修正／残留吸着力測定における無限ループの排除）
+		'If _
+		'DHDTest.waitwbakp _
+		'(
+		'	"ウエハ裏面圧が下がるのを待つ",
+		'	vac,
+		'	dt.schuse,
+		'	dt.tmp,
+		'	tprs,
+		'	bakp
+		') _
+		'Then
+		'	' オペレータによる中断
+		'	rtn = 0
+		'End If
+		'▲2024.05.14 TC Kanda （１．配管真空排気シーケンス修正／残留吸着力測定における無限ループの排除）
+
+
 
 		Return rtn
 

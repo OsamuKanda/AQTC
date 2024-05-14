@@ -248,7 +248,7 @@ Module tst3Lib
 
 			End If
 
-			'
+			'★下位ループ内でやってるので、いらん気がする
 			'	チャンバ内圧力、ウエハ裏面圧が下がるのを待つ
 			'
 			If						_
@@ -296,18 +296,18 @@ Module tst3Lib
 			'
 			'	測定値を画面表示
 			'
-			DHDTest.setMesHeGas( ntst )
+			DHDTest.setMesHeGas(ntst)
 
 			'
 			'	電極ヘッドの除電を行う
 			'	ＳＤＣ出力電圧を徐々に下げて、ウエハ飛び上がりを小さくする
 			'
-			ESCstop2			_
-			(				_
-				sdcv1,			_
-				sdcv2,			_
-				3000.0,			_
-				7			_
+			ESCstop2 _
+			(
+				sdcv1,
+				sdcv2,
+				3000.0,
+				7
 			)
 
 			WaitTim( 300.0 )
@@ -385,9 +385,6 @@ Module tst3Lib
 		Dim jdgTm1 As Double    ' 判定値１
 		Dim jdgTm2 As Double    ' 判定値２
 		Dim vacs As Integer
-		'▼2024.05.10 TC Kanda （３．Ｈｅリーク量測定のパターン追加／測定有効無効パラメータ追加）
-		Dim tmp50 As Boolean = False       '50度の測定になっているか？
-		'▲2024.05.10 TC Kanda （３．Ｈｅリーク量測定のパターン追加／測定有効無効パラメータ追加）
 
 
 		'判定値パラメータの設定で判定する
@@ -419,15 +416,6 @@ Module tst3Lib
 			ExDio_Output(MAEdoRYFC, DIO_ON)
 			WaitTim(10)
 
-			'▼2024.05.10 TC Kanda （３．Ｈｅリーク量測定のパターン追加／測定有効無効パラメータ追加）
-			'どちらかが50℃の場合にスキップを有効にする
-			If dt.schuse(0) = 1 AndAlso dt.tmp(0) = 50.0 Then
-				tmp50 = True
-			End If
-			If dt.schuse(1) = 1 AndAlso dt.tmp(1) = 50.0 Then
-				tmp50 = True
-			End If
-			'▲2024.05.10 TC Kanda （３．Ｈｅリーク量測定のパターン追加／測定有効無効パラメータ追加）
 			'
 			'	設定圧力 0=1.0[KPa], 1=2.0[KPa], 2=3.0[KPa], 3=4.0[KPa], 4=6.0[KPa]
 			'
@@ -436,7 +424,7 @@ Module tst3Lib
 					'1kPa
 					'▼2024.05.02 TC Kanda （３．Ｈｅリーク量測定のパターン追加／測定有効無効パラメータ追加）
 					'setpa = 1000.0
-					If dat.ptn.Contains("1") Or (Not tmp50) Then    '1kPaが有効またはサーモチラーの設定が50℃でない場合は測定実施
+					If dat.ptn.Contains("1") Then    '1kPaが有効またはサーモチラーの設定が50℃でない場合は測定実施
 						setpa = 1000.0
 					Else
 						setpa = 0.0
@@ -447,7 +435,7 @@ Module tst3Lib
 					'2kPa
 					'▼2024.05.02 TC Kanda （３．Ｈｅリーク量測定のパターン追加／測定有効無効パラメータ追加）
 					'setpa = 2000.0
-					If dat.ptn.Contains("2") Or (Not tmp50) Then    '2kPaが有効またはサーモチラーの設定が50℃でない場合は測定実施
+					If dat.ptn.Contains("2") Then    '2kPaが有効またはサーモチラーの設定が50℃でない場合は測定実施
 						setpa = 2000.0
 					Else
 						setpa = 0.0
@@ -458,7 +446,7 @@ Module tst3Lib
 					'3kPa
 					'▼2024.05.02 TC Kanda （３．Ｈｅリーク量測定のパターン追加／測定有効無効パラメータ追加）
 					'setpa = 3000.0
-					If dat.ptn.Contains("3") Or (Not tmp50) Then    '3kPaが有効またはサーモチラーの設定が50℃でない場合は測定実施
+					If dat.ptn.Contains("3") Then    '3kPaが有効またはサーモチラーの設定が50℃でない場合は測定実施
 						setpa = 3000.0
 					Else
 						setpa = 0.0
@@ -469,7 +457,7 @@ Module tst3Lib
 					'4kPa
 					'▼2024.05.02 TC Kanda （３．Ｈｅリーク量測定のパターン追加／測定有効無効パラメータ追加）
 					'setpa = 4000.0
-					If dat.ptn.Contains("4") Or (Not tmp50) Then    '4kPaが有効またはサーモチラーの設定が50℃でない場合は測定実施
+					If dat.ptn.Contains("4") Then    '4kPaが有効またはサーモチラーの設定が50℃でない場合は測定実施
 						setpa = 4000.0
 					Else
 						setpa = 0.0
@@ -480,7 +468,7 @@ Module tst3Lib
 					'6kPa
 					'▼2024.05.02 TC Kanda （３．Ｈｅリーク量測定のパターン追加／測定有効無効パラメータ追加）
 					'setpa = 6000.0
-					If dat.ptn.Contains("6") Or (Not tmp50) Then    '6kPaが有効またはサーモチラーの設定が50℃でない場合は測定実施
+					If dat.ptn.Contains("6") Then    '6kPaが有効またはサーモチラーの設定が50℃でない場合は測定実施
 						setpa = 6000.0
 					Else
 						setpa = 0.0
@@ -538,7 +526,7 @@ Module tst3Lib
 					ExDio_Output(EXSdoRYE2, DIO_ON)
 					WaitTim(100)
 
-					'
+					'★コレ、いらん気がする
 					'	チャンバ内圧力、ウエハ裏面圧が下がるのを待つ
 					'	リトライした時に圧が下がるまで待つ
 					'
@@ -578,7 +566,10 @@ Module tst3Lib
 					'
 					'	20230110 y.goto この関数内で MAEdoRYFC を OFFしている!
 					'
+					'▼2024.04.19 TC Kanda （１．配管真空排気シーケンス修正／真空排気シーケンス内でESC電源OFF）
+					'vacs = DHDTest.VACBproc()
 					vacs = DHDTest.VACBproc(DHDTest.TestType.HeLeak, sdcv1, sdcv2)
+					'▲2024.04.19 TC Kanda （１．配管真空排気シーケンス修正／真空排気シーケンス内でESC電源OFF）
 					If vacs <> 0 Then
 
 						' 試験中止
@@ -768,9 +759,27 @@ Module tst3Lib
 
 				End If
 
+				'▼2024.05.14 TC Kanda （１．配管真空排気シーケンス修正／Heリーク量測定の真空排気シーケンス完了後にESC電源ON）
+				'
+				'	電極ヘッドに吸着電圧印加し目標に到達するまで待つ
+				'
+				If (ESCproc(sdcv1, sdcv2, 30000.0, 7)) Then
+
+					'   20200716 s.harada
+					FrmLog.LogDspAdd("", "tst3 途中終了：ESCproc", Color.Empty)
+
+					' 中止指示
+					rtn = -1
+
+					Exit Do
+
+				End If
+				'▲2024.05.14 TC Kanda （１．配管真空排気シーケンス修正／真空排気シーケンス内でESC電源ON）
+
 				'▼2024.05.02 TC Kanda （３．Ｈｅリーク量測定のパターン追加／測定有効無効パラメータ追加）
 			End If
 			'▲2024.05.02 TC Kanda （３．Ｈｅリーク量測定のパターン追加／測定有効無効パラメータ追加）
+
 
 			' 設定圧力 0=1.0[KPa], 1=2.0[KPa], 2=3.0[KPa], 3=4.0[KPa], 4=6.0[KPa]
 			bpsel += 1

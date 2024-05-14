@@ -627,23 +627,23 @@ Public Class TestItemDlg
 		'
 
 		' Ｈｅリーク測定・ＳＤＣ電源印加電圧１
-		If IsNumeric( txtLekV1.Text ) Then
+		If IsNumeric(txtLekV1.Text) Then
 
 			' Ｈｅリーク測定・ＳＤＣ電源印加電圧１
-			pDtRow( "LV" )		= Math.Abs( CDbl( txtLekV1.Text ) )
+			pDtRow("LV") = Math.Abs(CDbl(txtLekV1.Text))
 
 			' Ｈｅリーク測定・ＳＤＣ電源印加電圧１
-			pDtRow( "LEK_VOLT1" )	= txtLekV1.Text
+			pDtRow("LEK_VOLT1") = txtLekV1.Text
 
 			' Ｈｅリーク測定・ＳＤＣ電源印加電圧２
-			If txtLekV2.Text = "" Or IsNumeric( txtLekV2.Text ) = False Then
+			If txtLekV2.Text = "" Or IsNumeric(txtLekV2.Text) = False Then
 
-				pDtRow( "LEK_VOLT2" )	= "0"
+				pDtRow("LEK_VOLT2") = "0"
 
 			Else
 
 				' Ｈｅリーク測定・ＳＤＣ電源印加電圧２
-				pDtRow( "LEK_VOLT2" )	= txtLekV2.Text
+				pDtRow("LEK_VOLT2") = txtLekV2.Text
 
 			End If
 
@@ -678,38 +678,42 @@ Public Class TestItemDlg
 			'pDtRow( "LEK_BASE" )	= txtLekBase.Text
 			If IsNumeric(txtLekBase.Text) AndAlso CDbl(txtLekBase.Text) > 0 Then
 
-					pDtRow("LEK_BASE") = CDbl(txtLekBase.Text).ToString("F1")
-
-				Else
-
-					pDtRow("LEK_BASE") = " "
-
-				End If
-
-				'	20201102 s.harada	Ｈｅリーク測定・判定値(2kPa)　追加
-				If IsNumeric(txtLekBase2.Text) AndAlso CDbl(txtLekBase2.Text) > 0 Then
-
-					pDtRow("LEK_BASE2") = CDbl(txtLekBase2.Text).ToString("F1")
-
-				Else
-
-					pDtRow("LEK_BASE2") = " "
-
-				End If
-
+				pDtRow("LEK_BASE") = CDbl(txtLekBase.Text).ToString("F1")
 
 			Else
 
-				pDtRow( "LV" )		= 0
+				pDtRow("LEK_BASE") = " "
 
-			pDtRow( "LEK_VOLT1" )	= "-"
-
-			pDtRow( "LEK_VOLT2" )	= "-"
-
-			pDtRow( "LEK_BASE" )	= "-"
+			End If
 
 			'	20201102 s.harada	Ｈｅリーク測定・判定値(2kPa)　追加
-			pDtRow( "LEK_BASE2" )	= "-"
+			If IsNumeric(txtLekBase2.Text) AndAlso CDbl(txtLekBase2.Text) > 0 Then
+
+				pDtRow("LEK_BASE2") = CDbl(txtLekBase2.Text).ToString("F1")
+
+			Else
+
+				pDtRow("LEK_BASE2") = " "
+
+			End If
+
+
+		Else
+
+			pDtRow("LV") = 0
+
+			pDtRow("LEK_VOLT1") = "-"
+
+			pDtRow("LEK_VOLT2") = "-"
+
+			pDtRow("LEK_BASE") = "-"
+
+			'	20201102 s.harada	Ｈｅリーク測定・判定値(2kPa)　追加
+			pDtRow("LEK_BASE2") = "-"
+
+			'▼ 2024.05.02 TC Kanda （３．Ｈｅリーク量測定のパターン追加／測定有効無効パラメータ追加）
+			pDtRow("LEK_PTN") = "-"
+			'▲ 2024.05.02 TC Kanda （３．Ｈｅリーク量測定のパターン追加／測定有効無効パラメータ追加）
 
 
 		End If
