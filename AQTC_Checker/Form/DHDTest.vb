@@ -2194,13 +2194,19 @@ Public Class DHDTest
 
 		'tabGroupReSize( 3, tabPage4, grpZetsuen4, zdsp, grpKyuucyaku4, 0, grpHeGas4, 0 )
 
-		tabGroupReSize( 0, tabPage1, grpZetsuen1, zdsp, grpKyuucyaku1, 0, grpHeGas1, 0, grpZanryu1, 0 )
+		'▼ 2024.04.11 TC Kanda （４．測定の順番変更）
+		'tabGroupReSize(0, tabPage1, grpZetsuen1, zdsp, grpKyuucyaku1, 0, grpHeGas1, 0, grpZanryu1, 0)
 
-		tabGroupReSize( 1, tabPage2, grpZetsuen2, zdsp, grpKyuucyaku2, kdsp, grpHeGas2, hdsp, grpZanryu2, zkdsp )
+		'tabGroupReSize(1, tabPage2, grpZetsuen2, zdsp, grpKyuucyaku2, kdsp, grpHeGas2, hdsp, grpZanryu2, zkdsp)
 
-		tabGroupReSize( 2, tabPage3, grpZetsuen3, zdsp, grpKyuucyaku3, kdsp, grpHeGas3, hdsp, grpZanryu3, zkdsp )
+		'tabGroupReSize(2, tabPage3, grpZetsuen3, zdsp, grpKyuucyaku3, kdsp, grpHeGas3, hdsp, grpZanryu3, zkdsp)
 
-		tabGroupReSize( 3, tabPage4, grpZetsuen4, zdsp, grpKyuucyaku4, 0, grpHeGas4, 0, grpZanryu4, 0 )
+		'tabGroupReSize(3, tabPage4, grpZetsuen4, zdsp, grpKyuucyaku4, 0, grpHeGas4, 0, grpZanryu4, 0)
+		tabGroupReSize(0, tabPage1, grpZetsuen1, zdsp, grpHeGas1, 0, grpKyuucyaku1, 0, grpZanryu1, 0)
+		tabGroupReSize(1, tabPage2, grpZetsuen2, zdsp, grpHeGas2, hdsp, grpKyuucyaku2, kdsp, grpZanryu2, zkdsp)
+		tabGroupReSize(2, tabPage3, grpZetsuen3, zdsp, grpHeGas3, hdsp, grpKyuucyaku3, kdsp, grpZanryu3, zkdsp)
+		tabGroupReSize(3, tabPage4, grpZetsuen4, zdsp, grpHeGas4, 0, grpKyuucyaku4, 0, grpZanryu4, 0)
+		'▲ 2024.04.11 TC Kanda （４．測定の順番変更）
 
 
 	End Sub
@@ -2387,8 +2393,8 @@ Public Class DHDTest
 		'
 		'	テスト項目の表示処理
 		'
-	'	20201102 s.harada
-	'	 AQTC対応で変更
+		'	20201102 s.harada
+		'	 AQTC対応で変更
 		'tabGroupReSize( 0, tabPage1, grpZetsuen1, grpKyuucyaku1, grpHeGas1 )
 
 		'tabGroupReSize( 1, tabPage2, grpZetsuen2, grpKyuucyaku2, grpHeGas2 )
@@ -2397,13 +2403,23 @@ Public Class DHDTest
 
 		'tabGroupReSize( 3, tabPage4, grpZetsuen4, grpKyuucyaku4, grpHeGas4 )
 
-		tabGroupReSize( 0, tabPage1, grpZetsuen1, grpKyuucyaku1, grpHeGas1, grpZanryu1 )
+		'▼ 2024.04.11 TC Kanda （４．測定の順番変更）
+		'tabGroupReSize(0, tabPage1, grpZetsuen1, grpKyuucyaku1, grpHeGas1, grpZanryu1)
 
-		tabGroupReSize( 1, tabPage2, grpZetsuen2, grpKyuucyaku2, grpHeGas2, grpZanryu2 )
+		'tabGroupReSize( 1, tabPage2, grpZetsuen2, grpKyuucyaku2, grpHeGas2, grpZanryu2 )
 
-		tabGroupReSize( 2, tabPage3, grpZetsuen3, grpKyuucyaku3, grpHeGas3, grpZanryu3 )
+		'tabGroupReSize( 2, tabPage3, grpZetsuen3, grpKyuucyaku3, grpHeGas3, grpZanryu3 )
 
-		tabGroupReSize( 3, tabPage4, grpZetsuen4, grpKyuucyaku4, grpHeGas4, grpZanryu4 )
+		'tabGroupReSize( 3, tabPage4, grpZetsuen4, grpKyuucyaku4, grpHeGas4, grpZanryu4 )
+
+		tabGroupReSize(0, tabPage1, grpZetsuen1, grpHeGas1, grpKyuucyaku1, grpZanryu1)
+
+		tabGroupReSize(1, tabPage2, grpZetsuen2, grpHeGas2, grpKyuucyaku2, grpZanryu2)
+
+		tabGroupReSize(2, tabPage3, grpZetsuen3, grpHeGas3, grpKyuucyaku3, grpZanryu3)
+
+		tabGroupReSize(3, tabPage4, grpZetsuen4, grpHeGas4, grpKyuucyaku4, grpZanryu4)
+		'▲ 2024.04.11 TC Kanda （４．測定の順番変更）
 
 
 
@@ -2960,15 +2976,26 @@ Public Class DHDTest
 
 	'   20201102 s.harada
 	'   AQTC対応で残留吸着追加
-	Private Sub tabGroupReSize			_
-	(						_
-		ByVal no		As Integer,	_
-		ByRef tabPage		As TabPage,	_
-		ByRef zgrp		As GroupBox,	_
-		ByRef kgrp		As GroupBox,	_
-		ByRef hgrp		As GroupBox,	_
-		ByRef zkgrp		As GroupBox	_
+	'▼ 2024.04.11 TC Kanda （４．測定の順番変更）
+	'Private Sub tabGroupReSize _
+	'(
+	'	ByVal no As Integer,
+	'	ByRef tabPage As TabPage,
+	'	ByRef zgrp As GroupBox,
+	'	ByRef kgrp As GroupBox,
+	'	ByRef hgrp As GroupBox,
+	'	ByRef zkgrp As GroupBox
+	')
+	Private Sub tabGroupReSize _
+	(
+		ByVal no As Integer,
+		ByRef tabPage As TabPage,
+		ByRef zgrp As GroupBox,
+		ByRef hgrp As GroupBox,
+		ByRef kgrp As GroupBox,
+		ByRef zkgrp As GroupBox
 	)
+		'▲ 2024.04.11 TC Kanda （４．測定の順番変更）
 
 		'no:雰囲気　0:大気　1:真空(低温）　2:真空（高温）　3:真空（高温２）
 		'tabPage:タブページ
@@ -2978,60 +3005,63 @@ Public Class DHDTest
 		'zkgrp:残留吸着測定表示グループボックス
 
 
-		Dim ct			As Integer = 0
-		Dim hight		As Integer = tabPage.Height
-		Dim zct			As Integer
-		Dim kct			As Integer
-		Dim hct			As Integer
-		Dim zkct		As Integer
+		Dim ct As Integer = 0
+		Dim hight As Integer = tabPage.Height
+		Dim zct As Integer
+		Dim kct As Integer
+		Dim hct As Integer
+		Dim zkct As Integer
 
 
-		Select Case	no
+		Select Case no
 
-		Case	0
+			Case 0
 
-			zct		= dtZetsu1.Rows.Count
+				zct = dtZetsu1.Rows.Count
 
-			kct		= dtKyucy1.Rows.Count
+				kct = dtKyucy1.Rows.Count
 
-			hct		= dtHeGas1.Rows.Count
+				hct = dtHeGas1.Rows.Count
 
-			zkct		= dtZanry1.Rows.Count
+				zkct = dtZanry1.Rows.Count
 
-		Case	1
+			Case 1
 
-			zct		= dtZetsu2.Rows.Count
+				zct = dtZetsu2.Rows.Count
 
-			kct		= dtKyucy2.Rows.Count
+				kct = dtKyucy2.Rows.Count
 
-			hct		= dtHeGas2.Rows.Count
+				hct = dtHeGas2.Rows.Count
 
-			zkct		= dtZanry2.Rows.Count
+				zkct = dtZanry2.Rows.Count
 
-		Case	2
+			Case 2
 
-			zct		= dtZetsu3.Rows.Count
+				zct = dtZetsu3.Rows.Count
 
-			kct		= dtKyucy3.Rows.Count
+				kct = dtKyucy3.Rows.Count
 
-			hct		= dtHeGas3.Rows.Count
+				hct = dtHeGas3.Rows.Count
 
-			zkct		= dtZanry3.Rows.Count
+				zkct = dtZanry3.Rows.Count
 
-		Case	3
+			Case 3
 
-			zct		= dtZetsu4.Rows.Count
+				zct = dtZetsu4.Rows.Count
 
-			kct		= dtKyucy4.Rows.Count
+				kct = dtKyucy4.Rows.Count
 
-			hct		= dtHeGas4.Rows.Count
+				hct = dtHeGas4.Rows.Count
 
-			zkct		= dtZanry4.Rows.Count
+				zkct = dtZanry4.Rows.Count
 
 		End Select
 
 
-		tabGroupReSize( no, tabPage, zgrp, zct, kgrp, kct, hgrp, hct, zkgrp, zkct )
+		'▼ 2024.04.11 TC Kanda （４．測定の順番変更）
+		'tabGroupReSize(no, tabPage, zgrp, zct, kgrp, kct, hgrp, hct, zkgrp, zkct)
+		tabGroupReSize(no, tabPage, zgrp, zct, hgrp, hct, kgrp, kct, zkgrp, zkct)
+		'▲ 2024.04.11 TC Kanda （４．測定の順番変更）
 
 
 	End Sub

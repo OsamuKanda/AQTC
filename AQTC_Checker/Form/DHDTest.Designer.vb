@@ -2714,7 +2714,7 @@ Partial Class DHDTest
         Me.grpKyuucyaku1.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.grpKyuucyaku1.Controls.Add(Me.Label72)
         Me.grpKyuucyaku1.Controls.Add(Me.dgvKyuucyaku1)
-        Me.grpKyuucyaku1.Location = New System.Drawing.Point(5, 140)
+        Me.grpKyuucyaku1.Location = New System.Drawing.Point(5, 275)
         Me.grpKyuucyaku1.Name = "grpKyuucyaku1"
         Me.grpKyuucyaku1.Size = New System.Drawing.Size(916, 120)
         Me.grpKyuucyaku1.TabIndex = 6
@@ -2950,7 +2950,7 @@ Partial Class DHDTest
         '
         Me.grpHeGas1.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.grpHeGas1.Controls.Add(Me.dgvHeGas1)
-        Me.grpHeGas1.Location = New System.Drawing.Point(5, 275)
+        Me.grpHeGas1.Location = New System.Drawing.Point(5, 140)
         Me.grpHeGas1.Name = "grpHeGas1"
         Me.grpHeGas1.Size = New System.Drawing.Size(916, 120)
         Me.grpHeGas1.TabIndex = 3
@@ -3187,7 +3187,7 @@ Partial Class DHDTest
         Me.grpHeGas2.Controls.Add(Me.Label88)
         Me.grpHeGas2.Controls.Add(Me.Label87)
         Me.grpHeGas2.Controls.Add(Me.dgvHeGas2)
-        Me.grpHeGas2.Location = New System.Drawing.Point(5, 275)
+        Me.grpHeGas2.Location = New System.Drawing.Point(5, 140)
         Me.grpHeGas2.Name = "grpHeGas2"
         Me.grpHeGas2.Size = New System.Drawing.Size(916, 120)
         Me.grpHeGas2.TabIndex = 9
@@ -3345,7 +3345,7 @@ Partial Class DHDTest
         Me.grpKyuucyaku2.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.grpKyuucyaku2.Controls.Add(Me.Label56)
         Me.grpKyuucyaku2.Controls.Add(Me.dgvKyuucyaku2)
-        Me.grpKyuucyaku2.Location = New System.Drawing.Point(5, 140)
+        Me.grpKyuucyaku2.Location = New System.Drawing.Point(5, 275)
         Me.grpKyuucyaku2.Name = "grpKyuucyaku2"
         Me.grpKyuucyaku2.Size = New System.Drawing.Size(916, 120)
         Me.grpKyuucyaku2.TabIndex = 8
@@ -3690,7 +3690,7 @@ Partial Class DHDTest
         Me.grpHeGas3.Controls.Add(Me.Label91)
         Me.grpHeGas3.Controls.Add(Me.Label90)
         Me.grpHeGas3.Controls.Add(Me.dgvHeGas3)
-        Me.grpHeGas3.Location = New System.Drawing.Point(5, 275)
+        Me.grpHeGas3.Location = New System.Drawing.Point(5, 140)
         Me.grpHeGas3.Name = "grpHeGas3"
         Me.grpHeGas3.Size = New System.Drawing.Size(916, 120)
         Me.grpHeGas3.TabIndex = 9
@@ -3848,7 +3848,7 @@ Partial Class DHDTest
         Me.grpKyuucyaku3.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.grpKyuucyaku3.Controls.Add(Me.Label82)
         Me.grpKyuucyaku3.Controls.Add(Me.dgvKyuucyaku3)
-        Me.grpKyuucyaku3.Location = New System.Drawing.Point(5, 140)
+        Me.grpKyuucyaku3.Location = New System.Drawing.Point(5, 275)
         Me.grpKyuucyaku3.Name = "grpKyuucyaku3"
         Me.grpKyuucyaku3.Size = New System.Drawing.Size(916, 120)
         Me.grpKyuucyaku3.TabIndex = 8
@@ -4189,7 +4189,7 @@ Partial Class DHDTest
         '
         Me.grpHeGas4.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.grpHeGas4.Controls.Add(Me.dgvHeGas4)
-        Me.grpHeGas4.Location = New System.Drawing.Point(5, 275)
+        Me.grpHeGas4.Location = New System.Drawing.Point(5, 140)
         Me.grpHeGas4.Name = "grpHeGas4"
         Me.grpHeGas4.Size = New System.Drawing.Size(916, 120)
         Me.grpHeGas4.TabIndex = 9
@@ -4317,7 +4317,7 @@ Partial Class DHDTest
         Me.grpKyuucyaku4.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.grpKyuucyaku4.Controls.Add(Me.Label83)
         Me.grpKyuucyaku4.Controls.Add(Me.dgvKyuucyaku4)
-        Me.grpKyuucyaku4.Location = New System.Drawing.Point(5, 140)
+        Me.grpKyuucyaku4.Location = New System.Drawing.Point(5, 275)
         Me.grpKyuucyaku4.Name = "grpKyuucyaku4"
         Me.grpKyuucyaku4.Size = New System.Drawing.Size(916, 120)
         Me.grpKyuucyaku4.TabIndex = 8
