@@ -36,7 +36,7 @@ Partial Class MessageDlg
         Me.TableLayoutPanel1.ColumnCount = 3
         Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 70.0!))
         Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 70.0!))
-        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 70.0!))
+        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 72.0!))
         Me.TableLayoutPanel1.Controls.Add(Me.btnNo1, 0, 0)
         Me.TableLayoutPanel1.Controls.Add(Me.btnNo2, 1, 0)
         Me.TableLayoutPanel1.Controls.Add(Me.btnNo3, 2, 0)
@@ -86,7 +86,7 @@ Partial Class MessageDlg
         Me.lblMsg.AutoSize = True
         Me.lblMsg.Location = New System.Drawing.Point(10, 28)
         Me.lblMsg.Name = "lblMsg"
-        Me.lblMsg.Size = New System.Drawing.Size(52, 16)
+        Me.lblMsg.Size = New System.Drawing.Size(51, 16)
         Me.lblMsg.TabIndex = 1
         Me.lblMsg.Text = "Label1"
         '
@@ -95,6 +95,7 @@ Partial Class MessageDlg
         Me.AcceptButton = Me.btnNo2
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackColor = System.Drawing.SystemColors.Info
         Me.CancelButton = Me.btnNo1
         Me.ClientSize = New System.Drawing.Size(300, 117)
         Me.Controls.Add(Me.lblMsg)

@@ -53,6 +53,7 @@ Partial Class TestItemDlg
         Me.Label27 = New System.Windows.Forms.Label()
         Me.Label14 = New System.Windows.Forms.Label()
         Me.txtLekBase = New System.Windows.Forms.TextBox()
+        Me.Label28 = New System.Windows.Forms.Label()
         Me.Label23 = New System.Windows.Forms.Label()
         Me.Label15 = New System.Windows.Forms.Label()
         Me.Label10 = New System.Windows.Forms.Label()
@@ -78,7 +79,6 @@ Partial Class TestItemDlg
         Me.Label20 = New System.Windows.Forms.Label()
         Me.txtZKyuV1 = New System.Windows.Forms.TextBox()
         Me.Label21 = New System.Windows.Forms.Label()
-        Me.Label28 = New System.Windows.Forms.Label()
         Me.grpZetsuen.SuspendLayout()
         Me.grpKyucyaku.SuspendLayout()
         Me.grpHeGas.SuspendLayout()
@@ -433,14 +433,23 @@ Partial Class TestItemDlg
         Me.txtLekBase.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         Me.txtLekBase.Visible = False
         '
+        'Label28
+        '
+        Me.Label28.AutoSize = True
+        Me.Label28.Location = New System.Drawing.Point(10, 275)
+        Me.Label28.Name = "Label28"
+        Me.Label28.Size = New System.Drawing.Size(241, 16)
+        Me.Label28.TabIndex = 37
+        Me.Label28.Text = "※測定する圧力にチェックをいれること"
+        '
         'Label23
         '
         Me.Label23.AutoSize = True
         Me.Label23.Location = New System.Drawing.Point(8, 116)
         Me.Label23.Name = "Label23"
-        Me.Label23.Size = New System.Drawing.Size(113, 16)
+        Me.Label23.Size = New System.Drawing.Size(55, 16)
         Me.Label23.TabIndex = 37
-        Me.Label23.Text = "測定圧(50℃時)"
+        Me.Label23.Text = "測定圧"
         '
         'Label15
         '
@@ -687,19 +696,11 @@ Partial Class TestItemDlg
         Me.Label21.TabIndex = 28
         Me.Label21.Text = "印加電圧１"
         '
-        'Label28
-        '
-        Me.Label28.AutoSize = True
-        Me.Label28.Location = New System.Drawing.Point(10, 275)
-        Me.Label28.Name = "Label28"
-        Me.Label28.Size = New System.Drawing.Size(241, 16)
-        Me.Label28.TabIndex = 37
-        Me.Label28.Text = "※測定する圧力にチェックをいれること"
-        '
         'TestItemDlg
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackColor = System.Drawing.SystemColors.Info
         Me.ClientSize = New System.Drawing.Size(1124, 461)
         Me.Controls.Add(Me.grpZanKyucyaku)
         Me.Controls.Add(Me.btnDelete)

@@ -497,7 +497,10 @@ Module tst4Lib
 				'
 				'	＜測定２＞　PIDコントローラでウエハ裏面圧力を1.5[KPa]に制御して裏面圧力安定するのを待って、その時の圧力を印加中裏面圧力とする
 				'
-				sts			= tst4_pid( vac, dt, dt.t4.d( ntst ), tprs, bakp )
+				'▼2024.04.19 TC Kanda （２．測定中のHe流量及びウエハ裏面圧力のログ出力追加／リトライ回数をファイル名に追加）
+				'sts			= tst4_pid( vac, dt, dt.t4.d( ntst ), tprs, bakp )
+				sts = tst4_pid(vac, dt, dt.t4.d(ntst), tprs, bakp, ntst)
+				'▲2024.04.19 TC Kanda （２．測定中のHe流量及びウエハ裏面圧力のログ出力追加／リトライ回数をファイル名に追加）
 
 				If (sts <= 0) Then
 
@@ -956,7 +959,7 @@ Module tst4Lib
 			SaveWaveData _
 			(
 				DHDTest.tstNo,
-				"C",
+				"C" + ntst.ToString(),
 				dat.volt1,
 				dat.volt2
 			)
@@ -988,7 +991,6 @@ Module tst4Lib
 		'
 		'	ウエハ裏面圧条件待ち処理
 		'
-		'▼
 		'▼2024.05.14 TC Kanda （１．配管真空排気シーケンス修正／残留吸着力測定における無限ループの排除）
 		'If _
 		'DHDTest.waitwbakp _
@@ -1020,105 +1022,116 @@ Module tst4Lib
 	'	0	ｵﾍﾟﾚ-ﾀによる強制終了
 	'	0 >	測定時間オーバー
 	'*****
-	Private Function tst4_pid			_
-	(						_
-		ByVal vac		As Integer,	_
-		ByRef dt		As DTREC,	_
-		ByRef dat		As DTI4,	_
-		ByVal tprs		As Double,	_
-		ByVal bakp		As Double	_
+	'▼2024.04.19 TC Kanda （２．測定中のHe流量及びウエハ裏面圧力のログ出力追加／リトライ回数をファイル名に追加）
+	'Private Function tst4_pid _
+	'(
+	'	ByVal vac As Integer,
+	'	ByRef dt As DTREC,
+	'	ByRef dat As DTI4,
+	'	ByVal tprs As Double,
+	'	ByVal bakp As Double
+	')
+	Private Function tst4_pid _
+	(
+		ByVal vac As Integer,
+		ByRef dt As DTREC,
+		ByRef dat As DTI4,
+		ByVal tprs As Double,
+		ByVal bakp As Double,
+		ByVal ntst As Integer
 	)
+		'▲2024.04.19 TC Kanda （２．測定中のHe流量及びウエハ裏面圧力のログ出力追加／リトライ回数をファイル名に追加）
 
 		' dat;
 		' tmr;
 		' y;
 
-		Dim ptr			As Integer
-		Dim rtn			As Integer
-		Dim cnt			As Integer
-		Dim raw			As UShort
-		Dim flow		As Double
-		Dim volt		As Double
-		Dim vct			As Double
-		Dim v1			As Double
-		Dim v2			As Double
-		Dim gmt			As Double
-		Dim gpt			As Double
-		Dim sa( nMS )		As Single
-		Dim sdcerf		As Integer
-		Dim tm			As Double
-		Dim nowdt		As DateTime
-		Dim olddt		As DateTime
+		Dim ptr As Integer
+		Dim rtn As Integer
+		Dim cnt As Integer
+		Dim raw As UShort
+		Dim flow As Double
+		Dim volt As Double
+		Dim vct As Double
+		Dim v1 As Double
+		Dim v2 As Double
+		Dim gmt As Double
+		Dim gpt As Double
+		Dim sa(nMS) As Single
+		Dim sdcerf As Integer
+		Dim tm As Double
+		Dim nowdt As DateTime
+		Dim olddt As DateTime
 
 		'
 		'	SDC電源エラー発生検知フラグ・クリア
 		'	SDC電源のエラー信号を検知すると1になる
 		'
-		sdcerf			= 0
+		sdcerf = 0
 
 		' 戻り値初期値セット
-		rtn			= 1
+		rtn = 1
 
-		DHDTest.StatusDisp( 10, 9, "＊＊＊  電圧印加中  ＊＊＊" )
+		DHDTest.StatusDisp(10, 9, "＊＊＊  電圧印加中  ＊＊＊")
 
-		DHDTest.StatusDisp( 10, 10, "ESC･CH1電圧    :           [V]   CH2電圧    :           [V]" )
+		DHDTest.StatusDisp(10, 10, "ESC･CH1電圧    :           [V]   CH2電圧    :           [V]")
 
-		DHDTest.StatusDisp( 10, 11, "He流量         :           [SCCM]" )
+		DHDTest.StatusDisp(10, 11, "He流量         :           [SCCM]")
 
-		DHDTest.StatusDisp( 10, 12, "真空圧(ﾊﾞﾗﾄﾛﾝ) :           [Pa]" )
+		DHDTest.StatusDisp(10, 12, "真空圧(ﾊﾞﾗﾄﾛﾝ) :           [Pa]")
 
-		DHDTest.StatusDisp( 10, 13, "真空圧(ﾋﾟﾗﾆｰ)  :           [Pa]" )
+		DHDTest.StatusDisp(10, 13, "真空圧(ﾋﾟﾗﾆｰ)  :           [Pa]")
 
-		DHDTest.StatusDisp( 10, 14, "安定度 :           安定時間 :      秒    残り時間 :      秒" )
+		DHDTest.StatusDisp(10, 14, "安定度 :           安定時間 :      秒    残り時間 :      秒")
 
 		' 安定期間のタイムアウト時間を表示
-		DHDTest.StatusDisp( 40, 14, ( Imptim ).ToString( "0000" ) )
+		DHDTest.StatusDisp(40, 14, (Imptim).ToString("0000"))
 
 		'
 		'	波形サンプリング開始
 		'
 		WaveSmpGo()
 
-		WaitTim( 100 )
+		WaitTim(100)
 
 		'
 		'	ＰＩＤ運転スタ－ト
 		'
-		ExDio_Output( MAEdoPIDSTART, DIO_ON )
-		WaitTim( 10 )
+		ExDio_Output(MAEdoPIDSTART, DIO_ON)
+		WaitTim(10)
 
-		ptr			= ADptrR
+		ptr = ADptrR
 
-		cnt			= 0
+		cnt = 0
 
-		Dim i			As Integer
+		Dim i As Integer
 
 		For i = 0 To sa.Length - 1
 
-			sa( i )			= 0.0
+			sa(i) = 0.0
 
 		Next
 
 		' TMR_B : 安定期間タイマーリロード
-		SetTimDCnt( 4, Imptim * 100L )
+		SetTimDCnt(4, Imptim * 100L)
 
 		'
 		'	安定チェックル－プ(1ｸﾛｯｸは１回分のAD変換終了)
 		'
 
 		' TMR_A : タイムアウトチェック
-		Do While ( TimerDCnt( 3 ) > 0 )
+		Do While (TimerDCnt(3) > 0)
 
 			'
 			'	AD変換1ﾃﾞ-ﾀ確定するまで待つ (500msec)
 			'
-			If adwaitmsg( ptr ) = Keys.Escape Then
+			If adwaitmsg(ptr) = Keys.Escape Then
 
 				' オペレータによる中断指示
-				rtn			= 0
+				rtn = 0
 
 				'   20200716 s.harada
-				FrmLog.LogDspAdd( "", "tst3_pid 途中終了：adwaitmsg", Color.Empty )
+				FrmLog.LogDspAdd("", "tst3_pid 途中終了：adwaitmsg", Color.Empty)
 
 				Exit Do
 
@@ -1130,7 +1143,7 @@ Module tst4Lib
 				If ESCchkSts() <> 0 Then
 
 					' SDC電源のエラーを検知した
-					sdcerf				= 1
+					sdcerf = 1
 
 				End If
 
@@ -1139,157 +1152,157 @@ Module tst4Lib
 			'
 			'	ＥＳＣ・ＣＨ１モニタ電圧を取得
 			'
-			raw			= aiget( ESCaiMON1, 1 )
+			raw = aiget(ESCaiMON1, 1)
 
 			' ＲＡＷデ－タから電圧へ換算
-			v1			= cvtr2ESC( raw )
+			v1 = cvtr2ESC(raw)
 
 			'
 			'	ＥＳＣ・ＣＨ２モニタ電圧を取得
 			'
-			raw			= aiget( ESCaiMON2, 1 )
+			raw = aiget(ESCaiMON2, 1)
 
 			' ＲＡＷデ－タから電圧へ換算
-			v2			= cvtr2ESC( raw )
+			v2 = cvtr2ESC(raw)
 
 			'
 			'	バラトロン真空計の値を取得（ウエハ裏面圧）
 			'
-			raw			= aiget( GMaiPRS, 1 )
+			raw = aiget(GMaiPRS, 1)
 
 			' ＲＡＷデ－タからＰａへ換算
-			gmt			= cvtr2GM_Pa( raw )
+			gmt = cvtr2GM_Pa(raw)
 
 			'
 			'	ピラニー真空計の値を取得（チャンバ圧）
 			'
-			raw			= aiget( GPaiPRS, 1 )
+			raw = aiget(GPaiPRS, 1)
 
 			' ＲＡＷデ－タからＰａへ換算
-			gpt			= cvtr2GP_Pa( raw )
+			gpt = cvtr2GP_Pa(raw)
 
 			'
 			'	現在のＭＦＣの流量デ－タを取得
 			'
-			raw			= aiget( MFCaiFLW, DefFlowNAvg )
+			raw = aiget(MFCaiFLW, DefFlowNAvg)
 
 			' ＲＡＷデ－タから電圧へ換算
-			volt			= anar2v( raw )
+			volt = anar2v(raw)
 
 			' ＲＡＷデ－タからN2流量へ換算
-			flow			= cvtr2MFCop( raw )
+			flow = cvtr2MFCop(raw)
 
 			'
 			'	ウエハ裏面圧の傾向を求める
 			'
-			vct			= calvct( cnt, gmt, sa, nMS )
+			vct = calvct(cnt, gmt, sa, nMS)
 
 			'
 			'	ＥＳＣ電源ＣＨ１電圧モニタ信号測定値を表示
 			'
-			DHDTest.StatusDisp( 25, 10, v1.ToString( "0.0" ).PadLeft( 8 ) )
+			DHDTest.StatusDisp(25, 10, v1.ToString("0.0").PadLeft(8))
 
 			'
 			'	ＥＳＣ電源ＣＨ２電圧モニタ信号測定値を表示
 			'
-			DHDTest.StatusDisp( 54, 10, v2.ToString( "0.0" ).PadLeft( 8 ) )
+			DHDTest.StatusDisp(54, 10, v2.ToString("0.0").PadLeft(8))
 
 			'
 			' ＭＦＣ１流量モニタ信号測定値を表示
 			'
-			DHDTest.StatusDisp( 29, 11, flow.ToString( "0.00" ).PadLeft( 5 ) )
+			DHDTest.StatusDisp(29, 11, flow.ToString("0.00").PadLeft(5))
 
 			'
 			'	バラトロン真空計測定値を表示
 			'
-			DHDTest.StatusDisp( 25, 12, gmt.ToString( "0.0" ).PadLeft( 8 ) )
+			DHDTest.StatusDisp(25, 12, gmt.ToString("0.0").PadLeft(8))
 
 			'
 			'	ピラニー真空計測定値を表示
 			'
-			DHDTest.StatusDisp( 25, 13, gpt.ToString( "0.0" ).PadLeft( 8 ) )
+			DHDTest.StatusDisp(25, 13, gpt.ToString("0.0").PadLeft(8))
 
 			'
 			'	流量変化の傾向を表示
 			'
-			DHDTest.StatusDisp( 17, 14, vct.ToString( "0.000" ).PadLeft( 8 ) )
+			DHDTest.StatusDisp(17, 14, vct.ToString("0.000").PadLeft(8))
 
 			'
 			'	安定待ちの残り時間を表示
 			'
-			DHDTest.StatusDisp( 62, 14, ( TimerDCnt( 4 ) / 100.0 ).ToString( "0000" ) )
+			DHDTest.StatusDisp(62, 14, (TimerDCnt(4) / 100.0).ToString("0000"))
 
 			'
 			'	１秒毎に安定度をログに記録
 			'
-			nowdt		= DateTime.Now
-			If olddt.ToString( "HHmmss" ) <> nowdt.ToString( "HHmmss" ) Then
+			nowdt = DateTime.Now
+			If olddt.ToString("HHmmss") <> nowdt.ToString("HHmmss") Then
 
-				FrmLog.LogDspAdd( "", "tst4_pid 裏面圧=" + gmt.ToString( "0.000" ) + " 安定度=" + vct.ToString( "0.000" ) + " 残り=" + ( TimerDCnt( 4 ) / 100.0 ).ToString( "0000" ), Color.Empty )
+				FrmLog.LogDspAdd("", "tst4_pid 裏面圧=" + gmt.ToString("0.000") + " 安定度=" + vct.ToString("0.000") + " 残り=" + (TimerDCnt(4) / 100.0).ToString("0000"), Color.Empty)
 
-				olddt		= nowdt
+				olddt = nowdt
 
 			End If
 
-		'	20201124 y.goto 20201120木村さんメールの指示により安定は見ない
-		'
-		'	'
-		'	'	ウエハ裏面圧が安定したら測定終了
-		'	'
-		'	If					_
-		'	(					_
-		'		nMS < cnt And			_
-		'		STABlwr <= vct And		_
-		'		vct <= STABupr			_
-		'	) _
-		'	Then
-		'
-		'		'
-		'		'	ウエハ裏面圧安定と判断
-		'		'
-		'
-		'		' TMR_B : 安定期間ほど経過した？
-		'		If 0 >= TimerDCnt( 4 ) Then
-		'
-		'			'
-		'			'	Yes:ウエハ裏面圧安定と判断
-		'			'
-		'			rtn			= 1
-		'
-		'			Exit Do
-		'
-		'		End If
-		'
-		'	Else
-		'
-		'		'
-		'		'	ウエハ裏面圧は安定していない
-		'		'
-		'
-		'		' TMR_B : 安定期間タイマーリロード
-		'		SetTimDCnt( 4, Imptim * 100L )
-		'
-		'	End If
+			'	20201124 y.goto 20201120木村さんメールの指示により安定は見ない
+			'
+			'	'
+			'	'	ウエハ裏面圧が安定したら測定終了
+			'	'
+			'	If					_
+			'	(					_
+			'		nMS < cnt And			_
+			'		STABlwr <= vct And		_
+			'		vct <= STABupr			_
+			'	) _
+			'	Then
+			'
+			'		'
+			'		'	ウエハ裏面圧安定と判断
+			'		'
+			'
+			'		' TMR_B : 安定期間ほど経過した？
+			'		If 0 >= TimerDCnt( 4 ) Then
+			'
+			'			'
+			'			'	Yes:ウエハ裏面圧安定と判断
+			'			'
+			'			rtn			= 1
+			'
+			'			Exit Do
+			'
+			'		End If
+			'
+			'	Else
+			'
+			'		'
+			'		'	ウエハ裏面圧は安定していない
+			'		'
+			'
+			'		' TMR_B : 安定期間タイマーリロード
+			'		SetTimDCnt( 4, Imptim * 100L )
+			'
+			'	End If
 
 			' TMR_B : 電圧印加期間ほど経過した？
-			If 0 >= TimerDCnt( 4 ) Then
+			If 0 >= TimerDCnt(4) Then
 
 				'
 				'	Yes:電圧印加終了
 				'
-				rtn			= 1
+				rtn = 1
 				Exit Do
 
 			End If
 
-			cnt			+= 1
+			cnt += 1
 
 		Loop
 
 		'
 		'	＜測定データ２＞　電圧印可中のウエハ裏面圧データ保存
 		'
-		dat.pe			= gmt
+		dat.pe = gmt
 
 		'
 		'	波形サンプリング停止
@@ -1308,7 +1321,7 @@ Module tst4Lib
 		SaveWaveData _
 		(
 			DHDTest.tstNo,
-			"D",
+			"D" + ntst.ToString(),
 			dat.volt1,
 			dat.volt2
 		)
@@ -1317,9 +1330,9 @@ Module tst4Lib
 		'
 		'	ＰＩＤ運転停止 (Ｈｅの停止)
 		'
-		ExDio_Output( MAEdoPIDSTART, DIO_OFF )
+		ExDio_Output(MAEdoPIDSTART, DIO_OFF)
 
-		DHDTest.StatusClear( 9, 6 )
+		DHDTest.StatusClear(9, 6)
 
 		'
 		'	20210118 y.goto
@@ -1332,7 +1345,7 @@ Module tst4Lib
 		If DHDTest.VACBT4proc() <> 0 Then
 
 			' オペレータによる中断指示
-			rtn		= 0
+			rtn = 0
 
 		End If
 
@@ -1345,28 +1358,28 @@ Module tst4Lib
 			'
 			'	ウエハ裏面圧条件待ち処理
 			'
-			If						_
-			DHDTest.waitwbakp				_
-			(						_
-				"ウエハ裏面圧が下がるのを待つ",		_
-				vac,					_
-				dt.schuse,				_
-				dt.tmp,					_
-				tprs,					_
-				bakp					_
-			)						_
+			If _
+			DHDTest.waitwbakp _
+			(
+				"ウエハ裏面圧が下がるのを待つ",
+				vac,
+				dt.schuse,
+				dt.tmp,
+				tprs,
+				bakp
+			) _
 			Then
 				' オペレータによる中断指示
-				rtn		= 0
+				rtn = 0
 			End If
 
 		Else
 
-			FrmLog.LogDspAdd( "", "tst4_pid skip waitwbakp() 裏面圧指定値 " + bakp.ToString() + " : 裏面圧現在値 " + FrmGraph.MesBkp.ToString(), Color.Empty )
+			FrmLog.LogDspAdd("", "tst4_pid skip waitwbakp() 裏面圧指定値 " + bakp.ToString() + " : 裏面圧現在値 " + FrmGraph.MesBkp.ToString(), Color.Empty)
 
 		End If
 
-		Return ( rtn )
+		Return (rtn)
 
 	End Function
 

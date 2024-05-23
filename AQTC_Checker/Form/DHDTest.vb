@@ -3186,9 +3186,9 @@ Public Class DHDTest
 
 			WriteLog( "", "LG", "tst_proc_2" )
 
-			If tst_proc( 1, MESrec.dt( tstNo ), TPRS2, BakPres ) < 0 Then
+			If tst_proc(1, MESrec.dt(tstNo), TPRS2, BakPres) < 0 Then
 
-				ret			= -3
+				ret = -3
 
 				Exit Do
 
@@ -5469,7 +5469,10 @@ Public Class DHDTest
 					Case TestType.HeLeak
 						'Heリークテストの場合
 						FrmLog.LogDspAdd("", msg + "★ 真空引き時のESC電源OFF ★", Color.Empty)
-						ESCstop2(sdcv1, sdcv2, 3000.0, 7)
+						'▼2024.05.23 TC Kanda （１．配管真空排気シーケンス修正／ESC電源OFFの処理を チャンバ内圧力を下げる前に行う）／現地にて修正
+						'ESCstop2(sdcv1, sdcv2, 3000.0, 7)
+						ESCstop(2000.0, 7)
+						'▲2024.05.23 TC Kanda （１．配管真空排気シーケンス修正／ESC電源OFFの処理を チャンバ内圧力を下げる前に行う）／現地にて修正
 					Case TestType.Adsorption
 						'残留吸着力測定において印加中の真空引きには独自の排気シーケンスがある
 						'印加前、印加後はこの真空引き処理を利用しているが、ESC電源の状態が重要な為、ここでは処理しない

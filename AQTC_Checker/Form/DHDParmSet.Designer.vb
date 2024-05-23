@@ -36,6 +36,20 @@ Partial Class DHDParmSet
         Dim DataGridViewCellStyle12 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle13 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle14 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle15 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle16 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle17 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle18 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle19 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle20 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle21 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle22 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle23 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle24 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle25 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle26 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle27 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle28 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle29 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle30 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle31 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
@@ -64,20 +78,6 @@ Partial Class DHDParmSet
         Dim DataGridViewCellStyle54 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle55 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle56 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle15 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle16 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle17 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle18 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle19 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle20 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle21 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle22 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle23 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle24 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle25 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle26 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle27 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle28 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(DHDParmSet))
         Me.Label1 = New System.Windows.Forms.Label()
         Me.txtPoleFName = New System.Windows.Forms.TextBox()
@@ -180,6 +180,26 @@ Partial Class DHDParmSet
         Me.Label33 = New System.Windows.Forms.Label()
         Me.btnVcmLowAdd = New System.Windows.Forms.Button()
         Me.dgvVcmLow = New System.Windows.Forms.DataGridView()
+        Me.LVIN_POS = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.LISO_VOLT = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.LKYU_VOLT1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.LKYU_VOLT2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.LKYU_HE = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.LKYU_BASE = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.LLEK_VOLT1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.LLEK_VOLT2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.LLEK_PTN = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.LLEK_BASE = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.LLEK_BASE2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ZKU_VOLT1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ZKU_VOLT2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ZKU_BASE = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.PV = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.IV = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.KV = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.LV = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ZV = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.LIDX = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.tabPage3 = New System.Windows.Forms.TabPage()
         Me.LblVcmHiZku = New System.Windows.Forms.Label()
         Me.LblVcmHiLek = New System.Windows.Forms.Label()
@@ -262,26 +282,6 @@ Partial Class DHDParmSet
         Me.Label42 = New System.Windows.Forms.Label()
         Me.Label43 = New System.Windows.Forms.Label()
         Me.btnVcmHi2Add = New System.Windows.Forms.Button()
-        Me.LVIN_POS = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.LISO_VOLT = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.LKYU_VOLT1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.LKYU_VOLT2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.LKYU_HE = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.LKYU_BASE = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.LLEK_VOLT1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.LLEK_VOLT2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.LLEK_PTN = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.LLEK_BASE = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.LLEK_BASE2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.ZKU_VOLT1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.ZKU_VOLT2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.ZKU_BASE = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.PV = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.IV = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.KV = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.LV = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.ZV = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.LIDX = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.GroupBox1.SuspendLayout()
         Me.grpZanKyu.SuspendLayout()
         Me.tabTest.SuspendLayout()
@@ -709,6 +709,7 @@ Partial Class DHDParmSet
         '
         'tabPage1
         '
+        Me.tabPage1.BackColor = System.Drawing.SystemColors.Info
         Me.tabPage1.Controls.Add(Me.Label4)
         Me.tabPage1.Controls.Add(Me.Label14)
         Me.tabPage1.Controls.Add(Me.Label15)
@@ -735,7 +736,6 @@ Partial Class DHDParmSet
         Me.tabPage1.Size = New System.Drawing.Size(1344, 382)
         Me.tabPage1.TabIndex = 0
         Me.tabPage1.Text = "測定１"
-        Me.tabPage1.UseVisualStyleBackColor = True
         '
         'Label4
         '
@@ -1141,6 +1141,7 @@ Partial Class DHDParmSet
         '
         'tabPage2
         '
+        Me.tabPage2.BackColor = System.Drawing.SystemColors.Info
         Me.tabPage2.Controls.Add(Me.Label20)
         Me.tabPage2.Controls.Add(Me.Label21)
         Me.tabPage2.Controls.Add(Me.Label54)
@@ -1167,7 +1168,6 @@ Partial Class DHDParmSet
         Me.tabPage2.Size = New System.Drawing.Size(1344, 382)
         Me.tabPage2.TabIndex = 1
         Me.tabPage2.Text = "測定２"
-        Me.tabPage2.UseVisualStyleBackColor = True
         '
         'Label20
         '
@@ -1369,8 +1369,213 @@ Partial Class DHDParmSet
         Me.dgvVcmLow.Size = New System.Drawing.Size(1332, 273)
         Me.dgvVcmLow.TabIndex = 1
         '
+        'LVIN_POS
+        '
+        Me.LVIN_POS.DataPropertyName = "VIN_POS"
+        DataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        Me.LVIN_POS.DefaultCellStyle = DataGridViewCellStyle15
+        Me.LVIN_POS.HeaderText = "電圧印加箇所"
+        Me.LVIN_POS.Name = "LVIN_POS"
+        Me.LVIN_POS.ReadOnly = True
+        Me.LVIN_POS.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
+        Me.LVIN_POS.Width = 290
+        '
+        'LISO_VOLT
+        '
+        Me.LISO_VOLT.DataPropertyName = "ISO_VOLT"
+        DataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        Me.LISO_VOLT.DefaultCellStyle = DataGridViewCellStyle16
+        Me.LISO_VOLT.HeaderText = "印加電圧(V)"
+        Me.LISO_VOLT.Name = "LISO_VOLT"
+        Me.LISO_VOLT.ReadOnly = True
+        Me.LISO_VOLT.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
+        Me.LISO_VOLT.Width = 120
+        '
+        'LKYU_VOLT1
+        '
+        Me.LKYU_VOLT1.DataPropertyName = "KYU_VOLT1"
+        DataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        Me.LKYU_VOLT1.DefaultCellStyle = DataGridViewCellStyle17
+        Me.LKYU_VOLT1.HeaderText = "印加電圧１(V)"
+        Me.LKYU_VOLT1.Name = "LKYU_VOLT1"
+        Me.LKYU_VOLT1.ReadOnly = True
+        Me.LKYU_VOLT1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
+        Me.LKYU_VOLT1.Width = 120
+        '
+        'LKYU_VOLT2
+        '
+        Me.LKYU_VOLT2.DataPropertyName = "KYU_VOLT2"
+        DataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        Me.LKYU_VOLT2.DefaultCellStyle = DataGridViewCellStyle18
+        Me.LKYU_VOLT2.HeaderText = "印加電圧２(V)"
+        Me.LKYU_VOLT2.Name = "LKYU_VOLT2"
+        Me.LKYU_VOLT2.ReadOnly = True
+        Me.LKYU_VOLT2.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
+        Me.LKYU_VOLT2.Width = 120
+        '
+        'LKYU_HE
+        '
+        Me.LKYU_HE.DataPropertyName = "KYU_HE"
+        DataGridViewCellStyle19.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        Me.LKYU_HE.DefaultCellStyle = DataGridViewCellStyle19
+        Me.LKYU_HE.HeaderText = "He流量(sccm)"
+        Me.LKYU_HE.Name = "LKYU_HE"
+        Me.LKYU_HE.ReadOnly = True
+        Me.LKYU_HE.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
+        Me.LKYU_HE.Width = 120
+        '
+        'LKYU_BASE
+        '
+        Me.LKYU_BASE.DataPropertyName = "KYU_BASE"
+        DataGridViewCellStyle20.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        Me.LKYU_BASE.DefaultCellStyle = DataGridViewCellStyle20
+        Me.LKYU_BASE.HeaderText = "判定基準(kPa)"
+        Me.LKYU_BASE.Name = "LKYU_BASE"
+        Me.LKYU_BASE.ReadOnly = True
+        Me.LKYU_BASE.Visible = False
+        Me.LKYU_BASE.Width = 120
+        '
+        'LLEK_VOLT1
+        '
+        Me.LLEK_VOLT1.DataPropertyName = "LEK_VOLT1"
+        DataGridViewCellStyle21.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        Me.LLEK_VOLT1.DefaultCellStyle = DataGridViewCellStyle21
+        Me.LLEK_VOLT1.HeaderText = "印加電圧１(V)"
+        Me.LLEK_VOLT1.Name = "LLEK_VOLT1"
+        Me.LLEK_VOLT1.ReadOnly = True
+        Me.LLEK_VOLT1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
+        Me.LLEK_VOLT1.Width = 120
+        '
+        'LLEK_VOLT2
+        '
+        Me.LLEK_VOLT2.DataPropertyName = "LEK_VOLT2"
+        DataGridViewCellStyle22.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        Me.LLEK_VOLT2.DefaultCellStyle = DataGridViewCellStyle22
+        Me.LLEK_VOLT2.HeaderText = "印加電圧２(V)"
+        Me.LLEK_VOLT2.Name = "LLEK_VOLT2"
+        Me.LLEK_VOLT2.ReadOnly = True
+        Me.LLEK_VOLT2.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
+        Me.LLEK_VOLT2.Width = 120
+        '
+        'LLEK_PTN
+        '
+        Me.LLEK_PTN.DataPropertyName = "LEK_PTN"
+        DataGridViewCellStyle23.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        Me.LLEK_PTN.DefaultCellStyle = DataGridViewCellStyle23
+        Me.LLEK_PTN.HeaderText = "測定圧"
+        Me.LLEK_PTN.Name = "LLEK_PTN"
+        Me.LLEK_PTN.ReadOnly = True
+        Me.LLEK_PTN.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
+        Me.LLEK_PTN.Width = 80
+        '
+        'LLEK_BASE
+        '
+        Me.LLEK_BASE.DataPropertyName = "LEK_BASE"
+        DataGridViewCellStyle24.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        Me.LLEK_BASE.DefaultCellStyle = DataGridViewCellStyle24
+        Me.LLEK_BASE.HeaderText = "判定基準１(sccm)"
+        Me.LLEK_BASE.Name = "LLEK_BASE"
+        Me.LLEK_BASE.ReadOnly = True
+        Me.LLEK_BASE.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
+        Me.LLEK_BASE.Visible = False
+        Me.LLEK_BASE.Width = 120
+        '
+        'LLEK_BASE2
+        '
+        Me.LLEK_BASE2.DataPropertyName = "LEK_BASE2"
+        DataGridViewCellStyle25.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        Me.LLEK_BASE2.DefaultCellStyle = DataGridViewCellStyle25
+        Me.LLEK_BASE2.HeaderText = "判定基準２(sccm)"
+        Me.LLEK_BASE2.Name = "LLEK_BASE2"
+        Me.LLEK_BASE2.ReadOnly = True
+        Me.LLEK_BASE2.Visible = False
+        Me.LLEK_BASE2.Width = 120
+        '
+        'ZKU_VOLT1
+        '
+        Me.ZKU_VOLT1.DataPropertyName = "ZKU_VOLT1"
+        DataGridViewCellStyle26.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        Me.ZKU_VOLT1.DefaultCellStyle = DataGridViewCellStyle26
+        Me.ZKU_VOLT1.HeaderText = "印加電圧１(V)"
+        Me.ZKU_VOLT1.Name = "ZKU_VOLT1"
+        Me.ZKU_VOLT1.ReadOnly = True
+        Me.ZKU_VOLT1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
+        Me.ZKU_VOLT1.Width = 120
+        '
+        'ZKU_VOLT2
+        '
+        Me.ZKU_VOLT2.DataPropertyName = "ZKU_VOLT2"
+        DataGridViewCellStyle27.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        Me.ZKU_VOLT2.DefaultCellStyle = DataGridViewCellStyle27
+        Me.ZKU_VOLT2.HeaderText = "印加電圧２(V)"
+        Me.ZKU_VOLT2.Name = "ZKU_VOLT2"
+        Me.ZKU_VOLT2.ReadOnly = True
+        Me.ZKU_VOLT2.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
+        Me.ZKU_VOLT2.Width = 120
+        '
+        'ZKU_BASE
+        '
+        Me.ZKU_BASE.DataPropertyName = "ZKU_BASE"
+        DataGridViewCellStyle28.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        Me.ZKU_BASE.DefaultCellStyle = DataGridViewCellStyle28
+        Me.ZKU_BASE.HeaderText = "判定基準(KPa)"
+        Me.ZKU_BASE.Name = "ZKU_BASE"
+        Me.ZKU_BASE.ReadOnly = True
+        Me.ZKU_BASE.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
+        Me.ZKU_BASE.Visible = False
+        Me.ZKU_BASE.Width = 120
+        '
+        'PV
+        '
+        Me.PV.DataPropertyName = "PV"
+        Me.PV.HeaderText = "電圧印加位置"
+        Me.PV.Name = "PV"
+        Me.PV.ReadOnly = True
+        Me.PV.Visible = False
+        '
+        'IV
+        '
+        Me.IV.DataPropertyName = "IV"
+        Me.IV.HeaderText = "絶縁印加電圧"
+        Me.IV.Name = "IV"
+        Me.IV.ReadOnly = True
+        Me.IV.Visible = False
+        '
+        'KV
+        '
+        Me.KV.DataPropertyName = "KV"
+        Me.KV.HeaderText = "吸着印加電圧"
+        Me.KV.Name = "KV"
+        Me.KV.ReadOnly = True
+        Me.KV.Visible = False
+        '
+        'LV
+        '
+        Me.LV.DataPropertyName = "LV"
+        Me.LV.HeaderText = "He印加電圧"
+        Me.LV.Name = "LV"
+        Me.LV.ReadOnly = True
+        Me.LV.Visible = False
+        '
+        'ZV
+        '
+        Me.ZV.DataPropertyName = "ZV"
+        Me.ZV.HeaderText = "残留吸着印加電圧"
+        Me.ZV.Name = "ZV"
+        Me.ZV.ReadOnly = True
+        Me.ZV.Visible = False
+        '
+        'LIDX
+        '
+        Me.LIDX.DataPropertyName = "IDX"
+        Me.LIDX.HeaderText = "INDEX"
+        Me.LIDX.Name = "LIDX"
+        Me.LIDX.ReadOnly = True
+        Me.LIDX.Visible = False
+        '
         'tabPage3
         '
+        Me.tabPage3.BackColor = System.Drawing.SystemColors.Info
         Me.tabPage3.Controls.Add(Me.LblVcmHiZku)
         Me.tabPage3.Controls.Add(Me.LblVcmHiLek)
         Me.tabPage3.Controls.Add(Me.LblVcmHiKyu)
@@ -1397,7 +1602,6 @@ Partial Class DHDParmSet
         Me.tabPage3.Size = New System.Drawing.Size(1344, 382)
         Me.tabPage3.TabIndex = 2
         Me.tabPage3.Text = "測定３"
-        Me.tabPage3.UseVisualStyleBackColor = True
         '
         'LblVcmHiZku
         '
@@ -1805,6 +2009,7 @@ Partial Class DHDParmSet
         '
         'tabPage4
         '
+        Me.tabPage4.BackColor = System.Drawing.SystemColors.Info
         Me.tabPage4.Controls.Add(Me.Label10)
         Me.tabPage4.Controls.Add(Me.Label11)
         Me.tabPage4.Controls.Add(Me.Label12)
@@ -1830,7 +2035,6 @@ Partial Class DHDParmSet
         Me.tabPage4.Size = New System.Drawing.Size(1344, 382)
         Me.tabPage4.TabIndex = 3
         Me.tabPage4.Text = "測定４"
-        Me.tabPage4.UseVisualStyleBackColor = True
         '
         'Label10
         '
@@ -2244,214 +2448,11 @@ Partial Class DHDParmSet
         Me.btnVcmHi2Add.Text = "追加"
         Me.btnVcmHi2Add.UseVisualStyleBackColor = True
         '
-        'LVIN_POS
-        '
-        Me.LVIN_POS.DataPropertyName = "VIN_POS"
-        DataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        Me.LVIN_POS.DefaultCellStyle = DataGridViewCellStyle15
-        Me.LVIN_POS.HeaderText = "電圧印加箇所"
-        Me.LVIN_POS.Name = "LVIN_POS"
-        Me.LVIN_POS.ReadOnly = True
-        Me.LVIN_POS.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
-        Me.LVIN_POS.Width = 290
-        '
-        'LISO_VOLT
-        '
-        Me.LISO_VOLT.DataPropertyName = "ISO_VOLT"
-        DataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        Me.LISO_VOLT.DefaultCellStyle = DataGridViewCellStyle16
-        Me.LISO_VOLT.HeaderText = "印加電圧(V)"
-        Me.LISO_VOLT.Name = "LISO_VOLT"
-        Me.LISO_VOLT.ReadOnly = True
-        Me.LISO_VOLT.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
-        Me.LISO_VOLT.Width = 120
-        '
-        'LKYU_VOLT1
-        '
-        Me.LKYU_VOLT1.DataPropertyName = "KYU_VOLT1"
-        DataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        Me.LKYU_VOLT1.DefaultCellStyle = DataGridViewCellStyle17
-        Me.LKYU_VOLT1.HeaderText = "印加電圧１(V)"
-        Me.LKYU_VOLT1.Name = "LKYU_VOLT1"
-        Me.LKYU_VOLT1.ReadOnly = True
-        Me.LKYU_VOLT1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
-        Me.LKYU_VOLT1.Width = 120
-        '
-        'LKYU_VOLT2
-        '
-        Me.LKYU_VOLT2.DataPropertyName = "KYU_VOLT2"
-        DataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        Me.LKYU_VOLT2.DefaultCellStyle = DataGridViewCellStyle18
-        Me.LKYU_VOLT2.HeaderText = "印加電圧２(V)"
-        Me.LKYU_VOLT2.Name = "LKYU_VOLT2"
-        Me.LKYU_VOLT2.ReadOnly = True
-        Me.LKYU_VOLT2.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
-        Me.LKYU_VOLT2.Width = 120
-        '
-        'LKYU_HE
-        '
-        Me.LKYU_HE.DataPropertyName = "KYU_HE"
-        DataGridViewCellStyle19.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        Me.LKYU_HE.DefaultCellStyle = DataGridViewCellStyle19
-        Me.LKYU_HE.HeaderText = "He流量(sccm)"
-        Me.LKYU_HE.Name = "LKYU_HE"
-        Me.LKYU_HE.ReadOnly = True
-        Me.LKYU_HE.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
-        Me.LKYU_HE.Width = 120
-        '
-        'LKYU_BASE
-        '
-        Me.LKYU_BASE.DataPropertyName = "KYU_BASE"
-        DataGridViewCellStyle20.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        Me.LKYU_BASE.DefaultCellStyle = DataGridViewCellStyle20
-        Me.LKYU_BASE.HeaderText = "判定基準(kPa)"
-        Me.LKYU_BASE.Name = "LKYU_BASE"
-        Me.LKYU_BASE.ReadOnly = True
-        Me.LKYU_BASE.Visible = False
-        Me.LKYU_BASE.Width = 120
-        '
-        'LLEK_VOLT1
-        '
-        Me.LLEK_VOLT1.DataPropertyName = "LEK_VOLT1"
-        DataGridViewCellStyle21.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        Me.LLEK_VOLT1.DefaultCellStyle = DataGridViewCellStyle21
-        Me.LLEK_VOLT1.HeaderText = "印加電圧１(V)"
-        Me.LLEK_VOLT1.Name = "LLEK_VOLT1"
-        Me.LLEK_VOLT1.ReadOnly = True
-        Me.LLEK_VOLT1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
-        Me.LLEK_VOLT1.Width = 120
-        '
-        'LLEK_VOLT2
-        '
-        Me.LLEK_VOLT2.DataPropertyName = "LEK_VOLT2"
-        DataGridViewCellStyle22.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        Me.LLEK_VOLT2.DefaultCellStyle = DataGridViewCellStyle22
-        Me.LLEK_VOLT2.HeaderText = "印加電圧２(V)"
-        Me.LLEK_VOLT2.Name = "LLEK_VOLT2"
-        Me.LLEK_VOLT2.ReadOnly = True
-        Me.LLEK_VOLT2.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
-        Me.LLEK_VOLT2.Width = 120
-        '
-        'LLEK_PTN
-        '
-        Me.LLEK_PTN.DataPropertyName = "LEK_PTN"
-        DataGridViewCellStyle23.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        Me.LLEK_PTN.DefaultCellStyle = DataGridViewCellStyle23
-        Me.LLEK_PTN.HeaderText = "測定圧"
-        Me.LLEK_PTN.Name = "LLEK_PTN"
-        Me.LLEK_PTN.ReadOnly = True
-        Me.LLEK_PTN.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
-        Me.LLEK_PTN.Width = 80
-        '
-        'LLEK_BASE
-        '
-        Me.LLEK_BASE.DataPropertyName = "LEK_BASE"
-        DataGridViewCellStyle24.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        Me.LLEK_BASE.DefaultCellStyle = DataGridViewCellStyle24
-        Me.LLEK_BASE.HeaderText = "判定基準１(sccm)"
-        Me.LLEK_BASE.Name = "LLEK_BASE"
-        Me.LLEK_BASE.ReadOnly = True
-        Me.LLEK_BASE.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
-        Me.LLEK_BASE.Visible = False
-        Me.LLEK_BASE.Width = 120
-        '
-        'LLEK_BASE2
-        '
-        Me.LLEK_BASE2.DataPropertyName = "LEK_BASE2"
-        DataGridViewCellStyle25.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        Me.LLEK_BASE2.DefaultCellStyle = DataGridViewCellStyle25
-        Me.LLEK_BASE2.HeaderText = "判定基準２(sccm)"
-        Me.LLEK_BASE2.Name = "LLEK_BASE2"
-        Me.LLEK_BASE2.ReadOnly = True
-        Me.LLEK_BASE2.Visible = False
-        Me.LLEK_BASE2.Width = 120
-        '
-        'ZKU_VOLT1
-        '
-        Me.ZKU_VOLT1.DataPropertyName = "ZKU_VOLT1"
-        DataGridViewCellStyle26.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        Me.ZKU_VOLT1.DefaultCellStyle = DataGridViewCellStyle26
-        Me.ZKU_VOLT1.HeaderText = "印加電圧１(V)"
-        Me.ZKU_VOLT1.Name = "ZKU_VOLT1"
-        Me.ZKU_VOLT1.ReadOnly = True
-        Me.ZKU_VOLT1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
-        Me.ZKU_VOLT1.Width = 120
-        '
-        'ZKU_VOLT2
-        '
-        Me.ZKU_VOLT2.DataPropertyName = "ZKU_VOLT2"
-        DataGridViewCellStyle27.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        Me.ZKU_VOLT2.DefaultCellStyle = DataGridViewCellStyle27
-        Me.ZKU_VOLT2.HeaderText = "印加電圧２(V)"
-        Me.ZKU_VOLT2.Name = "ZKU_VOLT2"
-        Me.ZKU_VOLT2.ReadOnly = True
-        Me.ZKU_VOLT2.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
-        Me.ZKU_VOLT2.Width = 120
-        '
-        'ZKU_BASE
-        '
-        Me.ZKU_BASE.DataPropertyName = "ZKU_BASE"
-        DataGridViewCellStyle28.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        Me.ZKU_BASE.DefaultCellStyle = DataGridViewCellStyle28
-        Me.ZKU_BASE.HeaderText = "判定基準(KPa)"
-        Me.ZKU_BASE.Name = "ZKU_BASE"
-        Me.ZKU_BASE.ReadOnly = True
-        Me.ZKU_BASE.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
-        Me.ZKU_BASE.Visible = False
-        Me.ZKU_BASE.Width = 120
-        '
-        'PV
-        '
-        Me.PV.DataPropertyName = "PV"
-        Me.PV.HeaderText = "電圧印加位置"
-        Me.PV.Name = "PV"
-        Me.PV.ReadOnly = True
-        Me.PV.Visible = False
-        '
-        'IV
-        '
-        Me.IV.DataPropertyName = "IV"
-        Me.IV.HeaderText = "絶縁印加電圧"
-        Me.IV.Name = "IV"
-        Me.IV.ReadOnly = True
-        Me.IV.Visible = False
-        '
-        'KV
-        '
-        Me.KV.DataPropertyName = "KV"
-        Me.KV.HeaderText = "吸着印加電圧"
-        Me.KV.Name = "KV"
-        Me.KV.ReadOnly = True
-        Me.KV.Visible = False
-        '
-        'LV
-        '
-        Me.LV.DataPropertyName = "LV"
-        Me.LV.HeaderText = "He印加電圧"
-        Me.LV.Name = "LV"
-        Me.LV.ReadOnly = True
-        Me.LV.Visible = False
-        '
-        'ZV
-        '
-        Me.ZV.DataPropertyName = "ZV"
-        Me.ZV.HeaderText = "残留吸着印加電圧"
-        Me.ZV.Name = "ZV"
-        Me.ZV.ReadOnly = True
-        Me.ZV.Visible = False
-        '
-        'LIDX
-        '
-        Me.LIDX.DataPropertyName = "IDX"
-        Me.LIDX.HeaderText = "INDEX"
-        Me.LIDX.Name = "LIDX"
-        Me.LIDX.ReadOnly = True
-        Me.LIDX.Visible = False
-        '
         'DHDParmSet
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackColor = System.Drawing.SystemColors.Info
         Me.ClientSize = New System.Drawing.Size(1369, 796)
         Me.Controls.Add(Me.tabTest)
         Me.Controls.Add(Me.btnCancel)

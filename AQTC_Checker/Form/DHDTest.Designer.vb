@@ -2697,6 +2697,7 @@ Partial Class DHDTest
         '
         'tabPage1
         '
+        Me.tabPage1.BackColor = System.Drawing.SystemColors.Info
         Me.tabPage1.Controls.Add(Me.grpKyuucyaku1)
         Me.tabPage1.Controls.Add(Me.grpZanryu1)
         Me.tabPage1.Controls.Add(Me.grpHeGas1)
@@ -2707,7 +2708,6 @@ Partial Class DHDTest
         Me.tabPage1.Size = New System.Drawing.Size(929, 651)
         Me.tabPage1.TabIndex = 0
         Me.tabPage1.Text = "大気圧"
-        Me.tabPage1.UseVisualStyleBackColor = True
         '
         'grpKyuucyaku1
         '
@@ -3168,6 +3168,7 @@ Partial Class DHDTest
         '
         'tabPage2
         '
+        Me.tabPage2.BackColor = System.Drawing.SystemColors.Info
         Me.tabPage2.Controls.Add(Me.grpHeGas2)
         Me.tabPage2.Controls.Add(Me.grpKyuucyaku2)
         Me.tabPage2.Controls.Add(Me.grpZanryu2)
@@ -3178,7 +3179,6 @@ Partial Class DHDTest
         Me.tabPage2.Size = New System.Drawing.Size(929, 651)
         Me.tabPage2.TabIndex = 1
         Me.tabPage2.Text = "真空（低温）"
-        Me.tabPage2.UseVisualStyleBackColor = True
         '
         'grpHeGas2
         '
@@ -3671,6 +3671,7 @@ Partial Class DHDTest
         '
         'tabPage3
         '
+        Me.tabPage3.BackColor = System.Drawing.SystemColors.Info
         Me.tabPage3.Controls.Add(Me.grpHeGas3)
         Me.tabPage3.Controls.Add(Me.grpKyuucyaku3)
         Me.tabPage3.Controls.Add(Me.grpZanryu3)
@@ -3681,7 +3682,6 @@ Partial Class DHDTest
         Me.tabPage3.Size = New System.Drawing.Size(929, 651)
         Me.tabPage3.TabIndex = 2
         Me.tabPage3.Text = "真空（高温）"
-        Me.tabPage3.UseVisualStyleBackColor = True
         '
         'grpHeGas3
         '
@@ -4174,6 +4174,7 @@ Partial Class DHDTest
         '
         'tabPage4
         '
+        Me.tabPage4.BackColor = System.Drawing.SystemColors.Info
         Me.tabPage4.Controls.Add(Me.grpHeGas4)
         Me.tabPage4.Controls.Add(Me.grpKyuucyaku4)
         Me.tabPage4.Controls.Add(Me.grpZanryu4)
@@ -4183,7 +4184,6 @@ Partial Class DHDTest
         Me.tabPage4.Size = New System.Drawing.Size(929, 651)
         Me.tabPage4.TabIndex = 3
         Me.tabPage4.Text = "真空（高温２）"
-        Me.tabPage4.UseVisualStyleBackColor = True
         '
         'grpHeGas4
         '
@@ -4706,6 +4706,7 @@ Partial Class DHDTest
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.AutoScroll = True
+        Me.BackColor = System.Drawing.SystemColors.Info
         Me.ClientSize = New System.Drawing.Size(1887, 1029)
         Me.Controls.Add(Me.btnBzStop)
         Me.Controls.Add(Me.btnStop)
@@ -4787,7 +4788,7 @@ Partial Class DHDTest
         Me.ResumeLayout(False)
 
     End Sub
-	Friend WithEvents Label1 As System.Windows.Forms.Label
+    Friend WithEvents Label1 As System.Windows.Forms.Label
     Friend WithEvents txtYear As System.Windows.Forms.TextBox
     Friend WithEvents Label2 As System.Windows.Forms.Label
     Friend WithEvents Label3 As System.Windows.Forms.Label
