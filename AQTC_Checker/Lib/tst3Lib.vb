@@ -670,6 +670,23 @@ Module tst3Lib
 								'
 								nrty += 1
 
+								'▼2024.06.17 TC Kanda （１．配管真空排気シーケンス修正／Heリーク量測定の真空排気シーケンス完了後にESC電源ON）／リトライ時にONにならないため追加
+								'
+								'	電極ヘッドに吸着電圧印加し目標に到達するまで待つ
+								'
+								If (ESCproc(sdcv1, sdcv2, 30000.0, 7)) Then
+
+									'   20200716 s.harada
+									FrmLog.LogDspAdd("", "tst3 途中終了：ESCproc", Color.Empty)
+
+									' 中止指示
+									rtn = -1
+
+									Exit Do
+
+								End If
+								'▲2024.06.17 TC Kanda （１．配管真空排気シーケンス修正／真空排気シーケンス内でESC電源ON）／リトライ時にONにならないため追加
+
 								If (3 <= nrty) Then
 
 									' ﾘﾄﾗｲｱｳﾄ
