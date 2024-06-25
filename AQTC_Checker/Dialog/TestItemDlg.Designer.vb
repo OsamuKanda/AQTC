@@ -700,7 +700,7 @@ Partial Class TestItemDlg
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.SystemColors.Info
+        Me.BackColor = System.Drawing.SystemColors.Control
         Me.ClientSize = New System.Drawing.Size(1124, 461)
         Me.Controls.Add(Me.grpZanKyucyaku)
         Me.Controls.Add(Me.btnDelete)

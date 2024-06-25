@@ -1852,9 +1852,9 @@ Partial Class DHDMente
         Me.GroupBox11.Controls.Add(Me.DOX32)
         Me.GroupBox11.Controls.Add(Me.Label13)
         Me.GroupBox11.Location = New System.Drawing.Point(465, 466)
-        Me.GroupBox11.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.GroupBox11.Margin = New System.Windows.Forms.Padding(2)
         Me.GroupBox11.Name = "GroupBox11"
-        Me.GroupBox11.Padding = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.GroupBox11.Padding = New System.Windows.Forms.Padding(2)
         Me.GroupBox11.Size = New System.Drawing.Size(256, 108)
         Me.GroupBox11.TabIndex = 20
         Me.GroupBox11.TabStop = False
@@ -2216,7 +2216,7 @@ Partial Class DHDMente
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 12.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.SystemColors.Info
+        Me.BackColor = System.Drawing.SystemColors.Control
         Me.ClientSize = New System.Drawing.Size(1269, 623)
         Me.Controls.Add(Me.GroupBox12)
         Me.Controls.Add(Me.GroupBox11)

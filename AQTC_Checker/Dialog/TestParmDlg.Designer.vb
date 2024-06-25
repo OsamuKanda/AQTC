@@ -228,7 +228,7 @@ Partial Class TestParmDlg
         '
         'grpZanKyu
         '
-        Me.grpZanKyu.BackColor = System.Drawing.SystemColors.Info
+        Me.grpZanKyu.BackColor = System.Drawing.SystemColors.Control
         Me.grpZanKyu.Controls.Add(Me.Label4)
         Me.grpZanKyu.Controls.Add(Me.txtBakPrs)
         Me.grpZanKyu.Controls.Add(Me.Label5)
@@ -438,7 +438,7 @@ Partial Class TestParmDlg
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.SystemColors.Info
+        Me.BackColor = System.Drawing.SystemColors.Control
         Me.ClientSize = New System.Drawing.Size(477, 522)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.txtKyuMaxTm)

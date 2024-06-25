@@ -28,7 +28,7 @@ Partial Class FrmLog
         '
         'ListView1
         '
-        Me.ListView1.BackColor = System.Drawing.SystemColors.Info
+        Me.ListView1.BackColor = System.Drawing.SystemColors.Control
         Me.ListView1.HideSelection = False
         Me.ListView1.Location = New System.Drawing.Point(3, 1)
         Me.ListView1.Name = "ListView1"
@@ -40,7 +40,7 @@ Partial Class FrmLog
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.SystemColors.Info
+        Me.BackColor = System.Drawing.SystemColors.Control
         Me.ClientSize = New System.Drawing.Size(892, 409)
         Me.Controls.Add(Me.ListView1)
         Me.Font = New System.Drawing.Font("ＭＳ ゴシック", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))

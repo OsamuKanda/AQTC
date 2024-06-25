@@ -95,7 +95,7 @@ Partial Class MessageDlg
         Me.AcceptButton = Me.btnNo2
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.SystemColors.Info
+        Me.BackColor = System.Drawing.SystemColors.Control
         Me.CancelButton = Me.btnNo1
         Me.ClientSize = New System.Drawing.Size(300, 117)
         Me.Controls.Add(Me.lblMsg)

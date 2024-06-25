@@ -709,7 +709,7 @@ Partial Class DHDParmSet
         '
         'tabPage1
         '
-        Me.tabPage1.BackColor = System.Drawing.SystemColors.Info
+        Me.tabPage1.BackColor = System.Drawing.SystemColors.Control
         Me.tabPage1.Controls.Add(Me.Label4)
         Me.tabPage1.Controls.Add(Me.Label14)
         Me.tabPage1.Controls.Add(Me.Label15)
@@ -1141,7 +1141,7 @@ Partial Class DHDParmSet
         '
         'tabPage2
         '
-        Me.tabPage2.BackColor = System.Drawing.SystemColors.Info
+        Me.tabPage2.BackColor = System.Drawing.SystemColors.Control
         Me.tabPage2.Controls.Add(Me.Label20)
         Me.tabPage2.Controls.Add(Me.Label21)
         Me.tabPage2.Controls.Add(Me.Label54)
@@ -1575,7 +1575,7 @@ Partial Class DHDParmSet
         '
         'tabPage3
         '
-        Me.tabPage3.BackColor = System.Drawing.SystemColors.Info
+        Me.tabPage3.BackColor = System.Drawing.SystemColors.Control
         Me.tabPage3.Controls.Add(Me.LblVcmHiZku)
         Me.tabPage3.Controls.Add(Me.LblVcmHiLek)
         Me.tabPage3.Controls.Add(Me.LblVcmHiKyu)
@@ -2009,7 +2009,7 @@ Partial Class DHDParmSet
         '
         'tabPage4
         '
-        Me.tabPage4.BackColor = System.Drawing.SystemColors.Info
+        Me.tabPage4.BackColor = System.Drawing.SystemColors.Control
         Me.tabPage4.Controls.Add(Me.Label10)
         Me.tabPage4.Controls.Add(Me.Label11)
         Me.tabPage4.Controls.Add(Me.Label12)
@@ -2452,7 +2452,7 @@ Partial Class DHDParmSet
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.SystemColors.Info
+        Me.BackColor = System.Drawing.SystemColors.Control
         Me.ClientSize = New System.Drawing.Size(1369, 796)
         Me.Controls.Add(Me.tabTest)
         Me.Controls.Add(Me.btnCancel)

@@ -172,7 +172,7 @@ Partial Class TestTmpDlg
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.SystemColors.Info
+        Me.BackColor = System.Drawing.SystemColors.Control
         Me.ClientSize = New System.Drawing.Size(466, 270)
         Me.Controls.Add(Me.cboTmpStop)
         Me.Controls.Add(Me.Label7)

@@ -158,7 +158,7 @@ Partial Class DHDMenu
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 12.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.SystemColors.Info
+        Me.BackColor = System.Drawing.SystemColors.Control
         Me.ClientSize = New System.Drawing.Size(374, 495)
         Me.Controls.Add(Me.btnZanryu)
         Me.Controls.Add(Me.btnBzStop)

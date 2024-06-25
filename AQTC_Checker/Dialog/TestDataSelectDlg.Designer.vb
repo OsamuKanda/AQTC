@@ -76,7 +76,7 @@ Partial Class TestDataSelectDlg
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.SystemColors.Info
+        Me.BackColor = System.Drawing.SystemColors.Control
         Me.ClientSize = New System.Drawing.Size(568, 182)
         Me.Controls.Add(Me.btnCancel)
         Me.Controls.Add(Me.btnOk)

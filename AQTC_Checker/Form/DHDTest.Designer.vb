@@ -2697,7 +2697,7 @@ Partial Class DHDTest
         '
         'tabPage1
         '
-        Me.tabPage1.BackColor = System.Drawing.SystemColors.Info
+        Me.tabPage1.BackColor = System.Drawing.SystemColors.Control
         Me.tabPage1.Controls.Add(Me.grpKyuucyaku1)
         Me.tabPage1.Controls.Add(Me.grpZanryu1)
         Me.tabPage1.Controls.Add(Me.grpHeGas1)
@@ -3168,7 +3168,7 @@ Partial Class DHDTest
         '
         'tabPage2
         '
-        Me.tabPage2.BackColor = System.Drawing.SystemColors.Info
+        Me.tabPage2.BackColor = System.Drawing.SystemColors.Control
         Me.tabPage2.Controls.Add(Me.grpHeGas2)
         Me.tabPage2.Controls.Add(Me.grpKyuucyaku2)
         Me.tabPage2.Controls.Add(Me.grpZanryu2)
@@ -3183,6 +3183,7 @@ Partial Class DHDTest
         'grpHeGas2
         '
         Me.grpHeGas2.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.grpHeGas2.BackColor = System.Drawing.SystemColors.Control
         Me.grpHeGas2.Controls.Add(Me.Label89)
         Me.grpHeGas2.Controls.Add(Me.Label88)
         Me.grpHeGas2.Controls.Add(Me.Label87)
@@ -3671,7 +3672,7 @@ Partial Class DHDTest
         '
         'tabPage3
         '
-        Me.tabPage3.BackColor = System.Drawing.SystemColors.Info
+        Me.tabPage3.BackColor = System.Drawing.SystemColors.Control
         Me.tabPage3.Controls.Add(Me.grpHeGas3)
         Me.tabPage3.Controls.Add(Me.grpKyuucyaku3)
         Me.tabPage3.Controls.Add(Me.grpZanryu3)
@@ -3686,6 +3687,7 @@ Partial Class DHDTest
         'grpHeGas3
         '
         Me.grpHeGas3.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.grpHeGas3.BackColor = System.Drawing.SystemColors.Control
         Me.grpHeGas3.Controls.Add(Me.Label106)
         Me.grpHeGas3.Controls.Add(Me.Label91)
         Me.grpHeGas3.Controls.Add(Me.Label90)
@@ -4082,6 +4084,7 @@ Partial Class DHDTest
         'grpZetsuen3
         '
         Me.grpZetsuen3.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.grpZetsuen3.BackColor = System.Drawing.SystemColors.Control
         Me.grpZetsuen3.Controls.Add(Me.dgvZetsuen3)
         Me.grpZetsuen3.Location = New System.Drawing.Point(5, 5)
         Me.grpZetsuen3.Name = "grpZetsuen3"
@@ -4174,7 +4177,7 @@ Partial Class DHDTest
         '
         'tabPage4
         '
-        Me.tabPage4.BackColor = System.Drawing.SystemColors.Info
+        Me.tabPage4.BackColor = System.Drawing.SystemColors.Control
         Me.tabPage4.Controls.Add(Me.grpHeGas4)
         Me.tabPage4.Controls.Add(Me.grpKyuucyaku4)
         Me.tabPage4.Controls.Add(Me.grpZanryu4)
@@ -4706,7 +4709,7 @@ Partial Class DHDTest
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.AutoScroll = True
-        Me.BackColor = System.Drawing.SystemColors.Info
+        Me.BackColor = System.Drawing.SystemColors.Control
         Me.ClientSize = New System.Drawing.Size(1887, 1029)
         Me.Controls.Add(Me.btnBzStop)
         Me.Controls.Add(Me.btnStop)

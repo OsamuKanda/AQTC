@@ -626,7 +626,7 @@ Partial Class FrmWaitCdt
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(12.0!, 24.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.SystemColors.Info
+        Me.BackColor = System.Drawing.SystemColors.Control
         Me.ClientSize = New System.Drawing.Size(1019, 457)
         Me.Controls.Add(Me.BtnSkip)
         Me.Controls.Add(Me.lblAllOKUnit2)
