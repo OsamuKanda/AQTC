@@ -528,31 +528,33 @@ Module tst3Lib
 					ExDio_Output(EXSdoRYE2, DIO_ON)
 					WaitTim(100)
 
-					'★コレ、いらん気がする
-					'	チャンバ内圧力、ウエハ裏面圧が下がるのを待つ
-					'	リトライした時に圧が下がるまで待つ
-					'
-					If _
-						DHDTest.waittstcond3 _
-						(
-							"ウエハ裏面圧が下がるのを待つ",
-							vac,
-							dt.schuse,
-							dt.tmp,
-							tprs,
-							bakp
-						) _
-					Then
+					'▼2024.06.27 TC Kanda （その他／処理重複の為削除）
+					''★コレ、いらん気がする
+					''	チャンバ内圧力、ウエハ裏面圧が下がるのを待つ
+					''	リトライした時に圧が下がるまで待つ
+					''
+					'If _
+					'	DHDTest.waittstcond3 _
+					'	(
+					'		"ウエハ裏面圧が下がるのを待つ",
+					'		vac,
+					'		dt.schuse,
+					'		dt.tmp,
+					'		tprs,
+					'		bakp
+					'	) _
+					'Then
 
-						'   20200716 s.harada
-						FrmLog.LogDspAdd("", "tst3_proc 途中終了", Color.Empty)
+					'	'   20200716 s.harada
+					'	FrmLog.LogDspAdd("", "tst3_proc 途中終了", Color.Empty)
 
-						' 中止指示
-						rtn = -1
+					'	' 中止指示
+					'	rtn = -1
 
-						Exit Do
+					'	Exit Do
 
-					End If
+					'End If
+					'▲2024.06.27 TC Kanda （その他／処理重複の為削除）
 
 					'
 					'	ｳｴﾊ裏面圧が一定値になる様にPID調節計を使用しHeを制御（安定で測定）
