@@ -271,6 +271,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form\DHDParmSet.resx">
       <DependentUpon>DHDParmSet.vb</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Form\DHDtstAio.resx">
       <DependentUpon>DHDtstAio.vb</DependentUpon>

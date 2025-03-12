@@ -230,9 +230,9 @@
 			'	※本機能は下記条件文を入れ替えることで有効になる
 			'
 			'	20201102 s.harada 測定上源時間を追加
-			sts			= tst2_prc( vac, dt, dt.t2.d( ntst ), tprs, bprs, bakp, ntst, maxtm )
+			sts = tst2_prc(vac, dt, dt.t2.d(ntst), tprs, bprs, bakp, ntst, maxtm, dt.t2.d(ntst).maxPa)
 			'sts			= tst2_prc( vac, dt, dt.t2.d( ntst ), tprs, bprs, bakp, ntst )
-		'	sts			= tst2_prc( vac, dt, dt.t2.d( ntst ), tprs, bprs, bakp )
+			'	sts			= tst2_prc( vac, dt, dt.t2.d( ntst ), tprs, bprs, bakp )
 
 			If ( sts < 0 ) Then
 
@@ -324,36 +324,37 @@
 	'	20201102 S_Harada AQTC対応
 	'	測定時間上限を追加
 	'
-	Private Function tst2_prc			_
-	(						_
-		ByVal vac		As Integer,	_
-		ByRef dt		As DTREC,	_
-		ByRef dat		As DTI2,	_
-		ByVal tprs		As Double,	_
-		ByVal bprs		As Double,	_
-		ByVal bakp		As Double,	_
-		ByVal ntst		As Integer,	_
-		ByVal maxtm		As Double	_
-	)	As Integer
-	'Private Function tst2_prc			_
-	'(						_
-	'	ByVal vac		As Integer,	_
-	'	ByRef dt		As DTREC,	_
-	'	ByRef dat		As DTI2,	_
-	'	ByVal tprs		As Double,	_
-	'	ByVal bprs		As Double,	_
-	'	ByVal bakp		As Double,	_
-	'	ByVal ntst		As Integer	_
-	')	As Integer
-'	Private Function tst2_prc			_
-'	(						_
-'		ByVal vac		As Integer,	_
-'		ByRef dt		As DTREC,	_
-'		ByRef dat		As DTI2,	_
-'		ByVal tprs		As Double,	_
-'		ByVal bprs		As Double,	_
-'		ByVal bakp		As Double	_
-'	)	As Integer
+	Private Function tst2_prc _
+	(
+		ByVal vac As Integer,
+		ByRef dt As DTREC,
+		ByRef dat As DTI2,
+		ByVal tprs As Double,
+		ByVal bprs As Double,
+		ByVal bakp As Double,
+		ByVal ntst As Integer,
+		ByVal maxtm As Double,
+		ByVal maxPa As Integer
+	) As Integer
+		'Private Function tst2_prc			_
+		'(						_
+		'	ByVal vac		As Integer,	_
+		'	ByRef dt		As DTREC,	_
+		'	ByRef dat		As DTI2,	_
+		'	ByVal tprs		As Double,	_
+		'	ByVal bprs		As Double,	_
+		'	ByVal bakp		As Double,	_
+		'	ByVal ntst		As Integer	_
+		')	As Integer
+		'	Private Function tst2_prc			_
+		'	(						_
+		'		ByVal vac		As Integer,	_
+		'		ByRef dt		As DTREC,	_
+		'		ByRef dat		As DTI2,	_
+		'		ByVal tprs		As Double,	_
+		'		ByVal bprs		As Double,	_
+		'		ByVal bakp		As Double	_
+		'	)	As Integer
 
 
 		' dat;		測定ﾃﾞｰﾀ格納ｴﾘｱ
@@ -364,79 +365,88 @@
 
 		' maxtm;	測定時間の上限
 
-		Dim nrty		As Integer
-		Dim rtn			As Integer
-		Dim ngcnt		As Integer
-		Dim ptr			As Integer
-		Dim clk			As Double
-		Dim tim			As Double
-		Dim raw			As UShort
+		Dim nrty As Integer
+		Dim rtn As Integer
+		Dim ngcnt As Integer
+		Dim ptr As Integer
+		Dim clk As Double
+		Dim tim As Double
+		Dim raw As UShort
 		'Dim torr		As Double
-		Dim pa			As Double
+		Dim pa As Double
 		'Dim maxt		As Double
-		Dim maxp		As Double
+		Dim maxp As Double
 		'Dim hprs		As Double
-		Dim v1			As Double
-		Dim v2			As Double
-		Dim flw			As Double
-		Dim tm			As TimeSpan
-		Dim sttim		As DateTime
-		Dim crtim		As DateTime
-		Dim sts			As Integer
+		Dim v1 As Double
+		Dim v2 As Double
+		Dim flw As Double
+		Dim tm As TimeSpan
+		Dim sttim As DateTime
+		Dim crtim As DateTime
+		Dim sts As Integer
 
 		' 20201102 S_Harada　追加
-		Dim bpsel		As Integer		' 試験裏面圧選択
-		Dim setpa		As Double		' 設定圧力Pa
-		Dim jdgTm		As Double		' 判定値
+		Dim bpsel As Integer        ' 試験裏面圧選択
+		Dim setpa As Double     ' 設定圧力Pa
+		Dim jdgTm As Double     ' 判定値
+
+		Dim pas As Integer() = {1, 2, 3, 4, 6}
+		Dim maxIdx As Integer = Array.IndexOf(pas, maxPa)   '設定された最大回数
+		Dim jdgIdx As Integer = Array.IndexOf(pas, 3)       '3kPaを合格判定の回数とする
+
+		'3kPaと最大回数の小さいほうを合格判定回数とする
+		jdgIdx = Math.Min(jdgIdx, maxIdx)
 
 
-		FrmLog.LogDspAdd( "", "tst2_prc() Start", Color.Empty )
+
+
+		FrmLog.LogDspAdd("", "tst2_prc() Start", Color.Empty)
 
 		' 20201102 S_Harada 判定基準（秒）に変更
 		' 判定基準
 		'hprs			= dat.bs
-		jdgTm			= dat.bs	’判定値パラメータの設定で判定する
+		jdgTm = dat.arrivalTime '判定値パラメータの設定で判定する
 
 
 		' 試験結果初期値はＮＧ
 		' 20201102 s.harada	試験結果初期値を判定なしに変更
 		'dat.okng		= 1
-		dat.okng		= -1
+		dat.okng = -1
 
 
 		'
 		'	試験ループ (NGの場合は３回までﾘﾄﾗｲ)
 		'
-		nrty			= 0
+		nrty = 0
 
 
-		Do While ( 3 > nrty )
+		Do While (3 > nrty)
 
 			' 測定ループ終了フラグ・初期値中止セット
-			rtn			= -1
+			rtn = -1
 
 			' 20201102 S_Harada 試験裏面選択圧初期値セット
-			bpsel			= 0
+			bpsel = 0
 
 
 			'
 			'	試験開始条件待ち３
 			'	真空条件の時に、チャンバ内圧力と、ウエハ裏面圧力をチェックする
 			'
-			sts			= DHDTest.waittstcond3		_
-			(							_
-				"測定開始条件待ち",				_
-				vac,						_
-				dt.schuse,					_
-				dt.tmp,						_
-				tprs,						_
-				bakp						_
+			sts = DHDTest.waittstcond3 _
+			(
+				"測定開始条件待ち",
+				vac,
+				dt.schuse,
+				dt.tmp,
+				tprs,
+				bakp
 			)
 
 			If sts Then
 
 				' 中止指示
-				rtn			= -1
+				rtn = -1
 
 				Exit Do
 
@@ -453,7 +463,8 @@
 			'	電極ヘッドに吸着電圧印加し目標に到達するまで待つ
 			'
 			'▼ 2024.04.19 TC Kanda （１．配管真空排気シーケンス修正/ウエハ吸着直測定においてはサンプリング開始後ににESC電源ONを実施している）
-			If ( ESCproc( dat.volt1, dat.volt2, 30000L, 7 ) ) Then
+			If (ESCproc(dat.volt1, dat.volt2, 30000L, 7)) Then
+				'If (ESCproc(dat.volt1, dat.volt2, dat.maxPa, 7)) Then
 
 				Exit Do
 
@@ -464,20 +475,20 @@
 			'	※ 20200901 本バルブはトーカロ様では未装着
 			'	ウエハ裏面圧開放バルブOFF
 			'
-			ExDio_Output( MAEdoPRG, DIO_OFF )
+			ExDio_Output(MAEdoPRG, DIO_OFF)
 
 			'
 			'	20200220 y.goto トーカロ様対応
 			'	ウエハ裏面圧開放バルブ SV3(G4) OFF
 			'
-			ExDio_Output( EXSdoRYE3, DIO_OFF )		' 20200901 y.goto MB起動中なので既にOFF
+			ExDio_Output(EXSdoRYE3, DIO_OFF)        ' 20200901 y.goto MB起動中なので既にOFF
 
 			'
 			'	20200310 y.goto トーカロ様対応
 			' DOX34 EXDIO2 OUT2	RYE2 SV2 MFC 2次側バルブ開
-			ExDio_Output( EXSdoRYE2, DIO_ON )
+			ExDio_Output(EXSdoRYE2, DIO_ON)
 
-			WaitTim( 100 )
+			WaitTim(100)
 
 
 
@@ -485,38 +496,39 @@
 			'	Ｈｅをパラメータで指定された流量流す
 			'	20201124 y.goto
 			'
-			ExDa_Output( MFCaoSETPT1, cvtf2MFCset( dat.he ) )
+			ExDa_Output(MFCaoSETPT1, cvtf2MFCset(dat.he))
 
 
 			' 指定圧に達するまでの時間測定
 			' tim = TIM98CNT
-			sttim			= DateTime.Now
+			sttim = DateTime.Now
 
 
 			' 最大圧記録用
-			maxp			= 0.0
+			maxp = 0.0
 
-			clk			= 0L
+			clk = 0L
 
-			ngcnt			= 0
+			ngcnt = 0
 
-			ptr			= ADptrR
+			ptr = ADptrR
 
 			' 20201102 S_Harada 測定裏面圧の選択を追加
-			bpsel			= 0
+			bpsel = 0
 
-			setpa			= convSetPa( bpsel )
+			' 到達裏面測定圧
+			setpa = convSetPa(bpsel)
 
 			'	20201102 S_Harada 設定圧力追加
 			'DHDTest.StatusDisp( 10, 9, ( nrty + 1 ).ToString )
-			DHDTest.StatusDisp( 10, 9, ( nrty + 1 ).ToString + "回目     設定圧力 :       kPa" )
+			DHDTest.StatusDisp(10, 9, (nrty + 1).ToString + "回目     設定圧力 :       kPa")
 
-			DHDTest.StatusDisp( 34, 9,　( setpa / 1000 ).ToString( "0.0" ) )
+			DHDTest.StatusDisp(34, 9, (setpa / 1000).ToString("0.0"))
 
 
-			DHDTest.StatusDisp( 10, 10, "ESC･CH1電圧    :           [V]   CH2電圧    :           [V]" )
+			DHDTest.StatusDisp(10, 10, "ESC･CH1電圧    :           [V]   CH2電圧    :           [V]")
 
-			DHDTest.StatusDisp( 10, 11, "He流量         :           [CCM]" )
+			DHDTest.StatusDisp(10, 11, "He流量         :           [CCM]")
 
 			DHDTest.StatusDisp(10, 12, "真空圧(ﾊﾞﾗﾄﾛﾝ) :           [Pa]")
 
@@ -532,115 +544,115 @@
 			Do While True
 
 				'AD変換1ﾃﾞ-ﾀ確定するまで待つ (500msec)
-				If ( adwaitmsg( ptr ) = Keys.Escape ) Then
+				If (adwaitmsg(ptr) = Keys.Escape) Then
 
 					' Ｈｅを止める
-					ExDa_Output( MFCaoSETPT1, cvtf2MFCset( 0.0 ) )
+					ExDa_Output(MFCaoSETPT1, cvtf2MFCset(0.0))
 
-					rtn			= 0
+					rtn = 0
 
 					Exit Do
 
 				End If
 
-				clk			+= 1
+				clk += 1
 
 
 				'
 				'	バラトロン真空計の値を取得
 				'
 				'raw	= aiget( GMaiPRS, nMVAVG )
-				raw			= aiget( GMaiPRS, 1 )
+				raw = aiget(GMaiPRS, 1)
 
 				' ＲＡＷデ－タからＰａへ換算
-				pa			= cvtr2GM_Pa( raw )
+				pa = cvtr2GM_Pa(raw)
 
 
 				'
 				'	ＥＳＣ・ＣＨ１モニタ電圧を取得
 				'
-				raw			= aiget( ESCaiMON1, 1 )
+				raw = aiget(ESCaiMON1, 1)
 
 				' ＲＡＷデ－タから電圧へ換算
-				v1			= cvtr2ESC( raw )
+				v1 = cvtr2ESC(raw)
 
 
 
 				'
 				'	ＥＳＣ・ＣＨ２モニタ電圧を取得
 				'
-				raw			= aiget( ESCaiMON2, 1 )
+				raw = aiget(ESCaiMON2, 1)
 
 				' ＲＡＷデ－タから電圧へ換算
-				v2			= cvtr2ESC( raw )
+				v2 = cvtr2ESC(raw)
 
 
 
 				'
 				'	ＭＦＣ流量モニタ電圧を取得
 				'
-				raw			= aiget( MFCaiFLW, 1 )
+				raw = aiget(MFCaiFLW, 1)
 
 				' ＲＡＷデ－タから流量へ換算
-				flw			= cvtr2MFCop( raw )
+				flw = cvtr2MFCop(raw)
 
 
 
 				'
 				'	今までのウエハ裏面の最大圧を記録する
 				'
-				If ( maxp < pa ) Then
+				If (maxp < pa) Then
 
-					maxp			= pa
+					maxp = pa
 
 				End If
 
 
 				' 経過時間を計算
-				crtim			= DateTime.Now
+				crtim = DateTime.Now
 
-				tm			= crtim.Subtract( sttim )
+				tm = crtim.Subtract(sttim)
 
 				'	20201102 s.harada
 				'	単位を秒に変更
 				'tim			= tm.TotalMilliseconds
-				tim			= tm.TotalSeconds
+				tim = tm.TotalSeconds
 
 
 				'
 				'	ＥＳＣ電源ＣＨ１モニタ電圧の測定値を表示
 				'
-				DHDTest.StatusDisp( 27, 10, v1.ToString( "0.0" ).PadLeft( 8 ) )
+				DHDTest.StatusDisp(27, 10, v1.ToString("0.0").PadLeft(8))
 
 
 				'
 				'	ＥＳＣ電源ＣＨ２モニタ電圧の測定値を表示
 				'
-				DHDTest.StatusDisp( 56, 10, v2.ToString( "0.0" ).PadLeft( 8 ) )
+				DHDTest.StatusDisp(56, 10, v2.ToString("0.0").PadLeft(8))
 
 
 				'
 				'	ＭＦＣ１流量モニタ信号の測定値を表示
 				'
-				DHDTest.StatusDisp( 27, 11, flw.ToString( "0.0" ).PadLeft( 5 ) )
+				DHDTest.StatusDisp(27, 11, flw.ToString("0.0").PadLeft(5))
 
 
 				'
 				'	バラトロン真空計（ウエハ裏面圧）の測定値を表示
 				'
-				DHDTest.StatusDisp( 27, 12, pa.ToString( "0.0" ).PadLeft( 8 ) )
+				DHDTest.StatusDisp(27, 12, pa.ToString("0.0").PadLeft(8))
 
 
 				'
 				'	ウエハ裏面圧最大値を表示
 				'
-				DHDTest.StatusDisp( 27, 13, maxp.ToString( "0.0" ).PadLeft( 8 ) )
+				DHDTest.StatusDisp(27, 13, maxp.ToString("0.0").PadLeft(8))
 
 
 				'	20201102 s.harada
 				'	単位を秒に変更
 				'DHDTest.StatusDisp( 27, 14, ( tim / 1000.0 ).ToString( "0.0" ).PadLeft( 5 ) )
-				DHDTest.StatusDisp( 30, 14, tim.ToString( "0" ).PadLeft( 5 ) )
+				DHDTest.StatusDisp(30, 14, tim.ToString("0").PadLeft(5))
 
 
 				'
@@ -676,19 +688,19 @@
 
 				'	End If
 
-				If tim < maxTm Then
+				If tim < maxtm Then
 					' 測定時間内
 
-					If bpsel <= 2 And jdgTm > 0  Then
+					If bpsel <= jdgIdx And jdgTm > 0 Then
 						'判定有
 
-						If jdgTm < tim then
+						If jdgTm < tim Then
 
 							'
 							'	3kPaのタイムアウト
 							'
 
-							rtn			= -1
+							rtn = -1
 
 							Exit Do
 
@@ -696,58 +708,59 @@
 
 							' 到達時間記録
 							'
-							dat.tmr( bpsel)	= tim
+							dat.tmr(bpsel) = tim
 
-							If bpsel = 2 then
+							If bpsel = jdgIdx Then
 								'
 								'	判定ＯＫ
 								'
-								dat.okng		= 0
+								dat.okng = 0
 
 							End If
 
-							bpsel			+= 1
+							bpsel += 1
 
-							If bpsel > 4 Then
+							If bpsel > maxIdx Then
+								'If bpsel > 4 Then
 
 								' 測定終了
-								rtn			= 1
+								rtn = 1
 
 								Exit Do
 
 							End If
 
-							setpa			= convSetPa( bpsel )
+							setpa = convSetPa(bpsel)
 
-							DHDTest.StatusDisp( 34, 9,　( setpa / 1000 ).ToString( "0.0" ) )
+							DHDTest.StatusDisp(34, 9, (setpa / 1000).ToString("0.0"))
 
 						End If
 
 
 					Else
 
-						’判定なし
+						'判定なし
 
 						If setpa <= pa Then
 
 							' 到達時間記録
 							'
-							dat.tmr( bpsel)	= tim
+							dat.tmr(bpsel) = tim
 
-							bpsel			+= 1
+							bpsel += 1
 
-							If bpsel > 4 Then
+							If bpsel > maxIdx Then
 
 								' 測定終了
-								rtn			= 1
+								rtn = 1
 
 								Exit Do
 
 							End If
 
-							setpa			= convSetPa( bpsel )
+							setpa = convSetPa(bpsel)
 
-							DHDTest.StatusDisp( 34, 9,　( setpa / 1000 ).ToString( "0.0" ) )
+							DHDTest.StatusDisp(34, 9, (setpa / 1000).ToString("0.0"))
 
 
 						End If
@@ -756,17 +769,17 @@
 
 				Else
 
-					If bpsel <= 2 And jdgTm > 0  Then
+					If bpsel <= jdgIdx And jdgTm > 0 Then
 						'判定有
 						'測定時間オーバー リトライへ
-						rtn			= -1
+						rtn = -1
 
 						Exit Do
 
 					Else
-						’判定なし
+						'判定なし
 						'測定時間オーバー 次の測定へ
-						rtn			= 1
+						rtn = 1
 
 						Exit Do
 
@@ -781,20 +794,20 @@
 			'
 			'	Ｈｅを止める
 			'
-			ExDa_Output( MFCaoSETPT1, cvtf2MFCset( 0.0 ) )
+			ExDa_Output(MFCaoSETPT1, cvtf2MFCset(0.0))
 
 
 			' clrln( 10, 10 );
-			DHDTest.StatusClear( 9, 6 )
+			DHDTest.StatusClear(9, 6)
 
 
-			WaitTim( 100 )
+			WaitTim(100)
 
 
 			'	※ 20200901 本バルブはトーカロ様では未装着
 			'	ウエハ裏面圧開放バルブON
 			'
-			ExDio_Output( MAEdoPRG, DIO_ON )
+			ExDio_Output(MAEdoPRG, DIO_ON)
 
 			'
 			'	20200220 y.goto トーカロ様対応
@@ -813,7 +826,7 @@
 			If sts <> 0 Then
 
 				' 試験中止
-				rtn		= -1
+				rtn = -1
 				Exit Do
 
 			End If
@@ -832,7 +845,7 @@
 			'
 			'	しばらく待つ
 			'
-			WaitTim( 200 )
+			WaitTim(200)
 
 			'
 			'	ウエハ裏面圧条件待ち処理
@@ -858,24 +871,24 @@
 			'
 			'	しばらく待つ
 			'
-			WaitTim( 200 )
+			WaitTim(200)
 
 
 
 			' 波形サンプリングデータを保存
-			SaveWaveData					_
-			(						_
-				DHDtest.tstNo,				_
-				"B" + ntst.ToString(),			_
-				dat.volt1,				_
-				dat.volt2				_
+			SaveWaveData _
+			(
+				DHDTest.tstNo,
+				"B" + ntst.ToString(),
+				dat.volt1,
+				dat.volt2
 			)
 
 
 			If sts Then
 
 				' 中止指示
-				rtn			= -1
+				rtn = -1
 
 				Exit Do
 
@@ -884,7 +897,7 @@
 			'
 			'	ループ終了判断
 			'
-			If ( 0 <= rtn ) Then
+			If (0 <= rtn) Then
 
 				Exit Do
 
@@ -894,7 +907,7 @@
 			'
 			'	リトライ対象外
 			'
-			If bpsel > 2 Or jdgTm = 0  Then
+			If bpsel > 2 Or jdgTm = 0 Then
 
 				Exit Do
 
@@ -903,15 +916,15 @@
 			'
 			'	リトライ判断
 			'
-			nrty			+= 1
+			nrty += 1
 
-			If ( 3 <= nrty ) Then
+			If (3 <= nrty) Then
 
 				' ﾘﾄﾗｲｱｳﾄ
-				rtn			= 0	'測定終了なら-1
+				rtn = 0 '測定終了なら-1
 
 				'試験結果は ＮＧ
-				dat.okng		= 1
+				dat.okng = 1
 
 				Exit Do
 
@@ -922,9 +935,9 @@
 		'
 		'	20200310 y.goto トーカロ様対応
 		' DOX34 EXDIO2 OUT2	RYE2 SV2 MFC 2次側バルブ閉
-		ExDio_Output( EXSdoRYE2, DIO_OFF )
+		ExDio_Output(EXSdoRYE2, DIO_OFF)
 
-		FrmLog.LogDspAdd( "", "tst2_prc() End", Color.Empty )
+		FrmLog.LogDspAdd("", "tst2_prc() End", Color.Empty)
 
 		Return rtn
 

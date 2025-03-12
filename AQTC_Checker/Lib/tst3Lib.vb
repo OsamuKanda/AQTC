@@ -384,18 +384,19 @@ Module tst3Lib
 		Dim rtn As Integer
 		Dim nrty As Integer     ' リトライ
 		Dim bpsel As Integer    ' 試験裏面圧選択
-		Dim jdgTm1 As Double    ' 判定値１
-		Dim jdgTm2 As Double    ' 判定値２
+		'Dim jdgTm1 As Double    ' 判定値１
+		'Dim jdgTm2 As Double    ' 判定値２
 		Dim vacs As Integer
 
 
 		'判定値パラメータの設定で判定する
-		jdgTm1			= dat.bs
-		jdgTm2			= dat.bs2
+		'jdgTm1 = dat.bs(0)
+		'jdgTm2 = dat.bs(1)
 
 		' 験結果初期値は判定なし
-		dat.okng		= -1
-		dat.okng2		= -1
+		For i = 0 To dat.okng.Length - 1
+			dat.okng(i) = Nothing
+		Next
 
 		' 設定圧力 0=1.0[KPa], 1=2.0[KPa], 2=3.0[KPa], 3=4.0[KPa], 4=6.0[KPa]
 		bpsel			= 0
@@ -421,67 +422,72 @@ Module tst3Lib
 			'
 			'	設定圧力 0=1.0[KPa], 1=2.0[KPa], 2=3.0[KPa], 3=4.0[KPa], 4=6.0[KPa]
 			'
-			Select Case bpsel
-				Case 0 And dat.ptn.Contains("1")
-					'1kPa
-					'▼2024.05.02 TC Kanda （３．Ｈｅリーク量測定のパターン追加／測定有効無効パラメータ追加）
-					'setpa = 1000.0
-					If dat.ptn.Contains("1") Then    '1kPaが有効またはサーモチラーの設定が50℃でない場合は測定実施
-						setpa = 1000.0
-					Else
-						setpa = 0.0
-					End If
-					'▲2024.05.02 TC Kanda （３．Ｈｅリーク量測定のパターン追加／測定有効無効パラメータ追加）
+			'▼ 2025.02.18 TC Kanda （測定有効フラグ追加）
+			'Select Case bpsel
+			'	Case 0 And dat.ptn.ContainsKey(1)
+			'		'1kPa
+			'		'▼2024.05.02 TC Kanda （３．Ｈｅリーク量測定のパターン追加／測定有効無効パラメータ追加）
+			'		'setpa = 1000.0
+			'		If dat.bsEnabled(bpsel) Then    '1kPaが有効またはサーモチラーの設定が50℃でない場合は測定実施
+			'			setpa = 1000.0
+			'		Else
+			'			setpa = 0.0
+			'		End If
+			'		'▲2024.05.02 TC Kanda （３．Ｈｅリーク量測定のパターン追加／測定有効無効パラメータ追加）
 
-				Case 1
-					'2kPa
-					'▼2024.05.02 TC Kanda （３．Ｈｅリーク量測定のパターン追加／測定有効無効パラメータ追加）
-					'setpa = 2000.0
-					If dat.ptn.Contains("2") Then    '2kPaが有効またはサーモチラーの設定が50℃でない場合は測定実施
-						setpa = 2000.0
-					Else
-						setpa = 0.0
-					End If
-					'▲2024.05.02 TC Kanda （３．Ｈｅリーク量測定のパターン追加／測定有効無効パラメータ追加）
+			'	Case 1
+			'		'2kPa
+			'		'▼2024.05.02 TC Kanda （３．Ｈｅリーク量測定のパターン追加／測定有効無効パラメータ追加）
+			'		'setpa = 2000.0
+			'		If dat.ptn.ContainsKey(2) Then    '2kPaが有効またはサーモチラーの設定が50℃でない場合は測定実施
+			'			setpa = 2000.0
+			'		Else
+			'			setpa = 0.0
+			'		End If
+			'		'▲2024.05.02 TC Kanda （３．Ｈｅリーク量測定のパターン追加／測定有効無効パラメータ追加）
 
-				Case 2
-					'3kPa
-					'▼2024.05.02 TC Kanda （３．Ｈｅリーク量測定のパターン追加／測定有効無効パラメータ追加）
-					'setpa = 3000.0
-					If dat.ptn.Contains("3") Then    '3kPaが有効またはサーモチラーの設定が50℃でない場合は測定実施
-						setpa = 3000.0
-					Else
-						setpa = 0.0
-					End If
-					'▲2024.05.02 TC Kanda （３．Ｈｅリーク量測定のパターン追加／測定有効無効パラメータ追加）
+			'	Case 2
+			'		'3kPa
+			'		'▼2024.05.02 TC Kanda （３．Ｈｅリーク量測定のパターン追加／測定有効無効パラメータ追加）
+			'		'setpa = 3000.0
+			'		If dat.ptn.ContainsKey(3) Then    '3kPaが有効またはサーモチラーの設定が50℃でない場合は測定実施
+			'			setpa = 3000.0
+			'		Else
+			'			setpa = 0.0
+			'		End If
+			'		'▲2024.05.02 TC Kanda （３．Ｈｅリーク量測定のパターン追加／測定有効無効パラメータ追加）
 
-				Case 3
-					'4kPa
-					'▼2024.05.02 TC Kanda （３．Ｈｅリーク量測定のパターン追加／測定有効無効パラメータ追加）
-					'setpa = 4000.0
-					If dat.ptn.Contains("4") Then    '4kPaが有効またはサーモチラーの設定が50℃でない場合は測定実施
-						setpa = 4000.0
-					Else
-						setpa = 0.0
-					End If
-					'▲2024.05.02 TC Kanda （３．Ｈｅリーク量測定のパターン追加／測定有効無効パラメータ追加）
+			'	Case 3
+			'		'4kPa
+			'		'▼2024.05.02 TC Kanda （３．Ｈｅリーク量測定のパターン追加／測定有効無効パラメータ追加）
+			'		'setpa = 4000.0
+			'		If dat.ptn.ContainsKey(4) Then    '4kPaが有効またはサーモチラーの設定が50℃でない場合は測定実施
+			'			setpa = 4000.0
+			'		Else
+			'			setpa = 0.0
+			'		End If
+			'		'▲2024.05.02 TC Kanda （３．Ｈｅリーク量測定のパターン追加／測定有効無効パラメータ追加）
 
-				Case 4
-					'6kPa
-					'▼2024.05.02 TC Kanda （３．Ｈｅリーク量測定のパターン追加／測定有効無効パラメータ追加）
-					'setpa = 6000.0
-					If dat.ptn.Contains("6") Then    '6kPaが有効またはサーモチラーの設定が50℃でない場合は測定実施
-						setpa = 6000.0
-					Else
-						setpa = 0.0
-					End If
-					'▲2024.05.02 TC Kanda （３．Ｈｅリーク量測定のパターン追加／測定有効無効パラメータ追加）
+			'	Case 4
+			'		'6kPa
+			'		'▼2024.05.02 TC Kanda （３．Ｈｅリーク量測定のパターン追加／測定有効無効パラメータ追加）
+			'		'setpa = 6000.0
+			'		If dat.ptn.ContainsKey(6) Then    '6kPaが有効またはサーモチラーの設定が50℃でない場合は測定実施
+			'			setpa = 6000.0
+			'		Else
+			'			setpa = 0.0
+			'		End If
+			'		'▲2024.05.02 TC Kanda （３．Ｈｅリーク量測定のパターン追加／測定有効無効パラメータ追加）
 
-			End Select
+			'End Select
 
 			'▼2024.05.02 TC Kanda （３．Ｈｅリーク量測定のパターン追加／測定有効無効パラメータ追加）
 
-			If setpa > 0.0 Then
+			'▼ 2025.02.18 TC Kanda （測定有効フラグ追加）
+			If dat.bsEnabled(bpsel) Then
+				'▲ 2025.02.18 TC Kanda （測定有効フラグ追加）
+				Dim pas As Double() = {1000, 2000, 3000, 4000, 6000}
+				setpa = pas(bpsel)
 				'▲2024.05.02 TC Kanda （３．Ｈｅリーク量測定のパターン追加／測定有効無効パラメータ追加）
 
 				' PIDへ目標裏面圧力 DA値 を出力
@@ -596,68 +602,131 @@ Module tst3Lib
 						'	Ｈｅ流量安定した
 						'
 
-						' 裏面圧力が 1.0[KPa] で、He流量の基準値が設定してる時
-						If bpsel = 0 And dat.bs > 0 Then
+						'▼ 2025.02.18 TC Kanda （測定有効フラグ追加）
+						'' 裏面圧力が 1.0[KPa] で、He流量の基準値が設定してる時
+						'If bpsel = 0 And dat.bs(bpsel) > 0 Then
 
-							' He流量が基準値以下か？
-							If dat.bs >= dat.cm(bpsel) Then
+						'	' He流量が基準値以下か？
+						'	If dat.bs(bpsel) >= dat.cm(bpsel) Then
 
-								' 判定ＯＫ
-								dat.okng = 0
+						'		' 判定ＯＫ
+						'		dat.okng(bpsel) = 0
 
-								rtn = 1
+						'		rtn = 1
 
-								Exit Do
+						'		Exit Do
 
-							Else
+						'	Else
 
-								' 判定ＮＧ
-								dat.okng = 1
+						'		' 判定ＮＧ
+						'		dat.okng(bpsel) = 1
 
-								' 判定NG　リトライ判断
-								'
-								nrty += 1
+						'		' 判定NG　リトライ判断
+						'		'
+						'		nrty += 1
 
-								'▼2024.05.14 TC Kanda （１．配管真空排気シーケンス修正／Heリーク量測定の真空排気シーケンス完了後にESC電源ON）／リトライ時にONにならないため追加
-								'
-								'	電極ヘッドに吸着電圧印加し目標に到達するまで待つ
-								'
-								If (ESCproc(sdcv1, sdcv2, 30000.0, 7)) Then
+						'		'▼2024.05.14 TC Kanda （１．配管真空排気シーケンス修正／Heリーク量測定の真空排気シーケンス完了後にESC電源ON）／リトライ時にONにならないため追加
+						'		'
+						'		'	電極ヘッドに吸着電圧印加し目標に到達するまで待つ
+						'		'
+						'		If (ESCproc(sdcv1, sdcv2, 30000.0, 7)) Then
 
-									'   20200716 s.harada
-									FrmLog.LogDspAdd("", "tst3 途中終了：ESCproc", Color.Empty)
+						'			'   20200716 s.harada
+						'			FrmLog.LogDspAdd("", "tst3 途中終了：ESCproc", Color.Empty)
 
-									' 中止指示
-									rtn = -1
+						'			' 中止指示
+						'			rtn = -1
 
-									Exit Do
+						'			Exit Do
 
-								End If
-								'▲2024.05.14 TC Kanda （１．配管真空排気シーケンス修正／真空排気シーケンス内でESC電源ON）／リトライ時にONにならないため追加
+						'		End If
+						'		'▲2024.05.14 TC Kanda （１．配管真空排気シーケンス修正／真空排気シーケンス内でESC電源ON）／リトライ時にONにならないため追加
 
-								If (3 <= nrty) Then
+						'		If (3 <= nrty) Then
 
-									' ﾘﾄﾗｲｱｳﾄ
-									rtn = 0 '測定終了なら-1
+						'			' ﾘﾄﾗｲｱｳﾄ
+						'			rtn = 0 '測定終了なら-1
 
-									Exit Do
+						'			Exit Do
 
-								End If
+						'		End If
 
-								' 20230110 y.goto
-								'
-								'	判定NGの場合 Loop先頭から処理するが、この時 MAEdoRYFC はOFFのまま
-								'	処理してしまうBug有り①。
-								'
-							End If
+						'		' 20230110 y.goto
+						'		'
+						'		'	判定NGの場合 Loop先頭から処理するが、この時 MAEdoRYFC はOFFのまま
+						'		'	処理してしまうBug有り①。
+						'		'
+						'	End If
 
-							' 裏面圧力が 2.0[KPa] で、He流量の基準値が設定してる時
-						ElseIf bpsel = 1 And dat.bs2 > 0 Then
+						'	' 裏面圧力が 2.0[KPa] で、He流量の基準値が設定してる時
+						'ElseIf bpsel = 1 And dat.bs(bpsel) > 0 Then
 
-							If dat.bs2 >= dat.cm(bpsel) Then
+						'	If dat.bs(bpsel) >= dat.cm(bpsel) Then
+
+						'		'	判定ＯＫ
+						'		dat.okng(bpsel) = 0
+
+						'		rtn = 1
+
+						'		Exit Do
+
+						'	Else
+
+						'		'	判定ＮＧ
+						'		dat.okng(bpsel) = 1
+
+						'		' 判定NG　リトライ判断
+						'		'
+						'		nrty += 1
+
+						'		'▼2024.06.17 TC Kanda （１．配管真空排気シーケンス修正／Heリーク量測定の真空排気シーケンス完了後にESC電源ON）／リトライ時にONにならないため追加
+						'		'
+						'		'	電極ヘッドに吸着電圧印加し目標に到達するまで待つ
+						'		'
+						'		If (ESCproc(sdcv1, sdcv2, 30000.0, 7)) Then
+
+						'			'   20200716 s.harada
+						'			FrmLog.LogDspAdd("", "tst3 途中終了：ESCproc", Color.Empty)
+
+						'			' 中止指示
+						'			rtn = -1
+
+						'			Exit Do
+
+						'		End If
+						'		'▲2024.06.17 TC Kanda （１．配管真空排気シーケンス修正／真空排気シーケンス内でESC電源ON）／リトライ時にONにならないため追加
+
+						'		If (3 <= nrty) Then
+
+						'			' ﾘﾄﾗｲｱｳﾄ
+						'			rtn = 0 '測定終了なら-1
+
+						'			Exit Do
+
+						'		End If
+
+						'		' 20230110 y.goto
+						'		'
+						'		'	判定NGの場合 Loop先頭から処理するが、この時 MAEdoRYFC はOFFのまま
+						'		'	処理してしまうBug有り②。
+						'		'
+						'	End If
+
+						'Else
+
+						'	'判定なし
+						'	rtn = 1     '測定継続
+
+						'	Exit Do
+
+						'End If
+
+						If dat.bs(bpsel) > 0 Then
+
+							If dat.bs(bpsel) >= dat.cm(bpsel) Then
 
 								'	判定ＯＫ
-								dat.okng2 = 0
+								dat.okng(bpsel) = True
 
 								rtn = 1
 
@@ -666,7 +735,7 @@ Module tst3Lib
 							Else
 
 								'	判定ＮＧ
-								dat.okng2 = 1
+								dat.okng(bpsel) = False
 
 								' 判定NG　リトライ判断
 								'
@@ -714,6 +783,8 @@ Module tst3Lib
 
 						End If
 
+						'▲ 2025.02.18 TC Kanda （測定有効フラグ追加）
+
 					ElseIf sts = -1 Then
 
 						'
@@ -722,7 +793,10 @@ Module tst3Lib
 
 						' 裏面圧力が 1.0[KPa] で、He流量基準値が設定してある時又は、
 						' 裏面圧力が 2.0[KPa] で、He流量基準値が設定してある時
-						If (bpsel = 0 And dat.bs > 0) Or (bpsel = 1 And dat.bs2 > 0) Then
+						'If (bpsel = 0 And dat.bs(bpsel) > 0) Or (bpsel = 1 And dat.bs(bpsel) > 0) Then
+						'▼ 2025.02.18 TC Kanda （測定有効フラグ追加）
+						If dat.bs(bpsel) > 0 Then
+							'▲ 2025.02.18 TC Kanda （測定有効フラグ追加）
 
 							' リトライ判断
 							'

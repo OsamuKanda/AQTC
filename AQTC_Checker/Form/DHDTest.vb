@@ -388,34 +388,41 @@ Public Class DHDTest
 
 		'If mdt.okng = 0 Or mdt.okng = 2 Then
 
-		'	dt.Rows( rno ).Item( 7 )	= "合"
+		'	dt.Rows( rno ).Item( 7 )	= "合"Item(9)
 
 		'Else
 
 		'	dt.Rows( rno ).Item( 7 )	= "否"
 
 		'End If
-		dt.Rows( rno ).Item( 3 )	= mdt.tmr( 0 ).ToString( "0." )
+		Dim pas As Integer() = {1, 2, 3, 4, 6}
+		For i = 0 To 4
+			If i <= Array.IndexOf(pas, mdt.maxPa) Then
+				dt.Rows(rno).Item("TIME" & pas(i).ToString) = mdt.tmr(i).ToString("0.")
+			Else
+				dt.Rows(rno).Item("TIME" & pas(i).ToString) = "-"
+			End If
+		Next
 
-		dt.Rows( rno ).Item( 4 )	= mdt.tmr( 1 ).ToString( "0." )
+		'dt.Rows(rno).Item("TIME2") = mdt.tmr(1).ToString("0.")
 
-		dt.Rows( rno ).Item( 5 )	= mdt.tmr( 2 ).ToString( "0." )
+		'dt.Rows(rno).Item("TIME3") = mdt.tmr(2).ToString("0.")
 
-		dt.Rows( rno ).Item( 6 )	= mdt.tmr( 3 ).ToString( "0." )
+		'dt.Rows(rno).Item("TIME4") = mdt.tmr(3).ToString("0.")
 
-		dt.Rows( rno ).Item( 7 )	= mdt.tmr( 4 ).ToString( "0." )
+		'dt.Rows(rno).Item("TIME6") = mdt.tmr(4).ToString("0.")
 
 		If mdt.okng = 0 Then
 
-			dt.Rows( rno ).Item( 9 )	= "合"
+			dt.Rows(rno).Item("HANTEI") = "合"
 
-		ElseIf mdt.okng = 1  Then
+		ElseIf mdt.okng = 1 Then
 
-			dt.Rows( rno ).Item( 9 )	= "否"
+			dt.Rows(rno).Item("HANTEI") = "否"
 
 		Else
 
-			dt.Rows( rno ).Item( 9 )	= "-"
+			dt.Rows(rno).Item("HANTEI") = "-"
 
 		End If
 
@@ -432,10 +439,10 @@ Public Class DHDTest
 		' 測定実施した行へ移動させる
 		Try
 
-			dgv.CurrentCell			= dgv			_
-			(							_
-				1,						_
-				rno						_
+			dgv.CurrentCell = dgv _
+			(
+				1,
+				rno
 			)
 
 		Catch
@@ -511,64 +518,82 @@ Public Class DHDTest
 		' 20140107 小数点以下桁数変更
 		'▼2024.05.14 TC Kanda （３．Ｈｅリーク量測定のパターン追加／測定有効無効パラメータ追加）
 		'dt.Rows(rno).Item(2) = mdt.cm(0).ToString("0.00")
-		If mdt.ptn.Contains("1") Then
-			dt.Rows(rno).Item(2) = mdt.cm(0).ToString("0.00")
-		Else
-			dt.Rows(rno).Item(2) = "-"
-		End If
-		'▲2024.05.14 TC Kanda （３．Ｈｅリーク量測定のパターン追加／測定有効無効パラメータ追加）
+		'▼ 2025.02.18 TC Kanda （非効率なコードの修正）
+		'If mdt.bsEnabled(0) Then
+		'	dt.Rows(rno).Item(2) = mdt.cm(0).ToString("0.00")
+		'Else
+		'	dt.Rows(rno).Item(2) = "-"
+		'End If
+		''▲2024.05.14 TC Kanda （３．Ｈｅリーク量測定のパターン追加／測定有効無効パラメータ追加）
 
-		If mdt.cm(1) > 0 Then
+		'If mdt.cm(1) > 0 Then
 
-			'▼2024.05.14 TC Kanda （３．Ｈｅリーク量測定のパターン追加／測定有効無効パラメータ追加）
-			'dt.Rows(rno).Item(3) = mdt.cm(1).ToString("0.00")
-			If mdt.ptn.Contains("2") Then
-				dt.Rows(rno).Item(3) = mdt.cm(1).ToString("0.00")
-			Else
-				dt.Rows(rno).Item(3) = "-"
+		'	'▼2024.05.14 TC Kanda （３．Ｈｅリーク量測定のパターン追加／測定有効無効パラメータ追加）
+		'	'dt.Rows(rno).Item(3) = mdt.cm(1).ToString("0.00")
+		'	If mdt.bsEnabled(1) Then
+		'		dt.Rows(rno).Item(3) = mdt.cm(1).ToString("0.00")
+		'	Else
+		'		dt.Rows(rno).Item(3) = "-"
+		'	End If
+		'	'▲2024.05.14 TC Kanda （３．Ｈｅリーク量測定のパターン追加／測定有効無効パラメータ追加）
+
+		'End If
+
+		'If mdt.cm(2) > 0 Then
+
+		'	'▼2024.05.14 TC Kanda （３．Ｈｅリーク量測定のパターン追加／測定有効無効パラメータ追加）
+		'	'dt.Rows(rno).Item(4) = mdt.cm(2).ToString("0.00")
+		'	If mdt.bsEnabled(2) Then
+		'		dt.Rows(rno).Item(4) = mdt.cm(2).ToString("0.00")
+		'	Else
+		'		dt.Rows(rno).Item(4) = "-"
+		'	End If
+		'	'▲2024.05.14 TC Kanda （３．Ｈｅリーク量測定のパターン追加／測定有効無効パラメータ追加）
+
+		'End If
+
+		'If mdt.cm(3) > 0 Then
+
+		'	'▼2024.05.14 TC Kanda （３．Ｈｅリーク量測定のパターン追加／測定有効無効パラメータ追加）
+		'	'dt.Rows(rno).Item(5) = mdt.cm(3).ToString("0.00")
+		'	If mdt.bsEnabled(3) Then
+		'		dt.Rows(rno).Item(5) = mdt.cm(3).ToString("0.00")
+		'	Else
+		'		dt.Rows(rno).Item(5) = "-"
+		'	End If
+		'	'▲2024.05.14 TC Kanda （３．Ｈｅリーク量測定のパターン追加／測定有効無効パラメータ追加）
+
+		'End If
+
+		'If mdt.cm(4) > 0 Then
+
+		'	'▼2024.05.14 TC Kanda （３．Ｈｅリーク量測定のパターン追加／測定有効無効パラメータ追加）
+		'	'dt.Rows(rno).Item(6) = mdt.cm(4).ToString("0.00")
+		'	If mdt.bsEnabled(4) Then
+		'		dt.Rows(rno).Item(6) = mdt.cm(4).ToString("0.00")
+		'	Else
+		'		dt.Rows(rno).Item(6) = "-"
+		'	End If
+		'	'▲2024.05.14 TC Kanda （３．Ｈｅリーク量測定のパターン追加／測定有効無効パラメータ追加）
+
+		'End If
+		For i As Integer = 0 To 4
+			If mdt.cm(i) > 0 Then
+				If mdt.bsEnabled(i) Then
+					If mdt.okng(i).HasValue Then
+						'測定が有効なら判定はなくても表示する
+						dt.Rows(rno).Item(i + 2) = mdt.cm(i).ToString("0.00")
+					ElseIf mdt.cm(i) > 0 Then
+						dt.Rows(rno).Item(i + 2) = mdt.cm(i).ToString("0.00")
+					Else
+						dt.Rows(rno).Item(i + 2) = ""
+					End If
+				Else
+					dt.Rows(rno).Item(i + 2) = "-"
+				End If
 			End If
-			'▲2024.05.14 TC Kanda （３．Ｈｅリーク量測定のパターン追加／測定有効無効パラメータ追加）
-
-		End If
-
-		If mdt.cm(2) > 0 Then
-
-			'▼2024.05.14 TC Kanda （３．Ｈｅリーク量測定のパターン追加／測定有効無効パラメータ追加）
-			'dt.Rows(rno).Item(4) = mdt.cm(2).ToString("0.00")
-			If mdt.ptn.Contains("3") Then
-				dt.Rows(rno).Item(4) = mdt.cm(2).ToString("0.00")
-			Else
-				dt.Rows(rno).Item(4) = "-"
-			End If
-			'▲2024.05.14 TC Kanda （３．Ｈｅリーク量測定のパターン追加／測定有効無効パラメータ追加）
-
-		End If
-
-		If mdt.cm(3) > 0 Then
-
-			'▼2024.05.14 TC Kanda （３．Ｈｅリーク量測定のパターン追加／測定有効無効パラメータ追加）
-			'dt.Rows(rno).Item(5) = mdt.cm(3).ToString("0.00")
-			If mdt.ptn.Contains("4") Then
-				dt.Rows(rno).Item(5) = mdt.cm(3).ToString("0.00")
-			Else
-				dt.Rows(rno).Item(5) = "-"
-			End If
-			'▲2024.05.14 TC Kanda （３．Ｈｅリーク量測定のパターン追加／測定有効無効パラメータ追加）
-
-		End If
-
-		If mdt.cm(4) > 0 Then
-
-			'▼2024.05.14 TC Kanda （３．Ｈｅリーク量測定のパターン追加／測定有効無効パラメータ追加）
-			'dt.Rows(rno).Item(6) = mdt.cm(4).ToString("0.00")
-			If mdt.ptn.Contains("6") Then
-				dt.Rows(rno).Item(6) = mdt.cm(4).ToString("0.00")
-			Else
-				dt.Rows(rno).Item(6) = "-"
-			End If
-			'▲2024.05.14 TC Kanda （３．Ｈｅリーク量測定のパターン追加／測定有効無効パラメータ追加）
-
-		End If
+		Next
+		'▼ 2025.02.18 TC Kanda （非効率なコードの修正）
 
 
 
@@ -583,33 +608,58 @@ Public Class DHDTest
 
 		'End If
 
-		If mdt.okng = 0 Then
+		'If mdt.okng(0) = 0 Then
 
-			dt.Rows(rno).Item(9) = "合"
+		'	dt.Rows(rno).Item(9) = "合"
 
-		ElseIf mdt.okng = 1 Then
+		'ElseIf mdt.okng(0) = 1 Then
 
-			dt.Rows(rno).Item(9) = "否"
+		'	dt.Rows(rno).Item(9) = "否"
 
-		Else
+		'Else
 
-			dt.Rows(rno).Item(9) = "-"
+		'	dt.Rows(rno).Item(9) = "-"
 
-		End If
+		'End If
 
-		If mdt.okng2 = 0 Then
+		'If mdt.okng(1) = 0 Then
 
-			dt.Rows(rno).Item(10) = "合"
+		'	dt.Rows(rno).Item(10) = "合"
 
-		ElseIf mdt.okng2 = 1 Then
+		'ElseIf mdt.okng(1) = 1 Then
 
-			dt.Rows(rno).Item(10) = "否"
+		'	dt.Rows(rno).Item(10) = "否"
 
-		Else
+		'Else
 
-			dt.Rows(rno).Item(10) = "-"
+		'	dt.Rows(rno).Item(10) = "-"
 
-		End If
+		'End If
+		Dim nos As Integer() = {"1", "2", "3", "4", "6"}
+		For i = 0 To 4
+			Dim colName As String = String.Format("HANTEI{0}", nos(i))
+			If mdt.bsEnabled(i) = False Then
+				'測定しない場合
+				dt.Rows(rno).Item(colName) = "-"
+			ElseIf mdt.bs(i) = 0 Then
+				'判定しない場合
+				dt.Rows(rno).Item(colName) = "-"
+			Else
+				'測定する場合
+				If Not mdt.okng(i).HasValue Then
+					'未測定
+					dt.Rows(rno).Item(colName) = ""
+				Else
+					If mdt.okng(i) = True Then
+						'合格
+						dt.Rows(rno).Item(colName) = "合"
+					Else
+						'不合格
+						dt.Rows(rno).Item(colName) = "否"
+					End If
+				End If
+			End If
+		Next
 
 
 		'
@@ -645,61 +695,61 @@ Public Class DHDTest
 
 	' 20200716 s.harada
 	' トーカロ選択対応で新規作成
-	Public Sub setMesZanryu				_
-	(						_
-		ByVal dno		As Integer	_
+	Public Sub setMesZanryu _
+	(
+		ByVal dno As Integer
 	)
 
-		Dim dgv			As DataGridView
-		Dim dt			As DataTable
+		Dim dgv As DataGridView
+		Dim dt As DataTable
 
 
 
-		Select Case	tstNo
+		Select Case tstNo
 
-		Case	0
+			Case 0
 
-			dgv			= dgvZanryu1
+				dgv = dgvZanryu1
 
-			dt			= dtZanry1
+				dt = dtZanry1
 
-		Case	1
+			Case 1
 
-			dgv			= dgvZanryu2
+				dgv = dgvZanryu2
 
-			dt			= dtZanry2
+				dt = dtZanry2
 
-		Case	2
+			Case 2
 
-			dgv			= dgvZanryu3
+				dgv = dgvZanryu3
 
-			dt			= dtZanry3
+				dt = dtZanry3
 
-		Case	3
+			Case 3
 
-			dgv			= dgvZanryu4
+				dgv = dgvZanryu4
 
-			dt			= dtZanry4
+				dt = dtZanry4
 
-		Case Else
+			Case Else
 
-			Exit Sub
+				Exit Sub
 
 		End Select
 
 
 
-		Dim mdt			As DTI4 = MESrec.dt( tstNo ).t4.d( dno )
-		Dim rno			As Integer = 0
+		Dim mdt As DTI4 = MESrec.dt(tstNo).t4.d(dno)
+		Dim rno As Integer = 0
 
 
-		rno			+= dno
+		rno += dno
 
-		dt.Rows( rno ).Item( 2 )	= mdt.pc.ToString( "0.00" )
+		dt.Rows(rno).Item(2) = mdt.pc.ToString("0.00")
 
-		dt.Rows( rno ).Item( 3 )	= mdt.pd.ToString( "0.00" )
+		dt.Rows(rno).Item(3) = mdt.pd.ToString("0.00")
 
-		dt.Rows( rno ).Item( 4 )	= mdt.pdc.ToString( "0.00" )
+		dt.Rows(rno).Item(4) = mdt.pdc.ToString("0.00")
 
 
 
@@ -713,17 +763,17 @@ Public Class DHDTest
 		'	dt.Rows( rno ).Item( 6 )	= "否"
 
 		'End If
-		If mdt.okng = 0  Then
+		If mdt.okng = 0 Then
 
-			dt.Rows( rno ).Item( 6 )	= "合"
+			dt.Rows(rno).Item(6) = "合"
 
-		ElseIf mdt.okng = 1  Then
+		ElseIf mdt.okng = 1 Then
 
-			dt.Rows( rno ).Item( 6 )	= "否"
+			dt.Rows(rno).Item(6) = "否"
 
 		Else
 
-			dt.Rows( rno ).Item( 6 )	= "-"
+			dt.Rows(rno).Item(6) = "-"
 
 		End If
 
@@ -734,10 +784,10 @@ Public Class DHDTest
 		' 測定実施した行へ移動させる
 		Try
 
-			dgv.CurrentCell			= dgv			_
-			(							_
-				1,						_
-				rno						_
+			dgv.CurrentCell = dgv _
+			(
+				1,
+				rno
 			)
 
 		Catch
@@ -755,74 +805,74 @@ Public Class DHDTest
 #Region "フォーム"
 
 
-	Private Sub DHDTest_FormClosed							_
-	(										_
-		sender			As Object,					_
-		e			As System.Windows.Forms.FormClosedEventArgs	_
-	)	Handles Me.FormClosed
+	Private Sub DHDTest_FormClosed _
+	(
+		sender As Object,
+		e As System.Windows.Forms.FormClosedEventArgs
+	) Handles Me.FormClosed
 
 
-		WriteLog( "", "LG", "DHDTest_FormClosed テスト終了" )
+		WriteLog("", "LG", "DHDTest_FormClosed テスト終了")
 
 		SigEnd()
 
 		'メニューに戻る
-		PROGID			= "DHDMenu"
+		PROGID = "DHDMenu"
 
 
 	End Sub
 
 
 
-	Private Sub DHDTest_Load				_
-	(							_
-		sender			As Object,		_
-		e			As System.EventArgs	_
-	)	Handles Me.Load
+	Private Sub DHDTest_Load _
+	(
+		sender As Object,
+		e As System.EventArgs
+	) Handles Me.Load
 
 
-		PROGID			= "DHDTest"
+		PROGID = "DHDTest"
 
 
 		' 測定モードを表示
-		Dim tMod		As String = "範囲外"
+		Dim tMod As String = "範囲外"
 
 
-		Select Case	DHDmd
+		Select Case DHDmd
 
-		Case	TST_AUTO
+			Case TST_AUTO
 
-			tMod			= "自動検査"
+				tMod = "自動検査"
 
-		Case	TST_ZETS
+			Case TST_ZETS
 
-			tMod			= "絶縁抵抗測定"
+				tMod = "絶縁抵抗測定"
 
-		Case	TST_KYUC
+			Case TST_KYUC
 
-			tMod			= "ウエハ吸着測定"
+				tMod = "ウエハ吸着測定"
 
-		Case	TST_HGAS
+			Case TST_HGAS
 
-			tMod			= "Ｈｅリーク量測定"
+				tMod = "Ｈｅリーク量測定"
 
 
 		'   20201102 s.harada
 		'   AQTC対応
 		'
-		Case	TST_ZKYU
+			Case TST_ZKYU
 
 
-			tMod			= "残留吸着力測定"
+				tMod = "残留吸着力測定"
 
 
 		End Select
 
 
-		Me.Text			= Me.Text + " " + tMod
+		Me.Text = Me.Text + " " + tMod
 
 
-		WriteLog( "", "LG", "DHDTest_Load テスト開始 " + tMod )
+		WriteLog("", "LG", "DHDTest_Load テスト開始 " + tMod)
 
 
 
@@ -831,60 +881,60 @@ Public Class DHDTest
 		'
 		If Me.WindowState <> FormWindowState.Maximized Then
 
-			Me.WindowState		= FormWindowState.Maximized
+			Me.WindowState = FormWindowState.Maximized
 
 		End If
 
 
 		If Me.Width < 1500 Then
 
-			panMoni.Width		= 300
+			panMoni.Width = 300
 
 		Else
 
-			panMoni.Width		= 755
+			panMoni.Width = 755
 
 		End If
 
 
-		panMoni.Left		= Me.Width - panMoni.Width - 20
+		panMoni.Left = Me.Width - panMoni.Width - 20
 
-		tabTest.Width		= panMoni.Left - 40
+		tabTest.Width = panMoni.Left - 40
 
-		grpParm.Enabled		= true
+		grpParm.Enabled = True
 
-		pnlStatus.Visible	= False
-
-
-
-		Dim dt			As DateTime = DateTime.Now
+		pnlStatus.Visible = False
 
 
-		txtYear.Text		= dt.Year
 
-		txtMonth.Text		= dt.Month
+		Dim dt As DateTime = DateTime.Now
 
-		txtDay.Text		= dt.Day
+
+		txtYear.Text = dt.Year
+
+		txtMonth.Text = dt.Month
+
+		txtDay.Text = dt.Day
 
 		'
 		'	20140123
 		'	試験開始時間の項目を追加
 		'
-		txtStTime.Text		= dt.ToString( "HH:mm:ss" )
+		txtStTime.Text = dt.ToString("HH:mm:ss")
 
-		txtFileName.Text	= ""
+		txtFileName.Text = ""
 
-		txtTno.Text		= ""
+		txtTno.Text = ""
 
-		txtMNo.Text		= ""
+		txtMNo.Text = ""
 
-		txtSNo.Text		= ""
+		txtSNo.Text = ""
 
-		txtDSiz.Text		= ""
+		txtDSiz.Text = ""
 
-		cboDHead.Text		= ""
+		cboDHead.Text = ""
 
-		cboDType.Text		= ""
+		cboDType.Text = ""
 
 
 		tstDataClear()
@@ -900,11 +950,11 @@ Public Class DHDTest
 		'   20201102 s.harada
 		'   AQTC対応専用に変更
 		'
-		Dim strPath		As String
+		Dim strPath As String
 
-		strPath			= System.IO.Directory.GetCurrentDirectory() + "\testTcl"
+		strPath = System.IO.Directory.GetCurrentDirectory() + "\testTcl"
 
-		GetTestFiletoCombbox( strPath, cboDHead )
+		GetTestFiletoCombbox(strPath, cboDHead)
 
 
 		' 電極種類の設定
@@ -915,11 +965,11 @@ Public Class DHDTest
 		cboDType.Items.Add("オリフラ")
 
 
-		btnStart.Enabled		= False
+		btnStart.Enabled = False
 
-		btnStop.Enabled			= False
+		btnStop.Enabled = False
 
-		StopFlag			= False
+		StopFlag = False
 
 
 
@@ -934,25 +984,25 @@ Public Class DHDTest
 
 		' 表示の初期設定
 		' PIDの設定
-		AOX01.Text			= "0.0V"
+		AOX01.Text = "0.0V"
 
 		' マスフローコントローラ
-		AOX02.Text			= "0.0V"
+		AOX02.Text = "0.0V"
 
 		' ESC電源1CH
-		AOX03.Text			= "0.0V"
+		AOX03.Text = "0.0V"
 
 		' ESC電源2CH
-		AOX04.Text			= "0.0V"
+		AOX04.Text = "0.0V"
 
 		' サ－モチラ－CH1
-		AOX05.Text			= "0.0"
+		AOX05.Text = "0.0"
 
 		' サ－モチラ－CH2
-		AOX06.Text			= "0.0"
+		AOX06.Text = "0.0"
 
 		' マスフローコントローラ２
-		AOX07.Text			= "0.0"
+		AOX07.Text = "0.0"
 
 
 		' ＡＤリングバッファの初期化
@@ -960,13 +1010,13 @@ Public Class DHDTest
 
 
 		' ダウンカウントタイマー開始
-		timCnt.Enabled			= True
+		timCnt.Enabled = True
 
 		' 入力タイマー開始()
-		timINP.Enabled			= True
+		timINP.Enabled = True
 
 		' パトライト点滅、モニター表示タイマー開始
-		timPtl.Enabled			= True
+		timPtl.Enabled = True
 
 
 	End Sub
@@ -981,16 +1031,16 @@ Public Class DHDTest
 	'*****
 	'	ＡＤ入力、モニタ用タイマー
 	'*****
-	Private Sub timINP_Tick					_
-	(							_
-		sender			As System.Object,	_
-		e			As System.EventArgs	_
-	)	Handles timINP.Tick
+	Private Sub timINP_Tick _
+	(
+		sender As System.Object,
+		e As System.EventArgs
+	) Handles timINP.Tick
 
 
 
 		' タイマー停止
-		timINP.Enabled		= False
+		timINP.Enabled = False
 
 
 		' ＡＤ入力 20131216 メニューでＡＤ入力のためコメント
@@ -1001,7 +1051,7 @@ Public Class DHDTest
 		' 入力ポインタの変化で入力確認
 		If ADrbFUL = 1 And ADptrBak <> ADptrR Then
 
-			ADptrBak		= ADptrR
+			ADptrBak = ADptrR
 
 			' ＡＤ入力状態を表示
 			Ad_moni()
@@ -1010,7 +1060,7 @@ Public Class DHDTest
 
 
 		' タイマー開始
-		timINP.Enabled		= True
+		timINP.Enabled = True
 
 
 	End Sub
@@ -1020,15 +1070,15 @@ Public Class DHDTest
 	'*****
 	'	パトライト点滅、ＤＩ入力、ＤＯ、ＤＡモニタ用タイマー
 	'*****
-	Private Sub timPtl_Tick					_
-	(							_
-		sender			As System.Object,	_
-		e			As System.EventArgs	_
-	)	Handles timPtl.Tick
+	Private Sub timPtl_Tick _
+	(
+		sender As System.Object,
+		e As System.EventArgs
+	) Handles timPtl.Tick
 
 
 
-		timPtl.Enabled		= False
+		timPtl.Enabled = False
 
 
 		' パトライト点滅処理
@@ -1052,7 +1102,7 @@ Public Class DHDTest
 
 
 
-		timPtl.Enabled		= True
+		timPtl.Enabled = True
 
 
 	End Sub
@@ -1062,11 +1112,11 @@ Public Class DHDTest
 	'*****
 	'	カウントダウンタイマー（１０ｍｓ）
 	'*****
-	Private Sub timCnt_Tick					_
-	(							_
-		sender			As System.Object,	_
-		e			As System.EventArgs	_
-	)	Handles timCnt.Tick
+	Private Sub timCnt_Tick _
+	(
+		sender As System.Object,
+		e As System.EventArgs
+	) Handles timCnt.Tick
 
 
 		timDownCount()
@@ -1078,11 +1128,11 @@ Public Class DHDTest
 	'*****
 	'	テストデータ選択コンボボックス
 	'*****
-	Private Sub cboDHead_SelectedIndexChanged		_
-	(							_
-		sender			As System.Object,	_
-		e			As System.EventArgs	_
-	)	Handles cboDHead.SelectedIndexChanged
+	Private Sub cboDHead_SelectedIndexChanged _
+	(
+		sender As System.Object,
+		e As System.EventArgs
+	) Handles cboDHead.SelectedIndexChanged
 
 
 		' 表示クリア
@@ -1091,14 +1141,14 @@ Public Class DHDTest
 		tabPageDisp()
 
 
-		btnStart.Enabled	= False
+		btnStart.Enabled = False
 
 
 
 		' テストデータのリード
-		If GetTestData( cboDHead.Text, DHDmd ) < 0 Then
+		If GetTestData(cboDHead.Text, DHDmd) < 0 Then
 
-			MessageBox.Show( "テストデータが読み込めません", "確認", MessageBoxButtons.OK )
+			MessageBox.Show("テストデータが読み込めません", "確認", MessageBoxButtons.OK)
 
 			Exit Sub
 
@@ -1107,7 +1157,7 @@ Public Class DHDTest
 
 		If MESrec.type = "" Then
 
-			MessageBox.Show( "テストデータが読み込めません", "確認", MessageBoxButtons.OK )
+			MessageBox.Show("テストデータが読み込めません", "確認", MessageBoxButtons.OK)
 
 			Exit Sub
 
@@ -1120,7 +1170,7 @@ Public Class DHDTest
 		tabPageDisp()
 
 
-		btnStart.Enabled		= True
+		btnStart.Enabled = True
 
 	End Sub
 
@@ -1129,15 +1179,15 @@ Public Class DHDTest
 	'*****
 	'	タブコントロール選択
 	'*****
-	Private Sub tabTest_SelectedIndexChanged		_
-	(							_
-		sender			As Object,		_
-		e			As System.EventArgs	_
-	)	Handles tabTest.SelectedIndexChanged
+	Private Sub tabTest_SelectedIndexChanged _
+	(
+		sender As Object,
+		e As System.EventArgs
+	) Handles tabTest.SelectedIndexChanged
 
 
 		' タブ変更時の表示
-		Dim tp			As TabPage
+		Dim tp As TabPage
 
 
 		If mTabPageNo = tabTest.SelectedIndex Then
@@ -1147,27 +1197,27 @@ Public Class DHDTest
 		End If
 
 
-		Select Case	tabTest.SelectedIndex
+		Select Case tabTest.SelectedIndex
 
-		Case	0
+			Case 0
 
-			tp			= tabPage1
+				tp = tabPage1
 
-		Case	1
+			Case 1
 
-			tp			= tabPage2
+				tp = tabPage2
 
-		Case	2
+			Case 2
 
-			tp			= tabPage3
+				tp = tabPage3
 
-		Case	3
+			Case 3
 
-			tp			= tabPage4
+				tp = tabPage4
 
-		Case Else
+			Case Else
 
-			tp			= tabPage1
+				tp = tabPage1
 
 		End Select
 
@@ -1176,27 +1226,27 @@ Public Class DHDTest
 		' テスト項目があればタブ表示、なければ元のタブを表示
 		If tp.Text <> "" Then
 
-			mTabPageNo		= tabTest.SelectedIndex
+			mTabPageNo = tabTest.SelectedIndex
 
 		Else
 
-			Select Case	mTabPageNo
+			Select Case mTabPageNo
 
-			Case	0
+				Case 0
 
-				tabTest.SelectedTab	= tabPage1
+					tabTest.SelectedTab = tabPage1
 
-			Case	1
+				Case 1
 
-				tabTest.SelectedTab	= tabPage2
+					tabTest.SelectedTab = tabPage2
 
-			Case	2
+				Case 2
 
-				tabTest.SelectedTab	= tabPage3
+					tabTest.SelectedTab = tabPage3
 
-			Case	3
+				Case 3
 
-				tabTest.SelectedTab	= tabPage4
+					tabTest.SelectedTab = tabPage4
 
 			End Select
 
@@ -1210,51 +1260,51 @@ Public Class DHDTest
 	'*****
 	'	開始ボタン処理
 	'*****
-	Private Sub btnStart_Click				_
-	(							_
-		sender			As System.Object,	_
-		e			As System.EventArgs	_
-	)	Handles btnStart.Click
-		Dim pcdate		As DateTime
+	Private Sub btnStart_Click _
+	(
+		sender As System.Object,
+		e As System.EventArgs
+	) Handles btnStart.Click
+		Dim pcdate As DateTime
 
 
 
 		'
 		'	検査開始ＰＣ日時
 		'
-		pcdate			= Now
+		pcdate = Now
 
 
 		'
 		'	測定データファイル名（パス、拡張子を含まない）
 		'
-		TstRstFname		= pcdate.ToString( "yyyyMMdd_HHmmss" ) + "_" + txtFileName.Text
+		TstRstFname = pcdate.ToString("yyyyMMdd_HHmmss") + "_" + txtFileName.Text
 
 		'
 		'	ファイル保存フォルダパス（測定データファイル、波形記録ファイル）
 		'
-		TstRstFolpth		= MkFldName( TstRstFname )
+		TstRstFolpth = MkFldName(TstRstFname)
 
 		'
 		'	測定データファイルパス
 		'
-		TstRstFpath		= MkDatFName( TstRstFname )
+		TstRstFpath = MkDatFName(TstRstFname)
 
 
 
 		' 保存ファイル名の確認
 		If txtFileName.Text = "" Then
 
-			flipprc( OPIPok, "保存ファイル名を入力してください。" )
+			flipprc(OPIPok, "保存ファイル名を入力してください。")
 
 			Exit Sub
 
 		End If
 
 
-		If File.Exists( TstRstFpath ) = True Then
+		If File.Exists(TstRstFpath) = True Then
 
-			If flipprc( OPIPyn, "ファイルが存在します。上書きしますか？" ) <> DialogResult.Yes Then
+			If flipprc(OPIPyn, "ファイルが存在します。上書きしますか？") <> DialogResult.Yes Then
 
 				Exit Sub
 
@@ -1269,9 +1319,9 @@ Public Class DHDTest
 			'	データ格納フォルダの作成
 			'
 
-			If Dir( TstRstFolpth, vbDirectory ) = "" Then
+			If Dir(TstRstFolpth, vbDirectory) = "" Then
 
-				MkDir( TstRstFolpth )
+				MkDir(TstRstFolpth)
 
 			End If
 
@@ -1280,9 +1330,9 @@ Public Class DHDTest
 			'
 			'	配管接続変更メッセージを出力してオペレータ入力を待つ
 			'
-			flipbz1r( OPIPok, "データ格納フォルダが作成出来ませんでした" )
+			flipbz1r(OPIPok, "データ格納フォルダが作成出来ませんでした")
 
-			return
+			Return
 
 		End Try
 
@@ -1294,112 +1344,118 @@ Public Class DHDTest
 		'
 		'	パラメータ位置に測定状態を表示
 		'
-		grpParm.Enabled		= False
+		grpParm.Enabled = False
 
-		pnlStatus.Top		= grpParm.Top
+		pnlStatus.Top = grpParm.Top
 
-		pnlStatus.Left		= grpParm.Left
+		pnlStatus.Left = grpParm.Left
 
-		pnlStatus.Width		= tabTest.Width
+		pnlStatus.Width = tabTest.Width
 
-		pnlStatus.Height	= grpParm.Height
+		pnlStatus.Height = grpParm.Height
 
-		pnlStatus.Visible	= True
+		pnlStatus.Visible = True
 
 
-		lblStatus.Text		= ""
+		lblStatus.Text = ""
 
 
 		StatusClear()
 
 
-		btnStop.Enabled		= True
+		btnStop.Enabled = True
 
-		btnEnd.Enabled		= False
+		btnEnd.Enabled = False
 
 
 		' ウエハ吸着力測定リミット値
 		' 20201102 s.harada	トーカロ専用に変更で削除
 		'BPRS			= CDbl( txtBPRS.Text ) * 1000
 
-		TPRS1			= CDbl( txtTPRS1.Text )
+		TPRS1 = CDbl(txtTPRS1.Text)
 
-		TPRS2			= CDbl( txtTPRS2.Text )
+		TPRS2 = CDbl(txtTPRS2.Text)
 
-		BakPres			= CDbl( txtBakPres.Text )
+		BakPres = CDbl(txtBakPres.Text)
 
 
 		'
 		'	20140127 y.goto
 		'	電極ヘッド温度安定待ち時間 (分)
 		'
-		PrmTmpStbW		= CDbl( txtTmpStbW.Text )
+		PrmTmpStbW = CDbl(txtTmpStbW.Text)
 
 
 		'   20201102 s.harada
 		'   AQTC対応専用に変更
 		'
 		'   残留吸着 Ｈｅ流量(ccm)
-		PrmHeFlow		= CDbl(TxtHeFlow.Text)
+		PrmHeFlow = CDbl(TxtHeFlow.Text)
 
 		'   残留吸着 電圧印加時間(秒)
-		PrmVoltImp		= CDbl(TxtVoltImp.Text)
+		PrmVoltImp = CDbl(TxtVoltImp.Text)
 
 		'   残留吸着 電圧印加停止後Ｈｅ流すまでの待ち時間(秒)
-		PrmHeWait		= CDbl(TxtHeWait.Text)
+		PrmHeWait = CDbl(TxtHeWait.Text)
 
 
 		' 20201102 s.harada　追加
 
 		' 吸吸着力測定時間上限（秒）
-		PrmMaxTim		= CDbl(TxtMaxTime.Text)
+		PrmMaxTim = CDbl(TxtMaxTime.Text)
 
 		' 残留吸着測定安定判断基準傾き
-		PrmStabVct		= CDbl(txtAntVct.Text)
+		PrmStabVct = CDbl(txtAntVct.Text)
 
 		' 残留吸着測定安定判断基準安定時間（秒）
-		PrmStabTim		= CDbl(txtAntTim.Text)
+		PrmStabTim = CDbl(txtAntTim.Text)
 
 		' 残留吸着電圧印可時裏面圧力 (Pa)
-		PrmBakPrs		= CDbl( txtBakPrs.Text )
+		PrmBakPrs = CDbl(txtBakPrs.Text)
 
 		' 20210201 追加 y.goto
 		' 電圧印可後He導入前裏面圧力 (Pa)
-		PrmBak2Prc		= CDbl( txtBakP2.Text )
+		PrmBak2Prc = CDbl(txtBakP2.Text)
 
-		MESrec.type		= cboDType.Text
+		MESrec.type = cboDType.Text
 
-		MESrec.dh.tno		= txtTno.Text
+		MESrec.dh.tno = txtTno.Text
 
-		MESrec.dh.mno		= txtMNo.Text
+		MESrec.dh.mno = txtMNo.Text
 
-		MESrec.dh.sno		= txtSNo.Text
+		MESrec.dh.sno = txtSNo.Text
 
-		MESrec.dh.inc		= txtDSiz.Text
+		MESrec.dh.inc = txtDSiz.Text
 
-		MESrec.dh.vo		= cboDHead.Text
+		MESrec.dh.vo = cboDHead.Text
 
 		' 20140123
 		' 検査開始時間を追加する
-		MESrec.dh.sdt		=	_
-					txtYear.Text + "/" +		_
-					txtMonth.Text + "/" +		_
-					txtDay.Text + " " +		_
+		MESrec.dh.sdt =
+					txtYear.Text + "/" +
+					txtMonth.Text + "/" +
+					txtDay.Text + " " +
 					txtStTime.Text
 
 		' 20140123 追加
 		' 試験開始ＰＣシステムデイト
-		MESrec.dh.pcdt		= pcdate.ToString()
+		MESrec.dh.pcdt = pcdate.ToString()
 
-		MESrec.dh.okng		= -1
+		MESrec.dh.okng = Nothing
 
 
 		'
 		'	測定メイン
 		'
-		Dim okng		As Integer
+		Dim okng As Integer
 
-		okng			= ProcMain()
+		okng = ProcMain()
+
+		If okng = 0 Then
+			MESrec.dh.okng = True
+		Else
+			MESrec.dh.okng = False
+		End If
 
 
 		'
@@ -1414,12 +1470,12 @@ Public Class DHDTest
 
 		'check( okng )
 
-		btnStop.Enabled		= False
+		btnStop.Enabled = False
 
-		btnEnd.Enabled		= True
+		btnEnd.Enabled = True
 
 
-		StatusDisp( 20, 10, "「メニューへ」ボタンを押してメニューに戻ります" )
+		StatusDisp(20, 10, "「メニューへ」ボタンを押してメニューに戻ります")
 
 
 	End Sub
@@ -1429,16 +1485,16 @@ Public Class DHDTest
 	'*****
 	'	中断ボタン処理
 	'*****
-	Private Sub btnStop_Click				_
-	(							_
-		sender			As System.Object,	_
-		e			As System.EventArgs	_
-	)	Handles btnStop.Click
+	Private Sub btnStop_Click _
+	(
+		sender As System.Object,
+		e As System.EventArgs
+	) Handles btnStop.Click
 
 
 		' btnStop.Enabled = False
 
-		StopFlag		= True
+		StopFlag = True
 
 
 	End Sub
@@ -1448,11 +1504,11 @@ Public Class DHDTest
 	'*****
 	'	終了ボタン処理
 	'*****
-	Private Sub btnEnd_Click				_
-	(							_
-		sender			As System.Object,	_
-		e			As System.EventArgs	_
-	)	Handles btnEnd.Click
+	Private Sub btnEnd_Click _
+	(
+		sender As System.Object,
+		e As System.EventArgs
+	) Handles btnEnd.Click
 
 
 		Me.Close()
@@ -1473,68 +1529,68 @@ Public Class DHDTest
 	'*****
 	Private Sub Di_moni()
 
-		Dim i			As Integer
-		Dim lbl			As Label
+		Dim i As Integer
+		Dim lbl As Label
 
 
 		For i = 1 To 10
 
-			Select Case	i
+			Select Case i
 
-			Case	1
+				Case 1
 
-				lbl			= DIX01
+					lbl = DIX01
 
-			Case	2
+				Case 2
 
-				lbl			= DIX02
+					lbl = DIX02
 
-			Case	3
+				Case 3
 
-				lbl			= DIX03
+					lbl = DIX03
 
-			Case	4
+				Case 4
 
-				lbl			= DIX04
+					lbl = DIX04
 
-			Case	5
+				Case 5
 
-				lbl			= DIX05
+					lbl = DIX05
 
-			Case	6
+				Case 6
 
-				lbl			= DIX06
+					lbl = DIX06
 
-			Case	7
+				Case 7
 
-				lbl			= DIX07
+					lbl = DIX07
 
-			Case	8
+				Case 8
 
-				lbl			= DIX08
+					lbl = DIX08
 
-			Case	9
+				Case 9
 
-				lbl			= DIX09
+					lbl = DIX09
 
-			Case	10
+				Case 10
 
-				lbl			= DIX10
+					lbl = DIX10
 
-			Case Else
+				Case Else
 
-				lbl			= Nothing
+					lbl = Nothing
 
 			End Select
 
 
-			If InBuf( i ) = DIO_ON Then
+			If InBuf(i) = DIO_ON Then
 
-				lbl.BackColor		= Color.Lime
+				lbl.BackColor = Color.Lime
 
 			Else
 
-				lbl.BackColor		= Color.WhiteSmoke
+				lbl.BackColor = Color.WhiteSmoke
 
 			End If
 
@@ -1543,58 +1599,58 @@ Public Class DHDTest
 		' 20200210 EXDIO2基板追加対応
 		For i = 33 To 41
 
-			Select Case	i
+			Select Case i
 
-			Case	33
+				Case 33
 
-				lbl			= DIX33
+					lbl = DIX33
 
-			Case	34
+				Case 34
 
-				lbl			= DIX34
+					lbl = DIX34
 
-			Case	35
+				Case 35
 
-				lbl			= DIX35
+					lbl = DIX35
 
-			Case	36
+				Case 36
 
-				lbl			= DIX36
+					lbl = DIX36
 
-			Case	37
+				Case 37
 
-				lbl			= DIX37
+					lbl = DIX37
 
-			Case	38
+				Case 38
 
-				lbl			= DIX38
+					lbl = DIX38
 
-			Case	39
+				Case 39
 
-				lbl			= DIX39
+					lbl = DIX39
 
-			Case	40
+				Case 40
 
-				lbl			= DIX40
+					lbl = DIX40
 
-			Case	41
+				Case 41
 
-				lbl			= DIX41
+					lbl = DIX41
 
-			Case Else
+				Case Else
 
-				lbl			= Nothing
+					lbl = Nothing
 
 			End Select
 
 
-			If InBuf( i ) = DIO_ON Then
+			If InBuf(i) = DIO_ON Then
 
-				lbl.BackColor		= Color.Lime
+				lbl.BackColor = Color.Lime
 
 			Else
 
-				lbl.BackColor		= Color.WhiteSmoke
+				lbl.BackColor = Color.WhiteSmoke
 
 			End If
 
@@ -1610,154 +1666,154 @@ Public Class DHDTest
 	'*****
 	Private Sub Do_moni()
 
-		Dim i			As Integer
-		Dim lbl			As Label
+		Dim i As Integer
+		Dim lbl As Label
 
 		For i = 1 To 32
 
-			Select Case	i
+			Select Case i
 
-			Case	1
+				Case 1
 
-				lbl			= DOX01
+					lbl = DOX01
 
-			Case	2
+				Case 2
 
-				lbl			= DOX02
-			Case	3
+					lbl = DOX02
+				Case 3
 
-				lbl			= DOX03
+					lbl = DOX03
 
-			Case	4
+				Case 4
 
-				lbl			= DOX04
+					lbl = DOX04
 
-			Case	5
+				Case 5
 
-				lbl			= DOX05
+					lbl = DOX05
 
-			Case	6
+				Case 6
 
-				lbl			= DOX06
+					lbl = DOX06
 
-			Case	7
+				Case 7
 
-				lbl			= DOX07
+					lbl = DOX07
 
-			Case	8
+				Case 8
 
-				lbl			= DOX08
+					lbl = DOX08
 
-			Case	9
+				Case 9
 
-				lbl			= DOX09
+					lbl = DOX09
 
-			Case	10
+				Case 10
 
-				lbl			= DOX10
+					lbl = DOX10
 
-			Case	11
+				Case 11
 
-				lbl			= DOX11
+					lbl = DOX11
 
-			Case	12
+				Case 12
 
-				lbl			= DOX12
+					lbl = DOX12
 
-			Case	13
+				Case 13
 
-				lbl			= DOX13
+					lbl = DOX13
 
-			Case	14
+				Case 14
 
-				lbl			= DOX14
+					lbl = DOX14
 
-			Case	15
+				Case 15
 
-				lbl			= DOX15
+					lbl = DOX15
 
-			Case	16
+				Case 16
 
-				lbl			= DOX16
+					lbl = DOX16
 
-			Case	17
+				Case 17
 
-				lbl			= DOX17
+					lbl = DOX17
 
-			Case	18
+				Case 18
 
-				lbl			= DOX18
+					lbl = DOX18
 
-			Case	19
+				Case 19
 
-				lbl			= DOX19
+					lbl = DOX19
 
-			Case	20
+				Case 20
 
-				lbl			= DOX20
+					lbl = DOX20
 
-			Case	21
+				Case 21
 
-				lbl			= DOX21
+					lbl = DOX21
 
-			Case	22
+				Case 22
 
-				lbl			= DOX22
+					lbl = DOX22
 
-			Case	23
+				Case 23
 
-				lbl			= DOX23
+					lbl = DOX23
 
-			Case	24
+				Case 24
 
-				lbl			= DOX24
+					lbl = DOX24
 
-			Case	25
+				Case 25
 
-				lbl			= DOX25
+					lbl = DOX25
 
-			Case	26
+				Case 26
 
-				lbl			= DOX26
+					lbl = DOX26
 
-			Case	27
+				Case 27
 
-				lbl			= DOX27
+					lbl = DOX27
 
-			Case	28
+				Case 28
 
-				lbl			= DOX28
+					lbl = DOX28
 
-			Case	29
+				Case 29
 
-				lbl			= DOX29
+					lbl = DOX29
 
-			Case	30
+				Case 30
 
-				lbl			= DOX30
+					lbl = DOX30
 
-			Case	31
+				Case 31
 
-				lbl			= DOX31
+					lbl = DOX31
 
-			Case	32
+				Case 32
 
-				lbl			= DOX32
+					lbl = DOX32
 
-			Case Else
+				Case Else
 
-				lbl			= Nothing
+					lbl = Nothing
 
 			End Select
 
 
-			If OutBuf( i ) = DIO_ON Then
+			If OutBuf(i) = DIO_ON Then
 
-				lbl.BackColor		= Color.Orange
+				lbl.BackColor = Color.Orange
 
 			Else
 
-				lbl.BackColor		= Color.WhiteSmoke
+				lbl.BackColor = Color.WhiteSmoke
 
 			End If
 
@@ -1767,45 +1823,45 @@ Public Class DHDTest
 		' 20200210 EXDIO2基板追加対応
 		For i = 33 To 38
 
-			Select Case	i
+			Select Case i
 
-			Case	33
+				Case 33
 
-				lbl			= DOX33
+					lbl = DOX33
 
-			Case	34
+				Case 34
 
-				lbl			= DOX34
+					lbl = DOX34
 
-			Case	35
+				Case 35
 
-				lbl			= DOX35
+					lbl = DOX35
 
-			Case	36
+				Case 36
 
-				lbl			= DOX36
+					lbl = DOX36
 
-			Case	37
+				Case 37
 
-				lbl			= DOX37
+					lbl = DOX37
 
-			Case	38
+				Case 38
 
-				lbl			= DOX38
+					lbl = DOX38
 
-			Case Else
+				Case Else
 
-				lbl			= Nothing
+					lbl = Nothing
 
 			End Select
 
-			If OutBuf( i ) = DIO_ON Then
+			If OutBuf(i) = DIO_ON Then
 
-				lbl.BackColor		= Color.Orange
+				lbl.BackColor = Color.Orange
 
 			Else
 
-				lbl.BackColor		= Color.WhiteSmoke
+				lbl.BackColor = Color.WhiteSmoke
 
 			End If
 
@@ -1821,76 +1877,76 @@ Public Class DHDTest
 	'*****
 	Private Sub Ad_moni()
 
-		Dim i			As Integer
+		Dim i As Integer
 
 
 
 		For i = 1 To 7
 
 			' リングバッファから移動平均取り出し
-			Dim dt			As UShort
+			Dim dt As UShort
 
 
-			dt			= aiget( i, 1 )
+			dt = aiget(i, 1)
 
 
-			Dim adv			As Double = anar2v( dt )
+			Dim adv As Double = anar2v(dt)
 
 
-			Select Case	i
+			Select Case i
 
-			Case	1
+				Case 1
 
-				' バラトロン真空計
-				Dim torr		As Double = Volt2Torr( adv )
-				Dim pa			As Double = Torr2Pa( torr )
+					' バラトロン真空計
+					Dim torr As Double = Volt2Torr(adv)
+					Dim pa As Double = Torr2Pa(torr)
 
-				AIX01.Text		= mkpastrN3( pa )
+					AIX01.Text = mkpastrN3(pa)
 			'
 			'	20200217 y.goto 指数表示から通常表示へ
 			'	AIX01.Text		= pa.ToString( "0.00E+00" ) + "Pa"
 			'
 
-			Case	2
+				Case 2
 
-				' ピラニ真空計
-				Dim pa			As Double = cvtv2p( adv )
+					' ピラニ真空計
+					Dim pa As Double = cvtv2p(adv)
 
-				AIX02.Text		= mkpastrN3( pa )
+					AIX02.Text = mkpastrN3(pa)
 			'
 			'	20200217 y.goto 指数表示から通常表示へ
 			'	AIX02.Text		= pa.ToString( "0.00E+00" ) + "Pa"
 			'
 
-			Case	3
+				Case 3
 
-				' ＭＦＣ１流量モニタ信号
-				Dim ccm			As Double = cvtv2Ccm( adv )
+					' ＭＦＣ１流量モニタ信号
+					Dim ccm As Double = cvtv2Ccm(adv)
 
-				AIX03.Text		= ccm.ToString( "0.0" ) + "CCM"
-
-
-			Case	4
-
-				' ESC-CH1 出力電圧モニタ
-				AIX04.Text		= ( adv * 100 ).ToString( "0" ) + "V"
+					AIX03.Text = ccm.ToString("0.0") + "CCM"
 
 
-			Case	5 
+				Case 4
 
-				' ESC-CH2 出力電圧モニタ
-				AIX05.Text		= ( adv * 100 ).ToString( "0" ) + "V"
+					' ESC-CH1 出力電圧モニタ
+					AIX04.Text = (adv * 100).ToString("0") + "V"
 
 
-			Case	6 
+				Case 5
 
-				' サ－モチラ－CH1温度モニタ電圧出力
-				AIX06.Text		= ( adv * 10 ).ToString( "0.0" ) + "℃"
+					' ESC-CH2 出力電圧モニタ
+					AIX05.Text = (adv * 100).ToString("0") + "V"
 
-			Case	7
 
-				' サ－モチラ－CH2温度モニタ電圧出力
-				AIX07.Text		= ( adv * 10 ).ToString( "0.0" ) + "℃"
+				Case 6
+
+					' サ－モチラ－CH1温度モニタ電圧出力
+					AIX06.Text = (adv * 10).ToString("0.0") + "℃"
+
+				Case 7
+
+					' サ－モチラ－CH2温度モニタ電圧出力
+					AIX07.Text = (adv * 10).ToString("0.0") + "℃"
 
 			End Select
 
@@ -1905,89 +1961,89 @@ Public Class DHDTest
 	'*****
 	Private Sub Da_moni()
 
-		Dim i			As Integer
-		Dim dav			As Double
+		Dim i As Integer
+		Dim dav As Double
 
 
 
 		For i = 1 To 7
 
-			Select Case	i
+			Select Case i
 
-			Case	PIDaoRSP
+				Case PIDaoRSP
 
-				' ＰＩＤ１リモートセットポイント（ＲＳＰ）
+					' ＰＩＤ１リモートセットポイント（ＲＳＰ）
 
-				' 0-5Vに変換
-				dav			= anar2v( 2, DaBuf( i ) )
+					' 0-5Vに変換
+					dav = anar2v(2, DaBuf(i))
 
-				Dim pa			As Double = cvtv2GM_Pa( dav )
+					Dim pa As Double = cvtv2GM_Pa(dav)
 
-				AOX01.Text		= pa.ToString( "0.000E+00" ) + "Pa"
-
-
-			Case	MFCaoSETPT1
-
-				' ＭＦＣ１流量設定信号
-
-				' 0-5Vに変換
-				dav			= anar2v( 2, DaBuf( i ) )
-
-				Dim ccm			As Double = cvtv2Ccm( dav )
-
-				AOX02.Text		= ccm.ToString( "0.0" ) + "CCM"
+					AOX01.Text = pa.ToString("0.000E+00") + "Pa"
 
 
-			Case	ESCaoVOLT1 
+				Case MFCaoSETPT1
 
-				' ＥＳＣ 1ch
+					' ＭＦＣ１流量設定信号
 
-				' ±10Vに変換
-				dav			= anar2v( 1, DaBuf( i ) )
+					' 0-5Vに変換
+					dav = anar2v(2, DaBuf(i))
 
-				AOX03.Text		= ( dav * 100 ).ToString( "0" ) + "V"
+					Dim ccm As Double = cvtv2Ccm(dav)
 
-
-			Case	ESCaoVOLT2
-
-				' ＥＳＣ 2ch
-
-				' ±10Vに変換
-				dav			= anar2v( 1, DaBuf( i ) )
-
-				AOX04.Text		= ( dav * 100 ).ToString( "0" ) + "V"
+					AOX02.Text = ccm.ToString("0.0") + "CCM"
 
 
-			Case	SCRaoREMOTE1
+				Case ESCaoVOLT1
 
-				' サ－モチラ－ch1
+					' ＥＳＣ 1ch
 
-				' ±10Vに変換
-				dav			= anar2v( 1, DaBuf( i ) )
+					' ±10Vに変換
+					dav = anar2v(1, DaBuf(i))
 
-				AOX05.Text		= ( dav * 10 ).ToString( "0.0" ) + "℃"
-
-
-			Case	SCRaoREMOTE2
-
-				' サ－モチラ－ch2
-
-				' ±10Vに変換
-				dav			= anar2v( 1, DaBuf( i ) )
-
-				AOX06.Text		= ( dav * 10 ).ToString( "0.0" ) + "℃"
+					AOX03.Text = (dav * 100).ToString("0") + "V"
 
 
-			Case	MFCaoSETPT2
+				Case ESCaoVOLT2
 
-				'ＭＦＣ２ ※2014-01-09 現時点でMFC2は未使用(未接続)
+					' ＥＳＣ 2ch
 
-				' ±10Vに変換
-				dav			= anar2v( 1, DaBuf( i ) )
+					' ±10Vに変換
+					dav = anar2v(1, DaBuf(i))
 
-				Dim ccm			As Double = cvtv2Ccm( dav )
+					AOX04.Text = (dav * 100).ToString("0") + "V"
 
-				AOX07.Text		= ccm.ToString( "0.0" ) + "CCM"
+
+				Case SCRaoREMOTE1
+
+					' サ－モチラ－ch1
+
+					' ±10Vに変換
+					dav = anar2v(1, DaBuf(i))
+
+					AOX05.Text = (dav * 10).ToString("0.0") + "℃"
+
+
+				Case SCRaoREMOTE2
+
+					' サ－モチラ－ch2
+
+					' ±10Vに変換
+					dav = anar2v(1, DaBuf(i))
+
+					AOX06.Text = (dav * 10).ToString("0.0") + "℃"
+
+
+				Case MFCaoSETPT2
+
+					'ＭＦＣ２ ※2014-01-09 現時点でMFC2は未使用(未接続)
+
+					' ±10Vに変換
+					dav = anar2v(1, DaBuf(i))
+
+					Dim ccm As Double = cvtv2Ccm(dav)
+
+					AOX07.Text = ccm.ToString("0.0") + "CCM"
 
 			End Select
 
@@ -2013,66 +2069,66 @@ Public Class DHDTest
 		' 20201102 s.harada	AQTC対応専用に変更で削除
 		'txtBPRS.Text		= ""
 
-		txtTPRS1.Text		= ""
+		txtTPRS1.Text = ""
 
-		txtTPRS2.Text		= ""
+		txtTPRS2.Text = ""
 
-		txtBakPres.Text		= ""
+		txtBakPres.Text = ""
 
 		'   20200716 s.harada
 		'	トーカロ対応
-		TxtHeFlow.Text		= ""
+		TxtHeFlow.Text = ""
 
-		TxtVoltImp.Text		= ""
+		TxtVoltImp.Text = ""
 
-		TxtHeWait.Text		= ""
+		TxtHeWait.Text = ""
 
 
 
 		'
 		'	データテーブル作成
 		'
-		dtZetsuen		= New DataTable
+		dtZetsuen = New DataTable
 
-		createTblZetsuenn( dtZetsuen )
+		createTblZetsuenn(dtZetsuen)
 
-		dtKyucyaku		= New DataTable
+		dtKyucyaku = New DataTable
 
-		createTblKyuucyaku( dtKyucyaku )
+		createTblKyuucyaku(dtKyucyaku)
 
-		dtHeGas			= New DataTable
+		dtHeGas = New DataTable
 
-		createTblHeGas( dtHeGas )
+		createTblHeGas(dtHeGas)
 
 		'	20201102 s.harada	AQTC対応専用で追加
-		dtZanryu		= New DataTable
+		dtZanryu = New DataTable
 
-		createTblZanryu( dtZanryu )
+		createTblZanryu(dtZanryu)
 
 
-	
+
 		'
 		'	絶縁テスト項目の設定
 		'
 		If DHDmd = TST_AUTO Or DHDmd = TST_ZETS Then
 
-			tstZetsuDgvDispClear( 0, dtZetsuen, dgvZetsuen1, grpZetsuen1, True )
+			tstZetsuDgvDispClear(0, dtZetsuen, dgvZetsuen1, grpZetsuen1, True)
 
-			tstZetsuDgvDispClear( 1, dtZetsuen, dgvZetsuen2, grpZetsuen2, True )
+			tstZetsuDgvDispClear(1, dtZetsuen, dgvZetsuen2, grpZetsuen2, True)
 
-			tstZetsuDgvDispClear( 2, dtZetsuen, dgvZetsuen3, grpZetsuen3, True )
+			tstZetsuDgvDispClear(2, dtZetsuen, dgvZetsuen3, grpZetsuen3, True)
 
-			tstZetsuDgvDispClear( 3, dtZetsuen, dgvZetsuen4, grpZetsuen4, True )
+			tstZetsuDgvDispClear(3, dtZetsuen, dgvZetsuen4, grpZetsuen4, True)
 
 		Else
 
-			tstZetsuDgvDispClear( 0, dtZetsuen, dgvZetsuen1, grpZetsuen1, False )
+			tstZetsuDgvDispClear(0, dtZetsuen, dgvZetsuen1, grpZetsuen1, False)
 
-			tstZetsuDgvDispClear( 1, dtZetsuen, dgvZetsuen2, grpZetsuen2, False )
+			tstZetsuDgvDispClear(1, dtZetsuen, dgvZetsuen2, grpZetsuen2, False)
 
-			tstZetsuDgvDispClear( 2, dtZetsuen, dgvZetsuen3, grpZetsuen3, False )
+			tstZetsuDgvDispClear(2, dtZetsuen, dgvZetsuen3, grpZetsuen3, False)
 
-			tstZetsuDgvDispClear( 3, dtZetsuen, dgvZetsuen4, grpZetsuen4, False )
+			tstZetsuDgvDispClear(3, dtZetsuen, dgvZetsuen4, grpZetsuen4, False)
 
 		End If
 
@@ -2083,22 +2139,22 @@ Public Class DHDTest
 		'
 		If DHDmd = TST_AUTO Or DHDmd = TST_KYUC Then
 
-			tstKyuuDgvDispClear( 1, dtKyucyaku, dgvKyuucyaku2, grpKyuucyaku2, True )
+			tstKyuuDgvDispClear(1, dtKyucyaku, dgvKyuucyaku2, grpKyuucyaku2, True)
 
-			tstKyuuDgvDispClear( 2, dtKyucyaku, dgvKyuucyaku3, grpKyuucyaku3, True )
+			tstKyuuDgvDispClear(2, dtKyucyaku, dgvKyuucyaku3, grpKyuucyaku3, True)
 
 		Else
 
-			tstKyuuDgvDispClear( 1, dtKyucyaku, dgvKyuucyaku2, grpKyuucyaku2, False )
+			tstKyuuDgvDispClear(1, dtKyucyaku, dgvKyuucyaku2, grpKyuucyaku2, False)
 
-			tstKyuuDgvDispClear( 2, dtKyucyaku, dgvKyuucyaku3, grpKyuucyaku3, False )
+			tstKyuuDgvDispClear(2, dtKyucyaku, dgvKyuucyaku3, grpKyuucyaku3, False)
 
 		End If
 
 
-		tstKyuuDgvDispClear( 0, dtKyucyaku, dgvKyuucyaku1, grpKyuucyaku1, False )
+		tstKyuuDgvDispClear(0, dtKyucyaku, dgvKyuucyaku1, grpKyuucyaku1, False)
 
-		tstKyuuDgvDispClear( 3, dtKyucyaku, dgvKyuucyaku4, grpKyuucyaku4, False )
+		tstKyuuDgvDispClear(3, dtKyucyaku, dgvKyuucyaku4, grpKyuucyaku4, False)
 
 
 
@@ -2107,82 +2163,82 @@ Public Class DHDTest
 		'
 		If DHDmd = TST_AUTO Or DHDmd = TST_HGAS Then
 
-			tstHeGasDgvDispClear( 1, dtHeGas, dgvHeGas2, grpHeGas2, True )
+			tstHeGasDgvDispClear(1, dtHeGas, dgvHeGas2, grpHeGas2, True)
 
-			tstHeGasDgvDispClear( 2, dtHeGas, dgvHeGas3, grpHeGas3, True )
+			tstHeGasDgvDispClear(2, dtHeGas, dgvHeGas3, grpHeGas3, True)
 
 		Else
 
-			tstHeGasDgvDispClear( 1, dtHeGas, dgvHeGas2, grpHeGas2, False )
+			tstHeGasDgvDispClear(1, dtHeGas, dgvHeGas2, grpHeGas2, False)
 
-			tstHeGasDgvDispClear( 2, dtHeGas, dgvHeGas3, grpHeGas3, False )
+			tstHeGasDgvDispClear(2, dtHeGas, dgvHeGas3, grpHeGas3, False)
 
 		End If
 
 
-		tstHeGasDgvDispClear( 0, dtHeGas, dgvHeGas1, grpHeGas1, False )
+		tstHeGasDgvDispClear(0, dtHeGas, dgvHeGas1, grpHeGas1, False)
 
-		tstHeGasDgvDispClear( 3, dtHeGas, dgvHeGas4, grpHeGas4, False )
+		tstHeGasDgvDispClear(3, dtHeGas, dgvHeGas4, grpHeGas4, False)
 
 
-	'	20201102 s.harada
-	'	AQTC対応で残留吸着テスト項目追加
+		'	20201102 s.harada
+		'	AQTC対応で残留吸着テスト項目追加
 		If DHDmd = TST_AUTO Or DHDmd = TST_ZKYU Then
 
-			tstZanryuDgvDispClear( 1, dtZanryu, dgvZanryu2, grpZanryu2, True )
+			tstZanryuDgvDispClear(1, dtZanryu, dgvZanryu2, grpZanryu2, True)
 
-			tstZanryuDgvDispClear( 2, dtZanryu, dgvZanryu3, grpZanryu3, True )
+			tstZanryuDgvDispClear(2, dtZanryu, dgvZanryu3, grpZanryu3, True)
 
 		Else
 
-			tstZanryuDgvDispClear( 1, dtZanryu, dgvZanryu2, grpZanryu2, False )
+			tstZanryuDgvDispClear(1, dtZanryu, dgvZanryu2, grpZanryu2, False)
 
-			tstZanryuDgvDispClear( 2, dtZanryu, dgvZanryu3, grpZanryu3, False )
+			tstZanryuDgvDispClear(2, dtZanryu, dgvZanryu3, grpZanryu3, False)
 
 		End If
 
-		tstZanryuDgvDispClear( 0, dtZanryu, dgvZanryu1, grpZanryu1, False )
+		tstZanryuDgvDispClear(0, dtZanryu, dgvZanryu1, grpZanryu1, False)
 
-		tstZanryuDgvDispClear( 3, dtZanryu, dgvZanryu4, grpZanryu4, False )
+		tstZanryuDgvDispClear(3, dtZanryu, dgvZanryu4, grpZanryu4, False)
 
 
 		'
 		'	テスト項目の表示処理
 		'
-		Dim zdsp		As Integer
-		Dim kdsp		As Integer
-		Dim hdsp		As Integer
+		Dim zdsp As Integer
+		Dim kdsp As Integer
+		Dim hdsp As Integer
 
 
 		If DHDmd = TST_AUTO Or DHDmd = TST_ZETS Then
 
-			zdsp			= 1
+			zdsp = 1
 
 		End If
 
 
 		If DHDmd = TST_AUTO Or DHDmd = TST_KYUC Then
 
-			kdsp			= 1
+			kdsp = 1
 
 		End If
 
 
 		If DHDmd = TST_AUTO Or DHDmd = TST_HGAS Then
 
-			hdsp			= 1
+			hdsp = 1
 
 		End If
 
 
-	'	20201102 s.harada
-	'	AQTC対応に変更
+		'	20201102 s.harada
+		'	AQTC対応に変更
 
 		Dim zkdsp As Integer
 
 		If DHDmd = TST_AUTO Or DHDmd = TST_ZKYU Then
 
-			zkdsp		= 1
+			zkdsp = 1
 
 		End If
 
@@ -2217,177 +2273,177 @@ Public Class DHDTest
 
 
 
-	'	20201102 s.harada
-	’	AQTC対応で削除
-	'	ウエハ吸着力測定リミット値 (kPaで表示)
-	'	txtBPRS.Text		= ( BPRS / 1000 ).ToString( "0.00" )
-	'
-	'	20200217 y.goto
-	'	ウエハ吸着力測定で指定ウエハ裏面圧が小数点以下が消されていた
-	'	txtBPRS.Text		= ( BPRS / 1000 ).ToString( "00" )
-	'
+		'	20201102 s.harada
+		'	AQTC対応で削除
+		'	ウエハ吸着力測定リミット値 (kPaで表示)
+		'	txtBPRS.Text		= ( BPRS / 1000 ).ToString( "0.00" )
+		'
+		'	20200217 y.goto
+		'	ウエハ吸着力測定で指定ウエハ裏面圧が小数点以下が消されていた
+		'	txtBPRS.Text		= ( BPRS / 1000 ).ToString( "00" )
+		'
 
-		txtTPRS1.Text		= TPRS1.ToString( "0.00" )
+		txtTPRS1.Text = TPRS1.ToString("0.00")
 
-		txtTPRS2.Text		= TPRS2.ToString( "0.00" )
+		txtTPRS2.Text = TPRS2.ToString("0.00")
 
-		txtBakPres.Text		= BakPres.ToString( "0" )
+		txtBakPres.Text = BakPres.ToString("0")
 
 
 		'
 		'	20140127 y.goto
 		'	電極ヘッド温度安定待ち時間 (分)
 		'
-		txtTmpStbW.Text		= PrmTmpStbW.ToString( "0." )
+		txtTmpStbW.Text = PrmTmpStbW.ToString("0.")
 
 
-	'	20201102 s.harada
-	'	AQTC対応で追加
+		'	20201102 s.harada
+		'	AQTC対応で追加
 
 		'   残留吸着 Ｈｅ流量(ccm)
-		TxtHeFlow.Text		= PrmHeFlow.ToString("0.")
+		TxtHeFlow.Text = PrmHeFlow.ToString("0.")
 
 		'   残留吸着 電圧印加時間(秒)
-		TxtVoltImp.Text		= PrmVoltImp.ToString("0.")
+		TxtVoltImp.Text = PrmVoltImp.ToString("0.")
 
 		'   残留吸着 電圧印加停止後Ｈｅ流すまでの待ち時間(秒)
-		TxtHeWait.Text		= PrmHeWait.ToString("0.")
+		TxtHeWait.Text = PrmHeWait.ToString("0.")
 
 		' 吸吸着力測定時間上限（秒）
-		TxtMaxTime.Text		= PrmMaxTim.ToString("0.")
+		TxtMaxTime.Text = PrmMaxTim.ToString("0.")
 
 		' 残留吸着測定安定判断基準傾き
-		txtAntVct.Text		= PrmStabVct.ToString("0.0")
+		txtAntVct.Text = PrmStabVct.ToString("0.0")
 
 		' 残留吸着測定安定判断基準安定時間（秒）
-		txtAntTim.Text		= PrmStabTim.ToString("0.")
+		txtAntTim.Text = PrmStabTim.ToString("0.")
 
 		' 残留吸着電圧印可時裏面圧力 (Pa)
-		txtBakPrs.Text		= PrmBakPrs.ToString( "0." )
+		txtBakPrs.Text = PrmBakPrs.ToString("0.")
 
 		' 20210201 追加 y.goto
 		' 電圧印可後He導入前裏面圧力 (Pa)
-		txtBakP2.Text		= PrmBak2Prc.ToString( "0." )
+		txtBakP2.Text = PrmBak2Prc.ToString("0.")
 
 		'
 		'	データテーブル作成
 		'
-		dtZetsuen		= New DataTable
+		dtZetsuen = New DataTable
 
-		createTblZetsuenn( dtZetsuen )
-
-
-		dtKyucyaku		= New DataTable
-
-		createTblKyuucyaku( dtKyucyaku )
+		createTblZetsuenn(dtZetsuen)
 
 
-		dtHeGas			= New DataTable
+		dtKyucyaku = New DataTable
 
-		createTblHeGas( dtHeGas )
-
-
-	'	20200716 s.harada
-	'	トーカロ対応で追加
-		dtZanryu		= New DataTable
-
-		createTblZanryu( dtZanryu )
+		createTblKyuucyaku(dtKyucyaku)
 
 
-		dtZetsu1		= dtZetsuen.Copy
+		dtHeGas = New DataTable
 
-		dtZetsu2		= dtZetsuen.Copy
-
-		dtZetsu3		= dtZetsuen.Copy
-
-		dtZetsu4		= dtZetsuen.Copy
+		createTblHeGas(dtHeGas)
 
 
-		dtKyucy1		= dtKyucyaku.Copy
+		'	20200716 s.harada
+		'	トーカロ対応で追加
+		dtZanryu = New DataTable
 
-		dtKyucy2		= dtKyucyaku.Copy
-
-		dtKyucy3		= dtKyucyaku.Copy
-
-		dtKyucy4		= dtKyucyaku.Copy
+		createTblZanryu(dtZanryu)
 
 
-		dtHeGas1		= dtHeGas.Copy
+		dtZetsu1 = dtZetsuen.Copy
 
-		dtHeGas2		= dtHeGas.Copy
+		dtZetsu2 = dtZetsuen.Copy
 
-		dtHeGas3		= dtHeGas.Copy
+		dtZetsu3 = dtZetsuen.Copy
 
-		dtHeGas4		= dtHeGas.Copy
+		dtZetsu4 = dtZetsuen.Copy
 
-	'	20201102 s.harada
-	'	AQTC対応で追加
+
+		dtKyucy1 = dtKyucyaku.Copy
+
+		dtKyucy2 = dtKyucyaku.Copy
+
+		dtKyucy3 = dtKyucyaku.Copy
+
+		dtKyucy4 = dtKyucyaku.Copy
+
+
+		dtHeGas1 = dtHeGas.Copy
+
+		dtHeGas2 = dtHeGas.Copy
+
+		dtHeGas3 = dtHeGas.Copy
+
+		dtHeGas4 = dtHeGas.Copy
+
+		'	20201102 s.harada
+		'	AQTC対応で追加
 		'   残留吸着
-		dtZanry1		= dtZanryu.Copy
+		dtZanry1 = dtZanryu.Copy
 
-		dtZanry2		= dtZanryu.Copy
+		dtZanry2 = dtZanryu.Copy
 
-		dtZanry3		= dtZanryu.Copy
+		dtZanry3 = dtZanryu.Copy
 
-		dtZanry4		= dtKyucyaku.Copy
+		dtZanry4 = dtKyucyaku.Copy
 
 
 
 		'
 		'	大気テスト項目の設定
 		'
-		tstZetsuDgvDisp( 0, dtZetsu1, MESrec, dgvZetsuen1, grpZetsuen1 )
+		tstZetsuDgvDisp(0, dtZetsu1, MESrec, dgvZetsuen1, grpZetsuen1)
 
-		tstKyuuDgvDisp( 0, dtKyucy1, MESrec, dgvKyuucyaku1, grpKyuucyaku1, ESCmd )
+		tstKyuuDgvDisp(0, dtKyucy1, MESrec, dgvKyuucyaku1, grpKyuucyaku1, ESCmd)
 
-		tstHeGasDgvDisp( 0, dtHeGas1, MESrec, dgvHeGas1, grpHeGas1, ESCmd )
+		tstHeGasDgvDisp(0, dtHeGas1, MESrec, dgvHeGas1, grpHeGas1, ESCmd)
 
-	'	20201102 s.harada
-	'	AQTC対応で追加
-		tstZanryuDgvDisp( 0, dtZanry1, MESrec, dgvZanryu1, grpZanryu1, ESCmd )
+		'	20201102 s.harada
+		'	AQTC対応で追加
+		tstZanryuDgvDisp(0, dtZanry1, MESrec, dgvZanryu1, grpZanryu1, ESCmd)
 
 
 		'
 		'	真空（低温）テスト項目の設定
 		'
-		tstZetsuDgvDisp( 1, dtZetsu2, MESrec, dgvZetsuen2, grpZetsuen2 )
+		tstZetsuDgvDisp(1, dtZetsu2, MESrec, dgvZetsuen2, grpZetsuen2)
 
-		tstKyuuDgvDisp( 1, dtKyucy2, MESrec, dgvKyuucyaku2, grpKyuucyaku2, ESCmd )
+		tstKyuuDgvDisp(1, dtKyucy2, MESrec, dgvKyuucyaku2, grpKyuucyaku2, ESCmd)
 
-		tstHeGasDgvDisp( 1, dtHeGas2, MESrec, dgvHeGas2, grpHeGas2, ESCmd )
+		tstHeGasDgvDisp(1, dtHeGas2, MESrec, dgvHeGas2, grpHeGas2, ESCmd)
 
-	'	20201102 s.harada
-	'	AQTC対応で追加
-		tstZanryuDgvDisp( 1, dtZanry2, MESrec, dgvZanryu2, grpZanryu2, ESCmd )
+		'	20201102 s.harada
+		'	AQTC対応で追加
+		tstZanryuDgvDisp(1, dtZanry2, MESrec, dgvZanryu2, grpZanryu2, ESCmd)
 
 
 		'
 		'	真空（高温)テスト項目の設定
 		'
-		tstZetsuDgvDisp( 2, dtZetsu3, MESrec, dgvZetsuen3, grpZetsuen3 )
+		tstZetsuDgvDisp(2, dtZetsu3, MESrec, dgvZetsuen3, grpZetsuen3)
 
-		tstKyuuDgvDisp( 2, dtKyucy3, MESrec, dgvKyuucyaku3, grpKyuucyaku3, ESCmd )
+		tstKyuuDgvDisp(2, dtKyucy3, MESrec, dgvKyuucyaku3, grpKyuucyaku3, ESCmd)
 
-		tstHeGasDgvDisp( 2, dtHeGas3, MESrec, dgvHeGas3, grpHeGas3, ESCmd )
+		tstHeGasDgvDisp(2, dtHeGas3, MESrec, dgvHeGas3, grpHeGas3, ESCmd)
 
-	'	20201102 s.harada
-	'	AQTC対応で追加
-		tstZanryuDgvDisp( 2, dtZanry3, MESrec, dgvZanryu3, grpZanryu3, ESCmd )
+		'	20201102 s.harada
+		'	AQTC対応で追加
+		tstZanryuDgvDisp(2, dtZanry3, MESrec, dgvZanryu3, grpZanryu3, ESCmd)
 
 
 
 		'
 		'	真空（高温２）テスト項目の設定
 		'
-		tstZetsuDgvDisp( 3, dtZetsu4, MESrec, dgvZetsuen4, grpZetsuen4 )
+		tstZetsuDgvDisp(3, dtZetsu4, MESrec, dgvZetsuen4, grpZetsuen4)
 
-		tstKyuuDgvDisp( 3, dtKyucy4, MESrec, dgvKyuucyaku4, grpKyuucyaku4, ESCmd )
+		tstKyuuDgvDisp(3, dtKyucy4, MESrec, dgvKyuucyaku4, grpKyuucyaku4, ESCmd)
 
-		tstHeGasDgvDisp( 3, dtHeGas4, MESrec, dgvHeGas4, grpHeGas4, ESCmd )
+		tstHeGasDgvDisp(3, dtHeGas4, MESrec, dgvHeGas4, grpHeGas4, ESCmd)
 
-	'	20201102 s.harada
-	'	AQTC対応で追加
-		tstZanryuDgvDisp( 3, dtZanry4, MESrec, dgvZanryu4, grpZanryu4, ESCmd )
+		'	20201102 s.harada
+		'	AQTC対応で追加
+		tstZanryuDgvDisp(3, dtZanry4, MESrec, dgvZanryu4, grpZanryu4, ESCmd)
 
 
 		'
@@ -2429,16 +2485,16 @@ Public Class DHDTest
 
 	'   20201102 s.harada
 	'   AQTC対応で残留吸着追加のため未使用
-	Private Sub tabGroupReSize				_
-	(							_
-		ByVal no		As Integer,		_
-		ByRef tabPage		As TabPage,		_
-		ByRef zgrp		As GroupBox,		_
-		ByVal zct		As Integer,		_
-		ByRef kgrp		As GroupBox,		_
-		ByVal kct		As Integer,		_
-		ByRef hgrp		As GroupBox,		_
-		ByVal hct		As Integer		_
+	Private Sub tabGroupReSize _
+	(
+		ByVal no As Integer,
+		ByRef tabPage As TabPage,
+		ByRef zgrp As GroupBox,
+		ByVal zct As Integer,
+		ByRef kgrp As GroupBox,
+		ByVal kct As Integer,
+		ByRef hgrp As GroupBox,
+		ByVal hct As Integer
 	)
 
 		'no:雰囲気　0:大気　1:真空(低温）　2:真空（高温）　3:真空（高温２）
@@ -2450,28 +2506,28 @@ Public Class DHDTest
 		'hgrp:Heリーク量測定表示グループボックス
 		'hct:Heリーク量測定　データ数　＞０で表示
 
-		Dim ct			As Integer = 0
-		Dim hight		As Integer = tabPage.Height
+		Dim ct As Integer = 0
+		Dim hight As Integer = tabPage.Height
 
 
 
 		If zct > 0 Then
 
-			ct			+= 1
+			ct += 1
 
 		End If
 
 
 		If kct > 0 Then
 
-			ct			+= 1
+			ct += 1
 
 		End If
 
 
 		If hct > 0 Then
 
-			ct			+= 1
+			ct += 1
 
 		End If
 
@@ -2480,82 +2536,82 @@ Public Class DHDTest
 
 			If zct > 0 Then
 
-				zgrp.Height		= hight - 20
+				zgrp.Height = hight - 20
 
 			ElseIf kct > 0 Then
 
-				kgrp.Height		= hight - 20
+				kgrp.Height = hight - 20
 
-				kgrp.Top		= zgrp.Top
+				kgrp.Top = zgrp.Top
 
 			ElseIf hct > 0 Then
 
-				hgrp.Height		= hight - 20
+				hgrp.Height = hight - 20
 
-				hgrp.Top		= zgrp.Top
+				hgrp.Top = zgrp.Top
 
 			End If
 
 		ElseIf ct = 2 Then
 
-			Dim h			As Integer = ( hight - 35 ) / 2
+			Dim h As Integer = (hight - 35) / 2
 
 
 			If zct > 0 Then
 
-				zgrp.Height		= h
+				zgrp.Height = h
 
 				If kct > 0 Then
 
-					kgrp.Height		= h
+					kgrp.Height = h
 
-					kgrp.Top		= zgrp.Top + h + 15
+					kgrp.Top = zgrp.Top + h + 15
 
 				Else
 
-					hgrp.Height		= h
+					hgrp.Height = h
 
-					hgrp.Top		= zgrp.Top + h + 15
+					hgrp.Top = zgrp.Top + h + 15
 
 				End If
 
 			ElseIf kct > 0 Then
 
-				kgrp.Height		= h
+				kgrp.Height = h
 
-				kgrp.Top		= zgrp.Top
+				kgrp.Top = zgrp.Top
 
-				hgrp.Height		= h
+				hgrp.Height = h
 
-				hgrp.Top		= kgrp.Top + h + 15
+				hgrp.Top = kgrp.Top + h + 15
 
 			End If
 
 		ElseIf ct = 3 Then
 
 
-			Dim h			As Integer = ( hight - 50 ) / 7
+			Dim h As Integer = (hight - 50) / 7
 
-			zgrp.Height		= h * 3
+			zgrp.Height = h * 3
 
-			kgrp.Height		= h * 2
+			kgrp.Height = h * 2
 
-			hgrp.Height		= h * 2
+			hgrp.Height = h * 2
 
-			kgrp.Top		= zgrp.Top + zgrp.Height + 15
+			kgrp.Top = zgrp.Top + zgrp.Height + 15
 
-			hgrp.Top		= kgrp.Top + kgrp.Height + 15
+			hgrp.Top = kgrp.Top + kgrp.Height + 15
 
 		End If
 
 
 		If ct = 0 Then
 
-			tabPage.Text		= ""
+			tabPage.Text = ""
 
 		Else
 
-			tabPage.Text		= convFunikiToStr(no)
+			tabPage.Text = convFunikiToStr(no)
 
 		End If
 
@@ -2567,18 +2623,18 @@ Public Class DHDTest
 
 	'   20201102 s.harada
 	'   AQTC対応で残留吸着追加
-	Private Sub tabGroupReSize			_
-	(						_
-		ByVal no		As Integer,	_
-		ByRef tabPage		As TabPage,	_
-		ByRef zgrp		As GroupBox,	_
-		ByVal zct		As Integer,	_
-		ByRef kgrp		As GroupBox,	_
-		ByVal kct		As Integer,	_
-		ByRef hgrp		As GroupBox,	_
-		ByVal hct		As Integer,	_
-		ByRef zkgrp		As GroupBox,	_
-		ByVal zkct		As Integer	_
+	Private Sub tabGroupReSize _
+	(
+		ByVal no As Integer,
+		ByRef tabPage As TabPage,
+		ByRef zgrp As GroupBox,
+		ByVal zct As Integer,
+		ByRef kgrp As GroupBox,
+		ByVal kct As Integer,
+		ByRef hgrp As GroupBox,
+		ByVal hct As Integer,
+		ByRef zkgrp As GroupBox,
+		ByVal zkct As Integer
 	)
 
 		'no:雰囲気　0:大気　1:真空(低温）　2:真空（高温）　3:真空（高温２）
@@ -2592,35 +2648,35 @@ Public Class DHDTest
 		'zkgrp:残留吸着測定表示グループボックス
 		'zkct:残留吸着測定　データ数　＞０で表示
 
-		Dim ct			As Integer = 0
-		Dim hight		As Integer = tabPage.Height
+		Dim ct As Integer = 0
+		Dim hight As Integer = tabPage.Height
 
 
 
 		If zct > 0 Then
 
-			ct			+= 1
+			ct += 1
 
 		End If
 
 
 		If kct > 0 Then
 
-			ct			+= 1
+			ct += 1
 
 		End If
 
 
 		If hct > 0 Then
 
-			ct			+= 1
+			ct += 1
 
 		End If
 
 
 		If zkct > 0 Then
 
-			ct			+= 1
+			ct += 1
 
 		End If
 
@@ -2629,173 +2685,173 @@ Public Class DHDTest
 
 			If zct > 0 Then
 
-				zgrp.Height		= hight - 10
+				zgrp.Height = hight - 10
 
 			ElseIf kct > 0 Then
 
-				kgrp.Height		= hight - 10
+				kgrp.Height = hight - 10
 
-				kgrp.Top		= zgrp.Top
+				kgrp.Top = zgrp.Top
 
 			ElseIf hct > 0 Then
 
-				hgrp.Height		= hight - 10
+				hgrp.Height = hight - 10
 
-				hgrp.Top		= zgrp.Top
+				hgrp.Top = zgrp.Top
 
 			Else
 
-				zkgrp.Height		= hight - 10
+				zkgrp.Height = hight - 10
 
-				zkgrp.Top		= zgrp.Top
+				zkgrp.Top = zgrp.Top
 
 			End If
 
 		ElseIf ct = 2 Then
 
-			Dim h			As Integer = (hight - 20) / 2
+			Dim h As Integer = (hight - 20) / 2
 
 
 			If zct > 0 Then
 
-				zgrp.Height		= h
+				zgrp.Height = h
 
 				If kct > 0 Then
 
-					kgrp.Height		= h
+					kgrp.Height = h
 
-					kgrp.Top		= zgrp.Top + h + 10
+					kgrp.Top = zgrp.Top + h + 10
 
 				ElseIf hct > 0 Then
 
-					hgrp.Height		= h
+					hgrp.Height = h
 
-					hgrp.Top		= zgrp.Top + h + 10
+					hgrp.Top = zgrp.Top + h + 10
 
 				Else
 
-					zkgrp.Height		= h
+					zkgrp.Height = h
 
-					zkgrp.Top		= zgrp.Top + h + 10
+					zkgrp.Top = zgrp.Top + h + 10
 
 				End If
 
 			ElseIf kct > 0 Then
 
-				kgrp.Height		= h
+				kgrp.Height = h
 
-				kgrp.Top		= zgrp.Top
+				kgrp.Top = zgrp.Top
 
 				If hct > 0 Then
 
-					hgrp.Height		= h
+					hgrp.Height = h
 
-					hgrp.Top		= kgrp.Top + h + 10
+					hgrp.Top = kgrp.Top + h + 10
 
 				Else
 
-					zkgrp.Height		= h
+					zkgrp.Height = h
 
-					zkgrp.Top		= kgrp.Top + h + 10
+					zkgrp.Top = kgrp.Top + h + 10
 
 				End If
 
 			Else
 
-				hgrp.Height		= h
+				hgrp.Height = h
 
-				hgrp.Top		= zgrp.Top
+				hgrp.Top = zgrp.Top
 
-				zkgrp.Height		= h
+				zkgrp.Height = h
 
-				zkgrp.Top		= hgrp.Top + h + 10
+				zkgrp.Top = hgrp.Top + h + 10
 
 			End If
 
 		ElseIf ct = 3 Then
 
-			Dim h			As Integer = (hight - 30) / 3
+			Dim h As Integer = (hight - 30) / 3
 
 			If zct > 0 Then
 
-				zgrp.Height		= h
+				zgrp.Height = h
 
 				If kct > 0 Then
 
-					kgrp.Height		= h
+					kgrp.Height = h
 
-					kgrp.Top		= zgrp.Top + h + 10
+					kgrp.Top = zgrp.Top + h + 10
 
 					If hct > 0 Then
 
-						hgrp.Height		= h
+						hgrp.Height = h
 
-						hgrp.Top		= kgrp.Top + h + 10
+						hgrp.Top = kgrp.Top + h + 10
 
 					Else
 
-						zkgrp.Height		= h
+						zkgrp.Height = h
 
-						zkgrp.Top		= kgrp.Top + h + 10
+						zkgrp.Top = kgrp.Top + h + 10
 
 					End If
 
 				Else
 
-					hgrp.Height		= h
+					hgrp.Height = h
 
-					hgrp.Top		= zgrp.Top + h + 10
+					hgrp.Top = zgrp.Top + h + 10
 
-					zkgrp.Height		= h
+					zkgrp.Height = h
 
-					zkgrp.Top		= hgrp.Top + h + 10
+					zkgrp.Top = hgrp.Top + h + 10
 
 				End If
 
 			Else
 
-				kgrp.Height		= h
+				kgrp.Height = h
 
-				kgrp.Top		= zgrp.Top
+				kgrp.Top = zgrp.Top
 
-				hgrp.Height		= h
+				hgrp.Height = h
 
-				hgrp.Top		= kgrp.Top + h + 10
+				hgrp.Top = kgrp.Top + h + 10
 
-				zkgrp.Height		= h
+				zkgrp.Height = h
 
-				zkgrp.Top		= hgrp.Top + h + 10
+				zkgrp.Top = hgrp.Top + h + 10
 
 			End If
 
 		ElseIf ct = 4 Then
 
-			Dim h As Integer		= (hight - 40) / 10
+			Dim h As Integer = (hight - 40) / 10
 
-			zgrp.Height		= h * 3
+			zgrp.Height = h * 3
 
-			kgrp.Height		= h * 3
+			kgrp.Height = h * 3
 
-			hgrp.Height		= h * 2
+			hgrp.Height = h * 2
 
-			zkgrp.Height		= h * 2
+			zkgrp.Height = h * 2
 
-			kgrp.Top		= zgrp.Top + zgrp.Height + 10
+			kgrp.Top = zgrp.Top + zgrp.Height + 10
 
-			hgrp.Top		= kgrp.Top + kgrp.Height + 10
+			hgrp.Top = kgrp.Top + kgrp.Height + 10
 
-			zkgrp.Top		= hgrp.Top + hgrp.Height + 10
+			zkgrp.Top = hgrp.Top + hgrp.Height + 10
 
 		End If
 
 
 		If ct = 0 Then
 
-			tabPage.Text		= ""
+			tabPage.Text = ""
 
 		Else
 
-			tabPage.Text		= convFunikiToStr(no)
+			tabPage.Text = convFunikiToStr(no)
 
 		End If
 
@@ -2806,13 +2862,13 @@ Public Class DHDTest
 
 	'   20201102 s.harada
 	'   AQTC対応で残留吸着追加のため未使用
-	Private Sub tabGroupReSize			_
-	(						_
-		ByVal no		As Integer,	_
-		ByRef tabPage		As TabPage,	_
-		ByRef zgrp		As GroupBox,	_
-		ByRef kgrp		As GroupBox,	_
-		ByRef hgrp		As GroupBox	_
+	Private Sub tabGroupReSize _
+	(
+		ByVal no As Integer,
+		ByRef tabPage As TabPage,
+		ByRef zgrp As GroupBox,
+		ByRef kgrp As GroupBox,
+		ByRef hgrp As GroupBox
 	)
 
 		'no:雰囲気　0:大気　1:真空(低温）　2:真空（高温）　3:真空（高温２）
@@ -2821,68 +2877,68 @@ Public Class DHDTest
 		'kgrp:吸着測定表示グループボックス
 		'hgrp:Heリーク量測定表示グループボックス
 
-		Dim ct			As Integer = 0
-		Dim hight		As Integer = tabPage.Height
-		Dim zct			As Integer
-		Dim kct			As Integer
-		Dim hct			As Integer
+		Dim ct As Integer = 0
+		Dim hight As Integer = tabPage.Height
+		Dim zct As Integer
+		Dim kct As Integer
+		Dim hct As Integer
 
 
 
-		Select Case	no
+		Select Case no
 
-		Case	0
+			Case 0
 
-			zct		= dtZetsu1.Rows.Count
+				zct = dtZetsu1.Rows.Count
 
-			kct		= dtKyucy1.Rows.Count
+				kct = dtKyucy1.Rows.Count
 
-			hct		= dtHeGas1.Rows.Count
+				hct = dtHeGas1.Rows.Count
 
-		Case	1
+			Case 1
 
-			zct		= dtZetsu2.Rows.Count
+				zct = dtZetsu2.Rows.Count
 
-			kct		= dtKyucy2.Rows.Count
+				kct = dtKyucy2.Rows.Count
 
-			hct		= dtHeGas2.Rows.Count
+				hct = dtHeGas2.Rows.Count
 
-		Case	2
+			Case 2
 
-			zct		= dtZetsu3.Rows.Count
+				zct = dtZetsu3.Rows.Count
 
-			kct		= dtKyucy3.Rows.Count
+				kct = dtKyucy3.Rows.Count
 
-			hct		= dtHeGas3.Rows.Count
+				hct = dtHeGas3.Rows.Count
 
-		Case	3
+			Case 3
 
-			zct		= dtZetsu4.Rows.Count
+				zct = dtZetsu4.Rows.Count
 
-			kct		= dtKyucy4.Rows.Count
+				kct = dtKyucy4.Rows.Count
 
-			hct		= dtHeGas4.Rows.Count
+				hct = dtHeGas4.Rows.Count
 
 		End Select
 
 
 		If zct > 0 Then
 
-			ct		+= 1
+			ct += 1
 
 		End If
 
 
 		If kct > 0 Then
 
-			ct		+= 1
+			ct += 1
 
 		End If
 
 
 		If hct > 0 Then
 
-			ct		+= 1
+			ct += 1
 
 		End If
 
@@ -2891,81 +2947,81 @@ Public Class DHDTest
 
 			If zct > 0 Then
 
-				zgrp.Height		= hight - 10
+				zgrp.Height = hight - 10
 
 			ElseIf kct > 0 Then
 
-				kgrp.Height		= hight - 10
+				kgrp.Height = hight - 10
 
-				kgrp.Top		= zgrp.Top
+				kgrp.Top = zgrp.Top
 
 			ElseIf hct > 0 Then
 
-				hgrp.Height		= hight - 10
+				hgrp.Height = hight - 10
 
-				hgrp.Top		= zgrp.Top
+				hgrp.Top = zgrp.Top
 
 			End If
 
 		ElseIf ct = 2 Then
 
-			Dim h			As Integer = ( hight - 20 ) / 2
+			Dim h As Integer = (hight - 20) / 2
 
 			If zct > 0 Then
 
-				zgrp.Height		= h
+				zgrp.Height = h
 
 				If kct > 0 Then
 
-					kgrp.Height		= h
+					kgrp.Height = h
 
-					kgrp.Top		= zgrp.Top + h + 10
+					kgrp.Top = zgrp.Top + h + 10
 
 				Else
 
-					hgrp.Height		= h
+					hgrp.Height = h
 
-					hgrp.Top		= zgrp.Top + h + 10
+					hgrp.Top = zgrp.Top + h + 10
 
 				End If
 
 			ElseIf kct > 0 Then
 
-				kgrp.Height		= h
+				kgrp.Height = h
 
-				kgrp.Top		= zgrp.Top
+				kgrp.Top = zgrp.Top
 
-				hgrp.Height		= h
+				hgrp.Height = h
 
-				hgrp.Top		= kgrp.Top + h + 10
+				hgrp.Top = kgrp.Top + h + 10
 
 			End If
 
 		ElseIf ct = 3 Then
 
-			Dim h			As Integer = (hight - 30) / 7
+			Dim h As Integer = (hight - 30) / 7
 
 
-			zgrp.Height		= h * 3
+			zgrp.Height = h * 3
 
-			kgrp.Height		= h * 2
+			kgrp.Height = h * 2
 
-			hgrp.Height		= h * 2
+			hgrp.Height = h * 2
 
-			kgrp.Top		= zgrp.Top + zgrp.Height + 10
+			kgrp.Top = zgrp.Top + zgrp.Height + 10
 
-			hgrp.Top		= kgrp.Top + kgrp.Height + 10
+			hgrp.Top = kgrp.Top + kgrp.Height + 10
 
 		End If
 
 
 		If ct = 0 Then
 
-			tabPage.Text		= ""
+			tabPage.Text = ""
 
 		Else
 
-			tabPage.Text		= convFunikiToStr( no )
+			tabPage.Text = convFunikiToStr(no)
 
 		End If
 
@@ -3073,28 +3129,28 @@ Public Class DHDTest
 		' テスト項目があればタブ表示、なければ元のタブを表示
 		If tabPage1.Text <> "" Then
 
-			tabTest.SelectedTab	= tabPage1
+			tabTest.SelectedTab = tabPage1
 
 		ElseIf tabPage2.Text <> "" Then
 
-			tabTest.SelectedTab	= tabPage2
+			tabTest.SelectedTab = tabPage2
 
 		ElseIf tabPage3.Text <> "" Then
 
-			tabTest.SelectedTab	= tabPage3
+			tabTest.SelectedTab = tabPage3
 
 		ElseIf tabPage4.Text <> "" Then
 
-			tabTest.SelectedTab	= tabPage4
+			tabTest.SelectedTab = tabPage4
 
 		Else
 
-			tabTest.SelectedTab	= tabPage1
+			tabTest.SelectedTab = tabPage1
 
 		End If
 
 
-		mTabPageNo		= tabTest.SelectedIndex
+		mTabPageNo = tabTest.SelectedIndex
 
 
 	End Sub
@@ -3110,10 +3166,13 @@ Public Class DHDTest
 	'*****
 	'	測定メイン
 	'*****
+	''' <summary>
+	''' 測定メイン
+	''' </summary>
+	''' <returns>[0]:正常終了、[-1]:大気圧測定エラー、[-2]:真空低温測定エラー、[-3]:真空高温測定エラー、[-4]:真空高温２測定エラー</returns>
 	Private Function ProcMain() As Integer
 
-		Dim ret			As Integer = 0
-		Dim sts			As Integer
+		Dim ret As Integer = 0
 
 
 
@@ -3129,13 +3188,13 @@ Public Class DHDTest
 		'	※ 20200901 本バルブはトーカロ様では未装着
 		'	ウエハ裏面圧開放バルブON
 		'
-		ExDio_Output( MAEdoPRG, DIO_ON )
+		ExDio_Output(MAEdoPRG, DIO_ON)
 
 		'
 		'	20200220 y.goto トーカロ様対応
 		'	ウエハ裏面圧開放バルブ SV3(G4) ON
 		'
-		ExDio_Output( EXSdoRYE3, DIO_ON )
+		ExDio_Output(EXSdoRYE3, DIO_ON)
 
 
 		'
@@ -3143,17 +3202,17 @@ Public Class DHDTest
 		'
 		' start
 
-			' MV=開 SV1=開 RYE1=ON DOX33=ON
-			ExDio_Output( EXSdoRYE1,	DIO_ON )
+		' MV=開 SV1=開 RYE1=ON DOX33=ON
+		ExDio_Output(EXSdoRYE1, DIO_ON)
 
-			' G1=閉 SV2=閉 RYE2=OFF DOX34=OFF
-			ExDio_Output( EXSdoRYE2,	DIO_OFF )
+		' G1=閉 SV2=閉 RYE2=OFF DOX34=OFF
+		ExDio_Output(EXSdoRYE2, DIO_OFF)
 
-			' G4=開 SV3=閉 RYE3=ON DOX35=ON
-			ExDio_Output( EXSdoRYE3,	DIO_ON )
+		' G4=開 SV3=閉 RYE3=ON DOX35=ON
+		ExDio_Output(EXSdoRYE3, DIO_ON)
 
-			' LV=閉 SV4=OFF RYE4=OFF DOX36=OFF
-			ExDio_Output( EXSdoRYE4,	DIO_OFF )
+		' LV=閉 SV4=OFF RYE4=OFF DOX36=OFF
+		ExDio_Output(EXSdoRYE4, DIO_OFF)
 
 		' end
 
@@ -3161,12 +3220,12 @@ Public Class DHDTest
 		'
 		'	パトライト点灯
 		'
-		PTLctl			= PTLctlYELon
+		PTLctl = PTLctlYELon
 
 
 
 		' ログ表示リストビューに１件追加
-		FrmLog.LogDspAdd( "", "検査開始", Color.Blue )
+		FrmLog.LogDspAdd("", "検査開始", Color.Blue)
 
 
 		'
@@ -3178,13 +3237,13 @@ Public Class DHDTest
 			'
 			'	大気圧測定
 			'
-			tstNo			= 0
+			tstNo = 0
 
-			WriteLog( "", "LG", "tst_proc_0" )
+			WriteLog("", "LG", "tst_proc_0")
 
-			If tst_proc( 0, MESrec.dt( tstNo ), 0, BakPres ) < 0 Then
+			If tst_proc(0, MESrec.dt(tstNo), 0, BakPres) < 0 Then
 
-				ret			= -1
+				ret = -1
 
 				Exit Do
 
@@ -3195,13 +3254,13 @@ Public Class DHDTest
 			'
 			'	真空低温測定
 			'
-			tstNo			= 1
+			tstNo = 1
 
-			WriteLog( "", "LG", "tst_proc_1" )
+			WriteLog("", "LG", "tst_proc_1")
 
-			If tst_proc( 1, MESrec.dt( tstNo ), TPRS1, BakPres ) < 0 Then
+			If tst_proc(1, MESrec.dt(tstNo), TPRS1, BakPres) < 0 Then
 
-				ret			= -2
+				ret = -2
 
 				Exit Do
 
@@ -3212,9 +3271,9 @@ Public Class DHDTest
 			'
 			'	真空高温測定
 			'
-			tstNo			= 2
+			tstNo = 2
 
-			WriteLog( "", "LG", "tst_proc_2" )
+			WriteLog("", "LG", "tst_proc_2")
 
 			If tst_proc(1, MESrec.dt(tstNo), TPRS2, BakPres) < 0 Then
 
@@ -3229,13 +3288,13 @@ Public Class DHDTest
 			'
 			'	真空高温２測定
 			'
-			tstNo			= 3
+			tstNo = 3
 
-			WriteLog( "", "LG", "tst_proc_3" )
+			WriteLog("", "LG", "tst_proc_3")
 
-			If tst_proc( 1, MESrec.dt( tstNo ), TPRS2, BakPres ) < 0 Then
+			If tst_proc(1, MESrec.dt(tstNo), TPRS2, BakPres) < 0 Then
 
-				ret			= -4
+				ret = -4
 
 				Exit Do
 
@@ -3246,85 +3305,83 @@ Public Class DHDTest
 
 		'   20200716 s.harada
 		'	トーカロ対応
-		WriteLog( "", "LG", "tst_proc_end" )
+		WriteLog("", "LG", "tst_proc_end")
 
 
 		'
 		'	ＥＳＣ電源の終了
 		'
-		ESCstop( 20000, 0 )
+		ESCstop(20000, 0)
 
 
 		'
 		'	ｲﾝﾀｰﾛｯｸ信号 OFF
 		'
-		ExDio_Output( ESCdoITL1, DIO_OFF )
+		ExDio_Output(ESCdoITL1, DIO_OFF)
 
-		ExDio_Output( ESCdoITL2, DIO_OFF )
+		ExDio_Output(ESCdoITL2, DIO_OFF)
 
 
 
 		'
 		'	外部起動信号 OFF
 		'
-		ExDio_Output( ESCdoSTART1, DIO_OFF )
+		ExDio_Output(ESCdoSTART1, DIO_OFF)
 
-		ExDio_Output( ESCdoSTART2, DIO_OFF )
+		ExDio_Output(ESCdoSTART2, DIO_OFF)
 
 
 		'
 		'	PID運転停止
 		'
-		ExDio_Output( MAEdoPIDSTART, DIO_OFF )
+		ExDio_Output(MAEdoPIDSTART, DIO_OFF)
 
 
 		'
 		'	MFC SET PTに接続されているﾊﾟｿｺﾝAO出力を0Vに設定
 		'
-		AoPutV( MFCaoSETPT1, 0.0 )
+		AoPutV(MFCaoSETPT1, 0.0)
 
 
 		'
 		'	強制OPEN を解除
 		'
-		ExDio_Output( MAEdoFOPN, DIO_OFF )
+		ExDio_Output(MAEdoFOPN, DIO_OFF)
 
 
 		'
 		'	強制CLOSE を解除
 		'
-		ExDio_Output( MAEdoFCLS, DIO_OFF )
+		ExDio_Output(MAEdoFCLS, DIO_OFF)
 
 
 		'
 		'	SET PT入力を パソコンＡＯと接続
 		'
-		ExDio_Output( MAEdoRYFC, DIO_OFF )
+		ExDio_Output(MAEdoRYFC, DIO_OFF)
 
 
 		'
 		'	電極をモノポール、電極ヘッドと絶縁抵抗計を接続
 		'
-		RyHvMode( POL_MON, MES_IOS )
+		RyHvMode(POL_MON, MES_IOS)
 
 		'	※ 20200901 本バルブはトーカロ様では未装着
 		'	ウエハ裏面圧開放バルブON
 		'
-		ExDio_Output( MAEdoPRG, DIO_ON )
+		ExDio_Output(MAEdoPRG, DIO_ON)
 
 		'
 		'	トーカロ様設備対応
 		'
 		' ベント処理 20201207 y.goto サーモチラー使用CH把握の為、パラメータ追加
-		VENTproc( 1, 0 )
+		VENTproc(1, 0)
 
-		
+
 		'
 		'	総合判定
 		'
-		sts			= judgeOkNg()
-
-		MESrec.dh.okng		= sts
+		MESrec.dh.okng = judgeOkNg()
 
 
 
@@ -3336,33 +3393,33 @@ Public Class DHDTest
 
 		If ret = 0 Then
 
-			StatusDisp( 20, 8, "検査終了" )
+			StatusDisp(20, 8, "検査終了")
 
 		Else
 
-			StatusDisp( 20, 8, "中断により終了" )
+			StatusDisp(20, 8, "中断により終了")
 
 		End If
 
 		' ログ表示リストビューに１件追加
-		FrmLog.LogDspAdd( "", "検査終了", Color.Blue )
+		FrmLog.LogDspAdd("", "検査終了", Color.Blue)
 
 		'
 		'	20210308 y.goto 試験終了時にサーモチラーを停止させる
 		'	サ－モチラ－の運転停止
 		'
-		ExDio_Output( MAEdoS1RUN, DIO_OFF )
-		ExDio_Output( MAEdoS2RUN, DIO_OFF )
-		WaitTim( 10 )
+		ExDio_Output(MAEdoS1RUN, DIO_OFF)
+		ExDio_Output(MAEdoS2RUN, DIO_OFF)
+		WaitTim(10)
 
 
-		flipbz1r( OPIPyn, "検査終了" )
+		flipbz1r(OPIPyn, "検査終了")
 
 
 		'
 		'	パトライトＯＦＦ
 		'
-		PTLctl			= 0
+		PTLctl = 0
 
 
 		'
@@ -3372,78 +3429,47 @@ Public Class DHDTest
 
 
 		' 試験中画面消去
-		StatusClear( 2, 21 )
+		StatusClear(2, 21)
 
 
+		Return MESrec.dh.okng
 
-		Return sts
-
-    End Function
+	End Function
 
 
 
 	'*****
 	'	総合判定
 	'*****
-	Private Function judgeOkNg() As Integer
-
-		Dim i			As Integer
-		Dim j			As Integer
-		Dim okng		As Integer
-
-
-
-		okng			= 0
-
-
+	Private Function judgeOkNg() As Boolean
 		'
 		'	吸着力試験結果チェック
 		'
-		For i = 0 To 3
-
-			For j = 0 To MESrec.dt( i ).t2.dsiz - 1
-
-				If MESrec.dt( i ).t2.d( j ).okng >= 0 Then
-
-					okng			= MESrec.dt( i ).t2.d( j ).okng
-
-					If okng = 1 Then
-
-						Return 1
-
-					End If
-
+		For Each dt In MESrec.dt
+			If dt.t2.d Is Nothing Then
+				Continue For
+			End If
+			For Each d In dt.t2.d
+				If d.okng = False Then
+					Return False
 				End If
-
 			Next
-
 		Next
-
-
-
 		'
 		'	Ｈｅリーク量測定結果チェック
 		'
-		For i = 0 To 3
-
-			For j = 0 To MESrec.dt( i ).t3.dsiz - 1
-
-				If MESrec.dt( i ).t3.d( j ).okng >= 0 Then
-
-					okng			= MESrec.dt( i ).t3.d( j ).okng
-
-					If okng = 1 Then
-
-						Return 1
-
+		For Each dt In MESrec.dt
+			If dt.t3.d Is Nothing Then
+				Continue For
+			End If
+			For Each d In dt.t3.d
+				For Each judge In d.okng
+					If judge = False Then
+						Return False
 					End If
-
-				End If
-
+				Next
 			Next
-
 		Next
-
 
 
 		'
@@ -3452,28 +3478,18 @@ Public Class DHDTest
 		'
 		'	残留吸着力測定結果チェック
 		'
-		For i = 0 To 3
-
-			For j = 0 To MESrec.dt( i ).t4.dsiz - 1
-
-				If MESrec.dt( i ).t4.d( j ).okng >= 0 Then
-
-					okng			= MESrec.dt( i ).t4.d( j ).okng
-
-					If okng = 1 Then
-
-						Return 1
-
-					End If
-
+		For Each dt In MESrec.dt
+			If dt.t4.d Is Nothing Then
+				Continue For
+			End If
+			For Each d In dt.t4.d
+				If d.okng = False Then
+					Return False
 				End If
-
 			Next
-
 		Next
 
-
-		Return 0
+		Return True
 
 	End Function
 
@@ -6010,6 +6026,14 @@ Public Class DHDTest
 	'*****
 	'	検査実行
 	'*****
+	''' <summary>
+	''' 
+	''' </summary>
+	''' <param name="vac">[0]:大気圧、[1]:真空圧</param>
+	''' <param name="dt">試験データ</param>
+	''' <param name="tprs">検査条件・真空圧</param>
+	''' <param name="bakp">吸着停止する際の裏面圧</param>
+	''' <returns></returns>
 	Private Function tst_proc _
 	(
 		ByVal vac As Integer, _ '★真空引きするか？

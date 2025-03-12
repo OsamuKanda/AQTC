@@ -28,12 +28,15 @@ Partial Class TestItemDlg
         Me.txtIsoV = New System.Windows.Forms.TextBox()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.grpKyucyaku = New System.Windows.Forms.GroupBox()
+        Me.Label34 = New System.Windows.Forms.Label()
+        Me.cmbKyuMaxPa = New System.Windows.Forms.ComboBox()
         Me.Label24 = New System.Windows.Forms.Label()
         Me.btnKyuDel = New System.Windows.Forms.Button()
         Me.TxtKyuHe = New System.Windows.Forms.TextBox()
         Me.Label12 = New System.Windows.Forms.Label()
         Me.Label25 = New System.Windows.Forms.Label()
-        Me.txtKyuBase = New System.Windows.Forms.TextBox()
+        Me.txtKyuSecond = New System.Windows.Forms.TextBox()
+        Me.Label33 = New System.Windows.Forms.Label()
         Me.Label13 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.txtKyuV2 = New System.Windows.Forms.TextBox()
@@ -42,20 +45,25 @@ Partial Class TestItemDlg
         Me.txtKyuV1 = New System.Windows.Forms.TextBox()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.grpHeGas = New System.Windows.Forms.GroupBox()
+        Me.TxtPa6k = New System.Windows.Forms.TextBox()
+        Me.TxtPa4k = New System.Windows.Forms.TextBox()
+        Me.TxtPa3k = New System.Windows.Forms.TextBox()
+        Me.TxtPa2k = New System.Windows.Forms.TextBox()
+        Me.TxtPa1k = New System.Windows.Forms.TextBox()
+        Me.Label35 = New System.Windows.Forms.Label()
+        Me.Label32 = New System.Windows.Forms.Label()
+        Me.Label31 = New System.Windows.Forms.Label()
+        Me.Label30 = New System.Windows.Forms.Label()
+        Me.Label29 = New System.Windows.Forms.Label()
+        Me.Label26 = New System.Windows.Forms.Label()
         Me.ChkPa6k = New System.Windows.Forms.CheckBox()
         Me.ChkPa4k = New System.Windows.Forms.CheckBox()
         Me.ChkPa3k = New System.Windows.Forms.CheckBox()
         Me.ChkPa2k = New System.Windows.Forms.CheckBox()
         Me.ChkPa1k = New System.Windows.Forms.CheckBox()
-        Me.Label22 = New System.Windows.Forms.Label()
-        Me.txtLekBase2 = New System.Windows.Forms.TextBox()
         Me.btnLekDel = New System.Windows.Forms.Button()
-        Me.Label27 = New System.Windows.Forms.Label()
-        Me.Label14 = New System.Windows.Forms.Label()
-        Me.txtLekBase = New System.Windows.Forms.TextBox()
         Me.Label28 = New System.Windows.Forms.Label()
         Me.Label23 = New System.Windows.Forms.Label()
-        Me.Label15 = New System.Windows.Forms.Label()
         Me.Label10 = New System.Windows.Forms.Label()
         Me.txtLekV2 = New System.Windows.Forms.TextBox()
         Me.Label11 = New System.Windows.Forms.Label()
@@ -95,18 +103,18 @@ Partial Class TestItemDlg
         Me.grpZetsuen.Controls.Add(Me.Label3)
         Me.grpZetsuen.Location = New System.Drawing.Point(30, 50)
         Me.grpZetsuen.Name = "grpZetsuen"
-        Me.grpZetsuen.Size = New System.Drawing.Size(209, 357)
-        Me.grpZetsuen.TabIndex = 1
+        Me.grpZetsuen.Size = New System.Drawing.Size(209, 514)
+        Me.grpZetsuen.TabIndex = 2
         Me.grpZetsuen.TabStop = False
         Me.grpZetsuen.Text = "絶縁耐圧測定"
         '
         'btnIsoDel
         '
         Me.btnIsoDel.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.btnIsoDel.Location = New System.Drawing.Point(90, 327)
+        Me.btnIsoDel.Location = New System.Drawing.Point(90, 484)
         Me.btnIsoDel.Name = "btnIsoDel"
         Me.btnIsoDel.Size = New System.Drawing.Size(57, 26)
-        Me.btnIsoDel.TabIndex = 1
+        Me.btnIsoDel.TabIndex = 3
         Me.btnIsoDel.Text = "削除"
         Me.btnIsoDel.UseVisualStyleBackColor = True
         '
@@ -116,7 +124,7 @@ Partial Class TestItemDlg
         Me.Label1.Location = New System.Drawing.Point(178, 40)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(17, 16)
-        Me.Label1.TabIndex = 27
+        Me.Label1.TabIndex = 2
         Me.Label1.Text = "V"
         '
         'txtIsoV
@@ -124,7 +132,7 @@ Partial Class TestItemDlg
         Me.txtIsoV.Location = New System.Drawing.Point(115, 37)
         Me.txtIsoV.Name = "txtIsoV"
         Me.txtIsoV.Size = New System.Drawing.Size(60, 23)
-        Me.txtIsoV.TabIndex = 0
+        Me.txtIsoV.TabIndex = 1
         Me.txtIsoV.Text = "-1000"
         Me.txtIsoV.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
@@ -134,19 +142,22 @@ Partial Class TestItemDlg
         Me.Label3.Location = New System.Drawing.Point(10, 40)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(71, 16)
-        Me.Label3.TabIndex = 25
+        Me.Label3.TabIndex = 0
         Me.Label3.Text = "印加電圧"
         '
         'grpKyucyaku
         '
         Me.grpKyucyaku.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.grpKyucyaku.Controls.Add(Me.Label34)
+        Me.grpKyucyaku.Controls.Add(Me.cmbKyuMaxPa)
         Me.grpKyucyaku.Controls.Add(Me.Label24)
         Me.grpKyucyaku.Controls.Add(Me.btnKyuDel)
         Me.grpKyucyaku.Controls.Add(Me.TxtKyuHe)
         Me.grpKyucyaku.Controls.Add(Me.Label12)
         Me.grpKyucyaku.Controls.Add(Me.Label25)
-        Me.grpKyucyaku.Controls.Add(Me.txtKyuBase)
+        Me.grpKyucyaku.Controls.Add(Me.txtKyuSecond)
+        Me.grpKyucyaku.Controls.Add(Me.Label33)
         Me.grpKyucyaku.Controls.Add(Me.Label13)
         Me.grpKyucyaku.Controls.Add(Me.Label5)
         Me.grpKyucyaku.Controls.Add(Me.txtKyuV2)
@@ -154,174 +165,303 @@ Partial Class TestItemDlg
         Me.grpKyucyaku.Controls.Add(Me.Label2)
         Me.grpKyucyaku.Controls.Add(Me.txtKyuV1)
         Me.grpKyucyaku.Controls.Add(Me.Label4)
-        Me.grpKyucyaku.Location = New System.Drawing.Point(250, 50)
+        Me.grpKyucyaku.Location = New System.Drawing.Point(552, 48)
         Me.grpKyucyaku.Name = "grpKyucyaku"
-        Me.grpKyucyaku.Size = New System.Drawing.Size(262, 357)
-        Me.grpKyucyaku.TabIndex = 2
+        Me.grpKyucyaku.Size = New System.Drawing.Size(262, 514)
+        Me.grpKyucyaku.TabIndex = 4
         Me.grpKyucyaku.TabStop = False
         Me.grpKyucyaku.Text = "吸着力測定"
+        '
+        'Label34
+        '
+        Me.Label34.AutoSize = True
+        Me.Label34.Location = New System.Drawing.Point(192, 208)
+        Me.Label34.Name = "Label34"
+        Me.Label34.Size = New System.Drawing.Size(32, 16)
+        Me.Label34.TabIndex = 14
+        Me.Label34.Text = "kPa"
+        '
+        'cmbKyuMaxPa
+        '
+        Me.cmbKyuMaxPa.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cmbKyuMaxPa.FormattingEnabled = True
+        Me.cmbKyuMaxPa.Items.AddRange(New Object() {"1", "2", "3", "4", "6"})
+        Me.cmbKyuMaxPa.Location = New System.Drawing.Point(128, 200)
+        Me.cmbKyuMaxPa.Name = "cmbKyuMaxPa"
+        Me.cmbKyuMaxPa.Size = New System.Drawing.Size(56, 24)
+        Me.cmbKyuMaxPa.TabIndex = 13
         '
         'Label24
         '
         Me.Label24.AutoSize = True
-        Me.Label24.Location = New System.Drawing.Point(182, 120)
+        Me.Label24.Location = New System.Drawing.Point(192, 120)
         Me.Label24.Name = "Label24"
         Me.Label24.Size = New System.Drawing.Size(42, 16)
-        Me.Label24.TabIndex = 39
+        Me.Label24.TabIndex = 8
         Me.Label24.Text = "sccm"
         '
         'btnKyuDel
         '
         Me.btnKyuDel.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.btnKyuDel.Location = New System.Drawing.Point(119, 327)
+        Me.btnKyuDel.Location = New System.Drawing.Point(119, 484)
         Me.btnKyuDel.Name = "btnKyuDel"
         Me.btnKyuDel.Size = New System.Drawing.Size(57, 26)
-        Me.btnKyuDel.TabIndex = 4
+        Me.btnKyuDel.TabIndex = 15
         Me.btnKyuDel.Text = "削除"
         Me.btnKyuDel.UseVisualStyleBackColor = True
         '
         'TxtKyuHe
         '
-        Me.TxtKyuHe.Location = New System.Drawing.Point(119, 117)
+        Me.TxtKyuHe.Location = New System.Drawing.Point(128, 117)
         Me.TxtKyuHe.Name = "TxtKyuHe"
         Me.TxtKyuHe.Size = New System.Drawing.Size(60, 23)
-        Me.TxtKyuHe.TabIndex = 0
+        Me.TxtKyuHe.TabIndex = 7
         Me.TxtKyuHe.Text = "-1000"
         Me.TxtKyuHe.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'Label12
         '
         Me.Label12.AutoSize = True
-        Me.Label12.Location = New System.Drawing.Point(178, 160)
+        Me.Label12.Location = New System.Drawing.Point(192, 160)
         Me.Label12.Name = "Label12"
         Me.Label12.Size = New System.Drawing.Size(55, 16)
-        Me.Label12.TabIndex = 36
+        Me.Label12.TabIndex = 11
         Me.Label12.Text = "秒以下"
-        Me.Label12.Visible = False
         '
         'Label25
         '
         Me.Label25.AutoSize = True
-        Me.Label25.Location = New System.Drawing.Point(10, 120)
+        Me.Label25.Location = New System.Drawing.Point(16, 120)
         Me.Label25.Name = "Label25"
         Me.Label25.Size = New System.Drawing.Size(57, 16)
-        Me.Label25.TabIndex = 37
+        Me.Label25.TabIndex = 6
         Me.Label25.Text = "He流量"
         '
-        'txtKyuBase
+        'txtKyuSecond
         '
-        Me.txtKyuBase.Location = New System.Drawing.Point(119, 157)
-        Me.txtKyuBase.Name = "txtKyuBase"
-        Me.txtKyuBase.Size = New System.Drawing.Size(57, 23)
-        Me.txtKyuBase.TabIndex = 2
-        Me.txtKyuBase.Text = "-1000"
-        Me.txtKyuBase.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        Me.txtKyuBase.Visible = False
+        Me.txtKyuSecond.Location = New System.Drawing.Point(128, 157)
+        Me.txtKyuSecond.Name = "txtKyuSecond"
+        Me.txtKyuSecond.Size = New System.Drawing.Size(57, 23)
+        Me.txtKyuSecond.TabIndex = 10
+        Me.txtKyuSecond.Text = "-1000"
+        Me.txtKyuSecond.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        '
+        'Label33
+        '
+        Me.Label33.Font = New System.Drawing.Font("MS UI Gothic", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
+        Me.Label33.Location = New System.Drawing.Point(16, 200)
+        Me.Label33.Name = "Label33"
+        Me.Label33.Size = New System.Drawing.Size(96, 32)
+        Me.Label33.TabIndex = 12
+        Me.Label33.Text = "到達裏面圧の最大値"
         '
         'Label13
         '
         Me.Label13.AutoSize = True
-        Me.Label13.Location = New System.Drawing.Point(10, 160)
+        Me.Label13.Location = New System.Drawing.Point(16, 154)
         Me.Label13.Name = "Label13"
-        Me.Label13.Size = New System.Drawing.Size(55, 16)
-        Me.Label13.TabIndex = 34
-        Me.Label13.Text = "判定値"
-        Me.Label13.Visible = False
+        Me.Label13.Size = New System.Drawing.Size(87, 32)
+        Me.Label13.TabIndex = 9
+        Me.Label13.Text = "合格判定値" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "(3kPaまで)" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10)
         '
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(182, 80)
+        Me.Label5.Location = New System.Drawing.Point(192, 80)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(17, 16)
-        Me.Label5.TabIndex = 33
+        Me.Label5.TabIndex = 5
         Me.Label5.Text = "V"
         '
         'txtKyuV2
         '
-        Me.txtKyuV2.Location = New System.Drawing.Point(119, 77)
+        Me.txtKyuV2.Location = New System.Drawing.Point(128, 77)
         Me.txtKyuV2.Name = "txtKyuV2"
         Me.txtKyuV2.Size = New System.Drawing.Size(60, 23)
-        Me.txtKyuV2.TabIndex = 1
+        Me.txtKyuV2.TabIndex = 4
         Me.txtKyuV2.Text = "-1000"
         Me.txtKyuV2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'Label6
         '
         Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(10, 80)
+        Me.Label6.Location = New System.Drawing.Point(16, 80)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(82, 16)
-        Me.Label6.TabIndex = 31
+        Me.Label6.TabIndex = 3
         Me.Label6.Text = "印加電圧２"
         '
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(182, 40)
+        Me.Label2.Location = New System.Drawing.Point(192, 40)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(17, 16)
-        Me.Label2.TabIndex = 30
+        Me.Label2.TabIndex = 2
         Me.Label2.Text = "V"
         '
         'txtKyuV1
         '
-        Me.txtKyuV1.Location = New System.Drawing.Point(119, 37)
+        Me.txtKyuV1.Location = New System.Drawing.Point(128, 37)
         Me.txtKyuV1.Name = "txtKyuV1"
         Me.txtKyuV1.Size = New System.Drawing.Size(60, 23)
-        Me.txtKyuV1.TabIndex = 0
+        Me.txtKyuV1.TabIndex = 1
         Me.txtKyuV1.Text = "-1000"
         Me.txtKyuV1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(10, 40)
+        Me.Label4.Location = New System.Drawing.Point(16, 40)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(82, 16)
-        Me.Label4.TabIndex = 28
+        Me.Label4.TabIndex = 0
         Me.Label4.Text = "印加電圧１"
         '
         'grpHeGas
         '
         Me.grpHeGas.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.grpHeGas.Controls.Add(Me.TxtPa6k)
+        Me.grpHeGas.Controls.Add(Me.TxtPa4k)
+        Me.grpHeGas.Controls.Add(Me.TxtPa3k)
+        Me.grpHeGas.Controls.Add(Me.TxtPa2k)
+        Me.grpHeGas.Controls.Add(Me.TxtPa1k)
+        Me.grpHeGas.Controls.Add(Me.Label35)
+        Me.grpHeGas.Controls.Add(Me.Label32)
+        Me.grpHeGas.Controls.Add(Me.Label31)
+        Me.grpHeGas.Controls.Add(Me.Label30)
+        Me.grpHeGas.Controls.Add(Me.Label29)
+        Me.grpHeGas.Controls.Add(Me.Label26)
         Me.grpHeGas.Controls.Add(Me.ChkPa6k)
         Me.grpHeGas.Controls.Add(Me.ChkPa4k)
         Me.grpHeGas.Controls.Add(Me.ChkPa3k)
         Me.grpHeGas.Controls.Add(Me.ChkPa2k)
         Me.grpHeGas.Controls.Add(Me.ChkPa1k)
-        Me.grpHeGas.Controls.Add(Me.Label22)
-        Me.grpHeGas.Controls.Add(Me.txtLekBase2)
         Me.grpHeGas.Controls.Add(Me.btnLekDel)
-        Me.grpHeGas.Controls.Add(Me.Label27)
-        Me.grpHeGas.Controls.Add(Me.Label14)
-        Me.grpHeGas.Controls.Add(Me.txtLekBase)
         Me.grpHeGas.Controls.Add(Me.Label28)
         Me.grpHeGas.Controls.Add(Me.Label23)
-        Me.grpHeGas.Controls.Add(Me.Label15)
         Me.grpHeGas.Controls.Add(Me.Label10)
         Me.grpHeGas.Controls.Add(Me.txtLekV2)
         Me.grpHeGas.Controls.Add(Me.Label11)
         Me.grpHeGas.Controls.Add(Me.Label8)
         Me.grpHeGas.Controls.Add(Me.txtLekV1)
         Me.grpHeGas.Controls.Add(Me.Label9)
-        Me.grpHeGas.Location = New System.Drawing.Point(525, 50)
+        Me.grpHeGas.Location = New System.Drawing.Point(248, 48)
         Me.grpHeGas.Name = "grpHeGas"
-        Me.grpHeGas.Size = New System.Drawing.Size(290, 357)
+        Me.grpHeGas.Size = New System.Drawing.Size(290, 514)
         Me.grpHeGas.TabIndex = 3
         Me.grpHeGas.TabStop = False
         Me.grpHeGas.Text = "Ｈｅリーク量測定"
+        '
+        'TxtPa6k
+        '
+        Me.TxtPa6k.Location = New System.Drawing.Point(120, 288)
+        Me.TxtPa6k.Name = "TxtPa6k"
+        Me.TxtPa6k.Size = New System.Drawing.Size(64, 23)
+        Me.TxtPa6k.TabIndex = 21
+        Me.TxtPa6k.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
+        '
+        'TxtPa4k
+        '
+        Me.TxtPa4k.Location = New System.Drawing.Point(120, 256)
+        Me.TxtPa4k.Name = "TxtPa4k"
+        Me.TxtPa4k.Size = New System.Drawing.Size(64, 23)
+        Me.TxtPa4k.TabIndex = 18
+        Me.TxtPa4k.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
+        '
+        'TxtPa3k
+        '
+        Me.TxtPa3k.Location = New System.Drawing.Point(120, 224)
+        Me.TxtPa3k.Name = "TxtPa3k"
+        Me.TxtPa3k.Size = New System.Drawing.Size(64, 23)
+        Me.TxtPa3k.TabIndex = 15
+        Me.TxtPa3k.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
+        '
+        'TxtPa2k
+        '
+        Me.TxtPa2k.Location = New System.Drawing.Point(120, 192)
+        Me.TxtPa2k.Name = "TxtPa2k"
+        Me.TxtPa2k.Size = New System.Drawing.Size(64, 23)
+        Me.TxtPa2k.TabIndex = 12
+        Me.TxtPa2k.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
+        '
+        'TxtPa1k
+        '
+        Me.TxtPa1k.Location = New System.Drawing.Point(120, 160)
+        Me.TxtPa1k.Name = "TxtPa1k"
+        Me.TxtPa1k.Size = New System.Drawing.Size(64, 23)
+        Me.TxtPa1k.TabIndex = 9
+        Me.TxtPa1k.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
+        '
+        'Label35
+        '
+        Me.Label35.AutoSize = True
+        Me.Label35.Location = New System.Drawing.Point(120, 128)
+        Me.Label35.Name = "Label35"
+        Me.Label35.Size = New System.Drawing.Size(55, 16)
+        Me.Label35.TabIndex = 7
+        Me.Label35.Text = "判定値"
+        '
+        'Label32
+        '
+        Me.Label32.AutoSize = True
+        Me.Label32.Font = New System.Drawing.Font("MS UI Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
+        Me.Label32.Location = New System.Drawing.Point(192, 296)
+        Me.Label32.Name = "Label32"
+        Me.Label32.Size = New System.Drawing.Size(74, 16)
+        Me.Label32.TabIndex = 22
+        Me.Label32.Text = "sccm以下"
+        '
+        'Label31
+        '
+        Me.Label31.AutoSize = True
+        Me.Label31.Font = New System.Drawing.Font("MS UI Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
+        Me.Label31.Location = New System.Drawing.Point(192, 264)
+        Me.Label31.Name = "Label31"
+        Me.Label31.Size = New System.Drawing.Size(74, 16)
+        Me.Label31.TabIndex = 19
+        Me.Label31.Text = "sccm以下"
+        '
+        'Label30
+        '
+        Me.Label30.AutoSize = True
+        Me.Label30.Font = New System.Drawing.Font("MS UI Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
+        Me.Label30.Location = New System.Drawing.Point(192, 232)
+        Me.Label30.Name = "Label30"
+        Me.Label30.Size = New System.Drawing.Size(74, 16)
+        Me.Label30.TabIndex = 16
+        Me.Label30.Text = "sccm以下"
+        '
+        'Label29
+        '
+        Me.Label29.AutoSize = True
+        Me.Label29.Font = New System.Drawing.Font("MS UI Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
+        Me.Label29.Location = New System.Drawing.Point(192, 200)
+        Me.Label29.Name = "Label29"
+        Me.Label29.Size = New System.Drawing.Size(74, 16)
+        Me.Label29.TabIndex = 13
+        Me.Label29.Text = "sccm以下"
+        '
+        'Label26
+        '
+        Me.Label26.AutoSize = True
+        Me.Label26.Font = New System.Drawing.Font("MS UI Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
+        Me.Label26.Location = New System.Drawing.Point(192, 168)
+        Me.Label26.Name = "Label26"
+        Me.Label26.Size = New System.Drawing.Size(74, 16)
+        Me.Label26.TabIndex = 10
+        Me.Label26.Text = "sccm以下"
         '
         'ChkPa6k
         '
         Me.ChkPa6k.AutoSize = True
         Me.ChkPa6k.Checked = True
         Me.ChkPa6k.CheckState = System.Windows.Forms.CheckState.Checked
-        Me.ChkPa6k.Location = New System.Drawing.Point(119, 220)
+        Me.ChkPa6k.Location = New System.Drawing.Point(32, 288)
         Me.ChkPa6k.Name = "ChkPa6k"
         Me.ChkPa6k.Size = New System.Drawing.Size(70, 20)
-        Me.ChkPa6k.TabIndex = 45
+        Me.ChkPa6k.TabIndex = 20
         Me.ChkPa6k.Text = "6.0kPa"
         Me.ChkPa6k.UseVisualStyleBackColor = True
         '
@@ -330,10 +470,10 @@ Partial Class TestItemDlg
         Me.ChkPa4k.AutoSize = True
         Me.ChkPa4k.Checked = True
         Me.ChkPa4k.CheckState = System.Windows.Forms.CheckState.Checked
-        Me.ChkPa4k.Location = New System.Drawing.Point(119, 194)
+        Me.ChkPa4k.Location = New System.Drawing.Point(32, 256)
         Me.ChkPa4k.Name = "ChkPa4k"
         Me.ChkPa4k.Size = New System.Drawing.Size(70, 20)
-        Me.ChkPa4k.TabIndex = 45
+        Me.ChkPa4k.TabIndex = 17
         Me.ChkPa4k.Text = "4.0kPa"
         Me.ChkPa4k.UseVisualStyleBackColor = True
         '
@@ -342,10 +482,10 @@ Partial Class TestItemDlg
         Me.ChkPa3k.AutoSize = True
         Me.ChkPa3k.Checked = True
         Me.ChkPa3k.CheckState = System.Windows.Forms.CheckState.Checked
-        Me.ChkPa3k.Location = New System.Drawing.Point(119, 168)
+        Me.ChkPa3k.Location = New System.Drawing.Point(32, 224)
         Me.ChkPa3k.Name = "ChkPa3k"
         Me.ChkPa3k.Size = New System.Drawing.Size(70, 20)
-        Me.ChkPa3k.TabIndex = 45
+        Me.ChkPa3k.TabIndex = 14
         Me.ChkPa3k.Text = "3.0kPa"
         Me.ChkPa3k.UseVisualStyleBackColor = True
         '
@@ -354,10 +494,10 @@ Partial Class TestItemDlg
         Me.ChkPa2k.AutoSize = True
         Me.ChkPa2k.Checked = True
         Me.ChkPa2k.CheckState = System.Windows.Forms.CheckState.Checked
-        Me.ChkPa2k.Location = New System.Drawing.Point(119, 142)
+        Me.ChkPa2k.Location = New System.Drawing.Point(32, 192)
         Me.ChkPa2k.Name = "ChkPa2k"
         Me.ChkPa2k.Size = New System.Drawing.Size(70, 20)
-        Me.ChkPa2k.TabIndex = 45
+        Me.ChkPa2k.TabIndex = 11
         Me.ChkPa2k.Text = "2.0kPa"
         Me.ChkPa2k.UseVisualStyleBackColor = True
         '
@@ -366,100 +506,40 @@ Partial Class TestItemDlg
         Me.ChkPa1k.AutoSize = True
         Me.ChkPa1k.Checked = True
         Me.ChkPa1k.CheckState = System.Windows.Forms.CheckState.Checked
-        Me.ChkPa1k.Location = New System.Drawing.Point(119, 115)
+        Me.ChkPa1k.Location = New System.Drawing.Point(32, 160)
         Me.ChkPa1k.Name = "ChkPa1k"
         Me.ChkPa1k.Size = New System.Drawing.Size(70, 20)
-        Me.ChkPa1k.TabIndex = 45
+        Me.ChkPa1k.TabIndex = 8
         Me.ChkPa1k.Text = "1.0kPa"
         Me.ChkPa1k.UseVisualStyleBackColor = True
-        '
-        'Label22
-        '
-        Me.Label22.AutoSize = True
-        Me.Label22.Location = New System.Drawing.Point(187, 256)
-        Me.Label22.Name = "Label22"
-        Me.Label22.Size = New System.Drawing.Size(74, 16)
-        Me.Label22.TabIndex = 44
-        Me.Label22.Text = "sccm以下"
-        Me.Label22.Visible = False
-        '
-        'txtLekBase2
-        '
-        Me.txtLekBase2.Location = New System.Drawing.Point(123, 292)
-        Me.txtLekBase2.Name = "txtLekBase2"
-        Me.txtLekBase2.Size = New System.Drawing.Size(57, 23)
-        Me.txtLekBase2.TabIndex = 0
-        Me.txtLekBase2.Text = "-1000"
-        Me.txtLekBase2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        Me.txtLekBase2.Visible = False
         '
         'btnLekDel
         '
         Me.btnLekDel.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.btnLekDel.Location = New System.Drawing.Point(119, 327)
+        Me.btnLekDel.Location = New System.Drawing.Point(119, 484)
         Me.btnLekDel.Name = "btnLekDel"
         Me.btnLekDel.Size = New System.Drawing.Size(57, 26)
-        Me.btnLekDel.TabIndex = 4
+        Me.btnLekDel.TabIndex = 24
         Me.btnLekDel.Text = "削除"
         Me.btnLekDel.UseVisualStyleBackColor = True
-        '
-        'Label27
-        '
-        Me.Label27.AutoSize = True
-        Me.Label27.Location = New System.Drawing.Point(14, 252)
-        Me.Label27.Name = "Label27"
-        Me.Label27.Size = New System.Drawing.Size(98, 16)
-        Me.Label27.TabIndex = 43
-        Me.Label27.Text = "判定値(1kPa)"
-        Me.Label27.Visible = False
-        '
-        'Label14
-        '
-        Me.Label14.AutoSize = True
-        Me.Label14.Location = New System.Drawing.Point(187, 295)
-        Me.Label14.Name = "Label14"
-        Me.Label14.Size = New System.Drawing.Size(74, 16)
-        Me.Label14.TabIndex = 39
-        Me.Label14.Text = "sccm以下"
-        Me.Label14.Visible = False
-        '
-        'txtLekBase
-        '
-        Me.txtLekBase.Location = New System.Drawing.Point(123, 252)
-        Me.txtLekBase.Name = "txtLekBase"
-        Me.txtLekBase.Size = New System.Drawing.Size(57, 23)
-        Me.txtLekBase.TabIndex = 2
-        Me.txtLekBase.Text = "-1000"
-        Me.txtLekBase.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        Me.txtLekBase.Visible = False
         '
         'Label28
         '
         Me.Label28.AutoSize = True
-        Me.Label28.Location = New System.Drawing.Point(10, 275)
+        Me.Label28.Location = New System.Drawing.Point(16, 336)
         Me.Label28.Name = "Label28"
         Me.Label28.Size = New System.Drawing.Size(241, 16)
-        Me.Label28.TabIndex = 37
+        Me.Label28.TabIndex = 23
         Me.Label28.Text = "※測定する圧力にチェックをいれること"
         '
         'Label23
         '
         Me.Label23.AutoSize = True
-        Me.Label23.Location = New System.Drawing.Point(8, 116)
+        Me.Label23.Location = New System.Drawing.Point(16, 128)
         Me.Label23.Name = "Label23"
         Me.Label23.Size = New System.Drawing.Size(55, 16)
-        Me.Label23.TabIndex = 37
+        Me.Label23.TabIndex = 6
         Me.Label23.Text = "測定圧"
-        '
-        'Label15
-        '
-        Me.Label15.AutoSize = True
-        Me.Label15.Location = New System.Drawing.Point(14, 295)
-        Me.Label15.Name = "Label15"
-        Me.Label15.Size = New System.Drawing.Size(98, 16)
-        Me.Label15.TabIndex = 37
-        Me.Label15.Text = "判定値(2kPa)"
-        Me.Label15.Visible = False
         '
         'Label10
         '
@@ -467,7 +547,7 @@ Partial Class TestItemDlg
         Me.Label10.Location = New System.Drawing.Point(187, 80)
         Me.Label10.Name = "Label10"
         Me.Label10.Size = New System.Drawing.Size(17, 16)
-        Me.Label10.TabIndex = 33
+        Me.Label10.TabIndex = 5
         Me.Label10.Text = "V"
         '
         'txtLekV2
@@ -475,17 +555,17 @@ Partial Class TestItemDlg
         Me.txtLekV2.Location = New System.Drawing.Point(119, 77)
         Me.txtLekV2.Name = "txtLekV2"
         Me.txtLekV2.Size = New System.Drawing.Size(60, 23)
-        Me.txtLekV2.TabIndex = 1
+        Me.txtLekV2.TabIndex = 4
         Me.txtLekV2.Text = "-1000"
         Me.txtLekV2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'Label11
         '
         Me.Label11.AutoSize = True
-        Me.Label11.Location = New System.Drawing.Point(10, 80)
+        Me.Label11.Location = New System.Drawing.Point(16, 80)
         Me.Label11.Name = "Label11"
         Me.Label11.Size = New System.Drawing.Size(82, 16)
-        Me.Label11.TabIndex = 31
+        Me.Label11.TabIndex = 3
         Me.Label11.Text = "印加電圧２"
         '
         'Label8
@@ -494,7 +574,7 @@ Partial Class TestItemDlg
         Me.Label8.Location = New System.Drawing.Point(187, 40)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(17, 16)
-        Me.Label8.TabIndex = 30
+        Me.Label8.TabIndex = 2
         Me.Label8.Text = "V"
         '
         'txtLekV1
@@ -502,28 +582,28 @@ Partial Class TestItemDlg
         Me.txtLekV1.Location = New System.Drawing.Point(119, 37)
         Me.txtLekV1.Name = "txtLekV1"
         Me.txtLekV1.Size = New System.Drawing.Size(60, 23)
-        Me.txtLekV1.TabIndex = 0
+        Me.txtLekV1.TabIndex = 1
         Me.txtLekV1.Text = "-1000"
         Me.txtLekV1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'Label9
         '
         Me.Label9.AutoSize = True
-        Me.Label9.Location = New System.Drawing.Point(10, 40)
+        Me.Label9.Location = New System.Drawing.Point(16, 40)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(82, 16)
-        Me.Label9.TabIndex = 28
+        Me.Label9.TabIndex = 0
         Me.Label9.Text = "印加電圧１"
         '
         'btnCancel
         '
         Me.btnCancel.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.btnCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel
-        Me.btnCancel.Location = New System.Drawing.Point(1019, 415)
+        Me.btnCancel.Location = New System.Drawing.Point(1019, 572)
         Me.btnCancel.Margin = New System.Windows.Forms.Padding(4)
         Me.btnCancel.Name = "btnCancel"
         Me.btnCancel.Size = New System.Drawing.Size(79, 36)
-        Me.btnCancel.TabIndex = 6
+        Me.btnCancel.TabIndex = 9
         Me.btnCancel.Text = "戻る"
         Me.btnCancel.UseVisualStyleBackColor = True
         '
@@ -531,11 +611,11 @@ Partial Class TestItemDlg
         '
         Me.btnSet.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.btnSet.DialogResult = System.Windows.Forms.DialogResult.OK
-        Me.btnSet.Location = New System.Drawing.Point(929, 415)
+        Me.btnSet.Location = New System.Drawing.Point(929, 572)
         Me.btnSet.Margin = New System.Windows.Forms.Padding(4)
         Me.btnSet.Name = "btnSet"
         Me.btnSet.Size = New System.Drawing.Size(79, 36)
-        Me.btnSet.TabIndex = 5
+        Me.btnSet.TabIndex = 8
         Me.btnSet.Text = "変更"
         Me.btnSet.UseVisualStyleBackColor = True
         '
@@ -543,11 +623,11 @@ Partial Class TestItemDlg
         '
         Me.btnAdd.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.btnAdd.DialogResult = System.Windows.Forms.DialogResult.OK
-        Me.btnAdd.Location = New System.Drawing.Point(745, 415)
+        Me.btnAdd.Location = New System.Drawing.Point(745, 572)
         Me.btnAdd.Margin = New System.Windows.Forms.Padding(4)
         Me.btnAdd.Name = "btnAdd"
         Me.btnAdd.Size = New System.Drawing.Size(79, 36)
-        Me.btnAdd.TabIndex = 7
+        Me.btnAdd.TabIndex = 6
         Me.btnAdd.Text = "追加"
         Me.btnAdd.UseVisualStyleBackColor = True
         '
@@ -557,7 +637,7 @@ Partial Class TestItemDlg
         Me.Label7.Location = New System.Drawing.Point(34, 20)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(103, 16)
-        Me.Label7.TabIndex = 8
+        Me.Label7.TabIndex = 0
         Me.Label7.Text = "電圧印加箇所"
         '
         'cboVinPos
@@ -567,17 +647,17 @@ Partial Class TestItemDlg
         Me.cboVinPos.Margin = New System.Windows.Forms.Padding(4)
         Me.cboVinPos.Name = "cboVinPos"
         Me.cboVinPos.Size = New System.Drawing.Size(341, 24)
-        Me.cboVinPos.TabIndex = 0
+        Me.cboVinPos.TabIndex = 1
         '
         'btnDelete
         '
         Me.btnDelete.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.btnDelete.DialogResult = System.Windows.Forms.DialogResult.OK
-        Me.btnDelete.Location = New System.Drawing.Point(842, 415)
+        Me.btnDelete.Location = New System.Drawing.Point(842, 572)
         Me.btnDelete.Margin = New System.Windows.Forms.Padding(4)
         Me.btnDelete.Name = "btnDelete"
         Me.btnDelete.Size = New System.Drawing.Size(79, 36)
-        Me.btnDelete.TabIndex = 8
+        Me.btnDelete.TabIndex = 7
         Me.btnDelete.Text = "全削除"
         Me.btnDelete.UseVisualStyleBackColor = True
         '
@@ -597,18 +677,18 @@ Partial Class TestItemDlg
         Me.grpZanKyucyaku.Controls.Add(Me.Label21)
         Me.grpZanKyucyaku.Location = New System.Drawing.Point(830, 51)
         Me.grpZanKyucyaku.Name = "grpZanKyucyaku"
-        Me.grpZanKyucyaku.Size = New System.Drawing.Size(262, 357)
-        Me.grpZanKyucyaku.TabIndex = 4
+        Me.grpZanKyucyaku.Size = New System.Drawing.Size(262, 514)
+        Me.grpZanKyucyaku.TabIndex = 5
         Me.grpZanKyucyaku.TabStop = False
         Me.grpZanKyucyaku.Text = "残留吸着力測定"
         '
         'btnZKyuDel
         '
         Me.btnZKyuDel.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.btnZKyuDel.Location = New System.Drawing.Point(119, 327)
+        Me.btnZKyuDel.Location = New System.Drawing.Point(119, 484)
         Me.btnZKyuDel.Name = "btnZKyuDel"
         Me.btnZKyuDel.Size = New System.Drawing.Size(57, 26)
-        Me.btnZKyuDel.TabIndex = 3
+        Me.btnZKyuDel.TabIndex = 9
         Me.btnZKyuDel.Text = "削除"
         Me.btnZKyuDel.UseVisualStyleBackColor = True
         '
@@ -618,29 +698,26 @@ Partial Class TestItemDlg
         Me.Label16.Location = New System.Drawing.Point(178, 120)
         Me.Label16.Name = "Label16"
         Me.Label16.Size = New System.Drawing.Size(57, 16)
-        Me.Label16.TabIndex = 36
+        Me.Label16.TabIndex = 8
         Me.Label16.Text = "Pa以下"
-        Me.Label16.Visible = False
         '
         'txtZKyuBase
         '
         Me.txtZKyuBase.Location = New System.Drawing.Point(119, 117)
         Me.txtZKyuBase.Name = "txtZKyuBase"
         Me.txtZKyuBase.Size = New System.Drawing.Size(57, 23)
-        Me.txtZKyuBase.TabIndex = 2
+        Me.txtZKyuBase.TabIndex = 7
         Me.txtZKyuBase.Text = "-1000"
         Me.txtZKyuBase.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        Me.txtZKyuBase.Visible = False
         '
         'Label17
         '
         Me.Label17.AutoSize = True
         Me.Label17.Location = New System.Drawing.Point(10, 120)
         Me.Label17.Name = "Label17"
-        Me.Label17.Size = New System.Drawing.Size(55, 16)
-        Me.Label17.TabIndex = 34
-        Me.Label17.Text = "判定値"
-        Me.Label17.Visible = False
+        Me.Label17.Size = New System.Drawing.Size(87, 16)
+        Me.Label17.TabIndex = 6
+        Me.Label17.Text = "合否判定値"
         '
         'Label18
         '
@@ -648,7 +725,7 @@ Partial Class TestItemDlg
         Me.Label18.Location = New System.Drawing.Point(182, 80)
         Me.Label18.Name = "Label18"
         Me.Label18.Size = New System.Drawing.Size(17, 16)
-        Me.Label18.TabIndex = 33
+        Me.Label18.TabIndex = 5
         Me.Label18.Text = "V"
         '
         'txtZKyuV2
@@ -656,7 +733,7 @@ Partial Class TestItemDlg
         Me.txtZKyuV2.Location = New System.Drawing.Point(119, 77)
         Me.txtZKyuV2.Name = "txtZKyuV2"
         Me.txtZKyuV2.Size = New System.Drawing.Size(60, 23)
-        Me.txtZKyuV2.TabIndex = 1
+        Me.txtZKyuV2.TabIndex = 4
         Me.txtZKyuV2.Text = "-1000"
         Me.txtZKyuV2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
@@ -666,7 +743,7 @@ Partial Class TestItemDlg
         Me.Label19.Location = New System.Drawing.Point(10, 80)
         Me.Label19.Name = "Label19"
         Me.Label19.Size = New System.Drawing.Size(82, 16)
-        Me.Label19.TabIndex = 31
+        Me.Label19.TabIndex = 3
         Me.Label19.Text = "印加電圧２"
         '
         'Label20
@@ -675,7 +752,7 @@ Partial Class TestItemDlg
         Me.Label20.Location = New System.Drawing.Point(182, 40)
         Me.Label20.Name = "Label20"
         Me.Label20.Size = New System.Drawing.Size(17, 16)
-        Me.Label20.TabIndex = 30
+        Me.Label20.TabIndex = 2
         Me.Label20.Text = "V"
         '
         'txtZKyuV1
@@ -683,7 +760,7 @@ Partial Class TestItemDlg
         Me.txtZKyuV1.Location = New System.Drawing.Point(119, 37)
         Me.txtZKyuV1.Name = "txtZKyuV1"
         Me.txtZKyuV1.Size = New System.Drawing.Size(60, 23)
-        Me.txtZKyuV1.TabIndex = 0
+        Me.txtZKyuV1.TabIndex = 1
         Me.txtZKyuV1.Text = "-1000"
         Me.txtZKyuV1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
@@ -693,7 +770,7 @@ Partial Class TestItemDlg
         Me.Label21.Location = New System.Drawing.Point(10, 40)
         Me.Label21.Name = "Label21"
         Me.Label21.Size = New System.Drawing.Size(82, 16)
-        Me.Label21.TabIndex = 28
+        Me.Label21.TabIndex = 0
         Me.Label21.Text = "印加電圧１"
         '
         'TestItemDlg
@@ -701,7 +778,7 @@ Partial Class TestItemDlg
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.Control
-        Me.ClientSize = New System.Drawing.Size(1124, 461)
+        Me.ClientSize = New System.Drawing.Size(1124, 618)
         Me.Controls.Add(Me.grpZanKyucyaku)
         Me.Controls.Add(Me.btnDelete)
         Me.Controls.Add(Me.cboVinPos)
@@ -740,7 +817,7 @@ Partial Class TestItemDlg
     Friend WithEvents Label7 As System.Windows.Forms.Label
     Friend WithEvents cboVinPos As System.Windows.Forms.ComboBox
     Friend WithEvents Label12 As System.Windows.Forms.Label
-    Friend WithEvents txtKyuBase As System.Windows.Forms.TextBox
+    Friend WithEvents txtKyuSecond As System.Windows.Forms.TextBox
     Friend WithEvents Label13 As System.Windows.Forms.Label
     Friend WithEvents Label5 As System.Windows.Forms.Label
     Friend WithEvents txtKyuV2 As System.Windows.Forms.TextBox
@@ -748,9 +825,6 @@ Partial Class TestItemDlg
     Friend WithEvents Label2 As System.Windows.Forms.Label
     Friend WithEvents txtKyuV1 As System.Windows.Forms.TextBox
     Friend WithEvents Label4 As System.Windows.Forms.Label
-    Friend WithEvents Label14 As System.Windows.Forms.Label
-    Friend WithEvents txtLekBase As System.Windows.Forms.TextBox
-    Friend WithEvents Label15 As System.Windows.Forms.Label
     Friend WithEvents Label10 As System.Windows.Forms.Label
     Friend WithEvents txtLekV2 As System.Windows.Forms.TextBox
     Friend WithEvents Label11 As System.Windows.Forms.Label
@@ -761,28 +835,39 @@ Partial Class TestItemDlg
     Friend WithEvents btnIsoDel As System.Windows.Forms.Button
     Friend WithEvents btnKyuDel As System.Windows.Forms.Button
     Friend WithEvents btnLekDel As System.Windows.Forms.Button
-	Friend WithEvents Label24 As Label
-	Friend WithEvents TxtKyuHe As TextBox
-	Friend WithEvents Label25 As Label
-	Friend WithEvents txtLekBase2 As TextBox
-	Friend WithEvents Label27 As Label
-	Friend WithEvents grpZanKyucyaku As GroupBox
-	Friend WithEvents btnZKyuDel As Button
-	Friend WithEvents Label16 As Label
-	Friend WithEvents txtZKyuBase As TextBox
-	Friend WithEvents Label17 As Label
-	Friend WithEvents Label18 As Label
-	Friend WithEvents txtZKyuV2 As TextBox
-	Friend WithEvents Label19 As Label
-	Friend WithEvents Label20 As Label
-	Friend WithEvents txtZKyuV1 As TextBox
-	Friend WithEvents Label21 As Label
-	Friend WithEvents Label22 As Label
-	Friend WithEvents ChkPa1k As CheckBox
-	Friend WithEvents Label23 As Label
+    Friend WithEvents Label24 As Label
+    Friend WithEvents TxtKyuHe As TextBox
+    Friend WithEvents Label25 As Label
+    Friend WithEvents grpZanKyucyaku As GroupBox
+    Friend WithEvents btnZKyuDel As Button
+    Friend WithEvents Label16 As Label
+    Friend WithEvents txtZKyuBase As TextBox
+    Friend WithEvents Label17 As Label
+    Friend WithEvents Label18 As Label
+    Friend WithEvents txtZKyuV2 As TextBox
+    Friend WithEvents Label19 As Label
+    Friend WithEvents Label20 As Label
+    Friend WithEvents txtZKyuV1 As TextBox
+    Friend WithEvents Label21 As Label
+    Friend WithEvents ChkPa1k As CheckBox
+    Friend WithEvents Label23 As Label
     Friend WithEvents ChkPa2k As CheckBox
     Friend WithEvents ChkPa6k As CheckBox
     Friend WithEvents ChkPa4k As CheckBox
     Friend WithEvents ChkPa3k As CheckBox
     Friend WithEvents Label28 As Label
+    Friend WithEvents Label32 As Label
+    Friend WithEvents Label31 As Label
+    Friend WithEvents Label30 As Label
+    Friend WithEvents Label29 As Label
+    Friend WithEvents Label26 As Label
+    Friend WithEvents Label33 As Label
+    Friend WithEvents Label34 As Label
+    Friend WithEvents cmbKyuMaxPa As ComboBox
+    Friend WithEvents Label35 As Label
+    Friend WithEvents TxtPa1k As TextBox
+    Friend WithEvents TxtPa6k As TextBox
+    Friend WithEvents TxtPa4k As TextBox
+    Friend WithEvents TxtPa3k As TextBox
+    Friend WithEvents TxtPa2k As TextBox
 End Class

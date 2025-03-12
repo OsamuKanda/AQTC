@@ -35,7 +35,7 @@ Partial Class TestDataSelectDlg
         Me.Label1.Location = New System.Drawing.Point(13, 32)
         Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(272, 16)
+        Me.Label1.Size = New System.Drawing.Size(337, 20)
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "変更するデータファイルを選択してください。"
         '
@@ -45,7 +45,7 @@ Partial Class TestDataSelectDlg
         Me.cboDHead.Location = New System.Drawing.Point(17, 76)
         Me.cboDHead.Margin = New System.Windows.Forms.Padding(4)
         Me.cboDHead.Name = "cboDHead"
-        Me.cboDHead.Size = New System.Drawing.Size(536, 24)
+        Me.cboDHead.Size = New System.Drawing.Size(536, 28)
         Me.cboDHead.TabIndex = 5
         '
         'btnOk
@@ -74,7 +74,7 @@ Partial Class TestDataSelectDlg
         '
         'TestDataSelectDlg
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 16.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(11.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.Control
         Me.ClientSize = New System.Drawing.Size(568, 182)

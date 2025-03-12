@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class DHDTest
     Inherits System.Windows.Forms.Form
 
     'フォームがコンポーネントの一覧をクリーンアップするために dispose をオーバーライドします。
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,7 +20,7 @@ Partial Class DHDTest
     'メモ: 以下のプロシージャは Windows フォーム デザイナーで必要です。
     'Windows フォーム デザイナーを使用して変更できます。  
     'コード エディターを使って変更しないでください。
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
@@ -40,6 +40,61 @@ Partial Class DHDTest
         Dim DataGridViewCellStyle15 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle16 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle17 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle35 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle36 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle37 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle38 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle39 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle40 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle41 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle69 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle70 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle71 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle72 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle73 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle74 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle75 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle124 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle125 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle126 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle127 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle128 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle129 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle130 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle131 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle132 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle133 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle134 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle135 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle136 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle137 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle138 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle139 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle140 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle141 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle142 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle143 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle144 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle145 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle146 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle147 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle148 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle149 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle150 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle151 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle152 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle153 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle154 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle155 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle156 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle157 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle158 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle159 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle160 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle161 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle162 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle163 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle164 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle18 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle19 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle20 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
@@ -57,13 +112,54 @@ Partial Class DHDTest
         Dim DataGridViewCellStyle32 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle33 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle34 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle35 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle36 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle37 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle38 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle39 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle40 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle41 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle100 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle101 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle102 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle103 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle104 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle105 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle106 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle107 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle108 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle109 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle110 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle111 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle112 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle113 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle114 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle115 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle116 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle117 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle118 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle119 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle120 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle121 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle122 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle123 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle83 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle84 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle85 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle86 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle87 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle88 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle89 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle90 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle91 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle92 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle93 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle94 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle95 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle96 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle97 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle98 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle99 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle76 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle77 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle78 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle79 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle80 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle81 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle82 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle42 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle43 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle44 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
@@ -91,78 +187,6 @@ Partial Class DHDTest
         Dim DataGridViewCellStyle66 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle67 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle68 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle69 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle70 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle71 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle72 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle73 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle74 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle75 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle76 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle77 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle78 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle79 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle80 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle81 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle82 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle83 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle84 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle85 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle86 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle87 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle88 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle89 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle90 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle91 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle92 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle93 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle94 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle95 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle96 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle97 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle98 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle99 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle100 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle101 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle102 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle103 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle104 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle105 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle106 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle107 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle108 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle109 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle110 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle111 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle112 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle113 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle114 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle115 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle116 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle117 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle118 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle119 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle120 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle121 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle122 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle123 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle124 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle125 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle126 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle127 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle128 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle129 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle130 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle131 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle132 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle133 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle134 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle135 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle136 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle137 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle138 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle139 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle140 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(DHDTest))
         Me.Label1 = New System.Windows.Forms.Label()
         Me.txtYear = New System.Windows.Forms.TextBox()
@@ -399,17 +423,6 @@ Partial Class DHDTest
         Me.DataGridViewTextBoxColumn83 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.grpHeGas1 = New System.Windows.Forms.GroupBox()
         Me.dgvHeGas1 = New System.Windows.Forms.DataGridView()
-        Me.DataGridViewTextBoxColumn15 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn16 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn20 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column17 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column18 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column19 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column20 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn18 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column21 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn19 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column22 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.grpZetsuen1 = New System.Windows.Forms.GroupBox()
         Me.dgvZetsuen1 = New System.Windows.Forms.DataGridView()
         Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -421,34 +434,13 @@ Partial Class DHDTest
         Me.Column10 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.tabPage2 = New System.Windows.Forms.TabPage()
         Me.grpHeGas2 = New System.Windows.Forms.GroupBox()
-        Me.Label89 = New System.Windows.Forms.Label()
-        Me.Label88 = New System.Windows.Forms.Label()
         Me.Label87 = New System.Windows.Forms.Label()
+        Me.Label88 = New System.Windows.Forms.Label()
+        Me.Label89 = New System.Windows.Forms.Label()
         Me.dgvHeGas2 = New System.Windows.Forms.DataGridView()
-        Me.DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn11 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column11 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column12 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column13 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column14 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn12 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column15 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn112 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column16 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.grpKyuucyaku2 = New System.Windows.Forms.GroupBox()
         Me.Label56 = New System.Windows.Forms.Label()
         Me.dgvKyuucyaku2 = New System.Windows.Forms.DataGridView()
-        Me.DataGridViewTextBoxColumn13 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn14 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn21 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn22 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn23 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn25 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn24 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn26 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.grpZanryu2 = New System.Windows.Forms.GroupBox()
         Me.dgvZanryu2 = New System.Windows.Forms.DataGridView()
         Me.DataGridViewTextBoxColumn82 = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -460,75 +452,39 @@ Partial Class DHDTest
         Me.DataGridViewTextBoxColumn89 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.grpZetsuen2 = New System.Windows.Forms.GroupBox()
         Me.dgvZetsuen2 = New System.Windows.Forms.DataGridView()
-        Me.DataGridViewTextBoxColumn27 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn28 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn29 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn30 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn31 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn32 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn33 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.tabPage3 = New System.Windows.Forms.TabPage()
         Me.grpHeGas3 = New System.Windows.Forms.GroupBox()
-        Me.Label106 = New System.Windows.Forms.Label()
-        Me.Label91 = New System.Windows.Forms.Label()
         Me.Label90 = New System.Windows.Forms.Label()
+        Me.Label91 = New System.Windows.Forms.Label()
+        Me.Label106 = New System.Windows.Forms.Label()
         Me.dgvHeGas3 = New System.Windows.Forms.DataGridView()
-        Me.DataGridViewTextBoxColumn34 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn35 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn38 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column23 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column24 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column25 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column26 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn39 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column27 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn113 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column28 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.grpKyuucyaku3 = New System.Windows.Forms.GroupBox()
         Me.Label82 = New System.Windows.Forms.Label()
         Me.dgvKyuucyaku3 = New System.Windows.Forms.DataGridView()
-        Me.DataGridViewTextBoxColumn40 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn41 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn42 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn43 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn44 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn45 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn46 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn47 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn108 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn109 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.grpZanryu3 = New System.Windows.Forms.GroupBox()
         Me.dgvZanryu3 = New System.Windows.Forms.DataGridView()
-        Me.DataGridViewTextBoxColumn90 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn91 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn92 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn93 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn94 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn95 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn96 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.grpZetsuen3 = New System.Windows.Forms.GroupBox()
         Me.dgvZetsuen3 = New System.Windows.Forms.DataGridView()
-        Me.DataGridViewTextBoxColumn48 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn49 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn50 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn51 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn52 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn53 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn54 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.tabPage4 = New System.Windows.Forms.TabPage()
         Me.grpHeGas4 = New System.Windows.Forms.GroupBox()
         Me.dgvHeGas4 = New System.Windows.Forms.DataGridView()
+        Me.DataGridViewTextBoxColumn3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn17 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn36 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn37 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn55 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn56 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn57 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn58 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn59 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column29 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column30 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column31 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column32 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn60 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column33 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn114 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column34 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn115 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn116 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn117 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn118 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn119 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.grpKyuucyaku4 = New System.Windows.Forms.GroupBox()
         Me.Label83 = New System.Windows.Forms.Label()
         Me.dgvKyuucyaku4 = New System.Windows.Forms.DataGridView()
@@ -567,6 +523,98 @@ Partial Class DHDTest
         Me.btnStop = New System.Windows.Forms.Button()
         Me.timCnt = New System.Windows.Forms.Timer(Me.components)
         Me.btnBzStop = New System.Windows.Forms.Button()
+        Me.DataGridViewTextBoxColumn15 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn16 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn18 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn19 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn20 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn120 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn121 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn122 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn123 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn124 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn125 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn126 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn127 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn128 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn129 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn130 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn131 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn40 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn41 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn42 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn43 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn44 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn45 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn46 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn47 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn108 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn109 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn90 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn91 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn92 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn93 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn94 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn95 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn96 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn48 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn49 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn50 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn51 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn52 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn53 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn54 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn34 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn35 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn38 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column23 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column24 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column25 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column26 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn39 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column27 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column39 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column40 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column41 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn113 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column28 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column42 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column43 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column44 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn27 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn28 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn29 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn30 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn31 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn32 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn33 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn11 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column11 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column12 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column13 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column14 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn12 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column15 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column35 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn112 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column16 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column36 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column37 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column38 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn13 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn14 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn21 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn22 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn23 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn25 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn24 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn26 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.grpParm.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
@@ -2744,6 +2792,7 @@ Partial Class DHDTest
         Me.dgvKyuucyaku1.Name = "dgvKyuucyaku1"
         Me.dgvKyuucyaku1.ReadOnly = True
         Me.dgvKyuucyaku1.RowHeadersVisible = False
+        Me.dgvKyuucyaku1.RowHeadersWidth = 51
         Me.dgvKyuucyaku1.RowTemplate.Height = 21
         Me.dgvKyuucyaku1.Size = New System.Drawing.Size(904, 74)
         Me.dgvKyuucyaku1.TabIndex = 3
@@ -2754,6 +2803,7 @@ Partial Class DHDTest
         DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
         Me.DataGridViewTextBoxColumn5.DefaultCellStyle = DataGridViewCellStyle1
         Me.DataGridViewTextBoxColumn5.HeaderText = "印加電圧１"
+        Me.DataGridViewTextBoxColumn5.MinimumWidth = 6
         Me.DataGridViewTextBoxColumn5.Name = "DataGridViewTextBoxColumn5"
         Me.DataGridViewTextBoxColumn5.ReadOnly = True
         Me.DataGridViewTextBoxColumn5.Width = 120
@@ -2764,6 +2814,7 @@ Partial Class DHDTest
         DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
         Me.DataGridViewTextBoxColumn6.DefaultCellStyle = DataGridViewCellStyle2
         Me.DataGridViewTextBoxColumn6.HeaderText = "印加電圧２"
+        Me.DataGridViewTextBoxColumn6.MinimumWidth = 6
         Me.DataGridViewTextBoxColumn6.Name = "DataGridViewTextBoxColumn6"
         Me.DataGridViewTextBoxColumn6.ReadOnly = True
         Me.DataGridViewTextBoxColumn6.Width = 120
@@ -2774,6 +2825,7 @@ Partial Class DHDTest
         DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
         Me.DataGridViewTextBoxColumn7.DefaultCellStyle = DataGridViewCellStyle3
         Me.DataGridViewTextBoxColumn7.HeaderText = "Ｈｅ流量 [sccm]"
+        Me.DataGridViewTextBoxColumn7.MinimumWidth = 6
         Me.DataGridViewTextBoxColumn7.Name = "DataGridViewTextBoxColumn7"
         Me.DataGridViewTextBoxColumn7.ReadOnly = True
         Me.DataGridViewTextBoxColumn7.Width = 140
@@ -2784,6 +2836,7 @@ Partial Class DHDTest
         DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
         Me.DataGridViewTextBoxColumn8.DefaultCellStyle = DataGridViewCellStyle4
         Me.DataGridViewTextBoxColumn8.HeaderText = "１kPa"
+        Me.DataGridViewTextBoxColumn8.MinimumWidth = 6
         Me.DataGridViewTextBoxColumn8.Name = "DataGridViewTextBoxColumn8"
         Me.DataGridViewTextBoxColumn8.ReadOnly = True
         Me.DataGridViewTextBoxColumn8.Width = 80
@@ -2794,6 +2847,7 @@ Partial Class DHDTest
         DataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
         Me.DataGridViewTextBoxColumn9.DefaultCellStyle = DataGridViewCellStyle5
         Me.DataGridViewTextBoxColumn9.HeaderText = "２kPa"
+        Me.DataGridViewTextBoxColumn9.MinimumWidth = 6
         Me.DataGridViewTextBoxColumn9.Name = "DataGridViewTextBoxColumn9"
         Me.DataGridViewTextBoxColumn9.ReadOnly = True
         Me.DataGridViewTextBoxColumn9.Width = 80
@@ -2804,6 +2858,7 @@ Partial Class DHDTest
         DataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
         Me.DataGridViewTextBoxColumn10.DefaultCellStyle = DataGridViewCellStyle6
         Me.DataGridViewTextBoxColumn10.HeaderText = "３kPa"
+        Me.DataGridViewTextBoxColumn10.MinimumWidth = 6
         Me.DataGridViewTextBoxColumn10.Name = "DataGridViewTextBoxColumn10"
         Me.DataGridViewTextBoxColumn10.ReadOnly = True
         Me.DataGridViewTextBoxColumn10.Width = 80
@@ -2814,6 +2869,7 @@ Partial Class DHDTest
         DataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
         Me.DataGridViewTextBoxColumn104.DefaultCellStyle = DataGridViewCellStyle7
         Me.DataGridViewTextBoxColumn104.HeaderText = "４kPa"
+        Me.DataGridViewTextBoxColumn104.MinimumWidth = 6
         Me.DataGridViewTextBoxColumn104.Name = "DataGridViewTextBoxColumn104"
         Me.DataGridViewTextBoxColumn104.ReadOnly = True
         Me.DataGridViewTextBoxColumn104.Width = 80
@@ -2824,16 +2880,18 @@ Partial Class DHDTest
         DataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
         Me.DataGridViewTextBoxColumn105.DefaultCellStyle = DataGridViewCellStyle8
         Me.DataGridViewTextBoxColumn105.HeaderText = "６kPa"
+        Me.DataGridViewTextBoxColumn105.MinimumWidth = 6
         Me.DataGridViewTextBoxColumn105.Name = "DataGridViewTextBoxColumn105"
         Me.DataGridViewTextBoxColumn105.ReadOnly = True
         Me.DataGridViewTextBoxColumn105.Width = 80
         '
         'DataGridViewTextBoxColumn106
         '
-        Me.DataGridViewTextBoxColumn106.DataPropertyName = "H_BASE"
+        Me.DataGridViewTextBoxColumn106.DataPropertyName = "H_SECOND"
         DataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
         Me.DataGridViewTextBoxColumn106.DefaultCellStyle = DataGridViewCellStyle9
         Me.DataGridViewTextBoxColumn106.HeaderText = "判定基準 [Sec]"
+        Me.DataGridViewTextBoxColumn106.MinimumWidth = 6
         Me.DataGridViewTextBoxColumn106.Name = "DataGridViewTextBoxColumn106"
         Me.DataGridViewTextBoxColumn106.ReadOnly = True
         Me.DataGridViewTextBoxColumn106.Width = 140
@@ -2844,6 +2902,7 @@ Partial Class DHDTest
         DataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
         Me.DataGridViewTextBoxColumn107.DefaultCellStyle = DataGridViewCellStyle10
         Me.DataGridViewTextBoxColumn107.HeaderText = "判定"
+        Me.DataGridViewTextBoxColumn107.MinimumWidth = 6
         Me.DataGridViewTextBoxColumn107.Name = "DataGridViewTextBoxColumn107"
         Me.DataGridViewTextBoxColumn107.ReadOnly = True
         Me.DataGridViewTextBoxColumn107.Width = 70
@@ -2852,7 +2911,7 @@ Partial Class DHDTest
         '
         Me.grpZanryu1.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.grpZanryu1.Controls.Add(Me.dgvZanryu1)
-        Me.grpZanryu1.Location = New System.Drawing.Point(5, 410)
+        Me.grpZanryu1.Location = New System.Drawing.Point(5, 408)
         Me.grpZanryu1.Name = "grpZanryu1"
         Me.grpZanryu1.Size = New System.Drawing.Size(916, 100)
         Me.grpZanryu1.TabIndex = 4
@@ -2872,6 +2931,7 @@ Partial Class DHDTest
         Me.dgvZanryu1.Location = New System.Drawing.Point(6, 20)
         Me.dgvZanryu1.Name = "dgvZanryu1"
         Me.dgvZanryu1.RowHeadersVisible = False
+        Me.dgvZanryu1.RowHeadersWidth = 51
         Me.dgvZanryu1.RowTemplate.Height = 21
         Me.dgvZanryu1.Size = New System.Drawing.Size(904, 74)
         Me.dgvZanryu1.TabIndex = 2
@@ -2882,6 +2942,7 @@ Partial Class DHDTest
         DataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
         Me.DataGridViewTextBoxColumn76.DefaultCellStyle = DataGridViewCellStyle11
         Me.DataGridViewTextBoxColumn76.HeaderText = "印加電圧１"
+        Me.DataGridViewTextBoxColumn76.MinimumWidth = 6
         Me.DataGridViewTextBoxColumn76.Name = "DataGridViewTextBoxColumn76"
         Me.DataGridViewTextBoxColumn76.ReadOnly = True
         Me.DataGridViewTextBoxColumn76.Width = 120
@@ -2892,6 +2953,7 @@ Partial Class DHDTest
         DataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
         Me.DataGridViewTextBoxColumn77.DefaultCellStyle = DataGridViewCellStyle12
         Me.DataGridViewTextBoxColumn77.HeaderText = "印加電圧２"
+        Me.DataGridViewTextBoxColumn77.MinimumWidth = 6
         Me.DataGridViewTextBoxColumn77.Name = "DataGridViewTextBoxColumn77"
         Me.DataGridViewTextBoxColumn77.ReadOnly = True
         Me.DataGridViewTextBoxColumn77.Width = 120
@@ -2902,6 +2964,7 @@ Partial Class DHDTest
         DataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
         Me.DataGridViewTextBoxColumn78.DefaultCellStyle = DataGridViewCellStyle13
         Me.DataGridViewTextBoxColumn78.HeaderText = "印加前圧力 [Pa]"
+        Me.DataGridViewTextBoxColumn78.MinimumWidth = 6
         Me.DataGridViewTextBoxColumn78.Name = "DataGridViewTextBoxColumn78"
         Me.DataGridViewTextBoxColumn78.ReadOnly = True
         Me.DataGridViewTextBoxColumn78.Width = 160
@@ -2912,6 +2975,7 @@ Partial Class DHDTest
         DataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
         Me.DataGridViewTextBoxColumn79.DefaultCellStyle = DataGridViewCellStyle14
         Me.DataGridViewTextBoxColumn79.HeaderText = "印加後圧力 [Pa]"
+        Me.DataGridViewTextBoxColumn79.MinimumWidth = 6
         Me.DataGridViewTextBoxColumn79.Name = "DataGridViewTextBoxColumn79"
         Me.DataGridViewTextBoxColumn79.ReadOnly = True
         Me.DataGridViewTextBoxColumn79.Width = 160
@@ -2922,6 +2986,7 @@ Partial Class DHDTest
         DataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
         Me.DataGridViewTextBoxColumn80.DefaultCellStyle = DataGridViewCellStyle15
         Me.DataGridViewTextBoxColumn80.HeaderText = "圧力差 [Pa]"
+        Me.DataGridViewTextBoxColumn80.MinimumWidth = 6
         Me.DataGridViewTextBoxColumn80.Name = "DataGridViewTextBoxColumn80"
         Me.DataGridViewTextBoxColumn80.ReadOnly = True
         Me.DataGridViewTextBoxColumn80.Width = 120
@@ -2932,6 +2997,7 @@ Partial Class DHDTest
         DataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
         Me.DataGridViewTextBoxColumn81.DefaultCellStyle = DataGridViewCellStyle16
         Me.DataGridViewTextBoxColumn81.HeaderText = "判定基準 [Pa]"
+        Me.DataGridViewTextBoxColumn81.MinimumWidth = 6
         Me.DataGridViewTextBoxColumn81.Name = "DataGridViewTextBoxColumn81"
         Me.DataGridViewTextBoxColumn81.ReadOnly = True
         Me.DataGridViewTextBoxColumn81.Width = 140
@@ -2942,6 +3008,7 @@ Partial Class DHDTest
         DataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
         Me.DataGridViewTextBoxColumn83.DefaultCellStyle = DataGridViewCellStyle17
         Me.DataGridViewTextBoxColumn83.HeaderText = "判定"
+        Me.DataGridViewTextBoxColumn83.MinimumWidth = 6
         Me.DataGridViewTextBoxColumn83.Name = "DataGridViewTextBoxColumn83"
         Me.DataGridViewTextBoxColumn83.ReadOnly = True
         Me.DataGridViewTextBoxColumn83.Width = 70
@@ -2966,112 +3033,14 @@ Partial Class DHDTest
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.dgvHeGas1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgvHeGas1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn15, Me.DataGridViewTextBoxColumn16, Me.DataGridViewTextBoxColumn20, Me.Column17, Me.Column18, Me.Column19, Me.Column20, Me.DataGridViewTextBoxColumn18, Me.Column21, Me.DataGridViewTextBoxColumn19, Me.Column22})
+        Me.dgvHeGas1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn15, Me.DataGridViewTextBoxColumn16, Me.DataGridViewTextBoxColumn18, Me.DataGridViewTextBoxColumn19, Me.DataGridViewTextBoxColumn20, Me.DataGridViewTextBoxColumn120, Me.DataGridViewTextBoxColumn121, Me.DataGridViewTextBoxColumn122, Me.DataGridViewTextBoxColumn123, Me.DataGridViewTextBoxColumn124, Me.DataGridViewTextBoxColumn125, Me.DataGridViewTextBoxColumn126, Me.DataGridViewTextBoxColumn127, Me.DataGridViewTextBoxColumn128, Me.DataGridViewTextBoxColumn129, Me.DataGridViewTextBoxColumn130, Me.DataGridViewTextBoxColumn131})
         Me.dgvHeGas1.Location = New System.Drawing.Point(6, 40)
         Me.dgvHeGas1.Name = "dgvHeGas1"
         Me.dgvHeGas1.RowHeadersVisible = False
+        Me.dgvHeGas1.RowHeadersWidth = 51
         Me.dgvHeGas1.RowTemplate.Height = 21
         Me.dgvHeGas1.Size = New System.Drawing.Size(904, 74)
-        Me.dgvHeGas1.TabIndex = 2
-        '
-        'DataGridViewTextBoxColumn15
-        '
-        Me.DataGridViewTextBoxColumn15.DataPropertyName = "VOLT_IN"
-        DataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        Me.DataGridViewTextBoxColumn15.DefaultCellStyle = DataGridViewCellStyle18
-        Me.DataGridViewTextBoxColumn15.HeaderText = "印加電圧１"
-        Me.DataGridViewTextBoxColumn15.Name = "DataGridViewTextBoxColumn15"
-        Me.DataGridViewTextBoxColumn15.Width = 120
-        '
-        'DataGridViewTextBoxColumn16
-        '
-        Me.DataGridViewTextBoxColumn16.DataPropertyName = "VOLT_OUT"
-        DataGridViewCellStyle19.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        Me.DataGridViewTextBoxColumn16.DefaultCellStyle = DataGridViewCellStyle19
-        Me.DataGridViewTextBoxColumn16.HeaderText = "印加電圧２"
-        Me.DataGridViewTextBoxColumn16.Name = "DataGridViewTextBoxColumn16"
-        Me.DataGridViewTextBoxColumn16.Width = 120
-        '
-        'DataGridViewTextBoxColumn20
-        '
-        Me.DataGridViewTextBoxColumn20.DataPropertyName = "LEAK"
-        DataGridViewCellStyle20.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
-        Me.DataGridViewTextBoxColumn20.DefaultCellStyle = DataGridViewCellStyle20
-        Me.DataGridViewTextBoxColumn20.HeaderText = "1kPa"
-        Me.DataGridViewTextBoxColumn20.Name = "DataGridViewTextBoxColumn20"
-        Me.DataGridViewTextBoxColumn20.Width = 70
-        '
-        'Column17
-        '
-        Me.Column17.DataPropertyName = "LEAK2"
-        DataGridViewCellStyle21.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        Me.Column17.DefaultCellStyle = DataGridViewCellStyle21
-        Me.Column17.HeaderText = "2kPa"
-        Me.Column17.Name = "Column17"
-        Me.Column17.Width = 70
-        '
-        'Column18
-        '
-        Me.Column18.DataPropertyName = "LEAK3"
-        DataGridViewCellStyle22.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        Me.Column18.DefaultCellStyle = DataGridViewCellStyle22
-        Me.Column18.HeaderText = "3kPa"
-        Me.Column18.Name = "Column18"
-        Me.Column18.Width = 70
-        '
-        'Column19
-        '
-        Me.Column19.DataPropertyName = "LEAK4"
-        DataGridViewCellStyle23.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        Me.Column19.DefaultCellStyle = DataGridViewCellStyle23
-        Me.Column19.HeaderText = "4kPa"
-        Me.Column19.Name = "Column19"
-        Me.Column19.Width = 70
-        '
-        'Column20
-        '
-        Me.Column20.DataPropertyName = "LEAK6"
-        DataGridViewCellStyle24.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        Me.Column20.DefaultCellStyle = DataGridViewCellStyle24
-        Me.Column20.HeaderText = "6kPa"
-        Me.Column20.Name = "Column20"
-        Me.Column20.Width = 70
-        '
-        'DataGridViewTextBoxColumn18
-        '
-        Me.DataGridViewTextBoxColumn18.DataPropertyName = "H_BASE"
-        DataGridViewCellStyle25.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        Me.DataGridViewTextBoxColumn18.DefaultCellStyle = DataGridViewCellStyle25
-        Me.DataGridViewTextBoxColumn18.HeaderText = "1kPa"
-        Me.DataGridViewTextBoxColumn18.Name = "DataGridViewTextBoxColumn18"
-        Me.DataGridViewTextBoxColumn18.Width = 80
-        '
-        'Column21
-        '
-        Me.Column21.DataPropertyName = "H_BASE2"
-        DataGridViewCellStyle26.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        Me.Column21.DefaultCellStyle = DataGridViewCellStyle26
-        Me.Column21.HeaderText = "2kPa"
-        Me.Column21.Name = "Column21"
-        Me.Column21.Width = 80
-        '
-        'DataGridViewTextBoxColumn19
-        '
-        Me.DataGridViewTextBoxColumn19.DataPropertyName = "HANTEI"
-        DataGridViewCellStyle27.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        Me.DataGridViewTextBoxColumn19.DefaultCellStyle = DataGridViewCellStyle27
-        Me.DataGridViewTextBoxColumn19.HeaderText = "1kPa"
-        Me.DataGridViewTextBoxColumn19.Name = "DataGridViewTextBoxColumn19"
-        Me.DataGridViewTextBoxColumn19.Width = 70
-        '
-        'Column22
-        '
-        Me.Column22.DataPropertyName = "HANTEI2"
-        DataGridViewCellStyle28.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        Me.Column22.DefaultCellStyle = DataGridViewCellStyle28
-        Me.Column22.HeaderText = "2kPa"
-        Me.Column22.Name = "Column22"
-        Me.Column22.Width = 70
+        Me.dgvHeGas1.TabIndex = 4
         '
         'grpZetsuen1
         '
@@ -3097,6 +3066,7 @@ Partial Class DHDTest
         Me.dgvZetsuen1.Name = "dgvZetsuen1"
         Me.dgvZetsuen1.ReadOnly = True
         Me.dgvZetsuen1.RowHeadersVisible = False
+        Me.dgvZetsuen1.RowHeadersWidth = 51
         Me.dgvZetsuen1.RowTemplate.Height = 21
         Me.dgvZetsuen1.Size = New System.Drawing.Size(904, 93)
         Me.dgvZetsuen1.TabIndex = 0
@@ -3104,9 +3074,10 @@ Partial Class DHDTest
         'Column1
         '
         Me.Column1.DataPropertyName = "VIN_POS"
-        DataGridViewCellStyle29.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        Me.Column1.DefaultCellStyle = DataGridViewCellStyle29
+        DataGridViewCellStyle35.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        Me.Column1.DefaultCellStyle = DataGridViewCellStyle35
         Me.Column1.HeaderText = "電圧印加箇所"
+        Me.Column1.MinimumWidth = 6
         Me.Column1.Name = "Column1"
         Me.Column1.ReadOnly = True
         Me.Column1.Width = 300
@@ -3114,45 +3085,54 @@ Partial Class DHDTest
         'Column4
         '
         Me.Column4.DataPropertyName = "VOLT_IN"
-        DataGridViewCellStyle30.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        Me.Column4.DefaultCellStyle = DataGridViewCellStyle30
+        DataGridViewCellStyle36.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        Me.Column4.DefaultCellStyle = DataGridViewCellStyle36
         Me.Column4.HeaderText = "印加電圧"
+        Me.Column4.MinimumWidth = 6
         Me.Column4.Name = "Column4"
         Me.Column4.ReadOnly = True
+        Me.Column4.Width = 125
         '
         'Column6
         '
         Me.Column6.DataPropertyName = "DENRYU"
-        DataGridViewCellStyle31.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
-        Me.Column6.DefaultCellStyle = DataGridViewCellStyle31
+        DataGridViewCellStyle37.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
+        Me.Column6.DefaultCellStyle = DataGridViewCellStyle37
         Me.Column6.HeaderText = "電流値"
+        Me.Column6.MinimumWidth = 6
         Me.Column6.Name = "Column6"
         Me.Column6.ReadOnly = True
+        Me.Column6.Width = 125
         '
         'Column7
         '
         Me.Column7.DataPropertyName = "ZETSU_R"
-        DataGridViewCellStyle32.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
-        Me.Column7.DefaultCellStyle = DataGridViewCellStyle32
+        DataGridViewCellStyle38.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
+        Me.Column7.DefaultCellStyle = DataGridViewCellStyle38
         Me.Column7.HeaderText = "絶縁抵抗"
+        Me.Column7.MinimumWidth = 6
         Me.Column7.Name = "Column7"
         Me.Column7.ReadOnly = True
+        Me.Column7.Width = 125
         '
         'Column8
         '
         Me.Column8.DataPropertyName = "H_BASE"
-        DataGridViewCellStyle33.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        Me.Column8.DefaultCellStyle = DataGridViewCellStyle33
+        DataGridViewCellStyle39.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        Me.Column8.DefaultCellStyle = DataGridViewCellStyle39
         Me.Column8.HeaderText = "判定基準"
+        Me.Column8.MinimumWidth = 6
         Me.Column8.Name = "Column8"
         Me.Column8.ReadOnly = True
+        Me.Column8.Width = 125
         '
         'Column9
         '
         Me.Column9.DataPropertyName = "HANTEI"
-        DataGridViewCellStyle34.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        Me.Column9.DefaultCellStyle = DataGridViewCellStyle34
+        DataGridViewCellStyle40.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        Me.Column9.DefaultCellStyle = DataGridViewCellStyle40
         Me.Column9.HeaderText = "判定"
+        Me.Column9.MinimumWidth = 6
         Me.Column9.Name = "Column9"
         Me.Column9.ReadOnly = True
         Me.Column9.Width = 70
@@ -3160,11 +3140,13 @@ Partial Class DHDTest
         'Column10
         '
         Me.Column10.DataPropertyName = "SINKUDO"
-        DataGridViewCellStyle35.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
-        Me.Column10.DefaultCellStyle = DataGridViewCellStyle35
+        DataGridViewCellStyle41.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
+        Me.Column10.DefaultCellStyle = DataGridViewCellStyle41
         Me.Column10.HeaderText = "真空度"
+        Me.Column10.MinimumWidth = 6
         Me.Column10.Name = "Column10"
         Me.Column10.ReadOnly = True
+        Me.Column10.Width = 125
         '
         'tabPage2
         '
@@ -3184,9 +3166,9 @@ Partial Class DHDTest
         '
         Me.grpHeGas2.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.grpHeGas2.BackColor = System.Drawing.SystemColors.Control
-        Me.grpHeGas2.Controls.Add(Me.Label89)
-        Me.grpHeGas2.Controls.Add(Me.Label88)
         Me.grpHeGas2.Controls.Add(Me.Label87)
+        Me.grpHeGas2.Controls.Add(Me.Label88)
+        Me.grpHeGas2.Controls.Add(Me.Label89)
         Me.grpHeGas2.Controls.Add(Me.dgvHeGas2)
         Me.grpHeGas2.Location = New System.Drawing.Point(5, 140)
         Me.grpHeGas2.Name = "grpHeGas2"
@@ -3196,35 +3178,35 @@ Partial Class DHDTest
         Me.grpHeGas2.Text = "Ｈｅリーク量測定　サーモチラー　20℃　電圧印加箇所　埋め込み電極－埋め込み電極（外）間"
         Me.grpHeGas2.Visible = False
         '
-        'Label89
+        'Label87
         '
-        Me.Label89.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Label89.Location = New System.Drawing.Point(757, 20)
-        Me.Label89.Name = "Label89"
-        Me.Label89.Size = New System.Drawing.Size(140, 21)
-        Me.Label89.TabIndex = 7
-        Me.Label89.Text = "判定"
-        Me.Label89.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.Label87.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Label87.Location = New System.Drawing.Point(727, 21)
+        Me.Label87.Name = "Label87"
+        Me.Label87.Size = New System.Drawing.Size(176, 21)
+        Me.Label87.TabIndex = 13
+        Me.Label87.Text = "判定"
+        Me.Label87.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'Label88
         '
         Me.Label88.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Label88.Location = New System.Drawing.Point(597, 20)
+        Me.Label88.Location = New System.Drawing.Point(427, 21)
         Me.Label88.Name = "Label88"
-        Me.Label88.Size = New System.Drawing.Size(160, 21)
-        Me.Label88.TabIndex = 6
+        Me.Label88.Size = New System.Drawing.Size(300, 21)
+        Me.Label88.TabIndex = 12
         Me.Label88.Text = "判定基準 [sccm]"
         Me.Label88.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
-        'Label87
+        'Label89
         '
-        Me.Label87.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Label87.Location = New System.Drawing.Point(247, 20)
-        Me.Label87.Name = "Label87"
-        Me.Label87.Size = New System.Drawing.Size(350, 21)
-        Me.Label87.TabIndex = 5
-        Me.Label87.Text = "リーク量 [sccm]"
-        Me.Label87.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.Label89.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Label89.Location = New System.Drawing.Point(127, 21)
+        Me.Label89.Name = "Label89"
+        Me.Label89.Size = New System.Drawing.Size(300, 21)
+        Me.Label89.TabIndex = 11
+        Me.Label89.Text = "リーク量 [sccm]"
+        Me.Label89.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'dgvHeGas2
         '
@@ -3234,112 +3216,14 @@ Partial Class DHDTest
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.dgvHeGas2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgvHeGas2.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn1, Me.DataGridViewTextBoxColumn2, Me.DataGridViewTextBoxColumn11, Me.Column11, Me.Column12, Me.Column13, Me.Column14, Me.DataGridViewTextBoxColumn12, Me.Column15, Me.DataGridViewTextBoxColumn112, Me.Column16})
+        Me.dgvHeGas2.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn1, Me.DataGridViewTextBoxColumn2, Me.DataGridViewTextBoxColumn11, Me.Column11, Me.Column12, Me.Column13, Me.Column14, Me.DataGridViewTextBoxColumn12, Me.Column15, Me.Column, Me.Column5, Me.Column35, Me.DataGridViewTextBoxColumn112, Me.Column16, Me.Column36, Me.Column37, Me.Column38})
         Me.dgvHeGas2.Location = New System.Drawing.Point(6, 40)
         Me.dgvHeGas2.Name = "dgvHeGas2"
         Me.dgvHeGas2.RowHeadersVisible = False
+        Me.dgvHeGas2.RowHeadersWidth = 51
         Me.dgvHeGas2.RowTemplate.Height = 21
         Me.dgvHeGas2.Size = New System.Drawing.Size(904, 74)
         Me.dgvHeGas2.TabIndex = 2
-        '
-        'DataGridViewTextBoxColumn1
-        '
-        Me.DataGridViewTextBoxColumn1.DataPropertyName = "VOLT_IN"
-        DataGridViewCellStyle36.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        Me.DataGridViewTextBoxColumn1.DefaultCellStyle = DataGridViewCellStyle36
-        Me.DataGridViewTextBoxColumn1.HeaderText = "印加電圧１"
-        Me.DataGridViewTextBoxColumn1.Name = "DataGridViewTextBoxColumn1"
-        Me.DataGridViewTextBoxColumn1.Width = 120
-        '
-        'DataGridViewTextBoxColumn2
-        '
-        Me.DataGridViewTextBoxColumn2.DataPropertyName = "VOLT_OUT"
-        DataGridViewCellStyle37.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        Me.DataGridViewTextBoxColumn2.DefaultCellStyle = DataGridViewCellStyle37
-        Me.DataGridViewTextBoxColumn2.HeaderText = "印加電圧２"
-        Me.DataGridViewTextBoxColumn2.Name = "DataGridViewTextBoxColumn2"
-        Me.DataGridViewTextBoxColumn2.Width = 120
-        '
-        'DataGridViewTextBoxColumn11
-        '
-        Me.DataGridViewTextBoxColumn11.DataPropertyName = "LEAK"
-        DataGridViewCellStyle38.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        Me.DataGridViewTextBoxColumn11.DefaultCellStyle = DataGridViewCellStyle38
-        Me.DataGridViewTextBoxColumn11.HeaderText = "1kPa"
-        Me.DataGridViewTextBoxColumn11.Name = "DataGridViewTextBoxColumn11"
-        Me.DataGridViewTextBoxColumn11.Width = 70
-        '
-        'Column11
-        '
-        Me.Column11.DataPropertyName = "LEAK2"
-        DataGridViewCellStyle39.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        Me.Column11.DefaultCellStyle = DataGridViewCellStyle39
-        Me.Column11.HeaderText = "2kPa"
-        Me.Column11.Name = "Column11"
-        Me.Column11.Width = 70
-        '
-        'Column12
-        '
-        Me.Column12.DataPropertyName = "LEAK3"
-        DataGridViewCellStyle40.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        Me.Column12.DefaultCellStyle = DataGridViewCellStyle40
-        Me.Column12.HeaderText = "3kPa"
-        Me.Column12.Name = "Column12"
-        Me.Column12.Width = 70
-        '
-        'Column13
-        '
-        Me.Column13.DataPropertyName = "LEAK4"
-        DataGridViewCellStyle41.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        Me.Column13.DefaultCellStyle = DataGridViewCellStyle41
-        Me.Column13.HeaderText = "4kPa"
-        Me.Column13.Name = "Column13"
-        Me.Column13.Width = 70
-        '
-        'Column14
-        '
-        Me.Column14.DataPropertyName = "LEAK6"
-        DataGridViewCellStyle42.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        Me.Column14.DefaultCellStyle = DataGridViewCellStyle42
-        Me.Column14.HeaderText = "6kPa"
-        Me.Column14.Name = "Column14"
-        Me.Column14.Width = 70
-        '
-        'DataGridViewTextBoxColumn12
-        '
-        Me.DataGridViewTextBoxColumn12.DataPropertyName = "H_BASE"
-        DataGridViewCellStyle43.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        Me.DataGridViewTextBoxColumn12.DefaultCellStyle = DataGridViewCellStyle43
-        Me.DataGridViewTextBoxColumn12.HeaderText = "1kPa"
-        Me.DataGridViewTextBoxColumn12.Name = "DataGridViewTextBoxColumn12"
-        Me.DataGridViewTextBoxColumn12.Width = 80
-        '
-        'Column15
-        '
-        Me.Column15.DataPropertyName = "H_BASE2"
-        DataGridViewCellStyle44.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        Me.Column15.DefaultCellStyle = DataGridViewCellStyle44
-        Me.Column15.HeaderText = "2kPa"
-        Me.Column15.Name = "Column15"
-        Me.Column15.Width = 80
-        '
-        'DataGridViewTextBoxColumn112
-        '
-        Me.DataGridViewTextBoxColumn112.DataPropertyName = "HANTEI"
-        DataGridViewCellStyle45.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        Me.DataGridViewTextBoxColumn112.DefaultCellStyle = DataGridViewCellStyle45
-        Me.DataGridViewTextBoxColumn112.HeaderText = "1kPa"
-        Me.DataGridViewTextBoxColumn112.Name = "DataGridViewTextBoxColumn112"
-        Me.DataGridViewTextBoxColumn112.Width = 70
-        '
-        'Column16
-        '
-        Me.Column16.DataPropertyName = "HANTEI2"
-        DataGridViewCellStyle46.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        Me.Column16.DefaultCellStyle = DataGridViewCellStyle46
-        Me.Column16.HeaderText = "2kPa"
-        Me.Column16.Name = "Column16"
-        Me.Column16.Width = 70
         '
         'grpKyuucyaku2
         '
@@ -3376,115 +3260,16 @@ Partial Class DHDTest
         Me.dgvKyuucyaku2.Name = "dgvKyuucyaku2"
         Me.dgvKyuucyaku2.ReadOnly = True
         Me.dgvKyuucyaku2.RowHeadersVisible = False
+        Me.dgvKyuucyaku2.RowHeadersWidth = 51
         Me.dgvKyuucyaku2.RowTemplate.Height = 21
         Me.dgvKyuucyaku2.Size = New System.Drawing.Size(904, 74)
         Me.dgvKyuucyaku2.TabIndex = 3
-        '
-        'DataGridViewTextBoxColumn13
-        '
-        Me.DataGridViewTextBoxColumn13.DataPropertyName = "VOLT_IN"
-        DataGridViewCellStyle47.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        Me.DataGridViewTextBoxColumn13.DefaultCellStyle = DataGridViewCellStyle47
-        Me.DataGridViewTextBoxColumn13.HeaderText = "印加電圧１"
-        Me.DataGridViewTextBoxColumn13.Name = "DataGridViewTextBoxColumn13"
-        Me.DataGridViewTextBoxColumn13.ReadOnly = True
-        Me.DataGridViewTextBoxColumn13.Width = 120
-        '
-        'DataGridViewTextBoxColumn14
-        '
-        Me.DataGridViewTextBoxColumn14.DataPropertyName = "VOLT_OUT"
-        DataGridViewCellStyle48.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        Me.DataGridViewTextBoxColumn14.DefaultCellStyle = DataGridViewCellStyle48
-        Me.DataGridViewTextBoxColumn14.HeaderText = "印加電圧２"
-        Me.DataGridViewTextBoxColumn14.Name = "DataGridViewTextBoxColumn14"
-        Me.DataGridViewTextBoxColumn14.ReadOnly = True
-        Me.DataGridViewTextBoxColumn14.Width = 120
-        '
-        'Column2
-        '
-        Me.Column2.DataPropertyName = "HE_FLOW"
-        DataGridViewCellStyle49.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        Me.Column2.DefaultCellStyle = DataGridViewCellStyle49
-        Me.Column2.HeaderText = "Ｈｅ流量 [sccm]"
-        Me.Column2.Name = "Column2"
-        Me.Column2.ReadOnly = True
-        Me.Column2.Width = 140
-        '
-        'DataGridViewTextBoxColumn21
-        '
-        Me.DataGridViewTextBoxColumn21.DataPropertyName = "TIME1"
-        DataGridViewCellStyle50.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        Me.DataGridViewTextBoxColumn21.DefaultCellStyle = DataGridViewCellStyle50
-        Me.DataGridViewTextBoxColumn21.HeaderText = "１kPa"
-        Me.DataGridViewTextBoxColumn21.Name = "DataGridViewTextBoxColumn21"
-        Me.DataGridViewTextBoxColumn21.ReadOnly = True
-        Me.DataGridViewTextBoxColumn21.Width = 80
-        '
-        'DataGridViewTextBoxColumn22
-        '
-        Me.DataGridViewTextBoxColumn22.DataPropertyName = "TIME2"
-        DataGridViewCellStyle51.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        Me.DataGridViewTextBoxColumn22.DefaultCellStyle = DataGridViewCellStyle51
-        Me.DataGridViewTextBoxColumn22.HeaderText = "２kPa"
-        Me.DataGridViewTextBoxColumn22.Name = "DataGridViewTextBoxColumn22"
-        Me.DataGridViewTextBoxColumn22.ReadOnly = True
-        Me.DataGridViewTextBoxColumn22.Width = 80
-        '
-        'DataGridViewTextBoxColumn23
-        '
-        Me.DataGridViewTextBoxColumn23.DataPropertyName = "TIME3"
-        DataGridViewCellStyle52.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        Me.DataGridViewTextBoxColumn23.DefaultCellStyle = DataGridViewCellStyle52
-        Me.DataGridViewTextBoxColumn23.HeaderText = "３kPa"
-        Me.DataGridViewTextBoxColumn23.Name = "DataGridViewTextBoxColumn23"
-        Me.DataGridViewTextBoxColumn23.ReadOnly = True
-        Me.DataGridViewTextBoxColumn23.Width = 80
-        '
-        'DataGridViewTextBoxColumn25
-        '
-        Me.DataGridViewTextBoxColumn25.DataPropertyName = "TIME4"
-        DataGridViewCellStyle53.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        Me.DataGridViewTextBoxColumn25.DefaultCellStyle = DataGridViewCellStyle53
-        Me.DataGridViewTextBoxColumn25.HeaderText = "４kPa"
-        Me.DataGridViewTextBoxColumn25.Name = "DataGridViewTextBoxColumn25"
-        Me.DataGridViewTextBoxColumn25.ReadOnly = True
-        Me.DataGridViewTextBoxColumn25.Width = 80
-        '
-        'Column3
-        '
-        Me.Column3.DataPropertyName = "TIME6"
-        DataGridViewCellStyle54.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        Me.Column3.DefaultCellStyle = DataGridViewCellStyle54
-        Me.Column3.HeaderText = "６kPa"
-        Me.Column3.Name = "Column3"
-        Me.Column3.ReadOnly = True
-        Me.Column3.Width = 80
-        '
-        'DataGridViewTextBoxColumn24
-        '
-        Me.DataGridViewTextBoxColumn24.DataPropertyName = "H_BASE"
-        DataGridViewCellStyle55.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        Me.DataGridViewTextBoxColumn24.DefaultCellStyle = DataGridViewCellStyle55
-        Me.DataGridViewTextBoxColumn24.HeaderText = "判定基準 [Sec]"
-        Me.DataGridViewTextBoxColumn24.Name = "DataGridViewTextBoxColumn24"
-        Me.DataGridViewTextBoxColumn24.ReadOnly = True
-        Me.DataGridViewTextBoxColumn24.Width = 140
-        '
-        'DataGridViewTextBoxColumn26
-        '
-        Me.DataGridViewTextBoxColumn26.DataPropertyName = "HANTEI"
-        DataGridViewCellStyle56.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        Me.DataGridViewTextBoxColumn26.DefaultCellStyle = DataGridViewCellStyle56
-        Me.DataGridViewTextBoxColumn26.HeaderText = "判定"
-        Me.DataGridViewTextBoxColumn26.Name = "DataGridViewTextBoxColumn26"
-        Me.DataGridViewTextBoxColumn26.ReadOnly = True
-        Me.DataGridViewTextBoxColumn26.Width = 70
         '
         'grpZanryu2
         '
         Me.grpZanryu2.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.grpZanryu2.Controls.Add(Me.dgvZanryu2)
-        Me.grpZanryu2.Location = New System.Drawing.Point(5, 425)
+        Me.grpZanryu2.Location = New System.Drawing.Point(5, 408)
         Me.grpZanryu2.Name = "grpZanryu2"
         Me.grpZanryu2.Size = New System.Drawing.Size(916, 100)
         Me.grpZanryu2.TabIndex = 7
@@ -3504,6 +3289,7 @@ Partial Class DHDTest
         Me.dgvZanryu2.Location = New System.Drawing.Point(6, 20)
         Me.dgvZanryu2.Name = "dgvZanryu2"
         Me.dgvZanryu2.RowHeadersVisible = False
+        Me.dgvZanryu2.RowHeadersWidth = 51
         Me.dgvZanryu2.RowTemplate.Height = 21
         Me.dgvZanryu2.Size = New System.Drawing.Size(904, 74)
         Me.dgvZanryu2.TabIndex = 2
@@ -3511,9 +3297,10 @@ Partial Class DHDTest
         'DataGridViewTextBoxColumn82
         '
         Me.DataGridViewTextBoxColumn82.DataPropertyName = "VOLT_IN"
-        DataGridViewCellStyle57.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        Me.DataGridViewTextBoxColumn82.DefaultCellStyle = DataGridViewCellStyle57
+        DataGridViewCellStyle69.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        Me.DataGridViewTextBoxColumn82.DefaultCellStyle = DataGridViewCellStyle69
         Me.DataGridViewTextBoxColumn82.HeaderText = "印加電圧１"
+        Me.DataGridViewTextBoxColumn82.MinimumWidth = 6
         Me.DataGridViewTextBoxColumn82.Name = "DataGridViewTextBoxColumn82"
         Me.DataGridViewTextBoxColumn82.ReadOnly = True
         Me.DataGridViewTextBoxColumn82.Width = 120
@@ -3521,9 +3308,10 @@ Partial Class DHDTest
         'DataGridViewTextBoxColumn84
         '
         Me.DataGridViewTextBoxColumn84.DataPropertyName = "VOLT_OUT"
-        DataGridViewCellStyle58.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        Me.DataGridViewTextBoxColumn84.DefaultCellStyle = DataGridViewCellStyle58
+        DataGridViewCellStyle70.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        Me.DataGridViewTextBoxColumn84.DefaultCellStyle = DataGridViewCellStyle70
         Me.DataGridViewTextBoxColumn84.HeaderText = "印加電圧２"
+        Me.DataGridViewTextBoxColumn84.MinimumWidth = 6
         Me.DataGridViewTextBoxColumn84.Name = "DataGridViewTextBoxColumn84"
         Me.DataGridViewTextBoxColumn84.ReadOnly = True
         Me.DataGridViewTextBoxColumn84.Width = 120
@@ -3531,9 +3319,10 @@ Partial Class DHDTest
         'DataGridViewTextBoxColumn85
         '
         Me.DataGridViewTextBoxColumn85.DataPropertyName = "PRESS1"
-        DataGridViewCellStyle59.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
-        Me.DataGridViewTextBoxColumn85.DefaultCellStyle = DataGridViewCellStyle59
+        DataGridViewCellStyle71.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
+        Me.DataGridViewTextBoxColumn85.DefaultCellStyle = DataGridViewCellStyle71
         Me.DataGridViewTextBoxColumn85.HeaderText = "印加前圧力 [Pa]"
+        Me.DataGridViewTextBoxColumn85.MinimumWidth = 6
         Me.DataGridViewTextBoxColumn85.Name = "DataGridViewTextBoxColumn85"
         Me.DataGridViewTextBoxColumn85.ReadOnly = True
         Me.DataGridViewTextBoxColumn85.Width = 160
@@ -3541,9 +3330,10 @@ Partial Class DHDTest
         'DataGridViewTextBoxColumn86
         '
         Me.DataGridViewTextBoxColumn86.DataPropertyName = "PRESS2"
-        DataGridViewCellStyle60.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
-        Me.DataGridViewTextBoxColumn86.DefaultCellStyle = DataGridViewCellStyle60
+        DataGridViewCellStyle72.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
+        Me.DataGridViewTextBoxColumn86.DefaultCellStyle = DataGridViewCellStyle72
         Me.DataGridViewTextBoxColumn86.HeaderText = "印加後圧力 [Pa]"
+        Me.DataGridViewTextBoxColumn86.MinimumWidth = 6
         Me.DataGridViewTextBoxColumn86.Name = "DataGridViewTextBoxColumn86"
         Me.DataGridViewTextBoxColumn86.ReadOnly = True
         Me.DataGridViewTextBoxColumn86.Width = 160
@@ -3551,18 +3341,20 @@ Partial Class DHDTest
         'DataGridViewTextBoxColumn87
         '
         Me.DataGridViewTextBoxColumn87.DataPropertyName = "PRESS_DIF"
-        DataGridViewCellStyle61.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
-        Me.DataGridViewTextBoxColumn87.DefaultCellStyle = DataGridViewCellStyle61
+        DataGridViewCellStyle73.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
+        Me.DataGridViewTextBoxColumn87.DefaultCellStyle = DataGridViewCellStyle73
         Me.DataGridViewTextBoxColumn87.HeaderText = "圧力差 [Pa]"
+        Me.DataGridViewTextBoxColumn87.MinimumWidth = 6
         Me.DataGridViewTextBoxColumn87.Name = "DataGridViewTextBoxColumn87"
         Me.DataGridViewTextBoxColumn87.Width = 120
         '
         'DataGridViewTextBoxColumn88
         '
         Me.DataGridViewTextBoxColumn88.DataPropertyName = "H_BASE"
-        DataGridViewCellStyle62.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        Me.DataGridViewTextBoxColumn88.DefaultCellStyle = DataGridViewCellStyle62
+        DataGridViewCellStyle74.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        Me.DataGridViewTextBoxColumn88.DefaultCellStyle = DataGridViewCellStyle74
         Me.DataGridViewTextBoxColumn88.HeaderText = "判定基準 [Pa]"
+        Me.DataGridViewTextBoxColumn88.MinimumWidth = 6
         Me.DataGridViewTextBoxColumn88.Name = "DataGridViewTextBoxColumn88"
         Me.DataGridViewTextBoxColumn88.ReadOnly = True
         Me.DataGridViewTextBoxColumn88.Width = 140
@@ -3570,9 +3362,10 @@ Partial Class DHDTest
         'DataGridViewTextBoxColumn89
         '
         Me.DataGridViewTextBoxColumn89.DataPropertyName = "HANTEI"
-        DataGridViewCellStyle63.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        Me.DataGridViewTextBoxColumn89.DefaultCellStyle = DataGridViewCellStyle63
+        DataGridViewCellStyle75.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        Me.DataGridViewTextBoxColumn89.DefaultCellStyle = DataGridViewCellStyle75
         Me.DataGridViewTextBoxColumn89.HeaderText = "判定"
+        Me.DataGridViewTextBoxColumn89.MinimumWidth = 6
         Me.DataGridViewTextBoxColumn89.Name = "DataGridViewTextBoxColumn89"
         Me.DataGridViewTextBoxColumn89.ReadOnly = True
         Me.DataGridViewTextBoxColumn89.Width = 70
@@ -3601,74 +3394,10 @@ Partial Class DHDTest
         Me.dgvZetsuen2.Name = "dgvZetsuen2"
         Me.dgvZetsuen2.ReadOnly = True
         Me.dgvZetsuen2.RowHeadersVisible = False
+        Me.dgvZetsuen2.RowHeadersWidth = 51
         Me.dgvZetsuen2.RowTemplate.Height = 21
         Me.dgvZetsuen2.Size = New System.Drawing.Size(904, 93)
         Me.dgvZetsuen2.TabIndex = 1
-        '
-        'DataGridViewTextBoxColumn27
-        '
-        Me.DataGridViewTextBoxColumn27.DataPropertyName = "VIN_POS"
-        DataGridViewCellStyle64.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        Me.DataGridViewTextBoxColumn27.DefaultCellStyle = DataGridViewCellStyle64
-        Me.DataGridViewTextBoxColumn27.HeaderText = "電圧印加箇所"
-        Me.DataGridViewTextBoxColumn27.Name = "DataGridViewTextBoxColumn27"
-        Me.DataGridViewTextBoxColumn27.ReadOnly = True
-        Me.DataGridViewTextBoxColumn27.Width = 300
-        '
-        'DataGridViewTextBoxColumn28
-        '
-        Me.DataGridViewTextBoxColumn28.DataPropertyName = "VOLT_IN"
-        DataGridViewCellStyle65.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        Me.DataGridViewTextBoxColumn28.DefaultCellStyle = DataGridViewCellStyle65
-        Me.DataGridViewTextBoxColumn28.HeaderText = "印加電圧"
-        Me.DataGridViewTextBoxColumn28.Name = "DataGridViewTextBoxColumn28"
-        Me.DataGridViewTextBoxColumn28.ReadOnly = True
-        '
-        'DataGridViewTextBoxColumn29
-        '
-        Me.DataGridViewTextBoxColumn29.DataPropertyName = "DENRYU"
-        DataGridViewCellStyle66.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
-        Me.DataGridViewTextBoxColumn29.DefaultCellStyle = DataGridViewCellStyle66
-        Me.DataGridViewTextBoxColumn29.HeaderText = "電流値"
-        Me.DataGridViewTextBoxColumn29.Name = "DataGridViewTextBoxColumn29"
-        Me.DataGridViewTextBoxColumn29.ReadOnly = True
-        '
-        'DataGridViewTextBoxColumn30
-        '
-        Me.DataGridViewTextBoxColumn30.DataPropertyName = "ZETSU_R"
-        DataGridViewCellStyle67.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
-        Me.DataGridViewTextBoxColumn30.DefaultCellStyle = DataGridViewCellStyle67
-        Me.DataGridViewTextBoxColumn30.HeaderText = "絶縁抵抗"
-        Me.DataGridViewTextBoxColumn30.Name = "DataGridViewTextBoxColumn30"
-        Me.DataGridViewTextBoxColumn30.ReadOnly = True
-        '
-        'DataGridViewTextBoxColumn31
-        '
-        Me.DataGridViewTextBoxColumn31.DataPropertyName = "H_BASE"
-        DataGridViewCellStyle68.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        Me.DataGridViewTextBoxColumn31.DefaultCellStyle = DataGridViewCellStyle68
-        Me.DataGridViewTextBoxColumn31.HeaderText = "判定基準"
-        Me.DataGridViewTextBoxColumn31.Name = "DataGridViewTextBoxColumn31"
-        Me.DataGridViewTextBoxColumn31.ReadOnly = True
-        '
-        'DataGridViewTextBoxColumn32
-        '
-        Me.DataGridViewTextBoxColumn32.DataPropertyName = "HANTEI"
-        DataGridViewCellStyle69.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        Me.DataGridViewTextBoxColumn32.DefaultCellStyle = DataGridViewCellStyle69
-        Me.DataGridViewTextBoxColumn32.HeaderText = "判定"
-        Me.DataGridViewTextBoxColumn32.Name = "DataGridViewTextBoxColumn32"
-        Me.DataGridViewTextBoxColumn32.ReadOnly = True
-        Me.DataGridViewTextBoxColumn32.Width = 70
-        '
-        'DataGridViewTextBoxColumn33
-        '
-        Me.DataGridViewTextBoxColumn33.DataPropertyName = "SINKUDO"
-        DataGridViewCellStyle70.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
-        Me.DataGridViewTextBoxColumn33.DefaultCellStyle = DataGridViewCellStyle70
-        Me.DataGridViewTextBoxColumn33.HeaderText = "真空度"
-        Me.DataGridViewTextBoxColumn33.Name = "DataGridViewTextBoxColumn33"
-        Me.DataGridViewTextBoxColumn33.ReadOnly = True
         '
         'tabPage3
         '
@@ -3688,9 +3417,9 @@ Partial Class DHDTest
         '
         Me.grpHeGas3.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.grpHeGas3.BackColor = System.Drawing.SystemColors.Control
-        Me.grpHeGas3.Controls.Add(Me.Label106)
-        Me.grpHeGas3.Controls.Add(Me.Label91)
         Me.grpHeGas3.Controls.Add(Me.Label90)
+        Me.grpHeGas3.Controls.Add(Me.Label91)
+        Me.grpHeGas3.Controls.Add(Me.Label106)
         Me.grpHeGas3.Controls.Add(Me.dgvHeGas3)
         Me.grpHeGas3.Location = New System.Drawing.Point(5, 140)
         Me.grpHeGas3.Name = "grpHeGas3"
@@ -3700,35 +3429,35 @@ Partial Class DHDTest
         Me.grpHeGas3.Text = "Ｈｅリーク量測定　サーモチラー　20℃　電圧印加箇所　埋め込み電極－埋め込み電極（外）間"
         Me.grpHeGas3.Visible = False
         '
-        'Label106
+        'Label90
         '
-        Me.Label106.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Label106.Location = New System.Drawing.Point(757, 20)
-        Me.Label106.Name = "Label106"
-        Me.Label106.Size = New System.Drawing.Size(140, 21)
-        Me.Label106.TabIndex = 8
-        Me.Label106.Text = "判定"
-        Me.Label106.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.Label90.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Label90.Location = New System.Drawing.Point(727, 21)
+        Me.Label90.Name = "Label90"
+        Me.Label90.Size = New System.Drawing.Size(176, 21)
+        Me.Label90.TabIndex = 10
+        Me.Label90.Text = "判定"
+        Me.Label90.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'Label91
         '
         Me.Label91.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Label91.Location = New System.Drawing.Point(597, 20)
+        Me.Label91.Location = New System.Drawing.Point(427, 21)
         Me.Label91.Name = "Label91"
-        Me.Label91.Size = New System.Drawing.Size(160, 21)
-        Me.Label91.TabIndex = 7
+        Me.Label91.Size = New System.Drawing.Size(300, 21)
+        Me.Label91.TabIndex = 9
         Me.Label91.Text = "判定基準 [sccm]"
         Me.Label91.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
-        'Label90
+        'Label106
         '
-        Me.Label90.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Label90.Location = New System.Drawing.Point(247, 20)
-        Me.Label90.Name = "Label90"
-        Me.Label90.Size = New System.Drawing.Size(350, 21)
-        Me.Label90.TabIndex = 6
-        Me.Label90.Text = "リーク量 [sccm]"
-        Me.Label90.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.Label106.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Label106.Location = New System.Drawing.Point(127, 21)
+        Me.Label106.Name = "Label106"
+        Me.Label106.Size = New System.Drawing.Size(300, 21)
+        Me.Label106.TabIndex = 8
+        Me.Label106.Text = "リーク量 [sccm]"
+        Me.Label106.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'dgvHeGas3
         '
@@ -3738,112 +3467,14 @@ Partial Class DHDTest
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.dgvHeGas3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgvHeGas3.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn34, Me.DataGridViewTextBoxColumn35, Me.DataGridViewTextBoxColumn38, Me.Column23, Me.Column24, Me.Column25, Me.Column26, Me.DataGridViewTextBoxColumn39, Me.Column27, Me.DataGridViewTextBoxColumn113, Me.Column28})
+        Me.dgvHeGas3.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn34, Me.DataGridViewTextBoxColumn35, Me.DataGridViewTextBoxColumn38, Me.Column23, Me.Column24, Me.Column25, Me.Column26, Me.DataGridViewTextBoxColumn39, Me.Column27, Me.Column39, Me.Column40, Me.Column41, Me.DataGridViewTextBoxColumn113, Me.Column28, Me.Column42, Me.Column43, Me.Column44})
         Me.dgvHeGas3.Location = New System.Drawing.Point(6, 40)
         Me.dgvHeGas3.Name = "dgvHeGas3"
         Me.dgvHeGas3.RowHeadersVisible = False
+        Me.dgvHeGas3.RowHeadersWidth = 51
         Me.dgvHeGas3.RowTemplate.Height = 21
         Me.dgvHeGas3.Size = New System.Drawing.Size(904, 74)
         Me.dgvHeGas3.TabIndex = 2
-        '
-        'DataGridViewTextBoxColumn34
-        '
-        Me.DataGridViewTextBoxColumn34.DataPropertyName = "VOLT_IN"
-        DataGridViewCellStyle71.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        Me.DataGridViewTextBoxColumn34.DefaultCellStyle = DataGridViewCellStyle71
-        Me.DataGridViewTextBoxColumn34.HeaderText = "印加電圧１"
-        Me.DataGridViewTextBoxColumn34.Name = "DataGridViewTextBoxColumn34"
-        Me.DataGridViewTextBoxColumn34.Width = 120
-        '
-        'DataGridViewTextBoxColumn35
-        '
-        Me.DataGridViewTextBoxColumn35.DataPropertyName = "VOLT_OUT"
-        DataGridViewCellStyle72.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        Me.DataGridViewTextBoxColumn35.DefaultCellStyle = DataGridViewCellStyle72
-        Me.DataGridViewTextBoxColumn35.HeaderText = "印加電圧２"
-        Me.DataGridViewTextBoxColumn35.Name = "DataGridViewTextBoxColumn35"
-        Me.DataGridViewTextBoxColumn35.Width = 120
-        '
-        'DataGridViewTextBoxColumn38
-        '
-        Me.DataGridViewTextBoxColumn38.DataPropertyName = "LEAK"
-        DataGridViewCellStyle73.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        Me.DataGridViewTextBoxColumn38.DefaultCellStyle = DataGridViewCellStyle73
-        Me.DataGridViewTextBoxColumn38.HeaderText = "1kPa"
-        Me.DataGridViewTextBoxColumn38.Name = "DataGridViewTextBoxColumn38"
-        Me.DataGridViewTextBoxColumn38.Width = 70
-        '
-        'Column23
-        '
-        Me.Column23.DataPropertyName = "LEAK2"
-        DataGridViewCellStyle74.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        Me.Column23.DefaultCellStyle = DataGridViewCellStyle74
-        Me.Column23.HeaderText = "2kPa"
-        Me.Column23.Name = "Column23"
-        Me.Column23.Width = 70
-        '
-        'Column24
-        '
-        Me.Column24.DataPropertyName = "LEAK3"
-        DataGridViewCellStyle75.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        Me.Column24.DefaultCellStyle = DataGridViewCellStyle75
-        Me.Column24.HeaderText = "3kPa"
-        Me.Column24.Name = "Column24"
-        Me.Column24.Width = 70
-        '
-        'Column25
-        '
-        Me.Column25.DataPropertyName = "LEAK4"
-        DataGridViewCellStyle76.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        Me.Column25.DefaultCellStyle = DataGridViewCellStyle76
-        Me.Column25.HeaderText = "4kPa"
-        Me.Column25.Name = "Column25"
-        Me.Column25.Width = 70
-        '
-        'Column26
-        '
-        Me.Column26.DataPropertyName = "LEAK6"
-        DataGridViewCellStyle77.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        Me.Column26.DefaultCellStyle = DataGridViewCellStyle77
-        Me.Column26.HeaderText = "6kPa"
-        Me.Column26.Name = "Column26"
-        Me.Column26.Width = 70
-        '
-        'DataGridViewTextBoxColumn39
-        '
-        Me.DataGridViewTextBoxColumn39.DataPropertyName = "H_BASE"
-        DataGridViewCellStyle78.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        Me.DataGridViewTextBoxColumn39.DefaultCellStyle = DataGridViewCellStyle78
-        Me.DataGridViewTextBoxColumn39.HeaderText = "1kPa"
-        Me.DataGridViewTextBoxColumn39.Name = "DataGridViewTextBoxColumn39"
-        Me.DataGridViewTextBoxColumn39.Width = 80
-        '
-        'Column27
-        '
-        Me.Column27.DataPropertyName = "H_BASE2"
-        DataGridViewCellStyle79.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        Me.Column27.DefaultCellStyle = DataGridViewCellStyle79
-        Me.Column27.HeaderText = "2kPa"
-        Me.Column27.Name = "Column27"
-        Me.Column27.Width = 80
-        '
-        'DataGridViewTextBoxColumn113
-        '
-        Me.DataGridViewTextBoxColumn113.DataPropertyName = "HANTEI"
-        DataGridViewCellStyle80.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        Me.DataGridViewTextBoxColumn113.DefaultCellStyle = DataGridViewCellStyle80
-        Me.DataGridViewTextBoxColumn113.HeaderText = "1kPa"
-        Me.DataGridViewTextBoxColumn113.Name = "DataGridViewTextBoxColumn113"
-        Me.DataGridViewTextBoxColumn113.Width = 70
-        '
-        'Column28
-        '
-        Me.Column28.DataPropertyName = "HANTEI2"
-        DataGridViewCellStyle81.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        Me.Column28.DefaultCellStyle = DataGridViewCellStyle81
-        Me.Column28.HeaderText = "2kPa"
-        Me.Column28.Name = "Column28"
-        Me.Column28.Width = 70
         '
         'grpKyuucyaku3
         '
@@ -3880,115 +3511,16 @@ Partial Class DHDTest
         Me.dgvKyuucyaku3.Name = "dgvKyuucyaku3"
         Me.dgvKyuucyaku3.ReadOnly = True
         Me.dgvKyuucyaku3.RowHeadersVisible = False
+        Me.dgvKyuucyaku3.RowHeadersWidth = 51
         Me.dgvKyuucyaku3.RowTemplate.Height = 21
         Me.dgvKyuucyaku3.Size = New System.Drawing.Size(904, 74)
         Me.dgvKyuucyaku3.TabIndex = 3
-        '
-        'DataGridViewTextBoxColumn40
-        '
-        Me.DataGridViewTextBoxColumn40.DataPropertyName = "VOLT_IN"
-        DataGridViewCellStyle82.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        Me.DataGridViewTextBoxColumn40.DefaultCellStyle = DataGridViewCellStyle82
-        Me.DataGridViewTextBoxColumn40.HeaderText = "印加電圧１"
-        Me.DataGridViewTextBoxColumn40.Name = "DataGridViewTextBoxColumn40"
-        Me.DataGridViewTextBoxColumn40.ReadOnly = True
-        Me.DataGridViewTextBoxColumn40.Width = 120
-        '
-        'DataGridViewTextBoxColumn41
-        '
-        Me.DataGridViewTextBoxColumn41.DataPropertyName = "VOLT_OUT"
-        DataGridViewCellStyle83.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        Me.DataGridViewTextBoxColumn41.DefaultCellStyle = DataGridViewCellStyle83
-        Me.DataGridViewTextBoxColumn41.HeaderText = "印加電圧２"
-        Me.DataGridViewTextBoxColumn41.Name = "DataGridViewTextBoxColumn41"
-        Me.DataGridViewTextBoxColumn41.ReadOnly = True
-        Me.DataGridViewTextBoxColumn41.Width = 120
-        '
-        'DataGridViewTextBoxColumn42
-        '
-        Me.DataGridViewTextBoxColumn42.DataPropertyName = "HE_FLOW"
-        DataGridViewCellStyle84.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        Me.DataGridViewTextBoxColumn42.DefaultCellStyle = DataGridViewCellStyle84
-        Me.DataGridViewTextBoxColumn42.HeaderText = "Ｈｅ流量 [sccm]"
-        Me.DataGridViewTextBoxColumn42.Name = "DataGridViewTextBoxColumn42"
-        Me.DataGridViewTextBoxColumn42.ReadOnly = True
-        Me.DataGridViewTextBoxColumn42.Width = 140
-        '
-        'DataGridViewTextBoxColumn43
-        '
-        Me.DataGridViewTextBoxColumn43.DataPropertyName = "TIME1"
-        DataGridViewCellStyle85.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        Me.DataGridViewTextBoxColumn43.DefaultCellStyle = DataGridViewCellStyle85
-        Me.DataGridViewTextBoxColumn43.HeaderText = "１kPa"
-        Me.DataGridViewTextBoxColumn43.Name = "DataGridViewTextBoxColumn43"
-        Me.DataGridViewTextBoxColumn43.ReadOnly = True
-        Me.DataGridViewTextBoxColumn43.Width = 80
-        '
-        'DataGridViewTextBoxColumn44
-        '
-        Me.DataGridViewTextBoxColumn44.DataPropertyName = "TIME2"
-        DataGridViewCellStyle86.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        Me.DataGridViewTextBoxColumn44.DefaultCellStyle = DataGridViewCellStyle86
-        Me.DataGridViewTextBoxColumn44.HeaderText = "２kPa"
-        Me.DataGridViewTextBoxColumn44.Name = "DataGridViewTextBoxColumn44"
-        Me.DataGridViewTextBoxColumn44.ReadOnly = True
-        Me.DataGridViewTextBoxColumn44.Width = 80
-        '
-        'DataGridViewTextBoxColumn45
-        '
-        Me.DataGridViewTextBoxColumn45.DataPropertyName = "TIME3"
-        DataGridViewCellStyle87.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        Me.DataGridViewTextBoxColumn45.DefaultCellStyle = DataGridViewCellStyle87
-        Me.DataGridViewTextBoxColumn45.HeaderText = "３kPa"
-        Me.DataGridViewTextBoxColumn45.Name = "DataGridViewTextBoxColumn45"
-        Me.DataGridViewTextBoxColumn45.ReadOnly = True
-        Me.DataGridViewTextBoxColumn45.Width = 80
-        '
-        'DataGridViewTextBoxColumn46
-        '
-        Me.DataGridViewTextBoxColumn46.DataPropertyName = "TIME4"
-        DataGridViewCellStyle88.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        Me.DataGridViewTextBoxColumn46.DefaultCellStyle = DataGridViewCellStyle88
-        Me.DataGridViewTextBoxColumn46.HeaderText = "４kPa"
-        Me.DataGridViewTextBoxColumn46.Name = "DataGridViewTextBoxColumn46"
-        Me.DataGridViewTextBoxColumn46.ReadOnly = True
-        Me.DataGridViewTextBoxColumn46.Width = 80
-        '
-        'DataGridViewTextBoxColumn47
-        '
-        Me.DataGridViewTextBoxColumn47.DataPropertyName = "TIME6"
-        DataGridViewCellStyle89.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        Me.DataGridViewTextBoxColumn47.DefaultCellStyle = DataGridViewCellStyle89
-        Me.DataGridViewTextBoxColumn47.HeaderText = "６kPa"
-        Me.DataGridViewTextBoxColumn47.Name = "DataGridViewTextBoxColumn47"
-        Me.DataGridViewTextBoxColumn47.ReadOnly = True
-        Me.DataGridViewTextBoxColumn47.Width = 80
-        '
-        'DataGridViewTextBoxColumn108
-        '
-        Me.DataGridViewTextBoxColumn108.DataPropertyName = "H_BASE"
-        DataGridViewCellStyle90.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        Me.DataGridViewTextBoxColumn108.DefaultCellStyle = DataGridViewCellStyle90
-        Me.DataGridViewTextBoxColumn108.HeaderText = "判定基準 [Sec]"
-        Me.DataGridViewTextBoxColumn108.Name = "DataGridViewTextBoxColumn108"
-        Me.DataGridViewTextBoxColumn108.ReadOnly = True
-        Me.DataGridViewTextBoxColumn108.Width = 140
-        '
-        'DataGridViewTextBoxColumn109
-        '
-        Me.DataGridViewTextBoxColumn109.DataPropertyName = "HANTEI"
-        DataGridViewCellStyle91.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        Me.DataGridViewTextBoxColumn109.DefaultCellStyle = DataGridViewCellStyle91
-        Me.DataGridViewTextBoxColumn109.HeaderText = "判定"
-        Me.DataGridViewTextBoxColumn109.Name = "DataGridViewTextBoxColumn109"
-        Me.DataGridViewTextBoxColumn109.ReadOnly = True
-        Me.DataGridViewTextBoxColumn109.Width = 70
         '
         'grpZanryu3
         '
         Me.grpZanryu3.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.grpZanryu3.Controls.Add(Me.dgvZanryu3)
-        Me.grpZanryu3.Location = New System.Drawing.Point(5, 400)
+        Me.grpZanryu3.Location = New System.Drawing.Point(5, 408)
         Me.grpZanryu3.Name = "grpZanryu3"
         Me.grpZanryu3.Size = New System.Drawing.Size(916, 100)
         Me.grpZanryu3.TabIndex = 7
@@ -4008,78 +3540,10 @@ Partial Class DHDTest
         Me.dgvZanryu3.Location = New System.Drawing.Point(6, 20)
         Me.dgvZanryu3.Name = "dgvZanryu3"
         Me.dgvZanryu3.RowHeadersVisible = False
+        Me.dgvZanryu3.RowHeadersWidth = 51
         Me.dgvZanryu3.RowTemplate.Height = 21
         Me.dgvZanryu3.Size = New System.Drawing.Size(904, 74)
         Me.dgvZanryu3.TabIndex = 2
-        '
-        'DataGridViewTextBoxColumn90
-        '
-        Me.DataGridViewTextBoxColumn90.DataPropertyName = "VOLT_IN"
-        DataGridViewCellStyle92.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        Me.DataGridViewTextBoxColumn90.DefaultCellStyle = DataGridViewCellStyle92
-        Me.DataGridViewTextBoxColumn90.HeaderText = "印加電圧１"
-        Me.DataGridViewTextBoxColumn90.Name = "DataGridViewTextBoxColumn90"
-        Me.DataGridViewTextBoxColumn90.ReadOnly = True
-        Me.DataGridViewTextBoxColumn90.Width = 120
-        '
-        'DataGridViewTextBoxColumn91
-        '
-        Me.DataGridViewTextBoxColumn91.DataPropertyName = "VOLT_OUT"
-        DataGridViewCellStyle93.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        Me.DataGridViewTextBoxColumn91.DefaultCellStyle = DataGridViewCellStyle93
-        Me.DataGridViewTextBoxColumn91.HeaderText = "印加電圧２"
-        Me.DataGridViewTextBoxColumn91.Name = "DataGridViewTextBoxColumn91"
-        Me.DataGridViewTextBoxColumn91.ReadOnly = True
-        Me.DataGridViewTextBoxColumn91.Width = 120
-        '
-        'DataGridViewTextBoxColumn92
-        '
-        Me.DataGridViewTextBoxColumn92.DataPropertyName = "PRESS1"
-        DataGridViewCellStyle94.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
-        Me.DataGridViewTextBoxColumn92.DefaultCellStyle = DataGridViewCellStyle94
-        Me.DataGridViewTextBoxColumn92.HeaderText = "印加前圧力 [Pa]"
-        Me.DataGridViewTextBoxColumn92.Name = "DataGridViewTextBoxColumn92"
-        Me.DataGridViewTextBoxColumn92.ReadOnly = True
-        Me.DataGridViewTextBoxColumn92.Width = 160
-        '
-        'DataGridViewTextBoxColumn93
-        '
-        Me.DataGridViewTextBoxColumn93.DataPropertyName = "PRESS2"
-        DataGridViewCellStyle95.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
-        Me.DataGridViewTextBoxColumn93.DefaultCellStyle = DataGridViewCellStyle95
-        Me.DataGridViewTextBoxColumn93.HeaderText = "印加後圧力 [Pa]"
-        Me.DataGridViewTextBoxColumn93.Name = "DataGridViewTextBoxColumn93"
-        Me.DataGridViewTextBoxColumn93.ReadOnly = True
-        Me.DataGridViewTextBoxColumn93.Width = 160
-        '
-        'DataGridViewTextBoxColumn94
-        '
-        Me.DataGridViewTextBoxColumn94.DataPropertyName = "PRESS_DIF"
-        DataGridViewCellStyle96.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
-        Me.DataGridViewTextBoxColumn94.DefaultCellStyle = DataGridViewCellStyle96
-        Me.DataGridViewTextBoxColumn94.HeaderText = "圧力差 [Pa]"
-        Me.DataGridViewTextBoxColumn94.Name = "DataGridViewTextBoxColumn94"
-        Me.DataGridViewTextBoxColumn94.Width = 120
-        '
-        'DataGridViewTextBoxColumn95
-        '
-        Me.DataGridViewTextBoxColumn95.DataPropertyName = "H_BASE"
-        DataGridViewCellStyle97.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        Me.DataGridViewTextBoxColumn95.DefaultCellStyle = DataGridViewCellStyle97
-        Me.DataGridViewTextBoxColumn95.HeaderText = "判定基準 [Pa]"
-        Me.DataGridViewTextBoxColumn95.Name = "DataGridViewTextBoxColumn95"
-        Me.DataGridViewTextBoxColumn95.ReadOnly = True
-        Me.DataGridViewTextBoxColumn95.Width = 140
-        '
-        'DataGridViewTextBoxColumn96
-        '
-        Me.DataGridViewTextBoxColumn96.DataPropertyName = "HANTEI"
-        DataGridViewCellStyle98.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        Me.DataGridViewTextBoxColumn96.DefaultCellStyle = DataGridViewCellStyle98
-        Me.DataGridViewTextBoxColumn96.HeaderText = "判定"
-        Me.DataGridViewTextBoxColumn96.Name = "DataGridViewTextBoxColumn96"
-        Me.DataGridViewTextBoxColumn96.ReadOnly = True
-        Me.DataGridViewTextBoxColumn96.Width = 70
         '
         'grpZetsuen3
         '
@@ -4106,74 +3570,10 @@ Partial Class DHDTest
         Me.dgvZetsuen3.Name = "dgvZetsuen3"
         Me.dgvZetsuen3.ReadOnly = True
         Me.dgvZetsuen3.RowHeadersVisible = False
+        Me.dgvZetsuen3.RowHeadersWidth = 51
         Me.dgvZetsuen3.RowTemplate.Height = 21
         Me.dgvZetsuen3.Size = New System.Drawing.Size(904, 93)
         Me.dgvZetsuen3.TabIndex = 1
-        '
-        'DataGridViewTextBoxColumn48
-        '
-        Me.DataGridViewTextBoxColumn48.DataPropertyName = "VIN_POS"
-        DataGridViewCellStyle99.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        Me.DataGridViewTextBoxColumn48.DefaultCellStyle = DataGridViewCellStyle99
-        Me.DataGridViewTextBoxColumn48.HeaderText = "電圧印加箇所"
-        Me.DataGridViewTextBoxColumn48.Name = "DataGridViewTextBoxColumn48"
-        Me.DataGridViewTextBoxColumn48.ReadOnly = True
-        Me.DataGridViewTextBoxColumn48.Width = 300
-        '
-        'DataGridViewTextBoxColumn49
-        '
-        Me.DataGridViewTextBoxColumn49.DataPropertyName = "VOLT_IN"
-        DataGridViewCellStyle100.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        Me.DataGridViewTextBoxColumn49.DefaultCellStyle = DataGridViewCellStyle100
-        Me.DataGridViewTextBoxColumn49.HeaderText = "印加電圧"
-        Me.DataGridViewTextBoxColumn49.Name = "DataGridViewTextBoxColumn49"
-        Me.DataGridViewTextBoxColumn49.ReadOnly = True
-        '
-        'DataGridViewTextBoxColumn50
-        '
-        Me.DataGridViewTextBoxColumn50.DataPropertyName = "DENRYU"
-        DataGridViewCellStyle101.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
-        Me.DataGridViewTextBoxColumn50.DefaultCellStyle = DataGridViewCellStyle101
-        Me.DataGridViewTextBoxColumn50.HeaderText = "電流値"
-        Me.DataGridViewTextBoxColumn50.Name = "DataGridViewTextBoxColumn50"
-        Me.DataGridViewTextBoxColumn50.ReadOnly = True
-        '
-        'DataGridViewTextBoxColumn51
-        '
-        Me.DataGridViewTextBoxColumn51.DataPropertyName = "ZETSU_R"
-        DataGridViewCellStyle102.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
-        Me.DataGridViewTextBoxColumn51.DefaultCellStyle = DataGridViewCellStyle102
-        Me.DataGridViewTextBoxColumn51.HeaderText = "絶縁抵抗"
-        Me.DataGridViewTextBoxColumn51.Name = "DataGridViewTextBoxColumn51"
-        Me.DataGridViewTextBoxColumn51.ReadOnly = True
-        '
-        'DataGridViewTextBoxColumn52
-        '
-        Me.DataGridViewTextBoxColumn52.DataPropertyName = "H_BASE"
-        DataGridViewCellStyle103.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        Me.DataGridViewTextBoxColumn52.DefaultCellStyle = DataGridViewCellStyle103
-        Me.DataGridViewTextBoxColumn52.HeaderText = "判定基準"
-        Me.DataGridViewTextBoxColumn52.Name = "DataGridViewTextBoxColumn52"
-        Me.DataGridViewTextBoxColumn52.ReadOnly = True
-        '
-        'DataGridViewTextBoxColumn53
-        '
-        Me.DataGridViewTextBoxColumn53.DataPropertyName = "HANTEI"
-        DataGridViewCellStyle104.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        Me.DataGridViewTextBoxColumn53.DefaultCellStyle = DataGridViewCellStyle104
-        Me.DataGridViewTextBoxColumn53.HeaderText = "判定"
-        Me.DataGridViewTextBoxColumn53.Name = "DataGridViewTextBoxColumn53"
-        Me.DataGridViewTextBoxColumn53.ReadOnly = True
-        Me.DataGridViewTextBoxColumn53.Width = 70
-        '
-        'DataGridViewTextBoxColumn54
-        '
-        Me.DataGridViewTextBoxColumn54.DataPropertyName = "SINKUDO"
-        DataGridViewCellStyle105.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
-        Me.DataGridViewTextBoxColumn54.DefaultCellStyle = DataGridViewCellStyle105
-        Me.DataGridViewTextBoxColumn54.HeaderText = "真空度"
-        Me.DataGridViewTextBoxColumn54.Name = "DataGridViewTextBoxColumn54"
-        Me.DataGridViewTextBoxColumn54.ReadOnly = True
         '
         'tabPage4
         '
@@ -4208,112 +3608,184 @@ Partial Class DHDTest
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.dgvHeGas4.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgvHeGas4.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn55, Me.DataGridViewTextBoxColumn56, Me.DataGridViewTextBoxColumn59, Me.Column29, Me.Column30, Me.Column31, Me.Column32, Me.DataGridViewTextBoxColumn60, Me.Column33, Me.DataGridViewTextBoxColumn114, Me.Column34})
+        Me.dgvHeGas4.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn3, Me.DataGridViewTextBoxColumn4, Me.DataGridViewTextBoxColumn17, Me.DataGridViewTextBoxColumn36, Me.DataGridViewTextBoxColumn37, Me.DataGridViewTextBoxColumn55, Me.DataGridViewTextBoxColumn56, Me.DataGridViewTextBoxColumn57, Me.DataGridViewTextBoxColumn58, Me.DataGridViewTextBoxColumn59, Me.DataGridViewTextBoxColumn60, Me.DataGridViewTextBoxColumn114, Me.DataGridViewTextBoxColumn115, Me.DataGridViewTextBoxColumn116, Me.DataGridViewTextBoxColumn117, Me.DataGridViewTextBoxColumn118, Me.DataGridViewTextBoxColumn119})
         Me.dgvHeGas4.Location = New System.Drawing.Point(6, 40)
         Me.dgvHeGas4.Name = "dgvHeGas4"
         Me.dgvHeGas4.RowHeadersVisible = False
+        Me.dgvHeGas4.RowHeadersWidth = 51
         Me.dgvHeGas4.RowTemplate.Height = 21
         Me.dgvHeGas4.Size = New System.Drawing.Size(904, 74)
-        Me.dgvHeGas4.TabIndex = 2
+        Me.dgvHeGas4.TabIndex = 3
+        '
+        'DataGridViewTextBoxColumn3
+        '
+        Me.DataGridViewTextBoxColumn3.DataPropertyName = "VOLT_IN"
+        DataGridViewCellStyle124.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        Me.DataGridViewTextBoxColumn3.DefaultCellStyle = DataGridViewCellStyle124
+        Me.DataGridViewTextBoxColumn3.HeaderText = "V1"
+        Me.DataGridViewTextBoxColumn3.MinimumWidth = 6
+        Me.DataGridViewTextBoxColumn3.Name = "DataGridViewTextBoxColumn3"
+        Me.DataGridViewTextBoxColumn3.Width = 60
+        '
+        'DataGridViewTextBoxColumn4
+        '
+        Me.DataGridViewTextBoxColumn4.DataPropertyName = "VOLT_OUT"
+        DataGridViewCellStyle125.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        Me.DataGridViewTextBoxColumn4.DefaultCellStyle = DataGridViewCellStyle125
+        Me.DataGridViewTextBoxColumn4.HeaderText = "V2"
+        Me.DataGridViewTextBoxColumn4.MinimumWidth = 6
+        Me.DataGridViewTextBoxColumn4.Name = "DataGridViewTextBoxColumn4"
+        Me.DataGridViewTextBoxColumn4.Width = 60
+        '
+        'DataGridViewTextBoxColumn17
+        '
+        Me.DataGridViewTextBoxColumn17.DataPropertyName = "LEAK1"
+        DataGridViewCellStyle126.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        Me.DataGridViewTextBoxColumn17.DefaultCellStyle = DataGridViewCellStyle126
+        Me.DataGridViewTextBoxColumn17.HeaderText = "1kPa"
+        Me.DataGridViewTextBoxColumn17.MinimumWidth = 6
+        Me.DataGridViewTextBoxColumn17.Name = "DataGridViewTextBoxColumn17"
+        Me.DataGridViewTextBoxColumn17.Width = 60
+        '
+        'DataGridViewTextBoxColumn36
+        '
+        Me.DataGridViewTextBoxColumn36.DataPropertyName = "LEAK2"
+        DataGridViewCellStyle127.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        Me.DataGridViewTextBoxColumn36.DefaultCellStyle = DataGridViewCellStyle127
+        Me.DataGridViewTextBoxColumn36.HeaderText = "2kPa"
+        Me.DataGridViewTextBoxColumn36.MinimumWidth = 6
+        Me.DataGridViewTextBoxColumn36.Name = "DataGridViewTextBoxColumn36"
+        Me.DataGridViewTextBoxColumn36.Width = 60
+        '
+        'DataGridViewTextBoxColumn37
+        '
+        Me.DataGridViewTextBoxColumn37.DataPropertyName = "LEAK3"
+        DataGridViewCellStyle128.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        Me.DataGridViewTextBoxColumn37.DefaultCellStyle = DataGridViewCellStyle128
+        Me.DataGridViewTextBoxColumn37.HeaderText = "3kPa"
+        Me.DataGridViewTextBoxColumn37.MinimumWidth = 6
+        Me.DataGridViewTextBoxColumn37.Name = "DataGridViewTextBoxColumn37"
+        Me.DataGridViewTextBoxColumn37.Width = 60
         '
         'DataGridViewTextBoxColumn55
         '
-        Me.DataGridViewTextBoxColumn55.DataPropertyName = "VOLT_IN"
-        DataGridViewCellStyle106.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        Me.DataGridViewTextBoxColumn55.DefaultCellStyle = DataGridViewCellStyle106
-        Me.DataGridViewTextBoxColumn55.HeaderText = "印加電圧１"
+        Me.DataGridViewTextBoxColumn55.DataPropertyName = "LEAK4"
+        DataGridViewCellStyle129.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        Me.DataGridViewTextBoxColumn55.DefaultCellStyle = DataGridViewCellStyle129
+        Me.DataGridViewTextBoxColumn55.HeaderText = "4kPa"
+        Me.DataGridViewTextBoxColumn55.MinimumWidth = 6
         Me.DataGridViewTextBoxColumn55.Name = "DataGridViewTextBoxColumn55"
-        Me.DataGridViewTextBoxColumn55.Width = 120
+        Me.DataGridViewTextBoxColumn55.Width = 60
         '
         'DataGridViewTextBoxColumn56
         '
-        Me.DataGridViewTextBoxColumn56.DataPropertyName = "VOLT_OUT"
-        DataGridViewCellStyle107.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        Me.DataGridViewTextBoxColumn56.DefaultCellStyle = DataGridViewCellStyle107
-        Me.DataGridViewTextBoxColumn56.HeaderText = "印加電圧２"
+        Me.DataGridViewTextBoxColumn56.DataPropertyName = "LEAK6"
+        DataGridViewCellStyle130.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        Me.DataGridViewTextBoxColumn56.DefaultCellStyle = DataGridViewCellStyle130
+        Me.DataGridViewTextBoxColumn56.HeaderText = "6kPa"
+        Me.DataGridViewTextBoxColumn56.MinimumWidth = 6
         Me.DataGridViewTextBoxColumn56.Name = "DataGridViewTextBoxColumn56"
-        Me.DataGridViewTextBoxColumn56.Width = 120
+        Me.DataGridViewTextBoxColumn56.Width = 60
+        '
+        'DataGridViewTextBoxColumn57
+        '
+        Me.DataGridViewTextBoxColumn57.DataPropertyName = "H_BASE"
+        DataGridViewCellStyle131.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        Me.DataGridViewTextBoxColumn57.DefaultCellStyle = DataGridViewCellStyle131
+        Me.DataGridViewTextBoxColumn57.HeaderText = "1kPa"
+        Me.DataGridViewTextBoxColumn57.MinimumWidth = 6
+        Me.DataGridViewTextBoxColumn57.Name = "DataGridViewTextBoxColumn57"
+        Me.DataGridViewTextBoxColumn57.Width = 60
+        '
+        'DataGridViewTextBoxColumn58
+        '
+        Me.DataGridViewTextBoxColumn58.DataPropertyName = "H_BASE2"
+        DataGridViewCellStyle132.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        Me.DataGridViewTextBoxColumn58.DefaultCellStyle = DataGridViewCellStyle132
+        Me.DataGridViewTextBoxColumn58.HeaderText = "2kPa"
+        Me.DataGridViewTextBoxColumn58.MinimumWidth = 6
+        Me.DataGridViewTextBoxColumn58.Name = "DataGridViewTextBoxColumn58"
+        Me.DataGridViewTextBoxColumn58.Width = 60
         '
         'DataGridViewTextBoxColumn59
         '
-        Me.DataGridViewTextBoxColumn59.DataPropertyName = "LEAK"
-        DataGridViewCellStyle108.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
-        Me.DataGridViewTextBoxColumn59.DefaultCellStyle = DataGridViewCellStyle108
-        Me.DataGridViewTextBoxColumn59.HeaderText = "1kPa"
+        Me.DataGridViewTextBoxColumn59.DataPropertyName = "H_BASE3"
+        DataGridViewCellStyle133.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        Me.DataGridViewTextBoxColumn59.DefaultCellStyle = DataGridViewCellStyle133
+        Me.DataGridViewTextBoxColumn59.HeaderText = "3kPa"
+        Me.DataGridViewTextBoxColumn59.MinimumWidth = 6
         Me.DataGridViewTextBoxColumn59.Name = "DataGridViewTextBoxColumn59"
-        Me.DataGridViewTextBoxColumn59.Width = 70
-        '
-        'Column29
-        '
-        Me.Column29.DataPropertyName = "LEAK2"
-        DataGridViewCellStyle109.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        Me.Column29.DefaultCellStyle = DataGridViewCellStyle109
-        Me.Column29.HeaderText = "2kPa"
-        Me.Column29.Name = "Column29"
-        Me.Column29.Width = 70
-        '
-        'Column30
-        '
-        Me.Column30.DataPropertyName = "LEAK3"
-        DataGridViewCellStyle110.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        Me.Column30.DefaultCellStyle = DataGridViewCellStyle110
-        Me.Column30.HeaderText = "3kPa"
-        Me.Column30.Name = "Column30"
-        Me.Column30.Width = 70
-        '
-        'Column31
-        '
-        Me.Column31.DataPropertyName = "LEAK4"
-        DataGridViewCellStyle111.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        Me.Column31.DefaultCellStyle = DataGridViewCellStyle111
-        Me.Column31.HeaderText = "4kPa"
-        Me.Column31.Name = "Column31"
-        Me.Column31.Width = 70
-        '
-        'Column32
-        '
-        Me.Column32.DataPropertyName = "LEAK6"
-        DataGridViewCellStyle112.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        Me.Column32.DefaultCellStyle = DataGridViewCellStyle112
-        Me.Column32.HeaderText = "6kPa"
-        Me.Column32.Name = "Column32"
-        Me.Column32.Width = 70
+        Me.DataGridViewTextBoxColumn59.Width = 60
         '
         'DataGridViewTextBoxColumn60
         '
-        Me.DataGridViewTextBoxColumn60.DataPropertyName = "H_BASE"
-        DataGridViewCellStyle113.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        Me.DataGridViewTextBoxColumn60.DefaultCellStyle = DataGridViewCellStyle113
-        Me.DataGridViewTextBoxColumn60.HeaderText = "1kPa"
+        Me.DataGridViewTextBoxColumn60.DataPropertyName = "H_BASE4"
+        DataGridViewCellStyle134.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        Me.DataGridViewTextBoxColumn60.DefaultCellStyle = DataGridViewCellStyle134
+        Me.DataGridViewTextBoxColumn60.HeaderText = "4kPa"
+        Me.DataGridViewTextBoxColumn60.MinimumWidth = 6
         Me.DataGridViewTextBoxColumn60.Name = "DataGridViewTextBoxColumn60"
-        Me.DataGridViewTextBoxColumn60.Width = 80
-        '
-        'Column33
-        '
-        Me.Column33.DataPropertyName = "H_BASE2"
-        DataGridViewCellStyle114.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        Me.Column33.DefaultCellStyle = DataGridViewCellStyle114
-        Me.Column33.HeaderText = "2kPa"
-        Me.Column33.Name = "Column33"
-        Me.Column33.Width = 80
+        Me.DataGridViewTextBoxColumn60.Width = 60
         '
         'DataGridViewTextBoxColumn114
         '
-        Me.DataGridViewTextBoxColumn114.DataPropertyName = "HANTEI"
-        DataGridViewCellStyle115.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        Me.DataGridViewTextBoxColumn114.DefaultCellStyle = DataGridViewCellStyle115
-        Me.DataGridViewTextBoxColumn114.HeaderText = "1kPa"
+        Me.DataGridViewTextBoxColumn114.DataPropertyName = "H_BASE6"
+        DataGridViewCellStyle135.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        Me.DataGridViewTextBoxColumn114.DefaultCellStyle = DataGridViewCellStyle135
+        Me.DataGridViewTextBoxColumn114.HeaderText = "6kPa"
+        Me.DataGridViewTextBoxColumn114.MinimumWidth = 6
         Me.DataGridViewTextBoxColumn114.Name = "DataGridViewTextBoxColumn114"
-        Me.DataGridViewTextBoxColumn114.Width = 70
+        Me.DataGridViewTextBoxColumn114.Width = 60
         '
-        'Column34
+        'DataGridViewTextBoxColumn115
         '
-        Me.Column34.DataPropertyName = "HANTEI2"
-        DataGridViewCellStyle116.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        Me.Column34.DefaultCellStyle = DataGridViewCellStyle116
-        Me.Column34.HeaderText = "2kPa"
-        Me.Column34.Name = "Column34"
-        Me.Column34.Width = 70
+        Me.DataGridViewTextBoxColumn115.DataPropertyName = "HANTEI1"
+        DataGridViewCellStyle136.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        Me.DataGridViewTextBoxColumn115.DefaultCellStyle = DataGridViewCellStyle136
+        Me.DataGridViewTextBoxColumn115.HeaderText = "1k"
+        Me.DataGridViewTextBoxColumn115.MinimumWidth = 6
+        Me.DataGridViewTextBoxColumn115.Name = "DataGridViewTextBoxColumn115"
+        Me.DataGridViewTextBoxColumn115.Width = 35
+        '
+        'DataGridViewTextBoxColumn116
+        '
+        Me.DataGridViewTextBoxColumn116.DataPropertyName = "HANTEI2"
+        DataGridViewCellStyle137.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        Me.DataGridViewTextBoxColumn116.DefaultCellStyle = DataGridViewCellStyle137
+        Me.DataGridViewTextBoxColumn116.HeaderText = "2k"
+        Me.DataGridViewTextBoxColumn116.MinimumWidth = 6
+        Me.DataGridViewTextBoxColumn116.Name = "DataGridViewTextBoxColumn116"
+        Me.DataGridViewTextBoxColumn116.Width = 35
+        '
+        'DataGridViewTextBoxColumn117
+        '
+        Me.DataGridViewTextBoxColumn117.DataPropertyName = "HANTEI3"
+        DataGridViewCellStyle138.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        Me.DataGridViewTextBoxColumn117.DefaultCellStyle = DataGridViewCellStyle138
+        Me.DataGridViewTextBoxColumn117.HeaderText = "3k"
+        Me.DataGridViewTextBoxColumn117.MinimumWidth = 6
+        Me.DataGridViewTextBoxColumn117.Name = "DataGridViewTextBoxColumn117"
+        Me.DataGridViewTextBoxColumn117.Width = 35
+        '
+        'DataGridViewTextBoxColumn118
+        '
+        Me.DataGridViewTextBoxColumn118.DataPropertyName = "HANTEI4"
+        DataGridViewCellStyle139.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        Me.DataGridViewTextBoxColumn118.DefaultCellStyle = DataGridViewCellStyle139
+        Me.DataGridViewTextBoxColumn118.HeaderText = "4k"
+        Me.DataGridViewTextBoxColumn118.MinimumWidth = 6
+        Me.DataGridViewTextBoxColumn118.Name = "DataGridViewTextBoxColumn118"
+        Me.DataGridViewTextBoxColumn118.Width = 35
+        '
+        'DataGridViewTextBoxColumn119
+        '
+        Me.DataGridViewTextBoxColumn119.DataPropertyName = "HANTEI6"
+        DataGridViewCellStyle140.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        Me.DataGridViewTextBoxColumn119.DefaultCellStyle = DataGridViewCellStyle140
+        Me.DataGridViewTextBoxColumn119.HeaderText = "6k"
+        Me.DataGridViewTextBoxColumn119.MinimumWidth = 6
+        Me.DataGridViewTextBoxColumn119.Name = "DataGridViewTextBoxColumn119"
+        Me.DataGridViewTextBoxColumn119.Width = 35
         '
         'grpKyuucyaku4
         '
@@ -4350,6 +3822,7 @@ Partial Class DHDTest
         Me.dgvKyuucyaku4.Name = "dgvKyuucyaku4"
         Me.dgvKyuucyaku4.ReadOnly = True
         Me.dgvKyuucyaku4.RowHeadersVisible = False
+        Me.dgvKyuucyaku4.RowHeadersWidth = 51
         Me.dgvKyuucyaku4.RowTemplate.Height = 21
         Me.dgvKyuucyaku4.Size = New System.Drawing.Size(904, 74)
         Me.dgvKyuucyaku4.TabIndex = 3
@@ -4357,9 +3830,10 @@ Partial Class DHDTest
         'DataGridViewTextBoxColumn61
         '
         Me.DataGridViewTextBoxColumn61.DataPropertyName = "VOLT_IN"
-        DataGridViewCellStyle117.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        Me.DataGridViewTextBoxColumn61.DefaultCellStyle = DataGridViewCellStyle117
+        DataGridViewCellStyle141.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        Me.DataGridViewTextBoxColumn61.DefaultCellStyle = DataGridViewCellStyle141
         Me.DataGridViewTextBoxColumn61.HeaderText = "印加電圧１"
+        Me.DataGridViewTextBoxColumn61.MinimumWidth = 6
         Me.DataGridViewTextBoxColumn61.Name = "DataGridViewTextBoxColumn61"
         Me.DataGridViewTextBoxColumn61.ReadOnly = True
         Me.DataGridViewTextBoxColumn61.Width = 120
@@ -4367,9 +3841,10 @@ Partial Class DHDTest
         'DataGridViewTextBoxColumn62
         '
         Me.DataGridViewTextBoxColumn62.DataPropertyName = "VOLT_OUT"
-        DataGridViewCellStyle118.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        Me.DataGridViewTextBoxColumn62.DefaultCellStyle = DataGridViewCellStyle118
+        DataGridViewCellStyle142.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        Me.DataGridViewTextBoxColumn62.DefaultCellStyle = DataGridViewCellStyle142
         Me.DataGridViewTextBoxColumn62.HeaderText = "印加電圧２"
+        Me.DataGridViewTextBoxColumn62.MinimumWidth = 6
         Me.DataGridViewTextBoxColumn62.Name = "DataGridViewTextBoxColumn62"
         Me.DataGridViewTextBoxColumn62.ReadOnly = True
         Me.DataGridViewTextBoxColumn62.Width = 120
@@ -4377,9 +3852,10 @@ Partial Class DHDTest
         'DataGridViewTextBoxColumn63
         '
         Me.DataGridViewTextBoxColumn63.DataPropertyName = "HE_FLOW"
-        DataGridViewCellStyle119.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        Me.DataGridViewTextBoxColumn63.DefaultCellStyle = DataGridViewCellStyle119
+        DataGridViewCellStyle143.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        Me.DataGridViewTextBoxColumn63.DefaultCellStyle = DataGridViewCellStyle143
         Me.DataGridViewTextBoxColumn63.HeaderText = "Ｈｅ流量 [sccm]"
+        Me.DataGridViewTextBoxColumn63.MinimumWidth = 6
         Me.DataGridViewTextBoxColumn63.Name = "DataGridViewTextBoxColumn63"
         Me.DataGridViewTextBoxColumn63.ReadOnly = True
         Me.DataGridViewTextBoxColumn63.Width = 140
@@ -4387,9 +3863,10 @@ Partial Class DHDTest
         'DataGridViewTextBoxColumn64
         '
         Me.DataGridViewTextBoxColumn64.DataPropertyName = "TIME1"
-        DataGridViewCellStyle120.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        Me.DataGridViewTextBoxColumn64.DefaultCellStyle = DataGridViewCellStyle120
+        DataGridViewCellStyle144.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        Me.DataGridViewTextBoxColumn64.DefaultCellStyle = DataGridViewCellStyle144
         Me.DataGridViewTextBoxColumn64.HeaderText = "１kPa"
+        Me.DataGridViewTextBoxColumn64.MinimumWidth = 6
         Me.DataGridViewTextBoxColumn64.Name = "DataGridViewTextBoxColumn64"
         Me.DataGridViewTextBoxColumn64.ReadOnly = True
         Me.DataGridViewTextBoxColumn64.Width = 80
@@ -4397,9 +3874,10 @@ Partial Class DHDTest
         'DataGridViewTextBoxColumn65
         '
         Me.DataGridViewTextBoxColumn65.DataPropertyName = "TIME2"
-        DataGridViewCellStyle121.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        Me.DataGridViewTextBoxColumn65.DefaultCellStyle = DataGridViewCellStyle121
+        DataGridViewCellStyle145.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        Me.DataGridViewTextBoxColumn65.DefaultCellStyle = DataGridViewCellStyle145
         Me.DataGridViewTextBoxColumn65.HeaderText = "２kPa"
+        Me.DataGridViewTextBoxColumn65.MinimumWidth = 6
         Me.DataGridViewTextBoxColumn65.Name = "DataGridViewTextBoxColumn65"
         Me.DataGridViewTextBoxColumn65.ReadOnly = True
         Me.DataGridViewTextBoxColumn65.Width = 80
@@ -4407,9 +3885,10 @@ Partial Class DHDTest
         'DataGridViewTextBoxColumn66
         '
         Me.DataGridViewTextBoxColumn66.DataPropertyName = "TIME3"
-        DataGridViewCellStyle122.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        Me.DataGridViewTextBoxColumn66.DefaultCellStyle = DataGridViewCellStyle122
+        DataGridViewCellStyle146.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        Me.DataGridViewTextBoxColumn66.DefaultCellStyle = DataGridViewCellStyle146
         Me.DataGridViewTextBoxColumn66.HeaderText = "３kPa"
+        Me.DataGridViewTextBoxColumn66.MinimumWidth = 6
         Me.DataGridViewTextBoxColumn66.Name = "DataGridViewTextBoxColumn66"
         Me.DataGridViewTextBoxColumn66.ReadOnly = True
         Me.DataGridViewTextBoxColumn66.Width = 80
@@ -4417,9 +3896,10 @@ Partial Class DHDTest
         'DataGridViewTextBoxColumn67
         '
         Me.DataGridViewTextBoxColumn67.DataPropertyName = "TIME4"
-        DataGridViewCellStyle123.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        Me.DataGridViewTextBoxColumn67.DefaultCellStyle = DataGridViewCellStyle123
+        DataGridViewCellStyle147.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        Me.DataGridViewTextBoxColumn67.DefaultCellStyle = DataGridViewCellStyle147
         Me.DataGridViewTextBoxColumn67.HeaderText = "４kPa"
+        Me.DataGridViewTextBoxColumn67.MinimumWidth = 6
         Me.DataGridViewTextBoxColumn67.Name = "DataGridViewTextBoxColumn67"
         Me.DataGridViewTextBoxColumn67.ReadOnly = True
         Me.DataGridViewTextBoxColumn67.Width = 80
@@ -4427,19 +3907,21 @@ Partial Class DHDTest
         'DataGridViewTextBoxColumn68
         '
         Me.DataGridViewTextBoxColumn68.DataPropertyName = "TIME6"
-        DataGridViewCellStyle124.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        Me.DataGridViewTextBoxColumn68.DefaultCellStyle = DataGridViewCellStyle124
+        DataGridViewCellStyle148.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        Me.DataGridViewTextBoxColumn68.DefaultCellStyle = DataGridViewCellStyle148
         Me.DataGridViewTextBoxColumn68.HeaderText = "６kPa"
+        Me.DataGridViewTextBoxColumn68.MinimumWidth = 6
         Me.DataGridViewTextBoxColumn68.Name = "DataGridViewTextBoxColumn68"
         Me.DataGridViewTextBoxColumn68.ReadOnly = True
         Me.DataGridViewTextBoxColumn68.Width = 80
         '
         'DataGridViewTextBoxColumn110
         '
-        Me.DataGridViewTextBoxColumn110.DataPropertyName = "H_BASE"
-        DataGridViewCellStyle125.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        Me.DataGridViewTextBoxColumn110.DefaultCellStyle = DataGridViewCellStyle125
+        Me.DataGridViewTextBoxColumn110.DataPropertyName = "H_SECOND"
+        DataGridViewCellStyle149.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        Me.DataGridViewTextBoxColumn110.DefaultCellStyle = DataGridViewCellStyle149
         Me.DataGridViewTextBoxColumn110.HeaderText = "判定基準 [Sec]"
+        Me.DataGridViewTextBoxColumn110.MinimumWidth = 6
         Me.DataGridViewTextBoxColumn110.Name = "DataGridViewTextBoxColumn110"
         Me.DataGridViewTextBoxColumn110.ReadOnly = True
         Me.DataGridViewTextBoxColumn110.Width = 140
@@ -4447,9 +3929,10 @@ Partial Class DHDTest
         'DataGridViewTextBoxColumn111
         '
         Me.DataGridViewTextBoxColumn111.DataPropertyName = "HANTEI"
-        DataGridViewCellStyle126.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        Me.DataGridViewTextBoxColumn111.DefaultCellStyle = DataGridViewCellStyle126
+        DataGridViewCellStyle150.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        Me.DataGridViewTextBoxColumn111.DefaultCellStyle = DataGridViewCellStyle150
         Me.DataGridViewTextBoxColumn111.HeaderText = "判定"
+        Me.DataGridViewTextBoxColumn111.MinimumWidth = 6
         Me.DataGridViewTextBoxColumn111.Name = "DataGridViewTextBoxColumn111"
         Me.DataGridViewTextBoxColumn111.ReadOnly = True
         Me.DataGridViewTextBoxColumn111.Width = 70
@@ -4458,7 +3941,7 @@ Partial Class DHDTest
         '
         Me.grpZanryu4.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.grpZanryu4.Controls.Add(Me.dgvZanryu4)
-        Me.grpZanryu4.Location = New System.Drawing.Point(5, 410)
+        Me.grpZanryu4.Location = New System.Drawing.Point(5, 408)
         Me.grpZanryu4.Name = "grpZanryu4"
         Me.grpZanryu4.Size = New System.Drawing.Size(916, 100)
         Me.grpZanryu4.TabIndex = 7
@@ -4478,6 +3961,7 @@ Partial Class DHDTest
         Me.dgvZanryu4.Location = New System.Drawing.Point(6, 20)
         Me.dgvZanryu4.Name = "dgvZanryu4"
         Me.dgvZanryu4.RowHeadersVisible = False
+        Me.dgvZanryu4.RowHeadersWidth = 51
         Me.dgvZanryu4.RowTemplate.Height = 21
         Me.dgvZanryu4.Size = New System.Drawing.Size(904, 74)
         Me.dgvZanryu4.TabIndex = 2
@@ -4485,9 +3969,10 @@ Partial Class DHDTest
         'DataGridViewTextBoxColumn97
         '
         Me.DataGridViewTextBoxColumn97.DataPropertyName = "VOLT_IN"
-        DataGridViewCellStyle127.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        Me.DataGridViewTextBoxColumn97.DefaultCellStyle = DataGridViewCellStyle127
+        DataGridViewCellStyle151.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        Me.DataGridViewTextBoxColumn97.DefaultCellStyle = DataGridViewCellStyle151
         Me.DataGridViewTextBoxColumn97.HeaderText = "印加電圧１"
+        Me.DataGridViewTextBoxColumn97.MinimumWidth = 6
         Me.DataGridViewTextBoxColumn97.Name = "DataGridViewTextBoxColumn97"
         Me.DataGridViewTextBoxColumn97.ReadOnly = True
         Me.DataGridViewTextBoxColumn97.Width = 120
@@ -4495,9 +3980,10 @@ Partial Class DHDTest
         'DataGridViewTextBoxColumn98
         '
         Me.DataGridViewTextBoxColumn98.DataPropertyName = "VOLT_OUT"
-        DataGridViewCellStyle128.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        Me.DataGridViewTextBoxColumn98.DefaultCellStyle = DataGridViewCellStyle128
+        DataGridViewCellStyle152.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        Me.DataGridViewTextBoxColumn98.DefaultCellStyle = DataGridViewCellStyle152
         Me.DataGridViewTextBoxColumn98.HeaderText = "印加電圧２"
+        Me.DataGridViewTextBoxColumn98.MinimumWidth = 6
         Me.DataGridViewTextBoxColumn98.Name = "DataGridViewTextBoxColumn98"
         Me.DataGridViewTextBoxColumn98.ReadOnly = True
         Me.DataGridViewTextBoxColumn98.Width = 120
@@ -4505,9 +3991,10 @@ Partial Class DHDTest
         'DataGridViewTextBoxColumn99
         '
         Me.DataGridViewTextBoxColumn99.DataPropertyName = "PRESS1"
-        DataGridViewCellStyle129.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
-        Me.DataGridViewTextBoxColumn99.DefaultCellStyle = DataGridViewCellStyle129
+        DataGridViewCellStyle153.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
+        Me.DataGridViewTextBoxColumn99.DefaultCellStyle = DataGridViewCellStyle153
         Me.DataGridViewTextBoxColumn99.HeaderText = "印加前圧力 [Pa]"
+        Me.DataGridViewTextBoxColumn99.MinimumWidth = 6
         Me.DataGridViewTextBoxColumn99.Name = "DataGridViewTextBoxColumn99"
         Me.DataGridViewTextBoxColumn99.ReadOnly = True
         Me.DataGridViewTextBoxColumn99.Width = 160
@@ -4515,9 +4002,10 @@ Partial Class DHDTest
         'DataGridViewTextBoxColumn100
         '
         Me.DataGridViewTextBoxColumn100.DataPropertyName = "PRESS2"
-        DataGridViewCellStyle130.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
-        Me.DataGridViewTextBoxColumn100.DefaultCellStyle = DataGridViewCellStyle130
+        DataGridViewCellStyle154.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
+        Me.DataGridViewTextBoxColumn100.DefaultCellStyle = DataGridViewCellStyle154
         Me.DataGridViewTextBoxColumn100.HeaderText = "印加後圧力 [Pa]"
+        Me.DataGridViewTextBoxColumn100.MinimumWidth = 6
         Me.DataGridViewTextBoxColumn100.Name = "DataGridViewTextBoxColumn100"
         Me.DataGridViewTextBoxColumn100.ReadOnly = True
         Me.DataGridViewTextBoxColumn100.Width = 160
@@ -4525,18 +4013,20 @@ Partial Class DHDTest
         'DataGridViewTextBoxColumn101
         '
         Me.DataGridViewTextBoxColumn101.DataPropertyName = "PRESS_DIF"
-        DataGridViewCellStyle131.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
-        Me.DataGridViewTextBoxColumn101.DefaultCellStyle = DataGridViewCellStyle131
+        DataGridViewCellStyle155.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
+        Me.DataGridViewTextBoxColumn101.DefaultCellStyle = DataGridViewCellStyle155
         Me.DataGridViewTextBoxColumn101.HeaderText = "圧力差 [Pa]"
+        Me.DataGridViewTextBoxColumn101.MinimumWidth = 6
         Me.DataGridViewTextBoxColumn101.Name = "DataGridViewTextBoxColumn101"
         Me.DataGridViewTextBoxColumn101.Width = 120
         '
         'DataGridViewTextBoxColumn102
         '
         Me.DataGridViewTextBoxColumn102.DataPropertyName = "H_BASE"
-        DataGridViewCellStyle132.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        Me.DataGridViewTextBoxColumn102.DefaultCellStyle = DataGridViewCellStyle132
+        DataGridViewCellStyle156.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        Me.DataGridViewTextBoxColumn102.DefaultCellStyle = DataGridViewCellStyle156
         Me.DataGridViewTextBoxColumn102.HeaderText = "判定基準 [Pa]"
+        Me.DataGridViewTextBoxColumn102.MinimumWidth = 6
         Me.DataGridViewTextBoxColumn102.Name = "DataGridViewTextBoxColumn102"
         Me.DataGridViewTextBoxColumn102.ReadOnly = True
         Me.DataGridViewTextBoxColumn102.Width = 140
@@ -4544,9 +4034,10 @@ Partial Class DHDTest
         'DataGridViewTextBoxColumn103
         '
         Me.DataGridViewTextBoxColumn103.DataPropertyName = "HANTEI"
-        DataGridViewCellStyle133.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        Me.DataGridViewTextBoxColumn103.DefaultCellStyle = DataGridViewCellStyle133
+        DataGridViewCellStyle157.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        Me.DataGridViewTextBoxColumn103.DefaultCellStyle = DataGridViewCellStyle157
         Me.DataGridViewTextBoxColumn103.HeaderText = "判定"
+        Me.DataGridViewTextBoxColumn103.MinimumWidth = 6
         Me.DataGridViewTextBoxColumn103.Name = "DataGridViewTextBoxColumn103"
         Me.DataGridViewTextBoxColumn103.ReadOnly = True
         Me.DataGridViewTextBoxColumn103.Width = 70
@@ -4575,6 +4066,7 @@ Partial Class DHDTest
         Me.dgvZetsuen4.Name = "dgvZetsuen4"
         Me.dgvZetsuen4.ReadOnly = True
         Me.dgvZetsuen4.RowHeadersVisible = False
+        Me.dgvZetsuen4.RowHeadersWidth = 51
         Me.dgvZetsuen4.RowTemplate.Height = 21
         Me.dgvZetsuen4.Size = New System.Drawing.Size(904, 93)
         Me.dgvZetsuen4.TabIndex = 1
@@ -4582,9 +4074,10 @@ Partial Class DHDTest
         'DataGridViewTextBoxColumn69
         '
         Me.DataGridViewTextBoxColumn69.DataPropertyName = "VIN_POS"
-        DataGridViewCellStyle134.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        Me.DataGridViewTextBoxColumn69.DefaultCellStyle = DataGridViewCellStyle134
+        DataGridViewCellStyle158.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        Me.DataGridViewTextBoxColumn69.DefaultCellStyle = DataGridViewCellStyle158
         Me.DataGridViewTextBoxColumn69.HeaderText = "電圧印加箇所"
+        Me.DataGridViewTextBoxColumn69.MinimumWidth = 6
         Me.DataGridViewTextBoxColumn69.Name = "DataGridViewTextBoxColumn69"
         Me.DataGridViewTextBoxColumn69.ReadOnly = True
         Me.DataGridViewTextBoxColumn69.Width = 300
@@ -4592,45 +4085,54 @@ Partial Class DHDTest
         'DataGridViewTextBoxColumn70
         '
         Me.DataGridViewTextBoxColumn70.DataPropertyName = "VOLT_IN"
-        DataGridViewCellStyle135.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        Me.DataGridViewTextBoxColumn70.DefaultCellStyle = DataGridViewCellStyle135
+        DataGridViewCellStyle159.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        Me.DataGridViewTextBoxColumn70.DefaultCellStyle = DataGridViewCellStyle159
         Me.DataGridViewTextBoxColumn70.HeaderText = "印加電圧"
+        Me.DataGridViewTextBoxColumn70.MinimumWidth = 6
         Me.DataGridViewTextBoxColumn70.Name = "DataGridViewTextBoxColumn70"
         Me.DataGridViewTextBoxColumn70.ReadOnly = True
+        Me.DataGridViewTextBoxColumn70.Width = 125
         '
         'DataGridViewTextBoxColumn71
         '
         Me.DataGridViewTextBoxColumn71.DataPropertyName = "DENRYU"
-        DataGridViewCellStyle136.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
-        Me.DataGridViewTextBoxColumn71.DefaultCellStyle = DataGridViewCellStyle136
+        DataGridViewCellStyle160.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
+        Me.DataGridViewTextBoxColumn71.DefaultCellStyle = DataGridViewCellStyle160
         Me.DataGridViewTextBoxColumn71.HeaderText = "電流値"
+        Me.DataGridViewTextBoxColumn71.MinimumWidth = 6
         Me.DataGridViewTextBoxColumn71.Name = "DataGridViewTextBoxColumn71"
         Me.DataGridViewTextBoxColumn71.ReadOnly = True
+        Me.DataGridViewTextBoxColumn71.Width = 125
         '
         'DataGridViewTextBoxColumn72
         '
         Me.DataGridViewTextBoxColumn72.DataPropertyName = "ZETSU_R"
-        DataGridViewCellStyle137.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
-        Me.DataGridViewTextBoxColumn72.DefaultCellStyle = DataGridViewCellStyle137
+        DataGridViewCellStyle161.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
+        Me.DataGridViewTextBoxColumn72.DefaultCellStyle = DataGridViewCellStyle161
         Me.DataGridViewTextBoxColumn72.HeaderText = "絶縁抵抗"
+        Me.DataGridViewTextBoxColumn72.MinimumWidth = 6
         Me.DataGridViewTextBoxColumn72.Name = "DataGridViewTextBoxColumn72"
         Me.DataGridViewTextBoxColumn72.ReadOnly = True
+        Me.DataGridViewTextBoxColumn72.Width = 125
         '
         'DataGridViewTextBoxColumn73
         '
         Me.DataGridViewTextBoxColumn73.DataPropertyName = "H_BASE"
-        DataGridViewCellStyle138.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        Me.DataGridViewTextBoxColumn73.DefaultCellStyle = DataGridViewCellStyle138
+        DataGridViewCellStyle162.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        Me.DataGridViewTextBoxColumn73.DefaultCellStyle = DataGridViewCellStyle162
         Me.DataGridViewTextBoxColumn73.HeaderText = "判定基準"
+        Me.DataGridViewTextBoxColumn73.MinimumWidth = 6
         Me.DataGridViewTextBoxColumn73.Name = "DataGridViewTextBoxColumn73"
         Me.DataGridViewTextBoxColumn73.ReadOnly = True
+        Me.DataGridViewTextBoxColumn73.Width = 125
         '
         'DataGridViewTextBoxColumn74
         '
         Me.DataGridViewTextBoxColumn74.DataPropertyName = "HANTEI"
-        DataGridViewCellStyle139.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        Me.DataGridViewTextBoxColumn74.DefaultCellStyle = DataGridViewCellStyle139
+        DataGridViewCellStyle163.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        Me.DataGridViewTextBoxColumn74.DefaultCellStyle = DataGridViewCellStyle163
         Me.DataGridViewTextBoxColumn74.HeaderText = "判定"
+        Me.DataGridViewTextBoxColumn74.MinimumWidth = 6
         Me.DataGridViewTextBoxColumn74.Name = "DataGridViewTextBoxColumn74"
         Me.DataGridViewTextBoxColumn74.ReadOnly = True
         Me.DataGridViewTextBoxColumn74.Width = 70
@@ -4638,11 +4140,13 @@ Partial Class DHDTest
         'DataGridViewTextBoxColumn75
         '
         Me.DataGridViewTextBoxColumn75.DataPropertyName = "SINKUDO"
-        DataGridViewCellStyle140.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
-        Me.DataGridViewTextBoxColumn75.DefaultCellStyle = DataGridViewCellStyle140
+        DataGridViewCellStyle164.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
+        Me.DataGridViewTextBoxColumn75.DefaultCellStyle = DataGridViewCellStyle164
         Me.DataGridViewTextBoxColumn75.HeaderText = "真空度"
+        Me.DataGridViewTextBoxColumn75.MinimumWidth = 6
         Me.DataGridViewTextBoxColumn75.Name = "DataGridViewTextBoxColumn75"
         Me.DataGridViewTextBoxColumn75.ReadOnly = True
+        Me.DataGridViewTextBoxColumn75.Width = 125
         '
         'btnEnd
         '
@@ -4703,6 +4207,1041 @@ Partial Class DHDTest
         Me.btnBzStop.TabIndex = 28
         Me.btnBzStop.Text = "ブザー停止"
         Me.btnBzStop.UseVisualStyleBackColor = True
+        '
+        'DataGridViewTextBoxColumn15
+        '
+        Me.DataGridViewTextBoxColumn15.DataPropertyName = "VOLT_IN"
+        DataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        Me.DataGridViewTextBoxColumn15.DefaultCellStyle = DataGridViewCellStyle18
+        Me.DataGridViewTextBoxColumn15.HeaderText = "電圧1 (V)"
+        Me.DataGridViewTextBoxColumn15.MinimumWidth = 6
+        Me.DataGridViewTextBoxColumn15.Name = "DataGridViewTextBoxColumn15"
+        Me.DataGridViewTextBoxColumn15.Width = 60
+        '
+        'DataGridViewTextBoxColumn16
+        '
+        Me.DataGridViewTextBoxColumn16.DataPropertyName = "VOLT_OUT"
+        DataGridViewCellStyle19.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        Me.DataGridViewTextBoxColumn16.DefaultCellStyle = DataGridViewCellStyle19
+        Me.DataGridViewTextBoxColumn16.HeaderText = "電圧2 (V)"
+        Me.DataGridViewTextBoxColumn16.MinimumWidth = 6
+        Me.DataGridViewTextBoxColumn16.Name = "DataGridViewTextBoxColumn16"
+        Me.DataGridViewTextBoxColumn16.Width = 60
+        '
+        'DataGridViewTextBoxColumn18
+        '
+        Me.DataGridViewTextBoxColumn18.DataPropertyName = "LEAK1"
+        DataGridViewCellStyle20.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        Me.DataGridViewTextBoxColumn18.DefaultCellStyle = DataGridViewCellStyle20
+        Me.DataGridViewTextBoxColumn18.HeaderText = "1kPa"
+        Me.DataGridViewTextBoxColumn18.MinimumWidth = 6
+        Me.DataGridViewTextBoxColumn18.Name = "DataGridViewTextBoxColumn18"
+        Me.DataGridViewTextBoxColumn18.Width = 60
+        '
+        'DataGridViewTextBoxColumn19
+        '
+        Me.DataGridViewTextBoxColumn19.DataPropertyName = "LEAK2"
+        DataGridViewCellStyle21.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        Me.DataGridViewTextBoxColumn19.DefaultCellStyle = DataGridViewCellStyle21
+        Me.DataGridViewTextBoxColumn19.HeaderText = "2kPa"
+        Me.DataGridViewTextBoxColumn19.MinimumWidth = 6
+        Me.DataGridViewTextBoxColumn19.Name = "DataGridViewTextBoxColumn19"
+        Me.DataGridViewTextBoxColumn19.Width = 60
+        '
+        'DataGridViewTextBoxColumn20
+        '
+        Me.DataGridViewTextBoxColumn20.DataPropertyName = "LEAK3"
+        DataGridViewCellStyle22.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        Me.DataGridViewTextBoxColumn20.DefaultCellStyle = DataGridViewCellStyle22
+        Me.DataGridViewTextBoxColumn20.HeaderText = "3kPa"
+        Me.DataGridViewTextBoxColumn20.MinimumWidth = 6
+        Me.DataGridViewTextBoxColumn20.Name = "DataGridViewTextBoxColumn20"
+        Me.DataGridViewTextBoxColumn20.Width = 60
+        '
+        'DataGridViewTextBoxColumn120
+        '
+        Me.DataGridViewTextBoxColumn120.DataPropertyName = "LEAK4"
+        DataGridViewCellStyle23.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        Me.DataGridViewTextBoxColumn120.DefaultCellStyle = DataGridViewCellStyle23
+        Me.DataGridViewTextBoxColumn120.HeaderText = "4kPa"
+        Me.DataGridViewTextBoxColumn120.MinimumWidth = 6
+        Me.DataGridViewTextBoxColumn120.Name = "DataGridViewTextBoxColumn120"
+        Me.DataGridViewTextBoxColumn120.Width = 60
+        '
+        'DataGridViewTextBoxColumn121
+        '
+        Me.DataGridViewTextBoxColumn121.DataPropertyName = "LEAK6"
+        DataGridViewCellStyle24.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        Me.DataGridViewTextBoxColumn121.DefaultCellStyle = DataGridViewCellStyle24
+        Me.DataGridViewTextBoxColumn121.HeaderText = "6kPa"
+        Me.DataGridViewTextBoxColumn121.MinimumWidth = 6
+        Me.DataGridViewTextBoxColumn121.Name = "DataGridViewTextBoxColumn121"
+        Me.DataGridViewTextBoxColumn121.Width = 60
+        '
+        'DataGridViewTextBoxColumn122
+        '
+        Me.DataGridViewTextBoxColumn122.DataPropertyName = "H_BASE1"
+        DataGridViewCellStyle25.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        Me.DataGridViewTextBoxColumn122.DefaultCellStyle = DataGridViewCellStyle25
+        Me.DataGridViewTextBoxColumn122.HeaderText = "1kPa"
+        Me.DataGridViewTextBoxColumn122.MinimumWidth = 6
+        Me.DataGridViewTextBoxColumn122.Name = "DataGridViewTextBoxColumn122"
+        Me.DataGridViewTextBoxColumn122.Width = 60
+        '
+        'DataGridViewTextBoxColumn123
+        '
+        Me.DataGridViewTextBoxColumn123.DataPropertyName = "H_BASE2"
+        DataGridViewCellStyle26.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        Me.DataGridViewTextBoxColumn123.DefaultCellStyle = DataGridViewCellStyle26
+        Me.DataGridViewTextBoxColumn123.HeaderText = "2kPa"
+        Me.DataGridViewTextBoxColumn123.MinimumWidth = 6
+        Me.DataGridViewTextBoxColumn123.Name = "DataGridViewTextBoxColumn123"
+        Me.DataGridViewTextBoxColumn123.Width = 60
+        '
+        'DataGridViewTextBoxColumn124
+        '
+        Me.DataGridViewTextBoxColumn124.DataPropertyName = "H_BASE3"
+        DataGridViewCellStyle27.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        Me.DataGridViewTextBoxColumn124.DefaultCellStyle = DataGridViewCellStyle27
+        Me.DataGridViewTextBoxColumn124.HeaderText = "3kPa"
+        Me.DataGridViewTextBoxColumn124.MinimumWidth = 6
+        Me.DataGridViewTextBoxColumn124.Name = "DataGridViewTextBoxColumn124"
+        Me.DataGridViewTextBoxColumn124.Width = 60
+        '
+        'DataGridViewTextBoxColumn125
+        '
+        Me.DataGridViewTextBoxColumn125.DataPropertyName = "H_BASE4"
+        DataGridViewCellStyle28.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        Me.DataGridViewTextBoxColumn125.DefaultCellStyle = DataGridViewCellStyle28
+        Me.DataGridViewTextBoxColumn125.HeaderText = "4kPa"
+        Me.DataGridViewTextBoxColumn125.MinimumWidth = 6
+        Me.DataGridViewTextBoxColumn125.Name = "DataGridViewTextBoxColumn125"
+        Me.DataGridViewTextBoxColumn125.Width = 60
+        '
+        'DataGridViewTextBoxColumn126
+        '
+        Me.DataGridViewTextBoxColumn126.DataPropertyName = "H_BASE6"
+        DataGridViewCellStyle29.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        Me.DataGridViewTextBoxColumn126.DefaultCellStyle = DataGridViewCellStyle29
+        Me.DataGridViewTextBoxColumn126.HeaderText = "6kPa"
+        Me.DataGridViewTextBoxColumn126.MinimumWidth = 6
+        Me.DataGridViewTextBoxColumn126.Name = "DataGridViewTextBoxColumn126"
+        Me.DataGridViewTextBoxColumn126.Width = 60
+        '
+        'DataGridViewTextBoxColumn127
+        '
+        Me.DataGridViewTextBoxColumn127.DataPropertyName = "HANTEI1"
+        DataGridViewCellStyle30.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        Me.DataGridViewTextBoxColumn127.DefaultCellStyle = DataGridViewCellStyle30
+        Me.DataGridViewTextBoxColumn127.HeaderText = "1k"
+        Me.DataGridViewTextBoxColumn127.MinimumWidth = 6
+        Me.DataGridViewTextBoxColumn127.Name = "DataGridViewTextBoxColumn127"
+        Me.DataGridViewTextBoxColumn127.Width = 35
+        '
+        'DataGridViewTextBoxColumn128
+        '
+        Me.DataGridViewTextBoxColumn128.DataPropertyName = "HANTEI2"
+        DataGridViewCellStyle31.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        Me.DataGridViewTextBoxColumn128.DefaultCellStyle = DataGridViewCellStyle31
+        Me.DataGridViewTextBoxColumn128.HeaderText = "2k"
+        Me.DataGridViewTextBoxColumn128.MinimumWidth = 6
+        Me.DataGridViewTextBoxColumn128.Name = "DataGridViewTextBoxColumn128"
+        Me.DataGridViewTextBoxColumn128.Width = 35
+        '
+        'DataGridViewTextBoxColumn129
+        '
+        Me.DataGridViewTextBoxColumn129.DataPropertyName = "HANTEI3"
+        DataGridViewCellStyle32.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        Me.DataGridViewTextBoxColumn129.DefaultCellStyle = DataGridViewCellStyle32
+        Me.DataGridViewTextBoxColumn129.HeaderText = "3k"
+        Me.DataGridViewTextBoxColumn129.MinimumWidth = 6
+        Me.DataGridViewTextBoxColumn129.Name = "DataGridViewTextBoxColumn129"
+        Me.DataGridViewTextBoxColumn129.Width = 35
+        '
+        'DataGridViewTextBoxColumn130
+        '
+        Me.DataGridViewTextBoxColumn130.DataPropertyName = "HANTEI4"
+        DataGridViewCellStyle33.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        Me.DataGridViewTextBoxColumn130.DefaultCellStyle = DataGridViewCellStyle33
+        Me.DataGridViewTextBoxColumn130.HeaderText = "4k"
+        Me.DataGridViewTextBoxColumn130.MinimumWidth = 6
+        Me.DataGridViewTextBoxColumn130.Name = "DataGridViewTextBoxColumn130"
+        Me.DataGridViewTextBoxColumn130.Width = 35
+        '
+        'DataGridViewTextBoxColumn131
+        '
+        Me.DataGridViewTextBoxColumn131.DataPropertyName = "HANTEI6"
+        DataGridViewCellStyle34.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        Me.DataGridViewTextBoxColumn131.DefaultCellStyle = DataGridViewCellStyle34
+        Me.DataGridViewTextBoxColumn131.HeaderText = "6k"
+        Me.DataGridViewTextBoxColumn131.MinimumWidth = 6
+        Me.DataGridViewTextBoxColumn131.Name = "DataGridViewTextBoxColumn131"
+        Me.DataGridViewTextBoxColumn131.Width = 35
+        '
+        'DataGridViewTextBoxColumn40
+        '
+        Me.DataGridViewTextBoxColumn40.DataPropertyName = "VOLT_IN"
+        DataGridViewCellStyle100.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        Me.DataGridViewTextBoxColumn40.DefaultCellStyle = DataGridViewCellStyle100
+        Me.DataGridViewTextBoxColumn40.HeaderText = "印加電圧１"
+        Me.DataGridViewTextBoxColumn40.MinimumWidth = 6
+        Me.DataGridViewTextBoxColumn40.Name = "DataGridViewTextBoxColumn40"
+        Me.DataGridViewTextBoxColumn40.ReadOnly = True
+        Me.DataGridViewTextBoxColumn40.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
+        Me.DataGridViewTextBoxColumn40.Width = 120
+        '
+        'DataGridViewTextBoxColumn41
+        '
+        Me.DataGridViewTextBoxColumn41.DataPropertyName = "VOLT_OUT"
+        DataGridViewCellStyle101.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        Me.DataGridViewTextBoxColumn41.DefaultCellStyle = DataGridViewCellStyle101
+        Me.DataGridViewTextBoxColumn41.HeaderText = "印加電圧２"
+        Me.DataGridViewTextBoxColumn41.MinimumWidth = 6
+        Me.DataGridViewTextBoxColumn41.Name = "DataGridViewTextBoxColumn41"
+        Me.DataGridViewTextBoxColumn41.ReadOnly = True
+        Me.DataGridViewTextBoxColumn41.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
+        Me.DataGridViewTextBoxColumn41.Width = 120
+        '
+        'DataGridViewTextBoxColumn42
+        '
+        Me.DataGridViewTextBoxColumn42.DataPropertyName = "HE_FLOW"
+        DataGridViewCellStyle102.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        Me.DataGridViewTextBoxColumn42.DefaultCellStyle = DataGridViewCellStyle102
+        Me.DataGridViewTextBoxColumn42.HeaderText = "Ｈｅ流量 [sccm]"
+        Me.DataGridViewTextBoxColumn42.MinimumWidth = 6
+        Me.DataGridViewTextBoxColumn42.Name = "DataGridViewTextBoxColumn42"
+        Me.DataGridViewTextBoxColumn42.ReadOnly = True
+        Me.DataGridViewTextBoxColumn42.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
+        Me.DataGridViewTextBoxColumn42.Width = 140
+        '
+        'DataGridViewTextBoxColumn43
+        '
+        Me.DataGridViewTextBoxColumn43.DataPropertyName = "TIME1"
+        DataGridViewCellStyle103.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        Me.DataGridViewTextBoxColumn43.DefaultCellStyle = DataGridViewCellStyle103
+        Me.DataGridViewTextBoxColumn43.HeaderText = "１kPa"
+        Me.DataGridViewTextBoxColumn43.MinimumWidth = 6
+        Me.DataGridViewTextBoxColumn43.Name = "DataGridViewTextBoxColumn43"
+        Me.DataGridViewTextBoxColumn43.ReadOnly = True
+        Me.DataGridViewTextBoxColumn43.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
+        Me.DataGridViewTextBoxColumn43.Width = 80
+        '
+        'DataGridViewTextBoxColumn44
+        '
+        Me.DataGridViewTextBoxColumn44.DataPropertyName = "TIME2"
+        DataGridViewCellStyle104.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        Me.DataGridViewTextBoxColumn44.DefaultCellStyle = DataGridViewCellStyle104
+        Me.DataGridViewTextBoxColumn44.HeaderText = "２kPa"
+        Me.DataGridViewTextBoxColumn44.MinimumWidth = 6
+        Me.DataGridViewTextBoxColumn44.Name = "DataGridViewTextBoxColumn44"
+        Me.DataGridViewTextBoxColumn44.ReadOnly = True
+        Me.DataGridViewTextBoxColumn44.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
+        Me.DataGridViewTextBoxColumn44.Width = 80
+        '
+        'DataGridViewTextBoxColumn45
+        '
+        Me.DataGridViewTextBoxColumn45.DataPropertyName = "TIME3"
+        DataGridViewCellStyle105.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        Me.DataGridViewTextBoxColumn45.DefaultCellStyle = DataGridViewCellStyle105
+        Me.DataGridViewTextBoxColumn45.HeaderText = "３kPa"
+        Me.DataGridViewTextBoxColumn45.MinimumWidth = 6
+        Me.DataGridViewTextBoxColumn45.Name = "DataGridViewTextBoxColumn45"
+        Me.DataGridViewTextBoxColumn45.ReadOnly = True
+        Me.DataGridViewTextBoxColumn45.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
+        Me.DataGridViewTextBoxColumn45.Width = 80
+        '
+        'DataGridViewTextBoxColumn46
+        '
+        Me.DataGridViewTextBoxColumn46.DataPropertyName = "TIME4"
+        DataGridViewCellStyle106.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        Me.DataGridViewTextBoxColumn46.DefaultCellStyle = DataGridViewCellStyle106
+        Me.DataGridViewTextBoxColumn46.HeaderText = "４kPa"
+        Me.DataGridViewTextBoxColumn46.MinimumWidth = 6
+        Me.DataGridViewTextBoxColumn46.Name = "DataGridViewTextBoxColumn46"
+        Me.DataGridViewTextBoxColumn46.ReadOnly = True
+        Me.DataGridViewTextBoxColumn46.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
+        Me.DataGridViewTextBoxColumn46.Width = 80
+        '
+        'DataGridViewTextBoxColumn47
+        '
+        Me.DataGridViewTextBoxColumn47.DataPropertyName = "TIME6"
+        DataGridViewCellStyle107.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        Me.DataGridViewTextBoxColumn47.DefaultCellStyle = DataGridViewCellStyle107
+        Me.DataGridViewTextBoxColumn47.HeaderText = "６kPa"
+        Me.DataGridViewTextBoxColumn47.MinimumWidth = 6
+        Me.DataGridViewTextBoxColumn47.Name = "DataGridViewTextBoxColumn47"
+        Me.DataGridViewTextBoxColumn47.ReadOnly = True
+        Me.DataGridViewTextBoxColumn47.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
+        Me.DataGridViewTextBoxColumn47.Width = 80
+        '
+        'DataGridViewTextBoxColumn108
+        '
+        Me.DataGridViewTextBoxColumn108.DataPropertyName = "H_SECOND"
+        DataGridViewCellStyle108.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        Me.DataGridViewTextBoxColumn108.DefaultCellStyle = DataGridViewCellStyle108
+        Me.DataGridViewTextBoxColumn108.HeaderText = "判定基準 [Sec]"
+        Me.DataGridViewTextBoxColumn108.MinimumWidth = 6
+        Me.DataGridViewTextBoxColumn108.Name = "DataGridViewTextBoxColumn108"
+        Me.DataGridViewTextBoxColumn108.ReadOnly = True
+        Me.DataGridViewTextBoxColumn108.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
+        Me.DataGridViewTextBoxColumn108.Width = 140
+        '
+        'DataGridViewTextBoxColumn109
+        '
+        Me.DataGridViewTextBoxColumn109.DataPropertyName = "HANTEI"
+        DataGridViewCellStyle109.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        Me.DataGridViewTextBoxColumn109.DefaultCellStyle = DataGridViewCellStyle109
+        Me.DataGridViewTextBoxColumn109.HeaderText = "判定"
+        Me.DataGridViewTextBoxColumn109.MinimumWidth = 6
+        Me.DataGridViewTextBoxColumn109.Name = "DataGridViewTextBoxColumn109"
+        Me.DataGridViewTextBoxColumn109.ReadOnly = True
+        Me.DataGridViewTextBoxColumn109.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
+        Me.DataGridViewTextBoxColumn109.Width = 70
+        '
+        'DataGridViewTextBoxColumn90
+        '
+        Me.DataGridViewTextBoxColumn90.DataPropertyName = "VOLT_IN"
+        DataGridViewCellStyle110.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        Me.DataGridViewTextBoxColumn90.DefaultCellStyle = DataGridViewCellStyle110
+        Me.DataGridViewTextBoxColumn90.HeaderText = "印加電圧１"
+        Me.DataGridViewTextBoxColumn90.MinimumWidth = 6
+        Me.DataGridViewTextBoxColumn90.Name = "DataGridViewTextBoxColumn90"
+        Me.DataGridViewTextBoxColumn90.ReadOnly = True
+        Me.DataGridViewTextBoxColumn90.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
+        Me.DataGridViewTextBoxColumn90.Width = 120
+        '
+        'DataGridViewTextBoxColumn91
+        '
+        Me.DataGridViewTextBoxColumn91.DataPropertyName = "VOLT_OUT"
+        DataGridViewCellStyle111.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        Me.DataGridViewTextBoxColumn91.DefaultCellStyle = DataGridViewCellStyle111
+        Me.DataGridViewTextBoxColumn91.HeaderText = "印加電圧２"
+        Me.DataGridViewTextBoxColumn91.MinimumWidth = 6
+        Me.DataGridViewTextBoxColumn91.Name = "DataGridViewTextBoxColumn91"
+        Me.DataGridViewTextBoxColumn91.ReadOnly = True
+        Me.DataGridViewTextBoxColumn91.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
+        Me.DataGridViewTextBoxColumn91.Width = 120
+        '
+        'DataGridViewTextBoxColumn92
+        '
+        Me.DataGridViewTextBoxColumn92.DataPropertyName = "PRESS1"
+        DataGridViewCellStyle112.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
+        Me.DataGridViewTextBoxColumn92.DefaultCellStyle = DataGridViewCellStyle112
+        Me.DataGridViewTextBoxColumn92.HeaderText = "印加前圧力 [Pa]"
+        Me.DataGridViewTextBoxColumn92.MinimumWidth = 6
+        Me.DataGridViewTextBoxColumn92.Name = "DataGridViewTextBoxColumn92"
+        Me.DataGridViewTextBoxColumn92.ReadOnly = True
+        Me.DataGridViewTextBoxColumn92.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
+        Me.DataGridViewTextBoxColumn92.Width = 160
+        '
+        'DataGridViewTextBoxColumn93
+        '
+        Me.DataGridViewTextBoxColumn93.DataPropertyName = "PRESS2"
+        DataGridViewCellStyle113.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
+        Me.DataGridViewTextBoxColumn93.DefaultCellStyle = DataGridViewCellStyle113
+        Me.DataGridViewTextBoxColumn93.HeaderText = "印加後圧力 [Pa]"
+        Me.DataGridViewTextBoxColumn93.MinimumWidth = 6
+        Me.DataGridViewTextBoxColumn93.Name = "DataGridViewTextBoxColumn93"
+        Me.DataGridViewTextBoxColumn93.ReadOnly = True
+        Me.DataGridViewTextBoxColumn93.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
+        Me.DataGridViewTextBoxColumn93.Width = 160
+        '
+        'DataGridViewTextBoxColumn94
+        '
+        Me.DataGridViewTextBoxColumn94.DataPropertyName = "PRESS_DIF"
+        DataGridViewCellStyle114.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
+        Me.DataGridViewTextBoxColumn94.DefaultCellStyle = DataGridViewCellStyle114
+        Me.DataGridViewTextBoxColumn94.HeaderText = "圧力差 [Pa]"
+        Me.DataGridViewTextBoxColumn94.MinimumWidth = 6
+        Me.DataGridViewTextBoxColumn94.Name = "DataGridViewTextBoxColumn94"
+        Me.DataGridViewTextBoxColumn94.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
+        Me.DataGridViewTextBoxColumn94.Width = 120
+        '
+        'DataGridViewTextBoxColumn95
+        '
+        Me.DataGridViewTextBoxColumn95.DataPropertyName = "H_BASE"
+        DataGridViewCellStyle115.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        Me.DataGridViewTextBoxColumn95.DefaultCellStyle = DataGridViewCellStyle115
+        Me.DataGridViewTextBoxColumn95.HeaderText = "判定基準 [Pa]"
+        Me.DataGridViewTextBoxColumn95.MinimumWidth = 6
+        Me.DataGridViewTextBoxColumn95.Name = "DataGridViewTextBoxColumn95"
+        Me.DataGridViewTextBoxColumn95.ReadOnly = True
+        Me.DataGridViewTextBoxColumn95.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
+        Me.DataGridViewTextBoxColumn95.Width = 140
+        '
+        'DataGridViewTextBoxColumn96
+        '
+        Me.DataGridViewTextBoxColumn96.DataPropertyName = "HANTEI"
+        DataGridViewCellStyle116.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        Me.DataGridViewTextBoxColumn96.DefaultCellStyle = DataGridViewCellStyle116
+        Me.DataGridViewTextBoxColumn96.HeaderText = "判定"
+        Me.DataGridViewTextBoxColumn96.MinimumWidth = 6
+        Me.DataGridViewTextBoxColumn96.Name = "DataGridViewTextBoxColumn96"
+        Me.DataGridViewTextBoxColumn96.ReadOnly = True
+        Me.DataGridViewTextBoxColumn96.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
+        Me.DataGridViewTextBoxColumn96.Width = 70
+        '
+        'DataGridViewTextBoxColumn48
+        '
+        Me.DataGridViewTextBoxColumn48.DataPropertyName = "VIN_POS"
+        DataGridViewCellStyle117.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        Me.DataGridViewTextBoxColumn48.DefaultCellStyle = DataGridViewCellStyle117
+        Me.DataGridViewTextBoxColumn48.HeaderText = "電圧印加箇所"
+        Me.DataGridViewTextBoxColumn48.MinimumWidth = 6
+        Me.DataGridViewTextBoxColumn48.Name = "DataGridViewTextBoxColumn48"
+        Me.DataGridViewTextBoxColumn48.ReadOnly = True
+        Me.DataGridViewTextBoxColumn48.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
+        Me.DataGridViewTextBoxColumn48.Width = 300
+        '
+        'DataGridViewTextBoxColumn49
+        '
+        Me.DataGridViewTextBoxColumn49.DataPropertyName = "VOLT_IN"
+        DataGridViewCellStyle118.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        Me.DataGridViewTextBoxColumn49.DefaultCellStyle = DataGridViewCellStyle118
+        Me.DataGridViewTextBoxColumn49.HeaderText = "印加電圧"
+        Me.DataGridViewTextBoxColumn49.MinimumWidth = 6
+        Me.DataGridViewTextBoxColumn49.Name = "DataGridViewTextBoxColumn49"
+        Me.DataGridViewTextBoxColumn49.ReadOnly = True
+        Me.DataGridViewTextBoxColumn49.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
+        Me.DataGridViewTextBoxColumn49.Width = 125
+        '
+        'DataGridViewTextBoxColumn50
+        '
+        Me.DataGridViewTextBoxColumn50.DataPropertyName = "DENRYU"
+        DataGridViewCellStyle119.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
+        Me.DataGridViewTextBoxColumn50.DefaultCellStyle = DataGridViewCellStyle119
+        Me.DataGridViewTextBoxColumn50.HeaderText = "電流値"
+        Me.DataGridViewTextBoxColumn50.MinimumWidth = 6
+        Me.DataGridViewTextBoxColumn50.Name = "DataGridViewTextBoxColumn50"
+        Me.DataGridViewTextBoxColumn50.ReadOnly = True
+        Me.DataGridViewTextBoxColumn50.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
+        Me.DataGridViewTextBoxColumn50.Width = 125
+        '
+        'DataGridViewTextBoxColumn51
+        '
+        Me.DataGridViewTextBoxColumn51.DataPropertyName = "ZETSU_R"
+        DataGridViewCellStyle120.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
+        Me.DataGridViewTextBoxColumn51.DefaultCellStyle = DataGridViewCellStyle120
+        Me.DataGridViewTextBoxColumn51.HeaderText = "絶縁抵抗"
+        Me.DataGridViewTextBoxColumn51.MinimumWidth = 6
+        Me.DataGridViewTextBoxColumn51.Name = "DataGridViewTextBoxColumn51"
+        Me.DataGridViewTextBoxColumn51.ReadOnly = True
+        Me.DataGridViewTextBoxColumn51.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
+        Me.DataGridViewTextBoxColumn51.Width = 125
+        '
+        'DataGridViewTextBoxColumn52
+        '
+        Me.DataGridViewTextBoxColumn52.DataPropertyName = "H_BASE"
+        DataGridViewCellStyle121.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        Me.DataGridViewTextBoxColumn52.DefaultCellStyle = DataGridViewCellStyle121
+        Me.DataGridViewTextBoxColumn52.HeaderText = "判定基準"
+        Me.DataGridViewTextBoxColumn52.MinimumWidth = 6
+        Me.DataGridViewTextBoxColumn52.Name = "DataGridViewTextBoxColumn52"
+        Me.DataGridViewTextBoxColumn52.ReadOnly = True
+        Me.DataGridViewTextBoxColumn52.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
+        Me.DataGridViewTextBoxColumn52.Width = 125
+        '
+        'DataGridViewTextBoxColumn53
+        '
+        Me.DataGridViewTextBoxColumn53.DataPropertyName = "HANTEI"
+        DataGridViewCellStyle122.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        Me.DataGridViewTextBoxColumn53.DefaultCellStyle = DataGridViewCellStyle122
+        Me.DataGridViewTextBoxColumn53.HeaderText = "判定"
+        Me.DataGridViewTextBoxColumn53.MinimumWidth = 6
+        Me.DataGridViewTextBoxColumn53.Name = "DataGridViewTextBoxColumn53"
+        Me.DataGridViewTextBoxColumn53.ReadOnly = True
+        Me.DataGridViewTextBoxColumn53.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
+        Me.DataGridViewTextBoxColumn53.Width = 70
+        '
+        'DataGridViewTextBoxColumn54
+        '
+        Me.DataGridViewTextBoxColumn54.DataPropertyName = "SINKUDO"
+        DataGridViewCellStyle123.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
+        Me.DataGridViewTextBoxColumn54.DefaultCellStyle = DataGridViewCellStyle123
+        Me.DataGridViewTextBoxColumn54.HeaderText = "真空度"
+        Me.DataGridViewTextBoxColumn54.MinimumWidth = 6
+        Me.DataGridViewTextBoxColumn54.Name = "DataGridViewTextBoxColumn54"
+        Me.DataGridViewTextBoxColumn54.ReadOnly = True
+        Me.DataGridViewTextBoxColumn54.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
+        Me.DataGridViewTextBoxColumn54.Width = 125
+        '
+        'DataGridViewTextBoxColumn34
+        '
+        Me.DataGridViewTextBoxColumn34.DataPropertyName = "VOLT_IN"
+        DataGridViewCellStyle83.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        Me.DataGridViewTextBoxColumn34.DefaultCellStyle = DataGridViewCellStyle83
+        Me.DataGridViewTextBoxColumn34.HeaderText = "電圧1 (V)"
+        Me.DataGridViewTextBoxColumn34.MinimumWidth = 6
+        Me.DataGridViewTextBoxColumn34.Name = "DataGridViewTextBoxColumn34"
+        Me.DataGridViewTextBoxColumn34.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
+        Me.DataGridViewTextBoxColumn34.Width = 60
+        '
+        'DataGridViewTextBoxColumn35
+        '
+        Me.DataGridViewTextBoxColumn35.DataPropertyName = "VOLT_OUT"
+        DataGridViewCellStyle84.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        Me.DataGridViewTextBoxColumn35.DefaultCellStyle = DataGridViewCellStyle84
+        Me.DataGridViewTextBoxColumn35.HeaderText = "電圧2 (V)"
+        Me.DataGridViewTextBoxColumn35.MinimumWidth = 6
+        Me.DataGridViewTextBoxColumn35.Name = "DataGridViewTextBoxColumn35"
+        Me.DataGridViewTextBoxColumn35.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
+        Me.DataGridViewTextBoxColumn35.Width = 60
+        '
+        'DataGridViewTextBoxColumn38
+        '
+        Me.DataGridViewTextBoxColumn38.DataPropertyName = "LEAK1"
+        DataGridViewCellStyle85.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        Me.DataGridViewTextBoxColumn38.DefaultCellStyle = DataGridViewCellStyle85
+        Me.DataGridViewTextBoxColumn38.HeaderText = "1kPa"
+        Me.DataGridViewTextBoxColumn38.MinimumWidth = 6
+        Me.DataGridViewTextBoxColumn38.Name = "DataGridViewTextBoxColumn38"
+        Me.DataGridViewTextBoxColumn38.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
+        Me.DataGridViewTextBoxColumn38.Width = 60
+        '
+        'Column23
+        '
+        Me.Column23.DataPropertyName = "LEAK2"
+        DataGridViewCellStyle86.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        Me.Column23.DefaultCellStyle = DataGridViewCellStyle86
+        Me.Column23.HeaderText = "2kPa"
+        Me.Column23.MinimumWidth = 6
+        Me.Column23.Name = "Column23"
+        Me.Column23.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
+        Me.Column23.Width = 60
+        '
+        'Column24
+        '
+        Me.Column24.DataPropertyName = "LEAK3"
+        DataGridViewCellStyle87.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        Me.Column24.DefaultCellStyle = DataGridViewCellStyle87
+        Me.Column24.HeaderText = "3kPa"
+        Me.Column24.MinimumWidth = 6
+        Me.Column24.Name = "Column24"
+        Me.Column24.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
+        Me.Column24.Width = 60
+        '
+        'Column25
+        '
+        Me.Column25.DataPropertyName = "LEAK4"
+        DataGridViewCellStyle88.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        Me.Column25.DefaultCellStyle = DataGridViewCellStyle88
+        Me.Column25.HeaderText = "4kPa"
+        Me.Column25.MinimumWidth = 6
+        Me.Column25.Name = "Column25"
+        Me.Column25.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
+        Me.Column25.Width = 60
+        '
+        'Column26
+        '
+        Me.Column26.DataPropertyName = "LEAK6"
+        DataGridViewCellStyle89.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        Me.Column26.DefaultCellStyle = DataGridViewCellStyle89
+        Me.Column26.HeaderText = "6kPa"
+        Me.Column26.MinimumWidth = 6
+        Me.Column26.Name = "Column26"
+        Me.Column26.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
+        Me.Column26.Width = 60
+        '
+        'DataGridViewTextBoxColumn39
+        '
+        Me.DataGridViewTextBoxColumn39.DataPropertyName = "H_BASE1"
+        DataGridViewCellStyle90.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        Me.DataGridViewTextBoxColumn39.DefaultCellStyle = DataGridViewCellStyle90
+        Me.DataGridViewTextBoxColumn39.HeaderText = "1kPa"
+        Me.DataGridViewTextBoxColumn39.MinimumWidth = 6
+        Me.DataGridViewTextBoxColumn39.Name = "DataGridViewTextBoxColumn39"
+        Me.DataGridViewTextBoxColumn39.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
+        Me.DataGridViewTextBoxColumn39.Width = 60
+        '
+        'Column27
+        '
+        Me.Column27.DataPropertyName = "H_BASE2"
+        DataGridViewCellStyle91.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        Me.Column27.DefaultCellStyle = DataGridViewCellStyle91
+        Me.Column27.HeaderText = "2kPa"
+        Me.Column27.MinimumWidth = 6
+        Me.Column27.Name = "Column27"
+        Me.Column27.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
+        Me.Column27.Width = 60
+        '
+        'Column39
+        '
+        Me.Column39.DataPropertyName = "H_BASE3"
+        DataGridViewCellStyle92.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        Me.Column39.DefaultCellStyle = DataGridViewCellStyle92
+        Me.Column39.HeaderText = "3kPa"
+        Me.Column39.MinimumWidth = 6
+        Me.Column39.Name = "Column39"
+        Me.Column39.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
+        Me.Column39.Width = 60
+        '
+        'Column40
+        '
+        Me.Column40.DataPropertyName = "H_BASE4"
+        DataGridViewCellStyle93.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        Me.Column40.DefaultCellStyle = DataGridViewCellStyle93
+        Me.Column40.HeaderText = "4kPa"
+        Me.Column40.MinimumWidth = 6
+        Me.Column40.Name = "Column40"
+        Me.Column40.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
+        Me.Column40.Width = 60
+        '
+        'Column41
+        '
+        Me.Column41.DataPropertyName = "H_BASE6"
+        DataGridViewCellStyle94.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        Me.Column41.DefaultCellStyle = DataGridViewCellStyle94
+        Me.Column41.HeaderText = "6kPa"
+        Me.Column41.MinimumWidth = 6
+        Me.Column41.Name = "Column41"
+        Me.Column41.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
+        Me.Column41.Width = 60
+        '
+        'DataGridViewTextBoxColumn113
+        '
+        Me.DataGridViewTextBoxColumn113.DataPropertyName = "HANTEI1"
+        DataGridViewCellStyle95.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        Me.DataGridViewTextBoxColumn113.DefaultCellStyle = DataGridViewCellStyle95
+        Me.DataGridViewTextBoxColumn113.HeaderText = "1k"
+        Me.DataGridViewTextBoxColumn113.MinimumWidth = 6
+        Me.DataGridViewTextBoxColumn113.Name = "DataGridViewTextBoxColumn113"
+        Me.DataGridViewTextBoxColumn113.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
+        Me.DataGridViewTextBoxColumn113.Width = 35
+        '
+        'Column28
+        '
+        Me.Column28.DataPropertyName = "HANTEI2"
+        DataGridViewCellStyle96.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        Me.Column28.DefaultCellStyle = DataGridViewCellStyle96
+        Me.Column28.HeaderText = "2k"
+        Me.Column28.MinimumWidth = 6
+        Me.Column28.Name = "Column28"
+        Me.Column28.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
+        Me.Column28.Width = 35
+        '
+        'Column42
+        '
+        Me.Column42.DataPropertyName = "HANTEI3"
+        DataGridViewCellStyle97.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        Me.Column42.DefaultCellStyle = DataGridViewCellStyle97
+        Me.Column42.HeaderText = "3k"
+        Me.Column42.MinimumWidth = 6
+        Me.Column42.Name = "Column42"
+        Me.Column42.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
+        Me.Column42.Width = 35
+        '
+        'Column43
+        '
+        Me.Column43.DataPropertyName = "HANTEI4"
+        DataGridViewCellStyle98.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        Me.Column43.DefaultCellStyle = DataGridViewCellStyle98
+        Me.Column43.HeaderText = "4k"
+        Me.Column43.MinimumWidth = 6
+        Me.Column43.Name = "Column43"
+        Me.Column43.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
+        Me.Column43.Width = 35
+        '
+        'Column44
+        '
+        Me.Column44.DataPropertyName = "HANTEI6"
+        DataGridViewCellStyle99.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        Me.Column44.DefaultCellStyle = DataGridViewCellStyle99
+        Me.Column44.HeaderText = "6k"
+        Me.Column44.MinimumWidth = 6
+        Me.Column44.Name = "Column44"
+        Me.Column44.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
+        Me.Column44.Width = 35
+        '
+        'DataGridViewTextBoxColumn27
+        '
+        Me.DataGridViewTextBoxColumn27.DataPropertyName = "VIN_POS"
+        DataGridViewCellStyle76.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        Me.DataGridViewTextBoxColumn27.DefaultCellStyle = DataGridViewCellStyle76
+        Me.DataGridViewTextBoxColumn27.HeaderText = "電圧印加箇所"
+        Me.DataGridViewTextBoxColumn27.MinimumWidth = 6
+        Me.DataGridViewTextBoxColumn27.Name = "DataGridViewTextBoxColumn27"
+        Me.DataGridViewTextBoxColumn27.ReadOnly = True
+        Me.DataGridViewTextBoxColumn27.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
+        Me.DataGridViewTextBoxColumn27.Width = 300
+        '
+        'DataGridViewTextBoxColumn28
+        '
+        Me.DataGridViewTextBoxColumn28.DataPropertyName = "VOLT_IN"
+        DataGridViewCellStyle77.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        Me.DataGridViewTextBoxColumn28.DefaultCellStyle = DataGridViewCellStyle77
+        Me.DataGridViewTextBoxColumn28.HeaderText = "印加電圧"
+        Me.DataGridViewTextBoxColumn28.MinimumWidth = 6
+        Me.DataGridViewTextBoxColumn28.Name = "DataGridViewTextBoxColumn28"
+        Me.DataGridViewTextBoxColumn28.ReadOnly = True
+        Me.DataGridViewTextBoxColumn28.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
+        Me.DataGridViewTextBoxColumn28.Width = 125
+        '
+        'DataGridViewTextBoxColumn29
+        '
+        Me.DataGridViewTextBoxColumn29.DataPropertyName = "DENRYU"
+        DataGridViewCellStyle78.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
+        Me.DataGridViewTextBoxColumn29.DefaultCellStyle = DataGridViewCellStyle78
+        Me.DataGridViewTextBoxColumn29.HeaderText = "電流値"
+        Me.DataGridViewTextBoxColumn29.MinimumWidth = 6
+        Me.DataGridViewTextBoxColumn29.Name = "DataGridViewTextBoxColumn29"
+        Me.DataGridViewTextBoxColumn29.ReadOnly = True
+        Me.DataGridViewTextBoxColumn29.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
+        Me.DataGridViewTextBoxColumn29.Width = 125
+        '
+        'DataGridViewTextBoxColumn30
+        '
+        Me.DataGridViewTextBoxColumn30.DataPropertyName = "ZETSU_R"
+        DataGridViewCellStyle79.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
+        Me.DataGridViewTextBoxColumn30.DefaultCellStyle = DataGridViewCellStyle79
+        Me.DataGridViewTextBoxColumn30.HeaderText = "絶縁抵抗"
+        Me.DataGridViewTextBoxColumn30.MinimumWidth = 6
+        Me.DataGridViewTextBoxColumn30.Name = "DataGridViewTextBoxColumn30"
+        Me.DataGridViewTextBoxColumn30.ReadOnly = True
+        Me.DataGridViewTextBoxColumn30.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
+        Me.DataGridViewTextBoxColumn30.Width = 125
+        '
+        'DataGridViewTextBoxColumn31
+        '
+        Me.DataGridViewTextBoxColumn31.DataPropertyName = "H_BASE"
+        DataGridViewCellStyle80.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        Me.DataGridViewTextBoxColumn31.DefaultCellStyle = DataGridViewCellStyle80
+        Me.DataGridViewTextBoxColumn31.HeaderText = "判定基準"
+        Me.DataGridViewTextBoxColumn31.MinimumWidth = 6
+        Me.DataGridViewTextBoxColumn31.Name = "DataGridViewTextBoxColumn31"
+        Me.DataGridViewTextBoxColumn31.ReadOnly = True
+        Me.DataGridViewTextBoxColumn31.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
+        Me.DataGridViewTextBoxColumn31.Width = 125
+        '
+        'DataGridViewTextBoxColumn32
+        '
+        Me.DataGridViewTextBoxColumn32.DataPropertyName = "HANTEI"
+        DataGridViewCellStyle81.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        Me.DataGridViewTextBoxColumn32.DefaultCellStyle = DataGridViewCellStyle81
+        Me.DataGridViewTextBoxColumn32.HeaderText = "判定"
+        Me.DataGridViewTextBoxColumn32.MinimumWidth = 6
+        Me.DataGridViewTextBoxColumn32.Name = "DataGridViewTextBoxColumn32"
+        Me.DataGridViewTextBoxColumn32.ReadOnly = True
+        Me.DataGridViewTextBoxColumn32.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
+        Me.DataGridViewTextBoxColumn32.Width = 70
+        '
+        'DataGridViewTextBoxColumn33
+        '
+        Me.DataGridViewTextBoxColumn33.DataPropertyName = "SINKUDO"
+        DataGridViewCellStyle82.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
+        Me.DataGridViewTextBoxColumn33.DefaultCellStyle = DataGridViewCellStyle82
+        Me.DataGridViewTextBoxColumn33.HeaderText = "真空度"
+        Me.DataGridViewTextBoxColumn33.MinimumWidth = 6
+        Me.DataGridViewTextBoxColumn33.Name = "DataGridViewTextBoxColumn33"
+        Me.DataGridViewTextBoxColumn33.ReadOnly = True
+        Me.DataGridViewTextBoxColumn33.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
+        Me.DataGridViewTextBoxColumn33.Width = 125
+        '
+        'DataGridViewTextBoxColumn1
+        '
+        Me.DataGridViewTextBoxColumn1.DataPropertyName = "VOLT_IN"
+        DataGridViewCellStyle42.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        Me.DataGridViewTextBoxColumn1.DefaultCellStyle = DataGridViewCellStyle42
+        Me.DataGridViewTextBoxColumn1.HeaderText = "電圧1 (V)"
+        Me.DataGridViewTextBoxColumn1.MinimumWidth = 6
+        Me.DataGridViewTextBoxColumn1.Name = "DataGridViewTextBoxColumn1"
+        Me.DataGridViewTextBoxColumn1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
+        Me.DataGridViewTextBoxColumn1.Width = 60
+        '
+        'DataGridViewTextBoxColumn2
+        '
+        Me.DataGridViewTextBoxColumn2.DataPropertyName = "VOLT_OUT"
+        DataGridViewCellStyle43.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        Me.DataGridViewTextBoxColumn2.DefaultCellStyle = DataGridViewCellStyle43
+        Me.DataGridViewTextBoxColumn2.HeaderText = "電圧2 (V)"
+        Me.DataGridViewTextBoxColumn2.MinimumWidth = 6
+        Me.DataGridViewTextBoxColumn2.Name = "DataGridViewTextBoxColumn2"
+        Me.DataGridViewTextBoxColumn2.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
+        Me.DataGridViewTextBoxColumn2.Width = 60
+        '
+        'DataGridViewTextBoxColumn11
+        '
+        Me.DataGridViewTextBoxColumn11.DataPropertyName = "LEAK1"
+        DataGridViewCellStyle44.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        Me.DataGridViewTextBoxColumn11.DefaultCellStyle = DataGridViewCellStyle44
+        Me.DataGridViewTextBoxColumn11.HeaderText = "1kPa"
+        Me.DataGridViewTextBoxColumn11.MinimumWidth = 6
+        Me.DataGridViewTextBoxColumn11.Name = "DataGridViewTextBoxColumn11"
+        Me.DataGridViewTextBoxColumn11.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
+        Me.DataGridViewTextBoxColumn11.Width = 60
+        '
+        'Column11
+        '
+        Me.Column11.DataPropertyName = "LEAK2"
+        DataGridViewCellStyle45.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        Me.Column11.DefaultCellStyle = DataGridViewCellStyle45
+        Me.Column11.HeaderText = "2kPa"
+        Me.Column11.MinimumWidth = 6
+        Me.Column11.Name = "Column11"
+        Me.Column11.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
+        Me.Column11.Width = 60
+        '
+        'Column12
+        '
+        Me.Column12.DataPropertyName = "LEAK3"
+        DataGridViewCellStyle46.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        Me.Column12.DefaultCellStyle = DataGridViewCellStyle46
+        Me.Column12.HeaderText = "3kPa"
+        Me.Column12.MinimumWidth = 6
+        Me.Column12.Name = "Column12"
+        Me.Column12.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
+        Me.Column12.Width = 60
+        '
+        'Column13
+        '
+        Me.Column13.DataPropertyName = "LEAK4"
+        DataGridViewCellStyle47.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        Me.Column13.DefaultCellStyle = DataGridViewCellStyle47
+        Me.Column13.HeaderText = "4kPa"
+        Me.Column13.MinimumWidth = 6
+        Me.Column13.Name = "Column13"
+        Me.Column13.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
+        Me.Column13.Width = 60
+        '
+        'Column14
+        '
+        Me.Column14.DataPropertyName = "LEAK6"
+        DataGridViewCellStyle48.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        Me.Column14.DefaultCellStyle = DataGridViewCellStyle48
+        Me.Column14.HeaderText = "6kPa"
+        Me.Column14.MinimumWidth = 6
+        Me.Column14.Name = "Column14"
+        Me.Column14.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
+        Me.Column14.Width = 60
+        '
+        'DataGridViewTextBoxColumn12
+        '
+        Me.DataGridViewTextBoxColumn12.DataPropertyName = "H_BASE1"
+        DataGridViewCellStyle49.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        Me.DataGridViewTextBoxColumn12.DefaultCellStyle = DataGridViewCellStyle49
+        Me.DataGridViewTextBoxColumn12.HeaderText = "1kPa"
+        Me.DataGridViewTextBoxColumn12.MinimumWidth = 6
+        Me.DataGridViewTextBoxColumn12.Name = "DataGridViewTextBoxColumn12"
+        Me.DataGridViewTextBoxColumn12.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
+        Me.DataGridViewTextBoxColumn12.Width = 60
+        '
+        'Column15
+        '
+        Me.Column15.DataPropertyName = "H_BASE2"
+        DataGridViewCellStyle50.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        Me.Column15.DefaultCellStyle = DataGridViewCellStyle50
+        Me.Column15.HeaderText = "2kPa"
+        Me.Column15.MinimumWidth = 6
+        Me.Column15.Name = "Column15"
+        Me.Column15.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
+        Me.Column15.Width = 60
+        '
+        'Column
+        '
+        Me.Column.DataPropertyName = "H_BASE3"
+        DataGridViewCellStyle51.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        Me.Column.DefaultCellStyle = DataGridViewCellStyle51
+        Me.Column.HeaderText = "3kPa"
+        Me.Column.MinimumWidth = 6
+        Me.Column.Name = "Column"
+        Me.Column.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
+        Me.Column.Width = 60
+        '
+        'Column5
+        '
+        Me.Column5.DataPropertyName = "H_BASE4"
+        DataGridViewCellStyle52.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        Me.Column5.DefaultCellStyle = DataGridViewCellStyle52
+        Me.Column5.HeaderText = "4kPa"
+        Me.Column5.MinimumWidth = 6
+        Me.Column5.Name = "Column5"
+        Me.Column5.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
+        Me.Column5.Width = 60
+        '
+        'Column35
+        '
+        Me.Column35.DataPropertyName = "H_BASE6"
+        DataGridViewCellStyle53.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        Me.Column35.DefaultCellStyle = DataGridViewCellStyle53
+        Me.Column35.HeaderText = "6kPa"
+        Me.Column35.MinimumWidth = 6
+        Me.Column35.Name = "Column35"
+        Me.Column35.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
+        Me.Column35.Width = 60
+        '
+        'DataGridViewTextBoxColumn112
+        '
+        Me.DataGridViewTextBoxColumn112.DataPropertyName = "HANTEI1"
+        DataGridViewCellStyle54.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        Me.DataGridViewTextBoxColumn112.DefaultCellStyle = DataGridViewCellStyle54
+        Me.DataGridViewTextBoxColumn112.HeaderText = "1k"
+        Me.DataGridViewTextBoxColumn112.MinimumWidth = 6
+        Me.DataGridViewTextBoxColumn112.Name = "DataGridViewTextBoxColumn112"
+        Me.DataGridViewTextBoxColumn112.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
+        Me.DataGridViewTextBoxColumn112.Width = 35
+        '
+        'Column16
+        '
+        Me.Column16.DataPropertyName = "HANTEI2"
+        DataGridViewCellStyle55.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        Me.Column16.DefaultCellStyle = DataGridViewCellStyle55
+        Me.Column16.HeaderText = "2k"
+        Me.Column16.MinimumWidth = 6
+        Me.Column16.Name = "Column16"
+        Me.Column16.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
+        Me.Column16.Width = 35
+        '
+        'Column36
+        '
+        Me.Column36.DataPropertyName = "HANTEI3"
+        DataGridViewCellStyle56.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        Me.Column36.DefaultCellStyle = DataGridViewCellStyle56
+        Me.Column36.HeaderText = "3k"
+        Me.Column36.MinimumWidth = 6
+        Me.Column36.Name = "Column36"
+        Me.Column36.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
+        Me.Column36.Width = 35
+        '
+        'Column37
+        '
+        Me.Column37.DataPropertyName = "HANTEI4"
+        DataGridViewCellStyle57.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        Me.Column37.DefaultCellStyle = DataGridViewCellStyle57
+        Me.Column37.HeaderText = "4k"
+        Me.Column37.MinimumWidth = 6
+        Me.Column37.Name = "Column37"
+        Me.Column37.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
+        Me.Column37.Width = 35
+        '
+        'Column38
+        '
+        Me.Column38.DataPropertyName = "HANTEI6"
+        DataGridViewCellStyle58.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        Me.Column38.DefaultCellStyle = DataGridViewCellStyle58
+        Me.Column38.HeaderText = "6k"
+        Me.Column38.MinimumWidth = 6
+        Me.Column38.Name = "Column38"
+        Me.Column38.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
+        Me.Column38.Width = 35
+        '
+        'DataGridViewTextBoxColumn13
+        '
+        Me.DataGridViewTextBoxColumn13.DataPropertyName = "VOLT_IN"
+        DataGridViewCellStyle59.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        Me.DataGridViewTextBoxColumn13.DefaultCellStyle = DataGridViewCellStyle59
+        Me.DataGridViewTextBoxColumn13.HeaderText = "印加電圧１"
+        Me.DataGridViewTextBoxColumn13.MinimumWidth = 6
+        Me.DataGridViewTextBoxColumn13.Name = "DataGridViewTextBoxColumn13"
+        Me.DataGridViewTextBoxColumn13.ReadOnly = True
+        Me.DataGridViewTextBoxColumn13.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
+        Me.DataGridViewTextBoxColumn13.Width = 120
+        '
+        'DataGridViewTextBoxColumn14
+        '
+        Me.DataGridViewTextBoxColumn14.DataPropertyName = "VOLT_OUT"
+        DataGridViewCellStyle60.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        Me.DataGridViewTextBoxColumn14.DefaultCellStyle = DataGridViewCellStyle60
+        Me.DataGridViewTextBoxColumn14.HeaderText = "印加電圧２"
+        Me.DataGridViewTextBoxColumn14.MinimumWidth = 6
+        Me.DataGridViewTextBoxColumn14.Name = "DataGridViewTextBoxColumn14"
+        Me.DataGridViewTextBoxColumn14.ReadOnly = True
+        Me.DataGridViewTextBoxColumn14.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
+        Me.DataGridViewTextBoxColumn14.Width = 120
+        '
+        'Column2
+        '
+        Me.Column2.DataPropertyName = "HE_FLOW"
+        DataGridViewCellStyle61.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        Me.Column2.DefaultCellStyle = DataGridViewCellStyle61
+        Me.Column2.HeaderText = "Ｈｅ流量 [sccm]"
+        Me.Column2.MinimumWidth = 6
+        Me.Column2.Name = "Column2"
+        Me.Column2.ReadOnly = True
+        Me.Column2.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
+        Me.Column2.Width = 140
+        '
+        'DataGridViewTextBoxColumn21
+        '
+        Me.DataGridViewTextBoxColumn21.DataPropertyName = "TIME1"
+        DataGridViewCellStyle62.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        Me.DataGridViewTextBoxColumn21.DefaultCellStyle = DataGridViewCellStyle62
+        Me.DataGridViewTextBoxColumn21.HeaderText = "１kPa"
+        Me.DataGridViewTextBoxColumn21.MinimumWidth = 6
+        Me.DataGridViewTextBoxColumn21.Name = "DataGridViewTextBoxColumn21"
+        Me.DataGridViewTextBoxColumn21.ReadOnly = True
+        Me.DataGridViewTextBoxColumn21.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
+        Me.DataGridViewTextBoxColumn21.Width = 80
+        '
+        'DataGridViewTextBoxColumn22
+        '
+        Me.DataGridViewTextBoxColumn22.DataPropertyName = "TIME2"
+        DataGridViewCellStyle63.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        Me.DataGridViewTextBoxColumn22.DefaultCellStyle = DataGridViewCellStyle63
+        Me.DataGridViewTextBoxColumn22.HeaderText = "２kPa"
+        Me.DataGridViewTextBoxColumn22.MinimumWidth = 6
+        Me.DataGridViewTextBoxColumn22.Name = "DataGridViewTextBoxColumn22"
+        Me.DataGridViewTextBoxColumn22.ReadOnly = True
+        Me.DataGridViewTextBoxColumn22.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
+        Me.DataGridViewTextBoxColumn22.Width = 80
+        '
+        'DataGridViewTextBoxColumn23
+        '
+        Me.DataGridViewTextBoxColumn23.DataPropertyName = "TIME3"
+        DataGridViewCellStyle64.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        Me.DataGridViewTextBoxColumn23.DefaultCellStyle = DataGridViewCellStyle64
+        Me.DataGridViewTextBoxColumn23.HeaderText = "３kPa"
+        Me.DataGridViewTextBoxColumn23.MinimumWidth = 6
+        Me.DataGridViewTextBoxColumn23.Name = "DataGridViewTextBoxColumn23"
+        Me.DataGridViewTextBoxColumn23.ReadOnly = True
+        Me.DataGridViewTextBoxColumn23.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
+        Me.DataGridViewTextBoxColumn23.Width = 80
+        '
+        'DataGridViewTextBoxColumn25
+        '
+        Me.DataGridViewTextBoxColumn25.DataPropertyName = "TIME4"
+        DataGridViewCellStyle65.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        Me.DataGridViewTextBoxColumn25.DefaultCellStyle = DataGridViewCellStyle65
+        Me.DataGridViewTextBoxColumn25.HeaderText = "４kPa"
+        Me.DataGridViewTextBoxColumn25.MinimumWidth = 6
+        Me.DataGridViewTextBoxColumn25.Name = "DataGridViewTextBoxColumn25"
+        Me.DataGridViewTextBoxColumn25.ReadOnly = True
+        Me.DataGridViewTextBoxColumn25.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
+        Me.DataGridViewTextBoxColumn25.Width = 80
+        '
+        'Column3
+        '
+        Me.Column3.DataPropertyName = "TIME6"
+        DataGridViewCellStyle66.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        Me.Column3.DefaultCellStyle = DataGridViewCellStyle66
+        Me.Column3.HeaderText = "６kPa"
+        Me.Column3.MinimumWidth = 6
+        Me.Column3.Name = "Column3"
+        Me.Column3.ReadOnly = True
+        Me.Column3.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
+        Me.Column3.Width = 80
+        '
+        'DataGridViewTextBoxColumn24
+        '
+        Me.DataGridViewTextBoxColumn24.DataPropertyName = "H_SECOND"
+        DataGridViewCellStyle67.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        Me.DataGridViewTextBoxColumn24.DefaultCellStyle = DataGridViewCellStyle67
+        Me.DataGridViewTextBoxColumn24.HeaderText = "判定基準 [Sec]"
+        Me.DataGridViewTextBoxColumn24.MinimumWidth = 6
+        Me.DataGridViewTextBoxColumn24.Name = "DataGridViewTextBoxColumn24"
+        Me.DataGridViewTextBoxColumn24.ReadOnly = True
+        Me.DataGridViewTextBoxColumn24.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
+        Me.DataGridViewTextBoxColumn24.Width = 140
+        '
+        'DataGridViewTextBoxColumn26
+        '
+        Me.DataGridViewTextBoxColumn26.DataPropertyName = "HANTEI"
+        DataGridViewCellStyle68.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        Me.DataGridViewTextBoxColumn26.DefaultCellStyle = DataGridViewCellStyle68
+        Me.DataGridViewTextBoxColumn26.HeaderText = "判定"
+        Me.DataGridViewTextBoxColumn26.MinimumWidth = 6
+        Me.DataGridViewTextBoxColumn26.Name = "DataGridViewTextBoxColumn26"
+        Me.DataGridViewTextBoxColumn26.ReadOnly = True
+        Me.DataGridViewTextBoxColumn26.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
+        Me.DataGridViewTextBoxColumn26.Width = 70
         '
         'DHDTest
         '
@@ -4953,7 +5492,6 @@ Partial Class DHDTest
     Friend WithEvents tabPage4 As System.Windows.Forms.TabPage
     Friend WithEvents grpZetsuen1 As System.Windows.Forms.GroupBox
     Friend WithEvents grpHeGas1 As System.Windows.Forms.GroupBox
-    Friend WithEvents dgvHeGas1 As System.Windows.Forms.DataGridView
     Friend WithEvents grpZetsuen2 As System.Windows.Forms.GroupBox
     Friend WithEvents grpZetsuen3 As System.Windows.Forms.GroupBox
     Friend WithEvents grpZetsuen4 As System.Windows.Forms.GroupBox
@@ -4967,20 +5505,6 @@ Partial Class DHDTest
     Friend WithEvents Column8 As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents Column9 As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents Column10 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn27 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn28 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn29 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn30 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn31 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn32 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn33 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn48 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn49 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn50 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn51 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn52 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn53 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn54 As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn69 As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn70 As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn71 As System.Windows.Forms.DataGridViewTextBoxColumn
@@ -5033,165 +5557,204 @@ Partial Class DHDTest
     Friend WithEvents Label79 As Label
     Friend WithEvents DOX38 As Label
     Friend WithEvents Label100 As Label
-	Friend WithEvents TxtHeWait As TextBox
-	Friend WithEvents Label81 As Label
-	Friend WithEvents TxtVoltImp As TextBox
-	Friend WithEvents Label80 As Label
-	Friend WithEvents TxtHeFlow As TextBox
-	Friend WithEvents Label78 As Label
-	Friend WithEvents grpZanryu1 As GroupBox
-	Friend WithEvents dgvZanryu1 As DataGridView
-	Friend WithEvents grpZanryu2 As GroupBox
-	Friend WithEvents dgvZanryu2 As DataGridView
-	Friend WithEvents grpZanryu3 As GroupBox
-	Friend WithEvents dgvZanryu3 As DataGridView
-	Friend WithEvents grpZanryu4 As GroupBox
-	Friend WithEvents dgvZanryu4 As DataGridView
-	Friend WithEvents grpKyuucyaku1 As GroupBox
-	Friend WithEvents Label72 As Label
-	Friend WithEvents dgvKyuucyaku1 As DataGridView
-	Friend WithEvents DataGridViewTextBoxColumn5 As DataGridViewTextBoxColumn
-	Friend WithEvents DataGridViewTextBoxColumn6 As DataGridViewTextBoxColumn
-	Friend WithEvents DataGridViewTextBoxColumn7 As DataGridViewTextBoxColumn
-	Friend WithEvents DataGridViewTextBoxColumn8 As DataGridViewTextBoxColumn
-	Friend WithEvents DataGridViewTextBoxColumn9 As DataGridViewTextBoxColumn
-	Friend WithEvents DataGridViewTextBoxColumn10 As DataGridViewTextBoxColumn
-	Friend WithEvents DataGridViewTextBoxColumn104 As DataGridViewTextBoxColumn
-	Friend WithEvents DataGridViewTextBoxColumn105 As DataGridViewTextBoxColumn
-	Friend WithEvents DataGridViewTextBoxColumn106 As DataGridViewTextBoxColumn
-	Friend WithEvents DataGridViewTextBoxColumn107 As DataGridViewTextBoxColumn
-	Friend WithEvents grpKyuucyaku2 As GroupBox
-	Friend WithEvents Label56 As Label
-	Friend WithEvents dgvKyuucyaku2 As DataGridView
-	Friend WithEvents DataGridViewTextBoxColumn13 As DataGridViewTextBoxColumn
-	Friend WithEvents DataGridViewTextBoxColumn14 As DataGridViewTextBoxColumn
-	Friend WithEvents Column2 As DataGridViewTextBoxColumn
-	Friend WithEvents DataGridViewTextBoxColumn21 As DataGridViewTextBoxColumn
-	Friend WithEvents DataGridViewTextBoxColumn22 As DataGridViewTextBoxColumn
-	Friend WithEvents DataGridViewTextBoxColumn23 As DataGridViewTextBoxColumn
-	Friend WithEvents DataGridViewTextBoxColumn25 As DataGridViewTextBoxColumn
-	Friend WithEvents Column3 As DataGridViewTextBoxColumn
-	Friend WithEvents DataGridViewTextBoxColumn24 As DataGridViewTextBoxColumn
-	Friend WithEvents DataGridViewTextBoxColumn26 As DataGridViewTextBoxColumn
-	Friend WithEvents grpKyuucyaku3 As GroupBox
-	Friend WithEvents Label82 As Label
-	Friend WithEvents dgvKyuucyaku3 As DataGridView
-	Friend WithEvents DataGridViewTextBoxColumn40 As DataGridViewTextBoxColumn
-	Friend WithEvents DataGridViewTextBoxColumn41 As DataGridViewTextBoxColumn
-	Friend WithEvents DataGridViewTextBoxColumn42 As DataGridViewTextBoxColumn
-	Friend WithEvents DataGridViewTextBoxColumn43 As DataGridViewTextBoxColumn
-	Friend WithEvents DataGridViewTextBoxColumn44 As DataGridViewTextBoxColumn
-	Friend WithEvents DataGridViewTextBoxColumn45 As DataGridViewTextBoxColumn
-	Friend WithEvents DataGridViewTextBoxColumn46 As DataGridViewTextBoxColumn
-	Friend WithEvents DataGridViewTextBoxColumn47 As DataGridViewTextBoxColumn
-	Friend WithEvents DataGridViewTextBoxColumn108 As DataGridViewTextBoxColumn
-	Friend WithEvents DataGridViewTextBoxColumn109 As DataGridViewTextBoxColumn
-	Friend WithEvents grpKyuucyaku4 As GroupBox
-	Friend WithEvents Label83 As Label
-	Friend WithEvents dgvKyuucyaku4 As DataGridView
-	Friend WithEvents DataGridViewTextBoxColumn61 As DataGridViewTextBoxColumn
-	Friend WithEvents DataGridViewTextBoxColumn62 As DataGridViewTextBoxColumn
-	Friend WithEvents DataGridViewTextBoxColumn63 As DataGridViewTextBoxColumn
-	Friend WithEvents DataGridViewTextBoxColumn64 As DataGridViewTextBoxColumn
-	Friend WithEvents DataGridViewTextBoxColumn65 As DataGridViewTextBoxColumn
-	Friend WithEvents DataGridViewTextBoxColumn66 As DataGridViewTextBoxColumn
-	Friend WithEvents DataGridViewTextBoxColumn67 As DataGridViewTextBoxColumn
-	Friend WithEvents DataGridViewTextBoxColumn68 As DataGridViewTextBoxColumn
-	Friend WithEvents DataGridViewTextBoxColumn110 As DataGridViewTextBoxColumn
-	Friend WithEvents DataGridViewTextBoxColumn111 As DataGridViewTextBoxColumn
-	Friend WithEvents grpHeGas2 As GroupBox
-	Friend WithEvents dgvHeGas2 As DataGridView
-	Friend WithEvents grpHeGas3 As GroupBox
-	Friend WithEvents dgvHeGas3 As DataGridView
-	Friend WithEvents grpHeGas4 As GroupBox
-	Friend WithEvents dgvHeGas4 As DataGridView
-	Friend WithEvents Label84 As Label
-	Friend WithEvents Label85 As Label
-	Friend WithEvents txtAntTim As TextBox
-	Friend WithEvents TxtMaxTime As TextBox
-	Friend WithEvents txtAntVct As TextBox
-	Friend WithEvents Label86 As Label
-	Friend WithEvents DataGridViewTextBoxColumn76 As DataGridViewTextBoxColumn
-	Friend WithEvents DataGridViewTextBoxColumn77 As DataGridViewTextBoxColumn
-	Friend WithEvents DataGridViewTextBoxColumn78 As DataGridViewTextBoxColumn
-	Friend WithEvents DataGridViewTextBoxColumn79 As DataGridViewTextBoxColumn
-	Friend WithEvents DataGridViewTextBoxColumn80 As DataGridViewTextBoxColumn
-	Friend WithEvents DataGridViewTextBoxColumn81 As DataGridViewTextBoxColumn
-	Friend WithEvents DataGridViewTextBoxColumn83 As DataGridViewTextBoxColumn
-	Friend WithEvents DataGridViewTextBoxColumn82 As DataGridViewTextBoxColumn
-	Friend WithEvents DataGridViewTextBoxColumn84 As DataGridViewTextBoxColumn
-	Friend WithEvents DataGridViewTextBoxColumn85 As DataGridViewTextBoxColumn
-	Friend WithEvents DataGridViewTextBoxColumn86 As DataGridViewTextBoxColumn
-	Friend WithEvents DataGridViewTextBoxColumn87 As DataGridViewTextBoxColumn
-	Friend WithEvents DataGridViewTextBoxColumn88 As DataGridViewTextBoxColumn
-	Friend WithEvents DataGridViewTextBoxColumn89 As DataGridViewTextBoxColumn
-	Friend WithEvents DataGridViewTextBoxColumn90 As DataGridViewTextBoxColumn
-	Friend WithEvents DataGridViewTextBoxColumn91 As DataGridViewTextBoxColumn
-	Friend WithEvents DataGridViewTextBoxColumn92 As DataGridViewTextBoxColumn
-	Friend WithEvents DataGridViewTextBoxColumn93 As DataGridViewTextBoxColumn
-	Friend WithEvents DataGridViewTextBoxColumn94 As DataGridViewTextBoxColumn
-	Friend WithEvents DataGridViewTextBoxColumn95 As DataGridViewTextBoxColumn
-	Friend WithEvents DataGridViewTextBoxColumn96 As DataGridViewTextBoxColumn
-	Friend WithEvents DataGridViewTextBoxColumn97 As DataGridViewTextBoxColumn
-	Friend WithEvents DataGridViewTextBoxColumn98 As DataGridViewTextBoxColumn
-	Friend WithEvents DataGridViewTextBoxColumn99 As DataGridViewTextBoxColumn
-	Friend WithEvents DataGridViewTextBoxColumn100 As DataGridViewTextBoxColumn
-	Friend WithEvents DataGridViewTextBoxColumn101 As DataGridViewTextBoxColumn
-	Friend WithEvents DataGridViewTextBoxColumn102 As DataGridViewTextBoxColumn
-	Friend WithEvents DataGridViewTextBoxColumn103 As DataGridViewTextBoxColumn
-	Friend WithEvents Label87 As Label
-	Friend WithEvents Label88 As Label
-	Friend WithEvents Label89 As Label
-	Friend WithEvents Label106 As Label
-	Friend WithEvents Label91 As Label
-	Friend WithEvents Label90 As Label
-	Friend WithEvents DataGridViewTextBoxColumn15 As DataGridViewTextBoxColumn
-	Friend WithEvents DataGridViewTextBoxColumn16 As DataGridViewTextBoxColumn
-	Friend WithEvents DataGridViewTextBoxColumn20 As DataGridViewTextBoxColumn
-	Friend WithEvents Column17 As DataGridViewTextBoxColumn
-	Friend WithEvents Column18 As DataGridViewTextBoxColumn
-	Friend WithEvents Column19 As DataGridViewTextBoxColumn
-	Friend WithEvents Column20 As DataGridViewTextBoxColumn
-	Friend WithEvents DataGridViewTextBoxColumn18 As DataGridViewTextBoxColumn
-	Friend WithEvents Column21 As DataGridViewTextBoxColumn
-	Friend WithEvents DataGridViewTextBoxColumn19 As DataGridViewTextBoxColumn
-	Friend WithEvents Column22 As DataGridViewTextBoxColumn
-	Friend WithEvents DataGridViewTextBoxColumn1 As DataGridViewTextBoxColumn
-	Friend WithEvents DataGridViewTextBoxColumn2 As DataGridViewTextBoxColumn
-	Friend WithEvents DataGridViewTextBoxColumn11 As DataGridViewTextBoxColumn
-	Friend WithEvents Column11 As DataGridViewTextBoxColumn
-	Friend WithEvents Column12 As DataGridViewTextBoxColumn
-	Friend WithEvents Column13 As DataGridViewTextBoxColumn
-	Friend WithEvents Column14 As DataGridViewTextBoxColumn
-	Friend WithEvents DataGridViewTextBoxColumn12 As DataGridViewTextBoxColumn
-	Friend WithEvents Column15 As DataGridViewTextBoxColumn
-	Friend WithEvents DataGridViewTextBoxColumn112 As DataGridViewTextBoxColumn
-	Friend WithEvents Column16 As DataGridViewTextBoxColumn
-	Friend WithEvents DataGridViewTextBoxColumn34 As DataGridViewTextBoxColumn
-	Friend WithEvents DataGridViewTextBoxColumn35 As DataGridViewTextBoxColumn
-	Friend WithEvents DataGridViewTextBoxColumn38 As DataGridViewTextBoxColumn
-	Friend WithEvents Column23 As DataGridViewTextBoxColumn
-	Friend WithEvents Column24 As DataGridViewTextBoxColumn
-	Friend WithEvents Column25 As DataGridViewTextBoxColumn
-	Friend WithEvents Column26 As DataGridViewTextBoxColumn
-	Friend WithEvents DataGridViewTextBoxColumn39 As DataGridViewTextBoxColumn
-	Friend WithEvents Column27 As DataGridViewTextBoxColumn
-	Friend WithEvents DataGridViewTextBoxColumn113 As DataGridViewTextBoxColumn
-	Friend WithEvents Column28 As DataGridViewTextBoxColumn
-	Friend WithEvents DataGridViewTextBoxColumn55 As DataGridViewTextBoxColumn
-	Friend WithEvents DataGridViewTextBoxColumn56 As DataGridViewTextBoxColumn
-	Friend WithEvents DataGridViewTextBoxColumn59 As DataGridViewTextBoxColumn
-	Friend WithEvents Column29 As DataGridViewTextBoxColumn
-	Friend WithEvents Column30 As DataGridViewTextBoxColumn
-	Friend WithEvents Column31 As DataGridViewTextBoxColumn
-	Friend WithEvents Column32 As DataGridViewTextBoxColumn
-	Friend WithEvents DataGridViewTextBoxColumn60 As DataGridViewTextBoxColumn
-	Friend WithEvents Column33 As DataGridViewTextBoxColumn
-	Friend WithEvents DataGridViewTextBoxColumn114 As DataGridViewTextBoxColumn
-	Friend WithEvents Column34 As DataGridViewTextBoxColumn
-	Friend WithEvents txtBakPrs As TextBox
-	Friend WithEvents Label107 As Label
-	Friend WithEvents Label110 As Label
-	Friend WithEvents txtBakP2 As TextBox
-	Friend WithEvents Label108 As Label
+    Friend WithEvents TxtHeWait As TextBox
+    Friend WithEvents Label81 As Label
+    Friend WithEvents TxtVoltImp As TextBox
+    Friend WithEvents Label80 As Label
+    Friend WithEvents TxtHeFlow As TextBox
+    Friend WithEvents Label78 As Label
+    Friend WithEvents grpZanryu1 As GroupBox
+    Friend WithEvents dgvZanryu1 As DataGridView
+    Friend WithEvents grpZanryu2 As GroupBox
+    Friend WithEvents dgvZanryu2 As DataGridView
+    Friend WithEvents grpZanryu3 As GroupBox
+    Friend WithEvents dgvZanryu3 As DataGridView
+    Friend WithEvents grpZanryu4 As GroupBox
+    Friend WithEvents dgvZanryu4 As DataGridView
+    Friend WithEvents grpKyuucyaku1 As GroupBox
+    Friend WithEvents Label72 As Label
+    Friend WithEvents dgvKyuucyaku1 As DataGridView
+    Friend WithEvents grpKyuucyaku2 As GroupBox
+    Friend WithEvents Label56 As Label
+    Friend WithEvents dgvKyuucyaku2 As DataGridView
+    Friend WithEvents grpKyuucyaku3 As GroupBox
+    Friend WithEvents Label82 As Label
+    Friend WithEvents dgvKyuucyaku3 As DataGridView
+    Friend WithEvents grpKyuucyaku4 As GroupBox
+    Friend WithEvents Label83 As Label
+    Friend WithEvents dgvKyuucyaku4 As DataGridView
+    Friend WithEvents grpHeGas2 As GroupBox
+    Friend WithEvents dgvHeGas2 As DataGridView
+    Friend WithEvents grpHeGas3 As GroupBox
+    Friend WithEvents dgvHeGas3 As DataGridView
+    Friend WithEvents grpHeGas4 As GroupBox
+    Friend WithEvents Label84 As Label
+    Friend WithEvents Label85 As Label
+    Friend WithEvents txtAntTim As TextBox
+    Friend WithEvents TxtMaxTime As TextBox
+    Friend WithEvents txtAntVct As TextBox
+    Friend WithEvents Label86 As Label
+    Friend WithEvents DataGridViewTextBoxColumn76 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn77 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn78 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn79 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn80 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn81 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn83 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn82 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn84 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn85 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn86 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn87 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn88 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn89 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn97 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn98 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn99 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn100 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn101 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn102 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn103 As DataGridViewTextBoxColumn
+    Friend WithEvents txtBakPrs As TextBox
+    Friend WithEvents Label107 As Label
+    Friend WithEvents Label110 As Label
+    Friend WithEvents txtBakP2 As TextBox
+    Friend WithEvents Label108 As Label
+    Friend WithEvents Label90 As Label
+    Friend WithEvents Label91 As Label
+    Friend WithEvents Label106 As Label
+    Friend WithEvents DataGridViewTextBoxColumn5 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn6 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn7 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn8 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn9 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn10 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn104 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn105 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn106 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn107 As DataGridViewTextBoxColumn
+    Friend WithEvents dgvHeGas1 As DataGridView
+    Friend WithEvents Label87 As Label
+    Friend WithEvents Label88 As Label
+    Friend WithEvents Label89 As Label
+    Friend WithEvents dgvHeGas4 As DataGridView
+    Friend WithEvents DataGridViewTextBoxColumn61 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn62 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn63 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn64 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn65 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn66 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn67 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn68 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn110 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn111 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn3 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn4 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn17 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn36 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn37 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn55 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn56 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn57 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn58 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn59 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn60 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn114 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn115 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn116 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn117 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn118 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn119 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn15 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn16 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn18 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn19 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn20 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn120 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn121 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn122 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn123 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn124 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn125 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn126 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn127 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn128 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn129 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn130 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn131 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn40 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn41 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn42 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn43 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn44 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn45 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn46 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn47 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn108 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn109 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn90 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn91 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn92 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn93 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn94 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn95 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn96 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn34 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn35 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn38 As DataGridViewTextBoxColumn
+    Friend WithEvents Column23 As DataGridViewTextBoxColumn
+    Friend WithEvents Column24 As DataGridViewTextBoxColumn
+    Friend WithEvents Column25 As DataGridViewTextBoxColumn
+    Friend WithEvents Column26 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn39 As DataGridViewTextBoxColumn
+    Friend WithEvents Column27 As DataGridViewTextBoxColumn
+    Friend WithEvents Column39 As DataGridViewTextBoxColumn
+    Friend WithEvents Column40 As DataGridViewTextBoxColumn
+    Friend WithEvents Column41 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn113 As DataGridViewTextBoxColumn
+    Friend WithEvents Column28 As DataGridViewTextBoxColumn
+    Friend WithEvents Column42 As DataGridViewTextBoxColumn
+    Friend WithEvents Column43 As DataGridViewTextBoxColumn
+    Friend WithEvents Column44 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn48 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn49 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn50 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn51 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn52 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn53 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn54 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn1 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn2 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn11 As DataGridViewTextBoxColumn
+    Friend WithEvents Column11 As DataGridViewTextBoxColumn
+    Friend WithEvents Column12 As DataGridViewTextBoxColumn
+    Friend WithEvents Column13 As DataGridViewTextBoxColumn
+    Friend WithEvents Column14 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn12 As DataGridViewTextBoxColumn
+    Friend WithEvents Column15 As DataGridViewTextBoxColumn
+    Friend WithEvents Column As DataGridViewTextBoxColumn
+    Friend WithEvents Column5 As DataGridViewTextBoxColumn
+    Friend WithEvents Column35 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn112 As DataGridViewTextBoxColumn
+    Friend WithEvents Column16 As DataGridViewTextBoxColumn
+    Friend WithEvents Column36 As DataGridViewTextBoxColumn
+    Friend WithEvents Column37 As DataGridViewTextBoxColumn
+    Friend WithEvents Column38 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn13 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn14 As DataGridViewTextBoxColumn
+    Friend WithEvents Column2 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn21 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn22 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn23 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn25 As DataGridViewTextBoxColumn
+    Friend WithEvents Column3 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn24 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn26 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn27 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn28 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn29 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn30 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn31 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn32 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn33 As DataGridViewTextBoxColumn
 End Class

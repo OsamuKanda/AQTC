@@ -171,7 +171,7 @@ Module TstDataRD
 		MESrec.dh.okng		= -1
 
 
-		ReDim MESrec.dt( 3 )
+		ReDim MESrec.dt(3)
 
 	End Sub
 
@@ -337,7 +337,7 @@ Module TstDataRD
 
 			If aryBuf.Count >= 3 Then
 
-				Select Case	aryBuf( 1 )
+				Select Case aryBuf(1)
 
 				'
 				'	20140123 変更
@@ -389,19 +389,20 @@ Module TstDataRD
 
 						If t1ct < 0 Then
 
-							t1ct = MESrec.dt(no).t1siz
+							't1ct = MESrec.dt(no).t1siz
 
-							If t1ct = 0 Then
+							'If t1ct = 0 Then
 
-								ReDim MESrec.dt(no).t1(t1ct)
+							'	ReDim MESrec.dt(no).t1(t1ct)
 
-							Else
+							'Else
 
-								ReDim Preserve MESrec.dt(no).t1(t1ct)
+							'	ReDim Preserve MESrec.dt(no).t1(t1ct)
 
-							End If
+							'End If
 
-							MESrec.dt(no).t1siz = t1ct + 1
+							'MESrec.dt(no).t1siz = t1ct + 1
+							ReDim Preserve MESrec.dt(no).t1(MESrec.dt(no).t1.Length)
 
 							MESrec.dt(no).t1(t1ct).posv = posv
 
@@ -426,7 +427,7 @@ Module TstDataRD
 
 						MESrec.dt(no).t1(t1ct).dsiz = ct + 1
 
-					' 吸着力 印可電圧（Ｖ）ＣＨ１・ＣＨ２・判定値（kPa以上）
+					' 吸着力 印可電圧（Ｖ）ＣＨ１・ＣＨ２・判定値（秒）・到達裏面圧力の最大値（kPa以上）・ヘリウム流量
 					Case "3"
 
 						If tMod <> TST_AUTO And tMod <> TST_KYUC Then
@@ -457,32 +458,44 @@ Module TstDataRD
 						MESrec.dt(no).t2.d(ct).volt2 = CDbl(aryBuf(3))
 
 
-						If IsNumeric(aryBuf(4)) Then
+                        If IsNumeric(aryBuf(4)) Then
 
-							' 20201102 s.harada	判定値を時間に変更
-							'MESrec.dt( no ).t2.d( ct ).bs		= CDbl( aryBuf( 4 ) ) * 1000.0
-							MESrec.dt(no).t2.d(ct).bs = CDbl(aryBuf(4))
+                            ' 20201102 s.harada	判定値を時間に変更
+                            'MESrec.dt( no ).t2.d( ct ).bs		= CDbl( aryBuf( 4 ) ) * 1000.0
+                            MESrec.dt(no).t2.d(ct).arrivalTime = CDbl(aryBuf(4))
 
-						Else
+                        Else
 
-							MESrec.dt(no).t2.d(ct).bs = -1.0
+							MESrec.dt(no).t2.d(ct).arrivalTime = 120 * 1000
 
 						End If
 
+						'パラメータファイルのバージョン対応
+						If aryBuf.Length > 7 Then
+							'新パラメータファイル
+							If IsNumeric(aryBuf(5)) Then
+								MESrec.dt(no).t2.d(ct).maxPa = Integer.Parse(aryBuf(5))
+							Else
+								MESrec.dt(no).t2.d(ct).maxPa = 6
+							End If
+							'	ヘリウム流量
+							If IsNumeric(aryBuf(6)) Then
+								MESrec.dt(no).t2.d(ct).he = Double.Parse(aryBuf(6))
+							Else
+								MESrec.dt(no).t2.d(ct).he = 0
+							End If
+						Else
+							'旧パラメータファイル
+							MESrec.dt(no).t2.d(ct).maxPa = 6
+							'	ヘリウム流量
+							If IsNumeric(aryBuf(5)) Then
+								MESrec.dt(no).t2.d(ct).he = Double.Parse(aryBuf(5))
+							Else
+								MESrec.dt(no).t2.d(ct).he = 0
+							End If
+						End If
 
 						ReDim MESrec.dt(no).t2.d(ct).pa(2)
-
-						'	ヘリウム流量
-						If IsNumeric(aryBuf(5)) Then
-
-							MESrec.dt(no).t2.d(ct).he = CDbl(aryBuf(5))
-
-						Else
-
-							MESrec.dt(no).t2.d(ct).he = 5.0
-
-						End If
-
 
 						' 20201102 s.harada	裏面圧到達時間を確保
 						ReDim MESrec.dt(no).t2.d(ct).tmr(4)
@@ -514,57 +527,137 @@ Module TstDataRD
 
 						End If
 
-						MESrec.dt(no).t3.d(ct).volt1 = CDbl(aryBuf(2))
+						'▼ 2025.02.17 TC Kanda 
+						With MESrec.dt(no).t3.d(ct)
 
-						MESrec.dt(no).t3.d(ct).volt2 = CDbl(aryBuf(3))
+							ReDim .bs(4)
+							ReDim .okng(4)
+							ReDim .bsEnabled(4)
 
-						If IsNumeric(aryBuf(4)) Then
+							'印加電圧１
+							.volt1 = CDbl(aryBuf(2))
 
-							MESrec.dt(no).t3.d(ct).bs = CDbl(aryBuf(4))
+							'印加電圧２
+							.volt2 = CDbl(aryBuf(3))
 
-						Else
-
-							MESrec.dt(no).t3.d(ct).bs = -1.0
-
-						End If
-
-						' 20201102 s.harada	AQTC対応で追加
-						'	判定基準２
-						If IsNumeric(aryBuf(5)) Then
-
-							MESrec.dt(no).t3.d(ct).bs2 = CDbl(aryBuf(5))
-
-						Else
-
-							MESrec.dt(no).t3.d(ct).bs2 = -1.5
-
-						End If
-
-
-						'▼2024.05.02 TC Kanda （３．Ｈｅリーク量測定のパターン追加／測定有効無効パラメータ追加）
-
-						'一旦無条件に全試験を有効にする
-						MESrec.dt(no).t3.d(ct).ptn = New List(Of String)
-						MESrec.dt(no).t3.d(ct).ptn.Clear()
-						MESrec.dt(no).t3.d(ct).ptn.Add(1)
-						MESrec.dt(no).t3.d(ct).ptn.Add(2)
-						MESrec.dt(no).t3.d(ct).ptn.Add(3)
-						MESrec.dt(no).t3.d(ct).ptn.Add(4)
-						MESrec.dt(no).t3.d(ct).ptn.Add(6)
-
-						'新しく保存されたパラメータファイルかを確認する
-						If aryBuf.Length >= 8 Then
-							If aryBuf(6).IndexOf("|") >= 0 Then
-								'パイプで区切られた文字列
-								MESrec.dt(no).t3.d(ct).ptn.Clear()
-								MESrec.dt(no).t3.d(ct).ptn = aryBuf(6).Split("|").ToList
-							ElseIf Integer.TryParse(aryBuf(6), Nothing) Then
-								'パイプで区切られていない数値
-								MESrec.dt(no).t3.d(ct).ptn.Clear()
-								MESrec.dt(no).t3.d(ct).ptn.Add(aryBuf(6).Trim())
+							'判定基準値の取得
+							If aryBuf.Length = 7 Then
+								'新ファイルの構成（1kPa、2kPaのみで、以降は判定値無しを指定）
+								For i As Integer = 0 To 1
+									If IsNumeric(aryBuf(4 + i)) Then
+										.bs(i) = CDbl(aryBuf(4 + i))
+									Else
+										.bs(i) = 0
+									End If
+								Next
+								For i As Integer = 2 To 4
+									.bs(i) = 0
+								Next
+								'旧ファイルの場合はすべて有効にする
+								For i As Integer = 0 To .bsEnabled.Length - 1
+									.bsEnabled(i) = True
+								Next
+							ElseIf aryBuf.Length = 8 Then
+								'新ファイルの構成（1kPa、2kPaのみで、以降は判定値無しを指定）
+								For i As Integer = 0 To 1
+									If IsNumeric(aryBuf(4 + i)) Then
+										.bs(i) = CDbl(aryBuf(4 + i))
+									Else
+										.bs(i) = 0
+									End If
+								Next
+								For i As Integer = 2 To 4
+									.bs(i) = 0
+								Next
+								'新ファイルの場合は一旦すべて無効にして有効なフラグのみ立てる
+								For i As Integer = 0 To .bsEnabled.Length - 1
+									.bsEnabled(i) = False
+								Next
+								'パイプで区切られた文字列から有効な測定を読み込む
+								For Each enableNo In aryBuf(6).Split("|")
+									Select Case enableNo
+										Case 1 '1kPa
+											.bsEnabled(0) = True
+										Case 2 '2kPa
+											.bsEnabled(1) = True
+										Case 3 '3kPa
+											.bsEnabled(2) = True
+										Case 4 '4kPa
+											.bsEnabled(3) = True
+										Case 6 '6kPa
+											.bsEnabled(4) = True
+									End Select
+								Next
+							ElseIf aryBuf.Length = 11 Then
+								'最新ファイルの構成（すべての設定値あり）
+								For i As Integer = 0 To .bsEnabled.Length - 1
+									If IsNumeric(aryBuf(4 + i)) Then
+										.bs(i) = CDbl(aryBuf(4 + i))
+									Else
+										.bs(i) = 0
+									End If
+								Next
+								'最新ファイルの場合は一旦すべて無効にして有効なフラグのみ立てる
+								For i As Integer = 0 To .bsEnabled.Length - 1
+									.bsEnabled(i) = False
+								Next
+								'パイプで区切られた文字列から有効な測定を読み込む
+								For Each enableNo In aryBuf(9).Split("|")
+									Select Case enableNo
+										Case 1 '1kPa
+											.bsEnabled(0) = True
+										Case 2 '2kPa
+											.bsEnabled(1) = True
+										Case 3 '3kPa
+											.bsEnabled(2) = True
+										Case 4 '4kPa
+											.bsEnabled(3) = True
+										Case 6 '6kPa
+											.bsEnabled(4) = True
+									End Select
+								Next
 							End If
-						End If
-						'▲2024.05.02 TC Kanda （３．Ｈｅリーク量測定のパターン追加／測定有効無効パラメータ追加）
+						End With
+						'▲ 2025.02.17 TC Kanda 
+
+						'If IsNumeric(aryBuf(4)) Then
+
+						'	MESrec.dt(no).t3.d(ct).bs(0) = CDbl(aryBuf(4))
+
+						'Else
+
+						'	MESrec.dt(no).t3.d(ct).bs(0) = -1.0
+
+						'End If
+
+						'' 20201102 s.harada	AQTC対応で追加
+						''	判定基準２
+						'If IsNumeric(aryBuf(5)) Then
+
+						'	MESrec.dt(no).t3.d(ct).bs(1) = CDbl(aryBuf(5))
+
+						'Else
+
+						'	MESrec.dt(no).t3.d(ct).bs(1) = -1.5
+
+						'End If
+
+
+						''▼2024.05.02 TC Kanda （３．Ｈｅリーク量測定のパターン追加／測定有効無効パラメータ追加）
+
+						''一旦無条件に全試験を有効にする
+						'MESrec.dt(no).t3.d(ct).ptn = New Dictionary(Of Integer, Integer)
+						'MESrec.dt(no).t3.d(ct).ptn.Clear()
+						'MESrec.dt(no).t3.d(ct).ptn.Add(1, -1)
+						'MESrec.dt(no).t3.d(ct).ptn.Add(2, -1)
+						'MESrec.dt(no).t3.d(ct).ptn.Add(3, -1)
+						'MESrec.dt(no).t3.d(ct).ptn.Add(4, -1)
+						'MESrec.dt(no).t3.d(ct).ptn.Add(6, -1)
+
+						''新しく保存されたパラメータファイルかを確認する
+						'If aryBuf.Length >= 8 Then
+						'End If
+						''▲2024.05.02 TC Kanda （３．Ｈｅリーク量測定のパターン追加／測定有効無効パラメータ追加）
 
 						' 20201102 s.harada	到達時MFC電圧、He流量を確保
 						ReDim MESrec.dt(no).t3.d(ct).mfcvolt(4)

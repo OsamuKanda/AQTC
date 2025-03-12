@@ -33,7 +33,7 @@ Module DataDef
 		Public pcdt		As String
 
 		' 総合判定結果
-		Public okng		As Integer
+		Public okng As Nullable(Of Boolean)
 
 
 	End Structure
@@ -157,8 +157,8 @@ Module DataDef
 		'
 		'	判定基準
 		'	20201102 裏面圧から到達時間測定に変更
-		'
-		Public bs		As Double
+		'	[0]:裏面圧到着時間設定なし 　[>0]:裏面圧到着時間（ミリ秒）
+		Public arrivalTime As Integer
 
 		'
 		'	ウエハ裏面圧力到達時間
@@ -186,6 +186,10 @@ Module DataDef
 		'
 		Public he		As Double
 
+		''' <summary>
+		''' 裏面圧最大値 1,2,3,4,6kPa
+		''' </summary>
+		Public maxPa As Integer
 
 	End Structure
 
@@ -245,7 +249,8 @@ Module DataDef
 		Public volt2		As Double
 
 		'▼2024.05.02 TC Kanda （３．Ｈｅリーク量測定のパターン追加／測定有効無効パラメータ追加）
-		Public ptn As List(Of String)
+		'Public ptn As List(Of String)
+		'Public ptn As Dictionary(Of Integer, Integer)
 		'▲2024.05.02 TC Kanda （３．Ｈｅリーク量測定のパターン追加／測定有効無効パラメータ追加）
 
 		'
@@ -268,20 +273,24 @@ Module DataDef
 		Public cm()		As Double
 
 		'
-		'	測定条件設定値
-		'	判定基準
+		'	測定条件設定値の有効／無効
 		'
-		Public bs		As Double
+		Public bsEnabled() As Boolean
 
+		'
+		'	測定条件設定値
+		'	判定基準（[0]:判定しない、[0以上]:判定値
+		'
+		Public bs() As Double
 		'
 		'	判定結果
 		'
-		Public okng		As Integer
+		Public okng() As Nullable(Of Boolean)
 
 		'	20201102 s.harada	判定基準２、判定結果２を追加
-		Public bs2		As Double
+		'Public bs2		As Double
 
-		Public okng2		As Integer
+		'Public okng2		As Integer
 
 		'	20201102 s.harada	bpは検査方法変更で削除
 		'   20200716 s.harada
@@ -368,7 +377,7 @@ Module DataDef
 		'
 		'	測定条件設定値
 		'	判定基準
-		'
+		'	[0]基準値なし [>0]基準値
 		Public bs		As Double
 
 		'

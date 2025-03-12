@@ -232,7 +232,7 @@ Module TstDataWT
 
 								Buff			+= "," + .d( j ).volt2.ToString
 
-								Buff			+= "," + ( .d( j ).bs / 1000.0 ).ToString( "0.00" )
+								Buff += "," + (.d(j).arrivalTime / 1000.0).ToString("0.00")
 
 								Buff			+= ",吸着力 印可電圧（Ｖ）ＣＨ１・ＣＨ２・判定値（kPa以上）"
 
@@ -267,7 +267,7 @@ Module TstDataWT
 
 								Buff			+= "," + .d( j ).volt2.ToString
 
-								Buff			+= "," + .d( j ).bs.ToString( "0.0" )
+								Buff += "," + .d(j).bs.ToString("0.000") '★★★★★★
 
 								Buff			+= ",Ｈｅリーク量 印可電圧（Ｖ）ＣＨ１・ＣＨ２・判定値（ml/min以下）"
 
@@ -619,8 +619,9 @@ Module TstDataWT
 					Buff = (Sel + 1).ToString + ",3"
 					Buff += "," + dt.Rows(i)("KYU_VOLT1")
 					Buff += "," + dt.Rows(i)("KYU_VOLT2")
-					Buff += "," + dt.Rows(i)("KYU_BASE")
-					Buff += ",吸着力 印可電圧（Ｖ）ＣＨ１・ＣＨ２・判定値（kPa以上）"
+					Buff += "," + dt.Rows(i)("KYU_SECOND")
+					Buff += "," + dt.Rows(i)("KYU_MAXPA")
+					Buff += ",吸着力 印可電圧（Ｖ）ＣＨ１・ＣＨ２・判定値（秒）・到達裏面圧の最大値（kPa）"
 					TextFile.WriteLine(Buff)
 				End If
 			Next
@@ -651,7 +652,7 @@ Module TstDataWT
 
 					Buff += "," + dt.Rows(i)("LEK_VOLT2")
 
-					Buff += "," + dt.Rows(i)("LEK_BASE")
+					Buff += "," + dt.Rows(i)("LEK_BASE").ToString("0.0")
 
 					Buff += ",Ｈｅリーク量 印可電圧（Ｖ）ＣＨ１・ＣＨ２・判定値（ml/min以下）"
 
@@ -908,21 +909,31 @@ Module TstDataWT
 
 					'	20201102 s.harada	判定値を５００Vのみ固定値に設定
 					'Buff			+= "," + rowView.Item( "KYU_BASE" )
-					If IsNumeric( rowView.Item( "KYU_VOLT1" ) )  AndAlso CInt( rowView.Item( "KYU_VOLT1" ) ) = 500 Then
-					
-						Buff			+= ",120" 
+					'If IsNumeric(rowView.Item("KYU_VOLT1")) AndAlso CInt(rowView.Item("KYU_VOLT1")) = 500 Then
 
+					'	Buff += ",120"
+
+					'Else
+
+					'	Buff += ",0"
+
+					'End If
+					If IsNumeric(rowView.Item("KYU_SECOND")) Then
+						Buff += "," + rowView.Item("KYU_SECOND")
 					Else
-
-						Buff			+= ",0" 
-
+						Buff += ",0"
+					End If
+					If IsNumeric(rowView.Item("KYU_MAXPA")) Then
+						Buff += "," + Double.Parse(rowView.Item("KYU_MAXPA")).ToString("0")
+					Else
+						Buff += ",6"
 					End If
 
 					'	20201102 s.harada	AQTC対応用にHe流量追加変更
 					'Buff			+= ",吸着力 印可電圧（Ｖ）ＣＨ１・ＣＨ２・判定値（kPa以上）"
 					Buff			+= "," + rowView.Item( "KYU_HE" )
 
-					Buff			+= ",吸着力 印可電圧（Ｖ）ＣＨ１・ＣＨ２・判定値（秒以下）・ヘリウム流量"
+					Buff += ",吸着力 印可電圧（Ｖ）ＣＨ１・ＣＨ２・判定値（秒以下）・到達裏面圧の最大値（kPa）・ヘリウム流量"
 
 
 					TextFile.WriteLine( Buff )
@@ -973,18 +984,25 @@ Module TstDataWT
 
 					'	20201102 s.harada	Ｈｅリーク測定・判定値(2kPa)　追加
 					'Buff			+= "," + rowView.Item( "LEK_BASE2" )
-					If IsNumeric( rowView.Item( "LEK_VOLT1" ) )  AndAlso CInt( rowView.Item( "LEK_VOLT1" ) ) = 500 Then
-					
-						Buff			+= ",1.0"	'1kPa
-						Buff			+= ",1.5"	'2kPa
+					'If IsNumeric( rowView.Item( "LEK_VOLT1" ) )  AndAlso CInt( rowView.Item( "LEK_VOLT1" ) ) = 500 Then
 
-					Else
+					'	Buff			+= ",1.0"	'1kPa
+					'	Buff			+= ",1.5"	'2kPa
 
-						Buff			+= ",0"		'1kPa
-						Buff			+= ",0"		'2kPa
+					'Else
 
-					End If
+					'	Buff			+= ",0"		'1kPa
+					'	Buff			+= ",0"		'2kPa
 
+					'End If
+					For Each s In {"1", "2", "3", "4", "6"}
+						Dim lekStr As String = rowView.Item("LEK_BASE" + s).ToString().Replace("★", "")
+						If IsNumeric(lekStr) Then
+							Buff += "," + Double.Parse(lekStr).ToString("0.000")
+						Else
+							Buff += ","
+						End If
+					Next
 					'▼2024.05.02 TC Kanda （３．Ｈｅリーク量測定のパターン追加／測定有効無効パラメータ追加）
 					Buff += "," + String.Join("|", rowView.Item("LEK_PTN").ToString.Split(","))
 					'▲2024.05.02 TC Kanda （３．Ｈｅリーク量測定のパターン追加／測定有効無効パラメータ追加）
@@ -993,8 +1011,10 @@ Module TstDataWT
 					'Buff			+= ",Ｈｅリーク量 印可電圧（Ｖ）ＣＨ１・ＣＨ２・判定値（ml/min以下）"
 					'▼2024.05.02 TC Kanda （３．Ｈｅリーク量測定のパターン追加／測定有効無効パラメータ追加）
 					'Buff += ",Ｈｅリーク量 印可電圧（Ｖ）ＣＨ１・ＣＨ２・判定値1kPa（sccm以下）・判定値2kPa（sccm以下）"
-					Buff += ",Ｈｅリーク量 印可電圧（Ｖ）ＣＨ１・ＣＨ２・判定値1kPa（sccm以下）・判定値2kPa（sccm以下）・測定圧"
-					'▲2024.05.02 TC Kanda （３．Ｈｅリーク量測定のパターン追加／測定有効無効パラメータ追加）
+					'▼ 2025.02.17 TC Kanda （合否判定値の任意設定）
+					'Buff += ",Ｈｅリーク量 印可電圧（Ｖ）ＣＨ１・ＣＨ２・判定値1kPa（sccm以下）・判定値2kPa（sccm以下）・測定圧"
+					Buff += ",Ｈｅリーク量 印可電圧（Ｖ）ＣＨ１・ＣＨ２・判定値1kPa（sccm以下）・判定値2kPa（sccm以下）・判定値3kPa（sccm以下）・判定値4kPa（sccm以下）・判定値6kPa（sccm以下）・測定圧"
+					'▲ 2025.02.17 TC Kanda （合否判定値の任意設定）
 
 					TextFile.WriteLine( Buff )
 
@@ -1041,14 +1061,19 @@ Module TstDataWT
 
 					'	判定値を５００Vのみ固定値に設定
 					'Buff			+= "," + rowView.Item( "ZKU_BASE" )
-					If IsNumeric( rowView.Item( "ZKU_VOLT1" ) )  AndAlso CInt( rowView.Item( "ZKU_VOLT1" ) ) = 500 Then
-					
-						Buff			+= ",300" 
+					'If IsNumeric( rowView.Item( "ZKU_VOLT1" ) )  AndAlso CInt( rowView.Item( "ZKU_VOLT1" ) ) = 500 Then
 
+					'	Buff			+= ",300" 
+
+					'Else
+
+					'	Buff			+= ",0" 
+
+					'End If
+					If IsNumeric(rowView.Item("ZKU_BASE")) Then
+						Buff += "," + Double.Parse(rowView.Item("ZKU_BASE")).ToString("0.0")
 					Else
-
-						Buff			+= ",0" 
-
+						Buff += ",0"
 					End If
 
 					Buff			+= ",残留吸着力 印可電圧（Ｖ）ＣＨ１・ＣＨ２・判定値（Pa以上）"
