@@ -112,16 +112,7 @@ Module TstResultWT
 
 
 			' ファイルをオープン
-			TextFile = New IO.StreamWriter _
-			(
-				New IO.FileStream _
-				(
-					TstRstFpath,
-					IO.FileMode.Create
-				),
-				System.Text.Encoding.Default
-			)
-
+			TextFile = New IO.StreamWriter(New IO.FileStream(TstRstFpath, IO.FileMode.Create), System.Text.Encoding.UTF8)
 
 		Catch ex As Exception
 
@@ -312,7 +303,7 @@ Module TstResultWT
 						'Buff = "温度CH1,温度CH2,印加電圧CH1,印加電圧CH2,ＭＦＣ電圧1Kpa,リーク量1Kpa,ＭＦＣ電圧2Kpa,リーク量2Kpa" _
 						'			+ ",ＭＦＣ電圧3Kpa,リーク量3Kpa,ＭＦＣ電圧4Kpa,リーク量4Kpa,ＭＦＣ電圧6Kpa,リーク量6Kpa" _
 						'			+ ",判定基準１,判定１,判定基準２,判定２"
-						Buff = "温度CH1,,,温度CH2,,,印加電圧CH1,,印加電圧CH2,,ＭＦＣ電圧1Kpa,,リーク量1Kpa,,ＭＦＣ電圧2Kpa,,リーク量2Kpa,,ＭＦＣ電圧3Kpa,,リーク量3Kpa,,ＭＦＣ電圧4Kpa,,リーク量4Kpa,,ＭＦＣ電圧6Kpa,,リーク量6Kpa,,判定基準１,判定１,判定基準２,判定２,判定基準３,判定３,判定基準４,判定４,判定基準５
+						Buff = "温度CH1,,,温度CH2,,,印加電圧CH1,,印加電圧CH2,,ＭＦＣ電圧1Kpa,,リーク量1Kpa,,ＭＦＣ電圧2Kpa,,リーク量2Kpa,,ＭＦＣ電圧3Kpa,,リーク量3Kpa,,ＭＦＣ電圧4Kpa,,リーク量4Kpa,,ＭＦＣ電圧6Kpa,,リーク量6Kpa,,判定基準１,,判定１,判定基準２,,判定２,判定基準３,,判定３,判定基準４,,判定４,判定基準５,
 ,判定５"
 						'▲ 2024.06.11 TC Kanda （その他．ログファイルのタイトル位置修正）
 
@@ -409,11 +400,11 @@ Module TstResultWT
 								Buff +=
 								"," +
 								.d(j).bs(l).ToString("0.000") +
-								"sccm以下"
+								",sccm以下"
 							Else
 								Buff +=
-								", " +
-								"sccm以下"
+								"," +
+								",sccm以下"
 							End If
 							If .d(j).okng(l) = True Then
 								Buff +=
@@ -479,7 +470,7 @@ Module TstResultWT
 						Dim buf As New List(Of String)
 
 						For k = 0 To MESrec.dt(i).tmp.Length - 1
-							buf.Add("CH"(k + 1).ToString)
+							buf.Add("CH" + (k + 1).ToString)
 							If MESrec.dt(i).schuse(0) Then
 								buf.Add(MESrec.dt(i).tmp(k).ToString)
 							Else
@@ -592,9 +583,6 @@ Module TstResultWT
 
 						buf.Add(.d(j).pdc.ToString("0.0"))
 						buf.Add("Pa")
-
-						buf.Add(.d(j).bs.ToString("0.0"))
-						buf.Add("Pa以下")
 
 						buf.Add(.d(j).bs.ToString("0.0"))
 						buf.Add("Pa以下")

@@ -31,15 +31,8 @@ Module TstDataWT
 		Try
 
 			' ファイルをオープン
-			TextFile		=				_
-				New IO.StreamWriter				_
-				(						_
-					New IO.FileStream			_
-					(					_
-						FileName, IO.FileMode.Create	_
-					),					_
-					System.Text.Encoding.Default		_
-				)
+			TextFile = New IO.StreamWriter(New IO.FileStream(FileName, IO.FileMode.Create), System.Text.Encoding.Default)
+
 
 		Catch ex As Exception
 
