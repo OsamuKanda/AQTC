@@ -645,7 +645,7 @@ Module TstDataWT
 
 					Buff += "," + dt.Rows(i)("LEK_VOLT2")
 
-					Buff += "," + dt.Rows(i)("LEK_BASE").ToString("0.0")
+					Buff += "," + dt.Rows(i)("LEK_BASE1").ToString("0.0")
 
 					Buff += ",Ｈｅリーク量 印可電圧（Ｖ）ＣＨ１・ＣＨ２・判定値（ml/min以下）"
 

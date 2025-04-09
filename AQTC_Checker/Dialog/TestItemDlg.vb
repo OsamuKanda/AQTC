@@ -432,7 +432,7 @@ Public Class TestItemDlg
 			pDtRow("KYU_SECOND") = txtKyuSecond.Text
 
 			' 吸着力測定・判定値
-			pDtRow("KYU_BASE") = cmbKyuMaxPa.Text
+			pDtRow("KYU_MAXPA") = cmbKyuMaxPa.Text
 
 
 			' 20200716 s.harada
@@ -452,7 +452,7 @@ Public Class TestItemDlg
 
 			pDtRow("LEK_VOLT2") = "-"
 
-			pDtRow("LEK_BASE") = "-"
+			pDtRow("LEK_BASE1") = "-"
 
 			'	20201102 s.harada	Ｈｅリーク測定・判定値(2kPa)　追加
 			pDtRow("LEK_BASE2") = "-"
@@ -495,8 +495,9 @@ Public Class TestItemDlg
 			Dim chkPa As CheckBox() = {ChkPa1k, ChkPa2k, ChkPa3k, ChkPa4k, ChkPa6k}
 			Dim numPa As Integer() = {1, 2, 3, 4, 6}
 			Dim strPa As String() = {"1", "2", "3", "4", "6"}
-			For i As Integer = 0 To chkPa.Length - 1
 
+			'チェックしている圧力の基準値を保存する
+			For i As Integer = 0 To chkPa.Length - 1
 				If chkPa(i).Checked Then
 					If IsNumeric(txtPa(i).Text) Then
 						pa.Add(numPa(i), Double.Parse(txtPa(i).Text))
@@ -509,7 +510,14 @@ Public Class TestItemDlg
 			If IsNumeric(txtLekV1.Text) Then
 				pDtRow("LEK_PTN") = String.Join(",", pa.Keys)
 				For i As Integer = 0 To strPa.Length - 1
-					pDtRow("LEK_BASE" + strPa(i)) = pa(numPa(i)).ToString("0.000")
+					If pa.ContainsKey(numPa(i)) Then
+						pDtRow("LEK_BASE" + strPa(i)) = "★"
+						If pa(numPa(i)) > 0 Then
+							pDtRow("LEK_BASE" + strPa(i)) += pa(numPa(i)).ToString("0.000")
+						End If
+					Else
+						pDtRow("LEK_BASE" + strPa(i)) = "-"
+					End If
 				Next
 			Else
 				pDtRow("LEK_PTN") = "-"
@@ -678,104 +686,57 @@ Public Class TestItemDlg
 		If IsNumeric(txtLekV1.Text) Then
 
 			' Ｈｅリーク測定・ＳＤＣ電源印加電圧１
-			pDtRow("LV") = Math.Abs(CDbl(txtLekV1.Text))
-
-			' Ｈｅリーク測定・ＳＤＣ電源印加電圧１
 			pDtRow("LEK_VOLT1") = txtLekV1.Text
-
-			' Ｈｅリーク測定・ＳＤＣ電源印加電圧２
-			If txtLekV2.Text = "" Or IsNumeric(txtLekV2.Text) = False Then
-
-				pDtRow("LEK_VOLT2") = "0"
-
-			Else
-
-				' Ｈｅリーク測定・ＳＤＣ電源印加電圧２
-				pDtRow("LEK_VOLT2") = txtLekV2.Text
-
-			End If
-
-			'▼ 2024.05.02 TC Kanda （３．Ｈｅリーク量測定のパターン追加／測定有効無効パラメータ追加）
-			Dim chks As CheckBox() = {ChkPa1k, ChkPa2k, ChkPa3k, ChkPa4k, ChkPa6k}
-			Dim pas As Integer() = {1, 2, 3, 4, 6}
-			Dim pa As New List(Of Integer)
-			For i As Integer = 0 To chks.Length - 1
-				If chks(i).Checked Then
-					pa.Add(pas(i).ToString)
-				End If
-			Next
-			'印加電圧が数値でない場合は（－）を表示する
-			If IsNumeric(txtLekV1.Text) Then
-				pDtRow("LEK_PTN") = String.Join(",", pa)
-			Else
-				pDtRow("LEK_PTN") = "-"
-			End If
-			'▲ 2024.05.02 TC Kanda （３．Ｈｅリーク量測定のパターン追加／測定有効無効パラメータ追加）
-
-			' Ｈｅリーク測定・判定値
-			'	20201102 s.harada	０設定はスペースに変更する
-			'pDtRow( "LEK_BASE" )	= txtLekBase.Text
-			'▼ 2025.02.18 TC Kanda （6kPaまで追加）
-
-			'If IsNumeric(txtLekBase.Text) AndAlso CDbl(txtLekBase.Text) > 0 Then
-
-			'	pDtRow("LEK_BASE") = CDbl(txtLekBase.Text).ToString("F1")
-
-			'Else
-
-			'	pDtRow("LEK_BASE") = " "
-
-			'End If
-
-			''	20201102 s.harada	Ｈｅリーク測定・判定値(2kPa)　追加
-			'If IsNumeric(txtLekBase2.Text) AndAlso CDbl(txtLekBase2.Text) > 0 Then
-
-			'	pDtRow("LEK_BASE2") = CDbl(txtLekBase2.Text).ToString("F1")
-
-			'Else
-
-			'	pDtRow("LEK_BASE2") = " "
-
-			'End If
-			Dim txts As TextBox() = {TxtPa1k, TxtPa2k, TxtPa3k, TxtPa4k, TxtPa6k}
-			Dim labels As String() = {"1", "2", "3", "4", "6"}
-			For i As Integer = 0 To txts.Count - 1
-				If chks(i).Checked Then
-					pDtRow("LEK_BASE" + labels(i)) = "★"
-				Else
-					pDtRow("LEK_BASE" + labels(i)) = ""
-				End If
-				If IsNumeric(txts(i).Text) Then
-					pDtRow("LEK_BASE" + labels(i)) += CDbl(txts(i).Text).ToString("0.000")
-				Else
-					pDtRow("LEK_BASE" + labels(i)) += ""
-				End If
-			Next
-			'▲ 2025.02.18 TC Kanda （6kPaまで追加）
-
-			'pDtRow("LV") = 0
-
-			'pDtRow("LEK_VOLT1") = "-"
-
-			'pDtRow("LEK_VOLT2") = "-"
-
-			'pDtRow("LEK_BASE") = "-"
-
-			''	20201102 s.harada	Ｈｅリーク測定・判定値(2kPa)　追加
-			'pDtRow("LEK_BASE2") = "-"
-
-			''▼ 2024.05.02 TC Kanda （３．Ｈｅリーク量測定のパターン追加／測定有効無効パラメータ追加）
-			'pDtRow("LEK_PTN") = "-"
-			''▲ 2024.05.02 TC Kanda （３．Ｈｅリーク量測定のパターン追加／測定有効無効パラメータ追加）
-
-			''▼ 2025.02.18 TC Kanda （基準値設定を可能にした）
-			'pDtRow("LEK_BASE3") = "-"
-			'pDtRow("LEK_BASE4") = "-"
-			'pDtRow("LEK_BASE6") = "-"
-			''▼ 2025.02.18 TC Kanda （基準値設定を可能にした）
-
+			' Ｈｅリーク測定・ＳＤＣ電源印加電圧１
+			pDtRow("LV") = Math.Abs(CDbl(txtLekV1.Text))
+		Else
+			' Ｈｅリーク測定・ＳＤＣ電源印加電圧１
+			pDtRow("LEK_VOLT1") = ""
+			' Ｈｅリーク測定・ＳＤＣ電源印加電圧１
+			pDtRow("LV") = 0
 		End If
 
+		' Ｈｅリーク測定・ＳＤＣ電源印加電圧２
+		If IsNumeric(txtLekV2.Text) Then
+
+			' Ｈｅリーク測定・ＳＤＣ電源印加電圧２
+			pDtRow("LEK_VOLT2") = txtLekV2.Text
+
+		Else
+
+			pDtRow("LEK_VOLT2") = ""
+
+		End If
+		'▼ 2024.05.02 TC Kanda （３．Ｈｅリーク量測定のパターン追加／測定有効無効パラメータ追加）
+		Dim chks As CheckBox() = {ChkPa1k, ChkPa2k, ChkPa3k, ChkPa4k, ChkPa6k}
+		Dim pas As Integer() = {1, 2, 3, 4, 6}
+		Dim pa As New List(Of Integer)
+		For i As Integer = 0 To chks.Length - 1
+			If chks(i).Checked Then
+				pa.Add(pas(i).ToString)
+			End If
+		Next
+		'印加電圧が数値でない場合は（－）を表示する
+		If IsNumeric(txtLekV1.Text) Then
+			pDtRow("LEK_PTN") = String.Join(",", pa)
+		Else
+			pDtRow("LEK_PTN") = "-"
+		End If
+		'▲ 2024.05.02 TC Kanda （３．Ｈｅリーク量測定のパターン追加／測定有効無効パラメータ追加）
+		Dim txts As TextBox() = {TxtPa1k, TxtPa2k, TxtPa3k, TxtPa4k, TxtPa6k}
+		Dim labels As String() = {"1", "2", "3", "4", "6"}
+		For i As Integer = 0 To txts.Count - 1
+			If chks(i).Checked Then
+				pDtRow("LEK_BASE" + labels(i)) = "★"
+			Else
+				pDtRow("LEK_BASE" + labels(i)) = ""
+			End If
+			If IsNumeric(txts(i).Text) Then
+				pDtRow("LEK_BASE" + labels(i)) += CDbl(txts(i).Text).ToString("0.000")
+			Else
+				pDtRow("LEK_BASE" + labels(i)) += ""
+			End If
+		Next
 
 		'	20201102 s.harada	AQTC対応追加
 		'
